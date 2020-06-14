@@ -1,0 +1,18 @@
+{
+    "name": "alta_cresta/kinza",
+    "authors": [
+        {
+            "name": "Alexey",
+            "email": "info@webskill24.ru"
+        }
+    ],
+    "require": {
+        "ext-pdo": "*",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+
+        }
+    }
+}
