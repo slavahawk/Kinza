@@ -1,9 +1,21 @@
 .mainSection {
-    background: url("/img/back.jpg") 100% 100% no-repeat;
+    // background: url("/img/back.jpg") 100% 100% no-repeat;
     // background-size: 100vh 100vw;
-    height: 100vh;
+    background-color: black;
+    height: 60vh;
+    margin-top: 80px;
     position: relative;
-    margin-top: 100px;
+    z-index: 100;
+    &::after {
+        z-index: 10;
+        padding-bottom: 290px;
+        position: absolute;
+        content: "";
+        background: url("/img/back123.jpg") no-repeat;
+        bottom: -290px;
+        left: 0;
+        width: 100vw;
+    }
 
     &__content {
         display: grid;
@@ -23,7 +35,7 @@
                 font-family: Drina;
                 @include adaptiv-fontAll(90, 26);
                 text-transform: uppercase;
-                margin-bottom: 40px;
+                margin-bottom: 70px;
             }
 
             a {
@@ -32,6 +44,7 @@
         }
 
         &-right {
+            z-index: 100;
             img {
                 max-height: 65vh;
             }

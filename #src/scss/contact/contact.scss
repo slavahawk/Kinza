@@ -1,0 +1,7 @@
+.contact {
+    color: black;
+    padding-top: 160px;
+    h2 {
+        @extend %tph2;
+    }
+}

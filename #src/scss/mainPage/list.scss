@@ -1,20 +1,44 @@
 .list1 {
     position: absolute;
-    top: 30%;
+    top: 60%;
     left: 48%;
     z-index: 100;
 }
 
 .list2 {
     position: absolute;
-    top: -60%;
+    top: 10%;
     left: 60%;
     z-index: 100;
 }
 
 .list3 {
     position: absolute;
-    top: -20%;
+    top: 25%;
     left: 10%;
+    z-index: 100;
+}
+.list4 {
+    z-index: 100;
+    position: absolute;
+    top: 73%;
+    left: 30%;
+    z-index: 100;
+}
+.list5 {
+    z-index: 100;
+    position: absolute;
+    top: 60%;
+    left: 70%;
+    z-index: 100;
+    img {
+        width: 110%;
+    }
+}
+.list6 {
+    z-index: 100;
+    position: absolute;
+    top: 55%;
+    left: 8%;
     z-index: 100;
 }

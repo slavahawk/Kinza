@@ -3829,18 +3829,27 @@ h6 {
 .mainSection__content-left a,
 .menu__content-button a {
   text-transform: uppercase;
-  font-size: 30px;
+  font-size: 26px;
   background-color: #fc4a02;
   border: 1px solid #fc4a02;
-  padding: 10px 30px;
-  border-radius: 40px;
+  padding: 6px 30px;
+  border-radius: 30px;
   color: black;
+  transition: 0.2s all;
+}
+
+.mainSection__content-left a:hover,
+.menu__content-button a:hover {
+  color: white;
+  background-color: black;
 }
 
 .aboutUs__content h2,
-.menu__content h2 {
+.menu__content h2,
+.contact h2,
+.cart h2 {
   text-align: center;
-  font-size: calc(26px + 6 * ((100vw - 320px) / 1600));
+  font-size: calc(26px + 10 * ((100vw - 320px) / 1600));
   text-transform: uppercase;
   font-family: Drina;
   line-height: 40px;
@@ -3867,27 +3876,11 @@ h6 {
   height: 80px;
 }
 
-.header__content-menu-phone {
-  border-bottom: 1px solid #fff;
-  display: flex;
-  align-items: center;
-}
-
-.header__content-menu-phone a {
-  font-size: 20px;
-}
-
-.header__content-menu-phone p {
-  font-size: 16px;
-  padding-left: 20px;
-}
-
 .header__content-menu ul {
   padding-top: 10px;
-  text-transform: uppercase;
   display: flex;
   justify-content: center;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .header__content-menu ul li {
@@ -3898,20 +3891,62 @@ h6 {
   margin-right: 0px;
 }
 
-.header__content-basket {
+.header__content-basket a {
   display: flex;
-  font-size: 20px;
+  font-size: 22px;
+  position: relative;
+  align-items: center;
 }
 
-.header__content-basket p {
+.header__content-basket a p {
+  font-size: 18px;
   padding-left: 10px;
 }
 
+.header__content-basket a .count {
+  position: absolute;
+  top: 12px;
+  left: 15px;
+  z-index: 300;
+  background-color: #fc4a02;
+  color: black;
+  border-radius: 50%;
+  padding: 4px 7px;
+  font-size: 14px;
+}
+
+.header__content-phone {
+  text-align: end;
+}
+
+.header__content-phone a {
+  color: #fc4a02;
+  font-size: 18px;
+}
+
+.header__content-phone p {
+  padding-top: 5px;
+  font-size: 16px;
+  padding-left: 20px;
+}
+
 .mainSection {
-  background: url("/img/back.jpg") 100% 100% no-repeat;
-  height: 100vh;
+  background-color: black;
+  height: 60vh;
+  margin-top: 80px;
   position: relative;
-  margin-top: 100px;
+  z-index: 100;
+}
+
+.mainSection::after {
+  z-index: 10;
+  padding-bottom: 290px;
+  position: absolute;
+  content: "";
+  background: url("/img/back123.jpg") no-repeat;
+  bottom: -290px;
+  left: 0;
+  width: 100vw;
 }
 
 .mainSection__content {
@@ -3937,7 +3972,11 @@ h6 {
   font-family: Drina;
   font-size: calc(26px + 64 * ((100vw - 320px) / 1600));
   text-transform: uppercase;
-  margin-bottom: 40px;
+  margin-bottom: 70px;
+}
+
+.mainSection__content-right {
+  z-index: 100;
 }
 
 .mainSection__content-right img {
@@ -3947,6 +3986,8 @@ h6 {
 .aboutUs {
   color: #000;
   position: relative;
+  padding-bottom: 260px;
+  padding-top: 300px;
 }
 
 .aboutUs__content {
@@ -3986,28 +4027,57 @@ h6 {
 
 .list1 {
   position: absolute;
-  top: 30%;
+  top: 60%;
   left: 48%;
   z-index: 100;
 }
 
 .list2 {
   position: absolute;
-  top: -60%;
+  top: 10%;
   left: 60%;
   z-index: 100;
 }
 
 .list3 {
   position: absolute;
-  top: -20%;
+  top: 25%;
   left: 10%;
+  z-index: 100;
+}
+
+.list4 {
+  z-index: 100;
+  position: absolute;
+  top: 73%;
+  left: 30%;
+  z-index: 100;
+}
+
+.list5 {
+  z-index: 100;
+  position: absolute;
+  top: 60%;
+  left: 70%;
+  z-index: 100;
+}
+
+.list5 img {
+  width: 110%;
+}
+
+.list6 {
+  z-index: 100;
+  position: absolute;
+  top: 55%;
+  left: 8%;
   z-index: 100;
 }
 
 #map {
   height: 400px;
   width: 100%;
+  margin-top: 300px;
 }
 
 #map h7 {
@@ -4018,12 +4088,37 @@ h6 {
 
 .menu {
   background-color: black;
+  height: 80vh;
+  position: relative;
+  z-index: 90;
+}
+
+.menu::before {
+  z-index: 10;
+  padding-top: 260px;
+  position: absolute;
+  content: "";
+  background: url("/img/back2bef.png") no-repeat;
+  top: -260px;
+  left: 0;
+  width: 100%;
+}
+
+.menu::after {
+  z-index: 10;
+  padding-bottom: 253px;
+  position: absolute;
+  content: "";
+  background: url("/img/back2aft.png") no-repeat;
+  bottom: -253px;
+  left: 0;
+  width: 100%;
 }
 
 .menu__content {
   max-width: 1400px;
-  margin: 100px auto;
-  padding: 30px 20px;
+  margin: 0px auto;
+  padding: 0px 20px 50px 20px;
 }
 
 .menu__content-item {
@@ -4053,8 +4148,8 @@ h6 {
 
 .filter__content {
   max-width: 1220px;
-  margin: 0 auto;
-  padding: 40px 20px;
+  margin: 100px auto 0 auto;
+  padding: 20px 20px;
 }
 
 .filter__content ul {
@@ -4115,6 +4210,16 @@ h6 {
   padding: 5px 3vw;
   font-size: 20px;
   line-height: 177.6%;
+}
+
+.contact {
+  color: black;
+  padding-top: 160px;
+}
+
+.cart {
+  color: black;
+  padding-top: 160px;
 }
 
 .footer {
@@ -4188,6 +4293,10 @@ h6 {
   padding-right: 20px;
 }
 
+.footer__content-right-social-item a {
+  color: black;
+}
+
 .footer__content-right-social-item:last-child {
   padding-right: 0;
 }
@@ -4231,4 +4340,8 @@ body a {
   }
 }
 
-.webp .mainSection { background: url(/img/back.webp) 100% 100% no-repeat; }
+.webp .mainSection::after { background: url(/img/back123.webp) no-repeat; }
+
+.webp .menu::before { background: url(/img/back2bef.webp) no-repeat; }
+
+.webp .menu::after { background: url(/img/back2aft.webp) no-repeat; }

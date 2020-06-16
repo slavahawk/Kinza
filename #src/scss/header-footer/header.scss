@@ -19,24 +19,11 @@
         }
 
         &-menu {
-            &-phone {
-                border-bottom: 1px solid #fff;
-                display: flex;
-                align-items: center;
-                a {
-                    font-size: 20px;
-                }
-                p {
-                    font-size: 16px;
-                    padding-left: 20px;
-                }
-            }
             ul {
                 padding-top: 10px;
-                text-transform: uppercase;
                 display: flex;
                 justify-content: center;
-                font-size: 16px;
+                font-size: 18px;
 
                 li {
                     margin-right: 80px;
@@ -48,10 +35,40 @@
             }
         }
         &-basket {
-            display: flex;
-            font-size: 20px;
+            a {
+                display: flex;
+                font-size: 22px;
+                position: relative;
+                align-items: center;
+                p {
+                    font-size: 18px;
+                    padding-left: 10px;
+                }
+                .count {
+                    position: absolute;
+
+                    top: 12px;
+                    left: 15px;
+                    z-index: 300;
+                    background-color: #fc4a02;
+                    color: black;
+                    border-radius: 50%;
+                    padding: 4px 7px;
+                    font-size: 14px;
+                }
+            }
+        }
+        &-phone {
+            text-align: end;
+
+            a {
+                color: #fc4a02;
+                font-size: 18px;
+            }
             p {
-                padding-left: 10px;
+                padding-top: 5px;
+                font-size: 16px;
+                padding-left: 20px;
             }
         }
     }

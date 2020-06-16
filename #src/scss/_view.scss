@@ -1,16 +1,21 @@
 %tpbutton {
     text-transform: uppercase;
-    font-size: 30px;
+    font-size: 26px;
     background-color: #fc4a02;
     border: 1px solid #fc4a02;
-    padding: 10px 30px;
-    border-radius: 40px;
+    padding: 6px 30px;
+    border-radius: 30px;
     color: black;
+    transition: 0.2s all;
+    &:hover {
+        color: white;
+        background-color: black;
+    }
 }
 
 %tph2 {
     text-align: center;
-    @include adaptiv-fontAll(32, 26);
+    @include adaptiv-fontAll(36, 26);
     text-transform: uppercase;
     font-family: Drina;
     line-height: 40px;
