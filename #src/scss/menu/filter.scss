@@ -1,0 +1,38 @@
+.filter {
+    background-color: #fc4a02;
+    &__content {
+        max-width: 1220px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        ul {
+            font-size: 14px;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            li {
+            }
+        }
+        &-button {
+            display: none;
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 967px) {
+    .filter__content {
+        ul {
+            display: none;
+        }
+    }
+    .filter__content-button {
+        display: block;
+
+        width: 100%;
+        a {
+            border: 1px solid white;
+            // padding: 10px 20px;
+        }
+    }
+}

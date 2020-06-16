@@ -1,1 +1,5 @@
 /vendor/
+/node_modules/
+/.idea/
+/composer.json
+/composer.lockпг

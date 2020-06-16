@@ -1,0 +1,40 @@
+.mainSection {
+    background: url("/img/back.jpg") 100% 100% no-repeat;
+    // background-size: 100vh 100vw;
+    height: 100vh;
+    position: relative;
+    margin-top: 100px;
+
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        padding: 0 20px 10vh 20px;
+        max-width: 1400px;
+        margin: 0px auto;
+
+        &-left {
+            text-align: center;
+
+            h1 {
+                user-select: none;
+                font-family: Drina;
+                @include adaptiv-fontAll(90, 26);
+                text-transform: uppercase;
+                margin-bottom: 40px;
+            }
+
+            a {
+                @extend %tpbutton;
+            }
+        }
+
+        &-right {
+            img {
+                max-height: 65vh;
+            }
+        }
+    }
+}

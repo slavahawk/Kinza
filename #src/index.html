@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('layers/head.html')
+	<body>
+		@@include('layers/header.html')
+		<main class="wrapper">
+			<section class="mainSection">
+				<div class="mainSection__content">
+					<div class="mainSection__content-left">
+						<h1>
+							Лучшие чебуреки в городе
+						</h1>
+						<a href="#">Меню</a>
+					</div>
+					<div class="mainSection__content-right wow bounceInRight">
+						<img src="/img/cheb.jpeg" alt="чебуреки" />
+					</div>
+					<!-- Листик -->
+					<div class="list1">
+						<img src="/img/lists/1.png" alt="" />
+					</div>
+				</div>
+				<div class="callme"></div>
+			</section>
+			<section class="aboutUs">
+				<div class="aboutUs__content">
+					<h2>О нас</h2>
+					<div class="aboutUs__content-item">
+						<div class="aboutUs__content-item-left">
+							<p>
+								Мы предлагаем вашему вниманию блюда восточной и европейской кухни. Вся наша еда
+								готовится только из продуктов высшего качества, а заявки обрабатываются так быстро,
+								что вы всегда получаете ваш заказ вкусным и горячим.
+							</p>
+						</div>
+						<div class="aboutUs__content-item-right wow rotateIn">
+							<img src="/img/cheburek.png" alt="" />
+						</div>
+						<!-- Листик -->
+						<div class="list2">
+							<img src="/img/lists/2.png" alt="" />
+						</div>
+						<div class="list3">
+							<img src="/img/lists/3.png" alt="" />
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="menu">
+				<div class="menu__content">
+					<h2>Меню</h2>
+					<div class="menu__content-item">
+						<div class="menu__content-item-box">
+							<img src="/img/2.png" alt="" />
+							<h3>Супы</h3>
+						</div>
+						<div class="menu__content-item-box">
+							<img src="/img/1.png" alt="" />
+							<h3>Выпечка</h3>
+						</div>
+						<div class="menu__content-item-box">
+							<img src="/img/3.png" alt="" />
+							<h3>Завтраки</h3>
+						</div>
+					</div>
+					<div class="menu__content-button">
+						<a href="#">Смотреть больше</a>
+					</div>
+				</div>
+			</section>
+			<section id="map"></section>
+		</main>
+		@@include('layers/footer.html')
+		<script
+			async
+			defer
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCgwoTpESqADzD9gNWrX-uBJw7wB4-KWw&callback=initMap"
+		></script>
+		<script src="js/script.min.js"></script>
+	</body>
+</html>

@@ -1,0 +1,40 @@
+.aboutUs {
+    color: #000;
+    position: relative;
+
+    &__content {
+        max-width: 1400px;
+        margin: 0px auto;
+        h2 {
+            @extend %tph2;
+        }
+
+        &-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: center;
+
+            align-items: center;
+            justify-items: center;
+
+            &-left {
+                width: 80%;
+
+                p {
+                    user-select: none;
+                    font-size: 40px;
+                    text-align: center;
+                    line-height: 45px;
+                }
+            }
+
+            &-right {
+                width: 70%;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+.menu {
+    background-color: black;
+
+    &__content {
+
+        max-width: 1400px;
+        margin: 100px auto;
+        padding: 30px 20px;
+
+        h2 {
+            @extend %tph2;
+
+        }
+
+        &-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &-box {
+                img {
+                    width: 20vw;
+                }
+
+                h3 {
+                    text-align: center;
+                    text-transform: uppercase;
+                    font-size: 20px;
+                }
+            }
+        }
+
+        &-button {
+            margin-top: 50px;
+            text-align: center;
+
+            a {
+                @extend %tpbutton;
+            }
+        }
+    }
+}
