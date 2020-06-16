@@ -1,5 +1,6 @@
 /vendor/
 /node_modules/
 /.idea/
+/yii-application/
 /composer.json
 /composer.lockпг
