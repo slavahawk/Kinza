@@ -8,6 +8,12 @@
   }
 }
 
+@mixin disflex($dis, $jc, $ai) {
+  display: $dis;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
 // Адаптивные шрифты до 976px
 $maxWidth: 1920;
 
@@ -40,6 +46,7 @@ $maxWidthMin: 976;
 @import "_null";
 @import "view";
 @import "header-footer/header.scss";
+@import "header-footer/burger.scss";
 @import "mainPage/mainSection.scss";
 @import "mainPage/aboutUs.scss";
 @import "mainPage/list.scss";
@@ -58,5 +65,6 @@ body {
 
   a {
     color: #fff;
+    cursor: pointer;
   }
 }

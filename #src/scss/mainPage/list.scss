@@ -5,40 +5,112 @@
     z-index: 100;
 }
 
+@media (max-width:1770px) {
+    .list1 {
+        top: 60%;
+        left: 40%;
+    }
+}
+
+@media (max-width:1440px) {
+    .list1 {
+        top: 70%;
+        left: 38%;
+    }
+}
+
+@media (max-width:1350px) {
+    .list1 {
+        top: 70%;
+        left: 35%;
+    }
+}
+
+@media (max-width:1300px) {
+    .list1 {
+        top: 72%;
+        left: 40%;
+    }
+}
+
 .list2 {
     position: absolute;
-    top: 10%;
+    top: -20%;
     left: 60%;
     z-index: 100;
 }
 
+@media (max-width:1300px) {
+    .list2 {
+        top: -10%;
+        left: 80%;
+    }
+}
+
 .list3 {
     position: absolute;
-    top: 25%;
-    left: 10%;
+    top: 15%;
+    left: 8%;
     z-index: 100;
 }
+
+@media (max-width:1600px) {
+    .list3 {
+        top: 15%;
+        left: 3%;
+    }
+}
+
+@media (max-width:1450px) {
+    .list3 {
+        top: 5%;
+        left: 3%;
+    }
+}
+
+@media (max-width:1200px) {
+    .list3 {
+        top: 0%;
+        left: 3%;
+    }
+}
+
 .list4 {
     z-index: 100;
     position: absolute;
-    top: 73%;
+    top: 90%;
     left: 30%;
     z-index: 100;
 }
+
 .list5 {
     z-index: 100;
     position: absolute;
-    top: 60%;
+    top: 70%;
     left: 70%;
     z-index: 100;
+
     img {
         width: 110%;
     }
 }
+
 .list6 {
     z-index: 100;
     position: absolute;
-    top: 55%;
+    top: 0%;
     left: 8%;
     z-index: 100;
+}
+
+@media (max-width:976px) {
+
+    .list1,
+    .list2,
+    .list3,
+    .list4,
+    .list5,
+    .list6 {
+        display: none;
+    }
 }

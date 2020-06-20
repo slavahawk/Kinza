@@ -5,10 +5,47 @@
 		@@include('../layouts/header.html')
 		<main>
 			<section class="contact">
-				<h2>Контакты</h2>
+				<div class="contact__content">
+					<div class="contact__content-text">
+						<h2>Контакты</h2>
+						<p>Мира, 53, Красноярск</p>
+						<br />
+						<p>Часы работы: <br />Ежедневно с 10:00 до 24:00</p>
+						<br />
+						<p><a href="tel:+73912884506">+7 (391) 288-45-06</a></p>
+						<div class="contact__content-text-icon">
+							<div class="contact__content-text-icon-social vk">
+								<i class="fab fa-vk"></i>
+							</div>
+							<div class="contact__content-text-icon-social inst">
+								<i class="fab fa-instagram"></i>
+							</div>
+						</div>
+					</div>
+					<div class="contact__content-map">
+						<a
+							class="flamp-widget"
+							href="//krasnoyarsk.flamp.ru/firm/kinza_cheburechnaya-985690700664706"
+							data-flamp-widget-type="responsive-new"
+							data-flamp-widget-id="985690700664706"
+							data-flamp-widget-width="100%"
+							data-flamp-widget-count="1"
+							>Отзывы о нас на Флампе</a
+						>
+						<script>
+							!(function (d, s) {
+								var js,
+									fjs = d.getElementsByTagName(s)[0];
+								js = d.createElement(s);
+								js.async = 1;
+								js.src = '//widget.flamp.ru/loader.js';
+								fjs.parentNode.insertBefore(js, fjs);
+							})(document, 'script');
+						</script>
+					</div>
+				</div>
 			</section>
 		</main>
-		@@include('../layouts/footer.html')
-		<script src="/js/script.min.js"></script>
+		@@include('../layouts/scriptFooter.html')
 	</body>
 </html>

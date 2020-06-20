@@ -46,6 +46,7 @@
 
                         a {
                             color: #000;
+
                             &:active {
                                 border-bottom: 1px solid #000;
                             }
@@ -77,5 +78,16 @@
                 }
             }
         }
+    }
+}
+
+@media (max-width: 768px) {
+    .footer__content {
+        flex-direction: column;
+    }
+
+    .footer__content-left {
+        order: 2;
+        padding-top: 40px;
     }
 }

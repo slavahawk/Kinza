@@ -7,19 +7,33 @@
     z-index: 200;
 
     &__content {
+        font-family: SourceSansPro;
         padding: 10px 8vw;
         display: flex;
         justify-content: space-between;
         align-items: center;
 
         &-logo {
+            display: flex;
+            align-items: center;
+
             img {
                 height: 80px;
             }
         }
 
+        @media (max-width: 976px) {
+            .header__content-logo {
+                img {
+                    height: 50px;
+                }
+            }
+        }
+
         &-menu {
             ul {
+                font-family: SourceSansPro;
+
                 padding-top: 10px;
                 display: flex;
                 justify-content: center;
@@ -34,22 +48,25 @@
                 }
             }
         }
+
         &-basket {
+            display: inline-block;
             a {
                 display: flex;
                 font-size: 22px;
                 position: relative;
                 align-items: center;
+
                 p {
                     font-size: 18px;
                     padding-left: 10px;
                 }
+
                 .count {
                     position: absolute;
-
                     top: 12px;
                     left: 15px;
-                    z-index: 300;
+                    z-index: 2;
                     background-color: #fc4a02;
                     color: black;
                     border-radius: 50%;
@@ -57,19 +74,45 @@
                     font-size: 14px;
                 }
             }
+
+            .phone__min {
+                display: none;
+            }
         }
+
         &-phone {
             text-align: end;
 
             a {
                 color: #fc4a02;
-                font-size: 18px;
+                font-size: 19px;
             }
+
             p {
                 padding-top: 5px;
                 font-size: 16px;
                 padding-left: 20px;
             }
+        }
+    }
+}
+
+@media (max-width: 1140px) {
+    .basket__text {
+        display: none;
+    }
+
+    .header__content-phone {
+        display: none;
+    }
+
+    .header__content-basket {
+        display: flex;
+        align-items: center;
+
+        .phone__min {
+            display: block;
+            margin-left: 25px;
         }
     }
 }

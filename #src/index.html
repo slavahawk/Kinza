@@ -4,13 +4,14 @@
 	<body>
 		@@include('layouts/header.html')
 		<main class="wrapper">
+			<!-- Основная секция -->
 			<section class="mainSection">
 				<div class="mainSection__content">
 					<div class="mainSection__content-left">
 						<h1>
 							Лучшие чебуреки в городе
 						</h1>
-						<a href="#">Меню</a>
+						<a href="/site/menu.html">Меню</a>
 					</div>
 					<div class="mainSection__content-right wow bounceInRight">
 						<img src="/img/cheb.jpeg" alt="чебуреки" />
@@ -22,6 +23,11 @@
 				</div>
 				<div class="callme"></div>
 			</section>
+			<!-- Меню фон after -->
+			<section class="mainSectionAfter">
+				<img src="img/mainSection.jpg" alt="" />
+			</section>
+			<!-- О нас -->
 			<section class="aboutUs" id="aboutUs">
 				<div class="aboutUs__content">
 					<h2>О нас</h2>
@@ -34,36 +40,41 @@
 							</p>
 						</div>
 						<div class="aboutUs__content-item-right wow rotateIn">
-							<img src="/img/cheburek.png" alt="" />
-						</div>
-						<!-- Листик -->
-						<div class="list2">
-							<img src="/img/lists/2.png" alt="" />
-						</div>
-						<div class="list3">
-							<img src="/img/lists/3.png" alt="" />
-						</div>
-						<div class="list4">
-							<img src="/img/lists/4.png" alt="" />
+							<img src="/img/11.jpg" alt="" />
 						</div>
 					</div>
 				</div>
+				<!-- Листик -->
+				<div class="list2">
+					<img src="/img/lists/2.png" alt="" />
+				</div>
+				<div class="list3">
+					<img src="/img/lists/3.png" alt="" />
+				</div>
+				<div class="list4">
+					<img src="/img/lists/4.png" alt="" />
+				</div>
 			</section>
+			<!-- Меню фон before -->
+			<section class="menuBefore">
+				<img src="img/back2bef.png" alt="" />
+			</section>
+			<!-- Меню -->
 			<section class="menu">
 				<div class="menu__content">
 					<h2>Меню</h2>
 					<div class="menu__content-item">
 						<div class="menu__content-item-box">
+							<img src="/img/1.png" alt="" />
+							<h3>Завтраки</h3>
+						</div>
+						<div class="menu__content-item-box">
 							<img src="/img/2.png" alt="" />
 							<h3>Супы</h3>
 						</div>
 						<div class="menu__content-item-box">
-							<img src="/img/1.png" alt="" />
-							<h3>Выпечка</h3>
-						</div>
-						<div class="menu__content-item-box">
-							<img src="/img/3.png" alt="" />
-							<h3>Завтраки</h3>
+							<img src="/img/4.png" alt="" />
+							<h3>Салаты</h3>
 						</div>
 					</div>
 					<div class="menu__content-button">
@@ -77,14 +88,16 @@
 					</div>
 				</div>
 			</section>
-			<section id="map"></section>
+			<!-- Меню фон after -->
+			<section class="menuAfter">
+				<img src="img/back2aft.png" alt="" />
+			</section>
+			<!-- Карта -->
+			<section class="map">
+				<div id="map"></div>
+			</section>
 		</main>
-		@@include('layouts/footer.html')
-		<script
-			async
-			defer
-			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCgwoTpESqADzD9gNWrX-uBJw7wB4-KWw&callback=initMap"
-		></script>
-		<script src="js/script.min.js"></script>
+
+		@@include('layouts/footer.html') @@include('layouts/scriptFooter.html')
 	</body>
 </html>

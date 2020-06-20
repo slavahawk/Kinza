@@ -4,6 +4,7 @@
 	<body>
 		@@include('../layouts/header.html')
 		<main>
+			@@include('../layouts/filter.html')
 			<section class="filter">
 				<div class="filter__content">
 					<ul>
@@ -16,59 +17,61 @@
 						<li><a href="#">Детское меню</a></li>
 					</ul>
 					<div class="filter__content-button">
-						<a href="#">Фильтр и сортировка</a>
+						<a id="buttonFilterMini">Фильтр и сортировка</a>
 					</div>
 				</div>
 			</section>
 			<section class="catalog">
 				<div class="catalog__content">
 					<div class="catalog__content-item">
-						<div class="catalog__content-item-image">
-							<img src="/img/catalog/1.png" alt="" />
-						</div>
-						<h3>Чебуреки мясные с сосусом на выбор</h3>
-						<p>90<span>₽</span></p>
-						<div class="catalog__content-item-button">
-							<a href="#">Заказать</a>
-						</div>
-					</div>
-					<div class="catalog__content-item">
-						<div class="catalog__content-item-image">
-							<img src="/img/catalog/2.png" alt="" />
-						</div>
+						<img src="/img/catalog/1.png" alt="" />
 						<h3>Самса мясная</h3>
-						<p>110<span>₽</span></p>
-						<div class="catalog__content-item-button">
-							<a href="#">Заказать</a>
-						</div>
+						<p>90<span>₽</span></p>
+						<a class="add-to-cart">Заказать</a>
 					</div>
 					<div class="catalog__content-item">
-						<div class="catalog__content-item-image">
-							<img src="/img/catalog/3.png" alt="" />
-						</div>
+						<img src="/img/catalog/2.png" alt="" />
 						<h3>Хинкали с соусом на выбор</h3>
-						<p>240<span>₽</span></p>
-						<div class="catalog__content-item-button">
-							<a href="#">Заказать</a>
-						</div>
+						<p>110<span>₽</span></p>
+						<a class="add-to-cart">Заказать</a>
 					</div>
 					<div class="catalog__content-item">
-						<div class="catalog__content-item-image">
-							<img src="/img/catalog/4.png" alt="" />
-						</div>
+						<img src="/img/catalog/3.png" alt="" />
 						<h3>Хачапури по-аджарски</h3>
+						<p>240<span>₽</span></p>
+						<a class="add-to-cart">Заказать</a>
+					</div>
+					<div class="catalog__content-item">
+						<img src="/img/catalog/4.png" alt="" />
+						<h3>Хачипури по аджарски ака вася петя коля</h3>
 						<p>150<span>₽</span></p>
-						<div class="catalog__content-item-button">
-							<a href="#">Заказать</a>
-						</div>
+						<a class="add-to-cart">Заказать</a>
+					</div>
+					<div class="catalog__content-item">
+						<img src="/img/catalog/1.png" alt="" />
+						<h3>Самса мясная</h3>
+						<p>90<span>₽</span></p>
+						<a class="add-to-cart">Заказать</a>
+					</div>
+					<div class="catalog__content-item">
+						<img src="/img/catalog/2.png" alt="" />
+						<h3>Хинкали с соусом на выбор</h3>
+						<p>110<span>₽</span></p>
+						<a class="add-to-cart">Заказать</a>
+					</div>
+					<div class="catalog__content-item">
+						<img src="/img/catalog/3.png" alt="" />
+						<h3>Хачапури по-аджарски</h3>
+						<p>240<span>₽</span></p>
+						<a class="add-to-cart">Заказать</a>
 					</div>
 				</div>
 			</section>
 			<section class="backMenu">
-				<img src="/img/backmenu.png" alt="" />
+				<!-- <img src="/img/backmenu.png" alt="" /> -->
 			</section>
 		</main>
-		@@include('../layouts/footer.html')
-		<script src="/js/script.min.js"></script>
+
+		@@include('../layouts/footer.html') @@include('../layouts/scriptFooter.html')
 	</body>
 </html>

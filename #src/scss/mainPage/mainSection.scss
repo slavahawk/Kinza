@@ -1,30 +1,37 @@
-.mainSection {
-    // background: url("/img/back.jpg") 100% 100% no-repeat;
-    // background-size: 100vh 100vw;
-    background-color: black;
-    height: 60vh;
-    margin-top: 80px;
-    position: relative;
-    z-index: 100;
-    &::after {
-        z-index: 10;
-        padding-bottom: 290px;
-        position: absolute;
-        content: "";
-        background: url("/img/back123.jpg") no-repeat;
-        bottom: -290px;
-        left: 0;
+.mainSectionAfter {
+    z-index: -1;
+    margin-top: -1px;
+
+    img {
         width: 100vw;
     }
+}
+
+// @media (max-width:1358px) {
+
+    //     .mainSectionAfter {
+    //         margin-top: -1px;
+    //     }
+    // }
+
+.mainSection {
+    @include disflex(flex, center, center);
+    flex-direction: column;
+    position: relative;
+    background-color: black;
+    width: 100%;
+    padding-top: 80px;
+    z-index: 100;
 
     &__content {
+
         display: grid;
         grid-template-columns: 1fr 1fr;
         justify-content: center;
         align-items: center;
         justify-items: center;
-        padding: 0 20px 10vh 20px;
-        max-width: 1400px;
+        padding: 1vh 15vw 0vh 15vw;
+
         margin: 0px auto;
 
         &-left {
@@ -33,7 +40,7 @@
             h1 {
                 user-select: none;
                 font-family: Drina;
-                @include adaptiv-fontAll(90, 26);
+                @include adaptiv-fontAll(90, 40);
                 text-transform: uppercase;
                 margin-bottom: 70px;
             }
@@ -45,9 +52,39 @@
 
         &-right {
             z-index: 100;
+
             img {
-                max-height: 65vh;
+
+                max-height: 80vh;
             }
         }
+    }
+}
+
+@media (max-width: 1300px) {
+
+
+    .mainSection__content-right {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 976px) {
+    .mainSection {}
+
+    .mainSection__content {
+        grid-template-columns: 1fr;
+        padding: 20vh 15vw 15vh 15vw;
+    }
+
+
+    .mainSection__content-left {
+        width: 100%;
+    }
+
+    .mainSection__content-right {
+        display: none;
     }
 }
