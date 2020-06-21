@@ -714,6 +714,7 @@ $(document).ready(function () {
 					opacity: '0.5',
 					position: 'absolute',
 					'z-index': '1000',
+					width: '0',
 				})
 				.appendTo($('html, body'))
 				.animate(

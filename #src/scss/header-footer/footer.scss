@@ -2,6 +2,7 @@
     color: black;
 
     &__content {
+        font-family: SourceSansPro;
         font-size: 16px;
         line-height: 24px;
         padding: 40px 20px;
@@ -46,6 +47,10 @@
 
                         a {
                             color: #000;
+                            transition: 0.2s ease-in-out;
+                            &:hover {
+                                color: #f53906;
+                            }
 
                             &:active {
                                 border-bottom: 1px solid #000;
@@ -67,6 +72,10 @@
                 &-item {
                     a {
                         color: black;
+                        transition: 0.2s ease-in-out;
+                        &:hover {
+                            color: #f53906;
+                        }
                     }
 
                     font-size: 30px;

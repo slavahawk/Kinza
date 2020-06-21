@@ -45,6 +45,26 @@
                     &:last-child {
                         margin-right: 0px;
                     }
+                    a {
+                        display: inline-block;
+                        color: #ffffff;
+                        line-height: 1;
+                        text-decoration: none;
+
+                        &:after {
+                            margin-top: 5px;
+                            background-color: #f53906;
+                            display: block;
+                            content: "";
+                            height: 2px;
+                            width: 0%;
+                            transition: width 0.3s ease-in-out;
+                        }
+                        &:hover:after,
+                        &:focus:after {
+                            width: 100%;
+                        }
+                    }
                 }
             }
         }

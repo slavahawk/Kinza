@@ -1,6 +1,7 @@
 %tpbutton {
+    font-family: SourceSansPro;
     text-transform: uppercase;
-    font-size: 26px;
+    @include adaptiv-fontAll(26, 20);
     background-color: #fc4a02;
     border: 1px solid #fc4a02;
     padding: 6px 30px;

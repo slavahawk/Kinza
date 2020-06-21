@@ -25,35 +25,100 @@
         flex-direction: column;
         max-width: 1400px;
         margin: 0px auto;
-        padding: 0px 20px 50px 20px;
+        padding: 10px 40px 50px 40px;
 
         h2 {
             @extend %tph2;
         }
 
         &-item {
-            @include disflex(flex, space-between, center);
+            padding: 50px 0 80px 0;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 4em 1em;
+            font-family: SourceSansPro;
 
             &-box {
                 img {
-                    width: 20vw;
+                    width: 100%;
+                    transition: 0.3s ease-in-out;
+                    padding-bottom: 30px;
+                    &:hover {
+                        transform: scale(1.1);
+                    }
                 }
 
-                h3 {
+                a {
+                    width: 70%;
                     text-align: center;
                     text-transform: uppercase;
-                    font-size: 20px;
+                    @include adaptiv-fontAll(20, 14);
+                    display: block;
+                    margin: auto;
+                    padding: 1rem 1.25rem;
+                    text-decoration: none;
+                    color: white;
+                    position: relative;
+                    transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+                    z-index: 1;
+                    &:after {
+                        content: "";
+                        display: block;
+                        height: 2px;
+                        position: absolute;
+                        bottom: 0;
+                        right: 1.25rem;
+                        left: 1.25rem;
+                        background-color: #ffffff;
+                        transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+                        transform-origin: bottom center;
+                        z-index: -1;
+                    }
+
+                    &:hover {
+                        color: #2d2d2d;
+
+                        &:after {
+                            right: 0;
+                            left: 0;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+            .menuMin {
+                display: none;
+            }
+            @media (max-width: 976px) {
+                .menuMin {
+                    display: block;
                 }
             }
         }
 
         &-button {
-            margin-top: 50px;
             text-align: center;
 
             a {
                 @extend %tpbutton;
             }
         }
+    }
+}
+
+@media (max-width: 976px) {
+    .menu__content-item {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .menu__content-item-box {
+        img {
+            padding-bottom: 0px;
+        }
+    }
+}
+
+@media (max-width: 976px) {
+    .menu__content-item {
+        padding: 25px 0 0px 0;
     }
 }
