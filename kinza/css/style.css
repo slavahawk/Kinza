@@ -4581,9 +4581,25 @@ h6 {
   justify-content: space-between;
 }
 
-.cart__content-sum-image-text-remove input {
-  color: #f53906;
-  border: 1px solid #888888;
+.cart__content-sum-image-text-remove .quantity-block {
+  display: flex;
+}
+
+.cart__content-sum-image-text-remove .quantity-block button {
+  background-color: #333333;
+  color: white;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart__content-sum-image-text-remove .quantity-block input {
+  padding-left: 14px;
+  width: 50px;
+  text-align: center;
 }
 
 .cart__content-sum-image-text-remove p {

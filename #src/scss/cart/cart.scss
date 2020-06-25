@@ -11,13 +11,16 @@
 
         &-sum {
             width: 35%;
+
             h2 {
                 @extend %tph2;
                 text-align: left;
             }
+
             &-back {
                 display: flex;
                 font-size: 16px;
+
                 p {
                     color: rgb(37, 78, 122);
                     padding: 10px 10px 10px 0;
@@ -28,11 +31,13 @@
                     padding: 10px 10px 10px 0;
                 }
             }
+
             &-image {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 padding: 10px 0 25px;
+
                 a {
                     img {
                         width: 100px;
@@ -42,27 +47,52 @@
                 &-text {
                     padding-left: 20px;
                     width: 100%;
+
                     &-title {
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
+
                         a {
                             color: #000;
                             font-size: 18px;
                         }
+
                         .delete {
                             font-size: 30px;
                             color: rgb(167, 166, 166);
                         }
                     }
+
                     &-remove {
                         padding-top: 10px;
                         display: flex;
                         justify-content: space-between;
 
-                        input {
-                            color: #f53906;
-                            border: 1px solid #888888;
+
+                        .quantity-block {
+                            display: flex;
+
+
+
+
+
+                            button {
+                                background-color: #333333;
+                                color: white;
+                                width: 25px;
+                                height: 25px;
+                                border-radius: 50%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+
+                            input {
+                                padding-left: 14px;
+                                width: 50px;
+                                text-align: center;
+                            }
                         }
 
                         p {
@@ -72,21 +102,26 @@
                     }
                 }
             }
+
             &-total {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 padding-top: 20px;
                 border-top: 1px solid #888888;
+
                 h5 {
                     font-size: 22px;
                 }
+
                 p {
                     font-size: 22px;
                 }
             }
+
             &-else {
                 padding-top: 20px;
+
                 p {
                     font-size: 16px;
 
@@ -96,32 +131,39 @@
                 }
             }
         }
+
         &-pickUp {
             width: 65%;
             padding-left: 60px;
+
             h2 {
                 @extend %tph2;
                 text-align: left;
                 padding-bottom: 30px;
             }
+
             a {
                 font-size: 20px;
                 padding: 10px 100px;
                 background-color: #333333;
                 border-radius: 5px;
             }
+
             p {
                 padding: 35px 0 25px;
                 font-size: 22px;
             }
+
             &-item {
                 border-top: 1px solid #888888;
                 padding-top: 20px;
+
                 &-text {
                     h6 {
                         font-size: 18px;
                         line-height: 22px;
                     }
+
                     p {
                         padding-top: 5px;
                         font-size: 18px;
