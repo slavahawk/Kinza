@@ -1,6 +1,7 @@
 .filter {
     // background-color: #f53906;
     margin-top: 100px;
+    font-family: SourceSansPro;
 
     &__content {
         max-width: 900px;
@@ -88,6 +89,7 @@
 }
 
 .title__box-mini {
+    font-family: SourceSansPro;
     @include disflex(flex, space-between, center);
     flex-wrap: nowrap;
     background-color: #f53906;
@@ -106,4 +108,23 @@
     color: white;
     font-weight: bold;
     color: white;
+}
+
+.contetnt__filter {
+    font-family: SourceSansPro;
+    padding: 30px;
+    &__item {
+        background-color: white;
+        ul {
+            padding: 20px;
+
+            li {
+                padding-bottom: 15px;
+                a {
+                    @include adaptiv-fontMin(18, 16);
+                    color: #000;
+                }
+            }
+        }
+    }
 }

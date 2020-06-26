@@ -5,28 +5,28 @@
     z-index: 100;
 }
 
-@media (max-width:1770px) {
+@media (max-width: 1770px) {
     .list1 {
         top: 60%;
         left: 40%;
     }
 }
 
-@media (max-width:1440px) {
+@media (max-width: 1440px) {
     .list1 {
         top: 70%;
         left: 38%;
     }
 }
 
-@media (max-width:1350px) {
+@media (max-width: 1350px) {
     .list1 {
         top: 70%;
         left: 35%;
     }
 }
 
-@media (max-width:1300px) {
+@media (max-width: 1300px) {
     .list1 {
         top: 72%;
         left: 40%;
@@ -35,43 +35,46 @@
 
 .list2 {
     position: absolute;
-    top: -20%;
-    left: 60%;
+    padding-right: 45px;
+    top: -35%;
+    right: 5%;
     z-index: 100;
+    width: 300px;
+    img {
+        transform: rotate(40deg);
+        width: 100%;
+    }
 }
 
-@media (max-width:1300px) {
+@media (max-width: 1300px) {
     .list2 {
-        top: -10%;
-        left: 80%;
+        top: -26%;
+        right: 2%;
+        img {
+            transform: rotate(40deg);
+            width: 80%;
+        }
     }
 }
 
 .list3 {
     position: absolute;
-    top: 15%;
-    left: 8%;
+    top: -8%;
+    left: 5%;
     z-index: 100;
-}
-
-@media (max-width:1600px) {
-    .list3 {
-        top: 15%;
-        left: 3%;
+    img {
+        width: 65%;
     }
 }
 
-@media (max-width:1450px) {
-    .list3 {
-        top: 5%;
-        left: 3%;
-    }
-}
-
-@media (max-width:1200px) {
+@media (max-width: 1300px) {
     .list3 {
         top: 0%;
-        left: 3%;
+        left: 5%;
+        z-index: 100;
+        img {
+            width: 50%;
+        }
     }
 }
 
@@ -81,30 +84,74 @@
     top: 90%;
     left: 30%;
     z-index: 100;
+    img {
+        width: 40%;
+    }
 }
 
 .list5 {
     z-index: 100;
     position: absolute;
-    top: 70%;
-    left: 70%;
+    top: 80%;
+    left: 75%;
     z-index: 100;
-
+    width: 300px;
     img {
-        width: 110%;
+        width: 100%;
+    }
+}
+
+@media (max-width: 1300px) {
+    .list5 {
+        z-index: 100;
+        position: absolute;
+        top: 85%;
+        left: 65%;
+        width: 250px;
+
+        img {
+            width: 100%;
+        }
     }
 }
 
 .list6 {
     z-index: 100;
     position: absolute;
-    top: 0%;
-    left: 8%;
-    z-index: 100;
+    top: -70%;
+    left: 5%;
+
+    img {
+        transform: rotate(45deg);
+        width: 50%;
+    }
 }
 
-@media (max-width:976px) {
+@media (max-width: 1700px) {
+    .list6 {
+        top: -60%;
+        left: 5%;
 
+        img {
+            transform: rotate(45deg);
+            width: 50%;
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    .list6 {
+        top: -55%;
+        left: 5%;
+
+        img {
+            transform: rotate(45deg);
+            width: 30%;
+        }
+    }
+}
+
+@media (max-width: 976px) {
     .list1,
     .list2,
     .list3,

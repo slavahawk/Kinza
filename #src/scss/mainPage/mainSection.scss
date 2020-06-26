@@ -3,7 +3,7 @@
     margin-top: -1px;
 
     img {
-        width: 100vw;
+        width: 100%;
     }
 }
 
@@ -43,9 +43,25 @@
                 text-transform: uppercase;
                 margin-bottom: 70px;
             }
+            p {
+                display: none;
+                margin-bottom: 60px;
+            }
 
             a {
                 @extend %tpbutton;
+            }
+        }
+
+        @media (max-width: 976px) {
+            .mainSection__content-left {
+                h1 {
+                    margin-bottom: 10px;
+                }
+                p {
+                    @include adaptiv-fontAll(20, 12);
+                    display: block;
+                }
             }
         }
 
