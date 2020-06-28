@@ -7,13 +7,6 @@
     }
 }
 
-// @media (max-width:1358px) {
-
-//     .mainSectionAfter {
-//         margin-top: -1px;
-//     }
-// }
-
 .mainSection {
     @include disflex(flex, center, center);
     flex-direction: column;
@@ -84,9 +77,6 @@
 }
 
 @media (max-width: 976px) {
-    .mainSection {
-    }
-
     .mainSection__content {
         grid-template-columns: 1fr;
         padding: 20vh 15vw 15vh 15vw;

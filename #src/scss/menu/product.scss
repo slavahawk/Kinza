@@ -41,6 +41,11 @@
                     line-height: 20px;
                     padding: 10px 5vw;
                     background-color: #333333;
+                    border: 1px solid #333333;
+                    transition: 0.1s ease-in-out;
+                    &:active {
+                        background-color: rgb(245, 57, 6);
+                    }
                 }
                 h3 {
                     padding: 30px 0 15px;

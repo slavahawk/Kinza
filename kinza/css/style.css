@@ -952,6 +952,12 @@ h6 {
   line-height: 20px;
   padding: 10px 5vw;
   background-color: #333333;
+  border: 1px solid #333333;
+  transition: 0.1s ease-in-out;
+}
+
+.product__content-item-info .pay__link:active {
+  background-color: #f53906;
 }
 
 .product__content-item-info h3 {
@@ -1021,6 +1027,12 @@ h6 {
   color: black;
   border-radius: 50%;
   margin-top: 12px;
+  transition: 0.2s ease-in-out;
+}
+
+.contact__content-text-icon-social:hover {
+  background-color: #fc4a02;
+  color: white;
 }
 
 .contact__content-text-icon .vk {
@@ -1174,6 +1186,13 @@ h6 {
   padding: 10px 100px;
   background-color: #333333;
   border-radius: 5px;
+  border: 1px solid #333333;
+  transition: 0.1s ease-in-out;
+}
+
+.cart__content-pickUp a:hover {
+  background-color: #ffffff;
+  color: #333333;
 }
 
 .cart__content-pickUp p {

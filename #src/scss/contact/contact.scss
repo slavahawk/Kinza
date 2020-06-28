@@ -40,6 +40,11 @@
                     color: black;
                     border-radius: 50%;
                     margin-top: 12px;
+                    transition: 0.2s ease-in-out;
+                    &:hover {
+                        background-color: #fc4a02;
+                        color: white;
+                    }
                 }
                 .vk {
                     padding: 10px;
