@@ -1,0 +1,56 @@
+.listMin1 {
+	display: none;
+	position: absolute;
+	top: 12%;
+	left: 5%;
+	z-index: 100;
+
+	img {
+		width: 70px;
+	}
+}
+
+.listMin2 {
+	display: none;
+	position: absolute;
+	bottom: 0%;
+	right: 5%;
+	z-index: 100;
+
+	img {
+		width: 70px;
+	}
+}
+
+.listMin3 {
+	display: none;
+	position: absolute;
+	bottom: 0%;
+	left: 5%;
+	z-index: 100;
+
+	img {
+		width: 70px;
+	}
+}
+
+.listMin4 {
+	display: none;
+	position: absolute;
+	bottom: -10%;
+	right: 5%;
+	z-index: 100;
+
+	img {
+		width: 70px;
+	}
+}
+
+@media (max-width: 976px) {
+	.listMin1,
+	.listMin2,
+	.listMin3,
+	.listMin4 {
+		display: block;
+	}
+}

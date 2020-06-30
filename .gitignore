@@ -1,5 +1,5 @@
-/vendor/
+/kinza
+/vendor
 /node_modules/
-/.idea/
-yii-application
-/kinza/
+/.idea
+/yii-application

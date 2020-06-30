@@ -165,6 +165,69 @@
   animation-name: bounceInRight;
 }
 
+@-webkit-keyframes bounceInLeft {
+  from, 60%, 75%, 90%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    transform: translate3d(-3000px, 0, 0) scaleX(3);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(25px, 0, 0) scaleX(1);
+  }
+
+  75% {
+    transform: translate3d(-10px, 0, 0) scaleX(0.98);
+  }
+
+  90% {
+    transform: translate3d(5px, 0, 0) scaleX(0.995);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes bounceInLeft {
+  from, 60%, 75%, 90%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    transform: translate3d(-3000px, 0, 0) scaleX(3);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(25px, 0, 0) scaleX(1);
+  }
+
+  75% {
+    transform: translate3d(-10px, 0, 0) scaleX(0.98);
+  }
+
+  90% {
+    transform: translate3d(5px, 0, 0) scaleX(0.995);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate__bounceInLeft {
+  -webkit-animation-name: bounceInLeft;
+  animation-name: bounceInLeft;
+}
+
 @-webkit-keyframes rotateIn {
   0% {
     transform: rotate(-200deg);
@@ -648,6 +711,54 @@ h6 {
 .list6 img {
   transform: rotate(45deg);
   width: 50%;
+}
+
+.listMin1 {
+  display: none;
+  position: absolute;
+  top: 12%;
+  left: 5%;
+  z-index: 100;
+}
+
+.listMin1 img {
+  width: 70px;
+}
+
+.listMin2 {
+  display: none;
+  position: absolute;
+  bottom: 0%;
+  right: 5%;
+  z-index: 100;
+}
+
+.listMin2 img {
+  width: 70px;
+}
+
+.listMin3 {
+  display: none;
+  position: absolute;
+  bottom: 0%;
+  left: 5%;
+  z-index: 100;
+}
+
+.listMin3 img {
+  width: 70px;
+}
+
+.listMin4 {
+  display: none;
+  position: absolute;
+  bottom: -10%;
+  right: 5%;
+  z-index: 100;
+}
+
+.listMin4 img {
+  width: 70px;
 }
 
 #map {
@@ -1645,6 +1756,13 @@ body a {
     display: none;
   }
 
+  .listMin1,
+  .listMin2,
+  .listMin3,
+  .listMin4 {
+    display: block;
+  }
+
   .menu__content-item .menuMin {
     display: block;
   }
@@ -1812,7 +1930,7 @@ body a {
     animation-iteration-count: 1 !important;
   }
 
-  .animate__animated[class*="Out"] {
+  .animate__animated[class*='Out'] {
     opacity: 0;
   }
 }

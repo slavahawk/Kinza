@@ -689,7 +689,7 @@ function initMap() {
 		title: 'Ресторан Кинза',
 		icon: {
 			url: '/img/logo.png',
-			scaledSize: new google.maps.Size(64, 64),
+			scaledSize: new google.maps.Size(64, 55),
 		},
 	});
 
@@ -752,11 +752,6 @@ $(document).ready(function () {
 	});
 });
 ;
-
-;
-
-new WOW().init();
-
 // Кнопка купить при нажатии
 
 var buttons = document.getElementsByClassName('pay__link'),
@@ -779,3 +774,6 @@ function addElement(e) {
 	addDiv.classList.add('pulse');
 	this.appendChild(addDiv);
 }
+;
+
+new WOW().init();
