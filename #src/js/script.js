@@ -5,5 +5,6 @@
 @@include('list.js');
 @@include('map.js');
 @@include('flyToBasket.js');
+@@include('payButton.js');
 
 new WOW().init();
