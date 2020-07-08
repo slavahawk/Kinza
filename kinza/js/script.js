@@ -689,7 +689,7 @@ function initMap() {
 		title: 'Ресторан Кинза',
 		icon: {
 			url: '/img/logo.png',
-			scaledSize: new google.maps.Size(64, 64),
+			scaledSize: new google.maps.Size(64, 55),
 		},
 	});
 
@@ -752,25 +752,28 @@ $(document).ready(function () {
 	});
 });
 ;
+// Кнопка купить при нажатии
+
+var buttons = document.getElementsByClassName('pay__link'),
+	forEach = Array.prototype.forEach;
+
+forEach.call(buttons, function (b) {
+	b.addEventListener('click', addElement);
+});
+
+function addElement(e) {
+	var addDiv = document.createElement('div'),
+		mValue = Math.max(this.clientWidth, this.clientHeight),
+		rect = this.getBoundingClientRect();
+	(sDiv = addDiv.style), (px = 'px');
+
+	sDiv.width = sDiv.height = mValue + px;
+	sDiv.left = e.clientX - rect.left - mValue / 2 + px;
+	sDiv.top = e.clientY - rect.top - mValue / 2 + px;
+
+	addDiv.classList.add('pulse');
+	this.appendChild(addDiv);
+}
+;
 
 new WOW().init();
-$(function () {
-	(function quantityProducts() {
-		var $quantityArrowMinus = $('.quantity-arrow-minus');
-		var $quantityArrowPlus = $('.quantity-arrow-plus');
-		var $quantityNum = $('.quantity-num');
-
-		$quantityArrowMinus.click(quantityMinus);
-		$quantityArrowPlus.click(quantityPlus);
-
-		function quantityMinus() {
-			if ($quantityNum.val() > 1) {
-				$quantityNum.val(+$quantityNum.val() - 1);
-			}
-		}
-
-		function quantityPlus() {
-			$quantityNum.val(+$quantityNum.val() + 1);
-		}
-	})();
-});

@@ -1,0 +1,42 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url("/fonts/#{$file_name}.woff") format("woff"), url("/fonts/#{$file_name}.woff2") format("woff2");
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+
+@mixin disflex($dis, $jc, $ai) {
+  display: $dis;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+// Адаптивные шрифты до 976px
+$maxWidth: 1920;
+
+@mixin adaptiv-font($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 976;
+  font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 976px) / #{$maxWidth}));
+}
+
+// Адаптивные шрифты до 320px
+$maxWidthAll: 1920;
+
+@mixin adaptiv-fontAll($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidthAll: $maxWidthAll - 320;
+  font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthAll}));
+}
+
+// Адаптивные шрифты до 320px
+$maxWidthMin: 976;
+
+@mixin adaptiv-fontMin($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidthMin: $maxWidthMin - 320;
+  font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthMin}));
+}
