@@ -3,6 +3,7 @@
     top: 60%;
     left: 48%;
     z-index: 100;
+    width: 300px;
 }
 
 @media (max-width: 1770px) {
@@ -26,9 +27,9 @@
     }
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1400px) {
     .list1 {
-        top: 72%;
+        top: 60%;
         left: 40%;
     }
 }
@@ -46,8 +47,9 @@
     }
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1400px) {
     .list2 {
+        width: 250px;
         top: -26%;
         right: 2%;
         img {
@@ -67,9 +69,9 @@
     }
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1400px) {
     .list3 {
-        top: 0%;
+        top: -5%;
         left: 5%;
         z-index: 100;
         img {
@@ -93,7 +95,7 @@
     z-index: 100;
     position: absolute;
     top: 80%;
-    left: 75%;
+    right: 5%;
     z-index: 100;
     width: 300px;
     img {
@@ -101,12 +103,12 @@
     }
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1400px) {
     .list5 {
         z-index: 100;
         position: absolute;
         top: 85%;
-        left: 65%;
+        right: 5%;
         width: 250px;
 
         img {
@@ -118,36 +120,60 @@
 .list6 {
     z-index: 100;
     position: absolute;
-    top: -70%;
-    left: 5%;
+    top: 80%;
+    right: 5%;
+    width: 350px;
 
     img {
-        transform: rotate(45deg);
-        width: 50%;
+        width: 100%;
     }
 }
 
-@media (max-width: 1700px) {
+@media (max-width: 1400px) {
     .list6 {
-        top: -60%;
-        left: 5%;
-
-        img {
-            transform: rotate(45deg);
-            width: 50%;
-        }
+        width: 250px;
+        top: 75%;
+        right: 5%;
     }
 }
 
-@media (max-width: 1300px) {
-    .list6 {
-        top: -55%;
-        left: 5%;
+.list7 {
+    z-index: 100;
+    position: absolute;
+    top: -50%;
+    left: 5%;
+    width: 350px;
 
-        img {
-            transform: rotate(45deg);
-            width: 30%;
-        }
+    img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1400px) {
+    .list7 {
+        width: 250px;
+        top: -50%;
+        left: 5%;
+    }
+}
+
+.list8 {
+    z-index: 100;
+    position: absolute;
+    bottom: -40%;
+    left: 5%;
+    width: 300px;
+
+    img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1400px) {
+    .list8 {
+        width: 250px;
+        bottom: -25%;
+        left: 5%;
     }
 }
 
@@ -157,7 +183,9 @@
     .list3,
     .list4,
     .list5,
-    .list6 {
+    .list6,
+    .list7,
+    .list8 {
         display: none;
     }
 }
