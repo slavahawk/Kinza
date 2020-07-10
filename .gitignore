@@ -1,3 +1,4 @@
-/vendor/
+/kinza
+/vendor
 /node_modules/
 /.idea/

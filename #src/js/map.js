@@ -203,7 +203,7 @@ function initMap() {
 		title: 'Ресторан Кинза',
 		icon: {
 			url: '/img/logo.png',
-			scaledSize: new google.maps.Size(64, 64),
+			scaledSize: new google.maps.Size(64, 55),
 		},
 	});
 
