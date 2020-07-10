@@ -46,6 +46,8 @@ return [
                 'contacts' => 'site/contact',
                 'menu' => 'menu/index',
                 'cart' => 'cart/index',
+                'menu/category/<categoryId:\d+>' => 'menu/category',
+                'menu/product/<productId:\d+>' => 'menu/product',
             ],
         ],
     ],

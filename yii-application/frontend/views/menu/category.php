@@ -5,7 +5,7 @@
 use frontend\widgets\categoryList\CategoryList;
 use yii\helpers\Url;
 
-$this->title = "Меню — Кинза";
+$this->title = "Категория ХХХ — Кинза";
 $this->registerMetaTag([
     'name' => 'description',
     'content' => 'Description of the page'
