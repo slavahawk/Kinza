@@ -7,7 +7,11 @@ use yii\helpers\Url;
         <p>Фильтры и сортировка</p>
         <i class="fas fa-times"></i>
     </div>
-    <div class="contetnt__filter"></div>
+    <div class="contetnt__filter">
+        <?php foreach ($categoryList as $category): ?>
+            <li><a href="<?php echo Url::to(['menu/category', 'categoryId' => $category->id]); ?>"><?php echo $category->name; ?></a></li>
+        <?php endforeach; ?>
+    </div>
 </div>
 
 <section class="filter">
