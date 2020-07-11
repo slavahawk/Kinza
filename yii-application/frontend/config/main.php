@@ -48,6 +48,7 @@ return [
                 'cart' => 'cart/index',
                 'menu/category/<categoryId:\d+>' => 'menu/category',
                 'menu/product/<productId:\d+>' => 'menu/product',
+                'cart/order' => 'cart/order',
             ],
         ],
     ],

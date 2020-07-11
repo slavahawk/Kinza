@@ -59,12 +59,12 @@ $this->registerMetaTag([
                     <p><?= $session['cart.qty']; ?><span> шт.</span></p>
                 </div>
                 <div class="cart__content-sum-else">
-                    <p>Что то забыли? <a href="<?php echo Url::to('menu/index')?>">Вернитесь в меню</a></p>
+                    <p>Что то забыли? <a href="<?= Url::to(['menu/index'])?>">Вернитесь в меню</a></p>
                 </div>
             </div>
             <div class="cart__content-pickUp">
                 <h2>Оформить заказ</h2>
-                <a href="">Оформить заказ</a>
+                <a href="<?= Url::to(['cart/order'])?>">Оформить заказ</a>
                 <p>Далее</p>
                 <div class="cart__content-pickUp-item">
                     <div class="cart__content-pickUp-item-text">
