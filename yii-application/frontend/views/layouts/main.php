@@ -3,6 +3,7 @@
 /* @var $this \yii\web\View */
 /* @var $content string */
 
+use frontend\models\Cart;
 use yii\helpers\Html;
 use frontend\assets\MainAsset;
 use yii\helpers\Url;
@@ -48,9 +49,9 @@ MainAsset::register($this);
         </div>
 
         <div class="header__content-basket">
-            <a href="<?php echo Url::to('cart/index')?>" class="basket">
+            <a href="/<?php echo Url::to('cart/index')?>" class="basket">
                 <i class="fas fa-shopping-basket"></i>
-                <div class="count">0</div>
+                <div class="count" id="cart-count"><?= Cart::countItems(); ?></div>
                 <p class="basket__text">Корзина</p>
             </a>
             <a class="phone__min" href="tel:+73912884506">

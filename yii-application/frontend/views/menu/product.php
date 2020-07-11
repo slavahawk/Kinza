@@ -4,6 +4,7 @@
 
 use frontend\widgets\categoryList\CategoryList;
 use yii\helpers\Url;
+use yii\web\JqueryAsset;
 
 $this->title = "Продукт — Кинза";
 $this->registerMetaTag([
@@ -28,7 +29,7 @@ $this->registerMetaTag([
                     <a class="backMenu__link" href="<?php echo Url::to(['menu/index']); ?>">Вернуться в каталог</a>
                     <p class="price"><?php echo $product->price; ?><span>₽</span></p>
                     <div class="product__content-item-info-btn">
-                        <a class="pay__link" href="#">В корзину</a>
+                        <a class="pay__link add-to-cart" data-id="<?= $product->id; ?>" href="<?= Url::to(['cart/add', 'id' => $product->id]); ?>">В корзину</a>
                     </div>
 
                     <h3>Информация о товаре</h3>
@@ -57,3 +58,7 @@ $this->registerMetaTag([
     </section>
     <section class="line"></section>
 </main>
+
+<?php $this->registerJsFile('@web/js/addToCart.js', [
+    'depends' => JqueryAsset::className()
+]);
