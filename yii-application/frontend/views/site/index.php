@@ -19,24 +19,26 @@ $this->registerMetaTag([
                 <h1>
                     Лучшие чебуреки в городе
                 </h1>
-                <a href="<?php echo Url::to(['menu/index']); ?>">Меню</a>
+                <p>Доставка с 10:00 до 21:00 в Красноярске</p>
+                <a href="<?= Url::to(['menu/index']); ?>">Меню</a>
             </div>
             <div class="mainSection__content-right wow bounceInRight">
-                <picture><source srcset="<?php echo Yii::getAlias('@imgFrontEnd'); ?>/cheb.webp" type="image/webp"><img src="<?php echo Yii::getAlias('@imgFrontEnd'); ?>/cheb.jpeg" alt="чебуреки" /></picture>
-            </div>
-            <!-- Листик -->
-            <div class="list1">
-                <picture><source srcset="<?php echo Yii::getAlias('@imgFrontEnd'); ?>/lists/1.webp" type="image/webp"><img src="<?php echo Yii::getAlias('@imgFrontEnd'); ?>/lists/1.png" alt="" /></picture>
+                <picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/cheb.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/cheb.jpeg" alt="чебуреки" /></picture>
             </div>
         </div>
-        <div class="callme"></div>
+        <div class="listMin1 wow bounceInRight">
+            <picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/1.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/1.png" alt="" /></picture>
+        </div>
+        <div class="listMin2 wow bounceInLeft">
+            <picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/4.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/4.png" alt="" /></picture>
+        </div>
     </section>
     <!-- Меню фон after -->
     <section class="mainSectionAfter">
-        <picture><source srcset="<?php echo Yii::getAlias('@imgFrontEnd'); ?>/mainSection.webp" type="image/webp"><img src="<?php echo Yii::getAlias('@imgFrontEnd'); ?>/mainSection.jpg" alt="" /></picture>
+        <picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/mainSection.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/mainSection.jpg" alt="" /></picture>
     </section>
     <!-- О нас -->
-    <section class="aboutUs" id="aboutUs">
+    <section class="aboutUs">
         <div class="aboutUs__content">
             <h2>О нас</h2>
             <div class="aboutUs__content-item">
@@ -48,24 +50,27 @@ $this->registerMetaTag([
                     </p>
                 </div>
                 <div class="aboutUs__content-item-right wow rotateIn">
-                    <picture><source srcset="<?php echo Yii::getAlias('@imgFrontEnd'); ?>/50.webp" type="image/webp"><img src="<?php echo Yii::getAlias('@imgFrontEnd'); ?>/50.jpg" alt="" /></picture>
+                    <picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/50.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/50.jpg" alt="" /></picture>
                 </div>
+            </div>
+            <div class="listMin3 wow rotateIn">
+                <picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/3.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/3.png" alt="" /></picture>
+            </div>
+            <div class="list4">
+                <picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/4.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/4.png" alt="" /></picture>
             </div>
         </div>
         <!-- Листик -->
+        <div class="list1">
+            <picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/1.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/1.png" alt="" /></picture>
+        </div>
         <div class="list2">
-            <picture><source srcset="<?php echo Yii::getAlias('@imgFrontEnd'); ?>/lists/2.webp" type="image/webp"><img src="<?php echo Yii::getAlias('@imgFrontEnd'); ?>/lists/2.png" alt="" /></picture>
-        </div>
-        <div class="list3">
-            <picture><source srcset="<?php echo Yii::getAlias('@imgFrontEnd'); ?>/lists/3.webp" type="image/webp"><img src="<?php echo Yii::getAlias('@imgFrontEnd'); ?>/lists/3.png" alt="" /></picture>
-        </div>
-        <div class="list4">
-            <picture><source srcset="<?php echo Yii::getAlias('@imgFrontEnd'); ?>/lists/4.webp" type="image/webp"><img src="<?php echo Yii::getAlias('@imgFrontEnd'); ?>/lists/4.png" alt="" /></picture>
+            <picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/2.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/2.png" alt="" /></picture>
         </div>
     </section>
     <!-- Меню фон before -->
     <section class="menuBefore">
-        <picture><source srcset="<?php echo Yii::getAlias('@imgFrontEnd'); ?>/back2bef.webp" type="image/webp"><img src="<?php echo Yii::getAlias('@imgFrontEnd'); ?>/back2bef.png" alt="" /></picture>
+        <picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/back2bef.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/back2bef.png" alt="" /></picture>
     </section>
     <!-- Меню -->
     <section class="menu">
@@ -73,36 +78,39 @@ $this->registerMetaTag([
             <h2>Меню</h2>
             <div class="menu__content-item">
                 <div class="menu__content-item-box">
-                    <picture><source srcset="<?php echo Yii::getAlias('@imgFrontEnd'); ?>/11.webp" type="image/webp"><img src="<?php echo Yii::getAlias('@imgFrontEnd'); ?>/11.png" alt="" class="breakfast" /></picture>
+                    <picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/1.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/1.png" alt="" class="breakfast" /></picture>
                     <a>Завтраки</a>
                 </div>
                 <div class="menu__content-item-box">
-                    <picture><source srcset="<?php echo Yii::getAlias('@imgFrontEnd'); ?>/12.webp" type="image/webp"><img src="<?php echo Yii::getAlias('@imgFrontEnd'); ?>/12.png" alt="" /></picture>
+                    <picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/2.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/2.png" alt="" /></picture>
                     <a>Супы</a>
                 </div>
                 <div class="menu__content-item-box">
-                    <picture><source srcset="<?php echo Yii::getAlias('@imgFrontEnd'); ?>/3.webp" type="image/webp"><img src="<?php echo Yii::getAlias('@imgFrontEnd'); ?>/3.png" alt="" /></picture>
+                    <picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/3.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/3.png" alt="" /></picture>
                     <a>Салаты</a>
                 </div>
                 <div class="menu__content-item-box menuMin">
-                    <picture><source srcset="<?php echo Yii::getAlias('@imgFrontEnd'); ?>/5.webp" type="image/webp"><img src="<?php echo Yii::getAlias('@imgFrontEnd'); ?>/5.png" alt="" /></picture>
+                    <picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/5.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/5.png" alt="" /></picture>
                     <a>Выпечка</a>
                 </div>
             </div>
-            <!-- <div class="menu__content-button">
-                <a href="#">Смотреть больше</a>
-            </div> -->
             <div class="list5">
-                <picture><source srcset="<?php echo Yii::getAlias('@imgFrontEnd'); ?>/lists/5.webp" type="image/webp"><img src="<?php echo Yii::getAlias('@imgFrontEnd'); ?>/lists/5.png" alt="" /></picture>
+                <picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/5.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/5.png" alt="" /></picture>
+            </div>
+            <div class="list3">
+                <picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/3.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/3.png" alt="" /></picture>
             </div>
             <div class="list6">
-                <picture><source srcset="<?php echo Yii::getAlias('@imgFrontEnd'); ?>/lists/6.webp" type="image/webp"><img src="<?php echo Yii::getAlias('@imgFrontEnd'); ?>/lists/6.png" alt="" /></picture>
+                <picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/6.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/6.png" alt="" /></picture>
+            </div>
+            <div class="listMin4 wow rotateIn">
+                <picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/6.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/6.png" alt="" /></picture>
             </div>
         </div>
     </section>
     <!-- Меню фон after -->
     <section class="menuAfter">
-        <picture><source srcset="<?php echo Yii::getAlias('@imgFrontEnd'); ?>/back2aft.webp" type="image/webp"><img src="<?php echo Yii::getAlias('@imgFrontEnd'); ?>/back2aft.png" alt="" /></picture>
+        <picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/back2aft.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/back2aft.png" alt="" /></picture>
     </section>
     <!-- Карта -->
     <section class="map">
@@ -114,3 +122,5 @@ $this->registerMetaTag([
         defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCgwoTpESqADzD9gNWrX-uBJw7wB4-KWw&callback=initMap"
 ></script>
+
+

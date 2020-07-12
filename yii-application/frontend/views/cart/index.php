@@ -19,66 +19,55 @@ $this->registerMetaTag([
 <main>
     <section class="cart">
         <div class="cart__content">
-            <div class="cart__content-sum">
-                <h2>Корзина</h2>
-                <div class="cart__content-sum-back">
-                    <a href="<?php echo Url::to(['menu/index'])?>">Меню</a>
-                    <p>/</p>
-                    <a href="">Корзина</a>
-                </div>
+            <h2>Корзина</h2>
+            <div class="cart__content-back">
+                <a href="<?= Url::to(['menu/index'])?>">Меню</a>
+                <p>/</p>
+                <a href="/">Корзина</a>
+            </div>
 
-                <?php if (!isset($session['cart']) || empty($session['cart'])): ?>
-                <h3>Корзина пуста</h3>
-                <?php else: ?>
-                <?php foreach ($session['cart'] as $id => $item): ?>
-                    <div class="cart__content-sum-image">
-                        <a href="<?= Url::to(['menu/product', 'productId' => $id]); ?>">
-                            <img src="<?php echo Yii::getAlias('@imgFrontEnd'); ?>/product/<?= $item['img']; ?>.jpg" alt="" />
-                        </a>
-                        <div class="cart__content-sum-image-text">
-                            <div class="cart__content-sum-image-text-title">
-                                <a href="<?= Url::to(['menu/product', 'productId' => $id]); ?>"><?= $item['name']; ?></a>
-                                <a class="delete" href="<?= Url::to(['cart/delete', 'id' => $id]); ?>">&times;</a>
-                            </div>
-                            <div class="cart__content-sum-image-text-remove">
-                                <input type="number" />
-                                <p><?= $item['qty']; ?> <span>шт.</span></p>
-                                <p><?= $item['price']; ?> <span>₽</span></p>
+            <?php if (!isset($session['cart']) || empty($session['cart'])): ?>
+
+            <h3>Корзина пуста</h3>
+
+            <?php else: ?>
+            <div class="cart__content-sum">
+                <div class="cart__content-cart">
+                    <div class="cart__content-cart-name">
+                        <p>Товары</p>
+                        <p>Кол-во</p>
+                        <p>Сумма</p>
+                    </div>
+
+                    <?php foreach ($session['cart'] as $id => $item): ?>
+                    <div class="cart__content-cart-product">
+                        <div class="cart__content-cart-product-main">
+                            <img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/product/<?= $item['img']; ?>.jpg" alt="" />
+                            <div class="cart__content-cart-product-main-title">
+                                <p><a href="<?= Url::to(['menu/product', 'productId' => $id]); ?>"><?= $item['name']; ?></a></p>
                             </div>
                         </div>
+                        <p class="sum"><?= $item['qty']; ?><span> шт.</span></p>
+                        <p class="sum"><?= $item['price']; ?><span> руб.</span></p>
+                        <p class="delete">
+                            <a href="<?= Url::to(['cart/delete', 'id' => $id]); ?>">&times;</a>
+                        </p>
                     </div>
-                <?php endforeach; ?>
-                <p><a href="/<?php echo Url::to('cart/clear')?>" style="color: #254e7a">Очистить корзину</a></p>
+                    <?php endforeach; ?>
+                    <div class="cart__content-cart-total">
+                        <p>Товаров на сумму</p>
+                        <p class="sum"><?= $session['cart.qty']; ?><span> шт.</span></p>
+                        <p class="sum"><?= $session['cart.sum']; ?><span> руб.</span></p>
+                        <p class="delete">
+                            <a href="#">&times;</a>
+                        </p>
+                    </div>
 
-                <div class="cart__content-sum-total">
-                    <h5>Итог</h5>
-                    <p><?= $session['cart.sum']; ?><span> ₽</span></p>
-                </div>
-                <div class="cart__content-sum-total">
-                    <h5>Количество</h5>
-                    <p><?= $session['cart.qty']; ?><span> шт.</span></p>
-                </div>
-                <div class="cart__content-sum-else">
-                    <p>Что то забыли? <a href="<?= Url::to(['menu/index'])?>">Вернитесь в меню</a></p>
-                </div>
-            </div>
-            <div class="cart__content-pickUp">
-                <h2>Оформить заказ</h2>
-                <a href="<?= Url::to(['cart/order'])?>">Оформить заказ</a>
-                <p>Далее</p>
-                <div class="cart__content-pickUp-item">
-                    <div class="cart__content-pickUp-item-text">
-                        <h6>Cпособ доставки</h6>
-                        <p>Выберите, как будете получать свой заказ.</p>
+                    <div class="cart__content-cart-btn">
+                        <p>Что то забыли? <a href="<?= Url::to(['menu/index'])?>">Нажмите, чтобы вернутсья</a></p>
+                        <a class="next" href="<?= Url::to(['cart/order'])?>">Подтвердить заказ</a>
                     </div>
-                    <div class="cart__content-pickUp-item-text">
-                        <h6>Оплата</h6>
-                        <p>Выберите способ оплаты и введите платёжные данные.</p>
-                    </div>
-                    <div class="cart__content-pickUp-item-text">
-                        <h6>Подтверждение заказа</h6>
-                        <p>Разместите заказ и получите подтверждение по электронной почте.</p>
-                    </div>
+                    <p><a href="<?php echo Url::to('cart/clear')?>" style="color: #254e7a">Очистить корзину</a></p>
                 </div>
             </div>
             <?php endif; ?>
@@ -86,7 +75,3 @@ $this->registerMetaTag([
     </section>
     <section class="line"></section>
 </main>
-
-<?php $this->registerJsFile('@web/js/addToCart.js', [
-    'depends' => JqueryAsset::className()
-]);
