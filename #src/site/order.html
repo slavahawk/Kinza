@@ -30,42 +30,56 @@
 						<p>/</p>
 						<a href="/">Оформление заказа</a>
 					</div>
-					<div class="order__content-person">
-						<h3>Персональные данные</h3>
-						<div class="order__content-person-grid">
-							<input type="text" placeholder="ФИО*" />
-							<input type="number" placeholder="Телефона*" />
-						</div>
-					</div>
-					<div class="order__content-delivery">
-						<h3>Адрес доставки</h3>
-						<div class="order__content-delivery-grid">
-							<input type="text" placeholder="улица*" />
-							<input type="text" placeholder="Красноярск" disabled/>
-						</div>
-					</div>
-					<div class="order__content-textarea">
-						<h3>Коментарий к заказу</h3>
-						<div class="order__content-textarea-grid">
-							<textarea name="messege" id="" cols="15" rows="5"></textarea>
-						</div>
-					</div>
-					<div class="order__content-pay">
-						<h3>Способ оплаты</h3>
-						<div class="order__content-pay-grid">
-							<input type="radio" checked />
-							<p>Безналичный расчет</p>
-						</div>
-					</div>
-					<div class="order__content-btn">
-						<div class="order__content-btn-grid">
-							<div class="order__content-btn-grid-checkbox">
-								<input type="checkbox" checkbox />
-								<p>Принимаю соглашения о конфиденциальности</p>
+					<div class="order__content__tabs">
+						<div class="order__content__tabs__items">
+							<div class="order__content__tabs__items-item is-active" data-tab-name="tab-1">
+								<img src="/img/cart/delivery.png" alt="">
+								<p>Доставка курьером</p> 
 							</div>
-							<a href="/site/readyOrder.html">Продолжить</a>
+							<div class="order__content__tabs__items-item" data-tab-name="tab-2">
+								<img src="/img/cart/pickup.png" alt="">
+								<p>Самовывоз</p> 
+							</div>
+						</div>
+						<div class="order__content__tabs__body">
+							<div class="tabs__block tab-1 is-active">
+								<div class="tabs__block-name">
+									<div class="tabs__text">
+										<label for="name">ФИО</label>
+										<input type="text" placeholder="Ваше имя и фамилие">
+									</div>
+									<div class="tabs__text">
+										<label for="phone">Телефон</label>
+										<input type="number" placeholder="Телефон">
+									</div>
+								</div>
+								<div class="tabs__text">
+									<label for="adress">Адрес доставки</label>
+									<input type="text" placeholder="Улица, дом, квартира">
+									<input class="disabled__input" type="text" placeholder="Красноярск" disabled>
+								</div>
+							</div>
+							<div class="tabs__block tab-2">
+								<div class="tabs__text">
+									<label for="name">ФИО</label>
+									<input type="text" placeholder="Ваше имя и фамилие">
+								</div>
+								<div class="tabs__text">
+									<label for="phone">Телефон</label>
+									<input type="number" placeholder="Телефон">
+								</div>
+							
+							</div>
 						</div>
 					</div>
+					<div class="tabs__text">
+						<label for="phone">Количество приборов</label>
+						<input type="number" placeholder="2">
+					</div>
+					<div class="order__content__btn">
+						<a class="next" href="#">Продолжить</a>
+					</div>
+					
 				</div>
 			</section>
 			

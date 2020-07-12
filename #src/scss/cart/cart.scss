@@ -1,222 +1,177 @@
 .cart {
-    color: black;
-    padding: 60px 20px 80px;
-
     &__content {
-        font-family: Roboto;
-        padding: 40px 20px;
-        max-width: 1220px;
+        padding: 60px 20px 80px;
+        max-width: 1024px;
         margin: 0 auto;
-        display: flex;
+        color: black;
+        font-family: Roboto;
+        h2 {
+            @extend %tph2;
+            text-align: left;
+        }
 
-        &-sum {
-            width: 35%;
+        &-back {
+            padding: 10px 0;
+            display: flex;
+            @include adaptiv-fontAll(16, 14);
 
-            h2 {
-                @extend %tph2;
-                text-align: left;
+            p {
+                color: rgb(37, 78, 122);
+                padding: 10px 10px 10px 0;
             }
 
-            &-back {
-                display: flex;
-                @include adaptiv-fontAll(16, 14);
-
+            a {
+                color: rgb(37, 78, 122);
+                padding: 10px 10px 10px 0;
+            }
+        }
+        &-cart {
+            &-name {
+                display: grid;
+                grid-template-columns: 49% 27% 22% 2%;
+                position: relative;
+                &::after {
+                    position: absolute;
+                    content: "";
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+                    background-color: #c4c4c4;
+                }
                 p {
-                    color: rgb(37, 78, 122);
-                    padding: 10px 10px 10px 0;
-                }
-
-                a {
-                    color: rgb(37, 78, 122);
-                    padding: 10px 10px 10px 0;
+                    font-weight: 500;
+                    @include adaptiv-fontAll(18, 12);
+                    line-height: 30px;
+                    color: #c4c4c4;
                 }
             }
-
-            &-image {
-                display: flex;
-                justify-content: space-between;
+            &-product {
+                padding: 22px 0 18px 0;
+                display: grid;
+                grid-template-columns: 49% 27% 22% 2%;
                 align-items: center;
-                padding: 10px 0 25px;
-
-                a {
+                position: relative;
+                &::after {
+                    position: absolute;
+                    content: "";
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+                    background-color: #c4c4c4;
+                }
+                &-main {
+                    @include disflex(flex, stretch, center);
                     img {
                         width: 100px;
+
+                        margin-right: 3vw;
                     }
-                }
-
-                &-text {
-                    padding-left: 20px;
-                    width: 100%;
-
                     &-title {
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-
-                        a {
-                            color: #000;
-                            @include adaptiv-fontAll(16, 14);
-                        }
-
-                        .delete {
-                            @include adaptiv-fontAll(30, 25);
-                            color: rgb(167, 166, 166);
-                        }
-                    }
-
-                    &-remove {
-                        padding-top: 10px;
-                        display: flex;
-                        justify-content: space-between;
-
-                        .quantity-block {
-                            display: flex;
-
-                            button {
-                                background-color: #333333;
-                                color: white;
-                                width: 25px;
-                                height: 25px;
-                                border-radius: 50%;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                            }
-
-                            input {
-                                width: 50px;
-                                text-align: center;
-                            }
-                        }
-
                         p {
-                            @include adaptiv-fontAll(18, 16);
-                            display: flex;
-                            align-items: center;
+                            font-weight: 500;
+                            @include adaptiv-fontAll(18, 11);
+                            line-height: 15px;
+                        }
+                        &-how {
+                            @include disflex(flex, stretch, center);
+                            flex-wrap: wrap;
+                            p {
+                                font-weight: 500;
+                                @include adaptiv-fontAll(18, 11);
+                                line-height: 25px;
+                                color: #c4c4c4;
+                                padding-right: 10px;
+                            }
+                            input {
+                                width: 100px;
+                                font-weight: 500;
+                                @include adaptiv-fontAll(16, 11);
+                                line-height: 19px;
+                                color: #c4c4c4;
+                            }
                         }
                     }
                 }
             }
-
-            &-total {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding-top: 20px;
-                border-top: 1px solid #888888;
-
-                h5 {
-                    @include adaptiv-fontAll(22, 20);
-                }
-
-                p {
-                    @include adaptiv-fontAll(22, 20);
+            .sum {
+                font-weight: 500;
+                @include adaptiv-fontAll(18, 11);
+                line-height: 28px;
+            }
+            .delete {
+                @include adaptiv-fontAll(30, 25);
+                a {
+                    color: black;
                 }
             }
-
-            &-else {
-                padding-top: 20px;
+            &-total {
+                display: grid;
+                grid-template-columns: 49% 27% 22% 2%;
+                align-items: center;
+                p {
+                    padding: 30px 0 0px 0;
+                    font-weight: 500;
+                    @include adaptiv-fontAll(18, 14);
+                    line-height: 26px;
+                }
+            }
+            &-btn {
+                @include disflex(flex, space-between, flex-start);
+                padding-top: 40px;
 
                 p {
-                    @include adaptiv-fontAll(16, 14);
-
+                    @include adaptiv-fontAll(16, 12);
                     a {
                         color: rgb(37, 78, 122);
                     }
                 }
-            }
-        }
-
-        &-pickUp {
-            width: 65%;
-            padding-left: 60px;
-
-            h2 {
-                @extend %tph2;
-                text-align: left;
-                padding-bottom: 30px;
-            }
-
-            a {
-                @include adaptiv-fontAll(20, 16);
-                padding: 10px 100px;
-                background-color: #333333;
-                border-radius: 5px;
-                border: 1px solid #333333;
-                transition: 0.1s ease-in-out;
-                &:hover {
-                    background-color: #ffffff;
-                    color: #333333;
-                }
-            }
-
-            p {
-                padding: 35px 0 25px;
-                @include adaptiv-fontAll(22, 18);
-            }
-
-            &-item {
-                border-top: 1px solid #888888;
-                padding-top: 20px;
-
-                &-text {
-                    h6 {
-                        @include adaptiv-fontAll(18, 16);
-                        line-height: 22px;
-                    }
-
-                    p {
-                        padding-top: 5px;
-                        @include adaptiv-fontAll(18, 16);
-                        line-height: 22px;
-                        color: #888888;
+                .next {
+                    @include adaptiv-fontAll(18, 12);
+                    word-wrap: none;
+                    padding: 10px 20px;
+                    background-color: #333333;
+                    border-radius: 5px;
+                    border: 1px solid #333333;
+                    transition: 0.1s ease-in-out;
+                    &:hover {
+                        background-color: #ffffff;
+                        color: #333333;
                     }
                 }
             }
         }
-    }
-}
-
-@media (max-width: 976px) {
-    .cart {
-        color: black;
-        padding: 0px 20px 0px;
-    }
-    .cart__content {
-        display: inline-block;
-        padding: 20px 5vw;
-        width: 100%;
-    }
-    .cart__content-sum {
-        width: 100%;
-    }
-
-    .cart__content-pickUp {
-        padding-top: 50px;
-        padding-left: 0px;
-        width: 100%;
     }
 }
 
 @media (max-width: 576px) {
-    .cart__content-sum-image {
-        a {
-            img {
-                width: 80px;
+    .cart {
+        &__content {
+            h2 {
+                padding: 10px 0;
             }
-        }
-    }
-    .cart__content-sum-image-text-remove {
-        .quantity-block {
-            input {
-                width: 40px;
-                text-align: center;
+            &-cart {
+                &-product {
+                    &-main {
+                        img {
+                            width: 40px;
+                        }
+                    }
+                }
+                &-total {
+                    p {
+                        padding: 10px 0 0px 0;
+                    }
+                }
+                &-btn {
+                    justify-content: flex-end;
+                    padding-top: 20px;
+                    p {
+                        display: none;
+                    }
+                }
             }
-        }
-    }
-    .cart__content-pickUp {
-        a {
-            padding: 10px 20px;
         }
     }
 }

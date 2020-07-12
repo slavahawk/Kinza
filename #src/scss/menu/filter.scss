@@ -9,7 +9,7 @@
         padding: 40px 0 0 0;
 
         ul {
-            font-size: 14px;
+            font-size: 13px;
             text-transform: uppercase;
             display: flex;
             justify-content: space-between;
@@ -22,6 +22,9 @@
                     color: black;
                     transition: 0.2s all;
                     &:hover {
+                        color: #f53906;
+                    }
+                    &.active {
                         color: #f53906;
                     }
                 }
@@ -119,10 +122,16 @@
             padding: 20px;
 
             li {
-                padding-bottom: 15px;
+                padding-bottom: 20px;
                 a {
-                    @include adaptiv-fontMin(18, 16);
+                    @include adaptiv-fontMin(18, 15);
                     color: #000;
+                    &.active {
+                        color: #f53906;
+                    }
+                }
+                &:last-child {
+                    padding-bottom: 0;
                 }
             }
         }

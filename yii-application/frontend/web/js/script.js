@@ -478,7 +478,7 @@ $('body').on('mousemove', (e) => {
 	const x = e.pageX / $(window).width();
 	const y = e.pageY / $(window).height();
 
-	$('.list1, .list2, .list3, .list4, .list5, .list6').css(
+	$('.list1, .list2, .list3, .list4, .list5, .list6, .list7, .list8 ').css(
 		'transform',
 		'translate(' + x * 30 + 'px, ' + y * 30 + 'px)'
 	);
@@ -689,7 +689,7 @@ function initMap() {
 		title: 'Ресторан Кинза',
 		icon: {
 			url: '/img/logo.png',
-			scaledSize: new google.maps.Size(64, 64),
+			scaledSize: new google.maps.Size(64, 55),
 		},
 	});
 
@@ -751,6 +751,41 @@ $(document).ready(function () {
 		}
 	});
 });
+;
+// Кнопка купить при нажатии
+
+var buttons = document.getElementsByClassName('pay__link'),
+	forEach = Array.prototype.forEach;
+
+forEach.call(buttons, function (b) {
+	b.addEventListener('click', addElement);
+});
+
+function addElement(e) {
+	var addDiv = document.createElement('div'),
+		mValue = Math.max(this.clientWidth, this.clientHeight),
+		rect = this.getBoundingClientRect();
+	(sDiv = addDiv.style), (px = 'px');
+
+	sDiv.width = sDiv.height = mValue + px;
+	sDiv.left = e.clientX - rect.left - mValue / 2 + px;
+	sDiv.top = e.clientY - rect.top - mValue / 2 + px;
+
+	addDiv.classList.add('pulse');
+	this.appendChild(addDiv);
+}
+;
+$('.tabs__block').not(':first').hide();
+$('.order__content__tabs .order__content__tabs__items-item')
+	.click(function () {
+		$('.order__content__tabs .order__content__tabs__items-item')
+			.removeClass('active')
+			.eq($(this).index())
+			.addClass('active');
+		$('.tabs__block').hide().eq($(this).index()).fadeIn();
+	})
+	.eq(0)
+	.addClass('active');
 ;
 
 new WOW().init();
