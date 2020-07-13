@@ -72,24 +72,9 @@
                         p {
                             font-weight: 500;
                             @include adaptiv-fontAll(18, 11);
-                            line-height: 15px;
-                        }
-                        &-how {
-                            @include disflex(flex, stretch, center);
-                            flex-wrap: wrap;
-                            p {
-                                font-weight: 500;
-                                @include adaptiv-fontAll(18, 11);
-                                line-height: 25px;
-                                color: #c4c4c4;
-                                padding-right: 10px;
-                            }
-                            input {
-                                width: 100px;
-                                font-weight: 500;
-                                @include adaptiv-fontAll(16, 11);
-                                line-height: 19px;
-                                color: #c4c4c4;
+                            line-height: 20px;
+                            a {
+                                color: black;
                             }
                         }
                     }
@@ -127,17 +112,37 @@
                         color: rgb(37, 78, 122);
                     }
                 }
-                .next {
-                    @include adaptiv-fontAll(18, 12);
-                    word-wrap: none;
-                    padding: 10px 20px;
-                    background-color: #333333;
-                    border-radius: 5px;
-                    border: 1px solid #333333;
-                    transition: 0.1s ease-in-out;
-                    &:hover {
-                        background-color: #ffffff;
-                        color: #333333;
+                &-item {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    align-items: center;
+                    justify-items: center;
+                    grid-gap: 20px;
+                    color: white;
+
+                    .next {
+                        @include adaptiv-fontAll(18, 12);
+                        word-wrap: none;
+                        padding: 10px 20px;
+                        background-color: #333333;
+                        border-radius: 5px;
+                        border: 1px solid #333333;
+                        transition: 0.1s ease-in-out;
+                        &:hover {
+                            background-color: #ffffff;
+                            color: #333333;
+                        }
+                    }
+
+                    .clear {
+                        color: white;
+                        @include adaptiv-fontAll(18, 12);
+                        word-wrap: none;
+                        padding: 10px 20px;
+                        background-color: #993030;
+                        border-radius: 5px;
+                        border: 1px solid #993030;
+                        transition: 0.1s ease-in-out;
                     }
                 }
             }
