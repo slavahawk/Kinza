@@ -1508,7 +1508,8 @@ h6 {
   padding-top: 10px;
 }
 
-.order__content-textarea-grid input {
+.order__content-textarea-grid input,
+.order__content-textarea-grid textarea {
   width: 100%;
   margin-top: 20px;
   background: #ffffff;
@@ -1519,23 +1520,25 @@ h6 {
   font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
 }
 
-.order__content-textarea-grid input:first-child {
+.order__content-textarea-grid input:first-child,
+.order__content-textarea-grid textarea:first-child {
   margin-top: 0;
 }
 
-.order__content-textarea-grid input::-moz-placeholder {
+.order__content-textarea-grid input::-moz-placeholder, .order__content-textarea-grid textarea::-moz-placeholder {
   font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
 }
 
-.order__content-textarea-grid input:-ms-input-placeholder {
+.order__content-textarea-grid input:-ms-input-placeholder, .order__content-textarea-grid textarea:-ms-input-placeholder {
   font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
 }
 
-.order__content-textarea-grid input::-ms-input-placeholder {
+.order__content-textarea-grid input::-ms-input-placeholder, .order__content-textarea-grid textarea::-ms-input-placeholder {
   font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
 }
 
-.order__content-textarea-grid input::placeholder {
+.order__content-textarea-grid input::placeholder,
+.order__content-textarea-grid textarea::placeholder {
   font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
 }
 
