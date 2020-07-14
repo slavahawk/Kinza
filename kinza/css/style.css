@@ -514,7 +514,16 @@ h6 {
   background-color: #fc4a02;
   color: black;
   border-radius: 50%;
-  padding: 4px 7px;
+  padding: 3px;
+}
+
+.header__content-basket a .count p {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 0;
   font-size: 14px;
 }
 
@@ -826,7 +835,7 @@ h6 {
   transform: scale(1.1);
 }
 
-.menu__content-item-box a {
+.menu__content-item-box .text__link {
   width: 70%;
   text-align: center;
   text-transform: uppercase;
@@ -841,7 +850,7 @@ h6 {
   z-index: 1;
 }
 
-.menu__content-item-box a:after {
+.menu__content-item-box .text__link:after {
   content: "";
   display: block;
   height: 2px;
@@ -855,11 +864,11 @@ h6 {
   z-index: -1;
 }
 
-.menu__content-item-box a:hover {
+.menu__content-item-box .text__link:hover {
   color: #2d2d2d;
 }
 
-.menu__content-item-box a:hover:after {
+.menu__content-item-box .text__link:hover:after {
   right: 0;
   left: 0;
   height: 100%;

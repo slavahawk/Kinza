@@ -51,7 +51,9 @@ MainAsset::register($this);
         <div class="header__content-basket">
             <a href="/<?php echo Url::to('cart/index')?>" class="basket">
                 <i class="fas fa-shopping-basket"></i>
-                <div class="count" id="cart-count"><?= Cart::countItems(); ?></div>
+                <div class="count" >
+                    <p id="cart-count"><?= Cart::countItems(); ?></p>
+                </div>
                 <p class="basket__text">Корзина</p>
             </a>
             <a class="phone__min" href="tel:+73912884506">
