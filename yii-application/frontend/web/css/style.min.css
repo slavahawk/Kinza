@@ -1434,30 +1434,43 @@ h6 {
     padding-top: 10px
 }
 
-.order__content-person-grid input {
+.order__content-person-grid .form-group {
+    position: relative
+}
+
+.order__content-person-grid .form-group input {
     width: 100%;
     background: #fff;
     border: 3px solid #ebebea;
     box-sizing: border-box;
     border-radius: 5px;
     padding: 10px;
+    font-size: calc(14px + 2 * ((100vw - 320px)/ 1600));
+    position: relative
+}
+
+.order__content-person-grid .form-group input::-moz-placeholder {
     font-size: calc(14px + 2 * ((100vw - 320px)/ 1600))
 }
 
-.order__content-person-grid input::-moz-placeholder {
+.order__content-person-grid .form-group input:-ms-input-placeholder {
     font-size: calc(14px + 2 * ((100vw - 320px)/ 1600))
 }
 
-.order__content-person-grid input:-ms-input-placeholder {
+.order__content-person-grid .form-group input::-ms-input-placeholder {
     font-size: calc(14px + 2 * ((100vw - 320px)/ 1600))
 }
 
-.order__content-person-grid input::-ms-input-placeholder {
+.order__content-person-grid .form-group input::placeholder {
     font-size: calc(14px + 2 * ((100vw - 320px)/ 1600))
 }
 
-.order__content-person-grid input::placeholder {
-    font-size: calc(14px + 2 * ((100vw - 320px)/ 1600))
+.order__content-person-grid .form-group .help-block {
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    font-size: calc(10px + 2 * ((100vw - 320px)/ 1600));
+    color: red
 }
 
 .order__content-delivery {
@@ -1478,7 +1491,11 @@ h6 {
     padding-top: 10px
 }
 
-.order__content-delivery-grid input {
+.order__content-delivery-grid .form-group {
+    position: relative
+}
+
+.order__content-delivery-grid .form-group input {
     width: 100%;
     margin-top: 20px;
     background: #fff;
@@ -1489,28 +1506,58 @@ h6 {
     font-size: calc(14px + 2 * ((100vw - 320px)/ 1600))
 }
 
-.order__content-delivery-grid input:first-child {
+.order__content-delivery-grid .form-group input:first-child {
     margin-top: 0
 }
 
-.order__content-delivery-grid input::-moz-placeholder {
+.order__content-delivery-grid .form-group input::-moz-placeholder {
     font-size: calc(14px + 2 * ((100vw - 320px)/ 1600))
 }
 
-.order__content-delivery-grid input:-ms-input-placeholder {
+.order__content-delivery-grid .form-group input:-ms-input-placeholder {
     font-size: calc(14px + 2 * ((100vw - 320px)/ 1600))
 }
 
-.order__content-delivery-grid input::-ms-input-placeholder {
+.order__content-delivery-grid .form-group input::-ms-input-placeholder {
     font-size: calc(14px + 2 * ((100vw - 320px)/ 1600))
 }
 
-.order__content-delivery-grid input::placeholder {
+.order__content-delivery-grid .form-group input::placeholder {
     font-size: calc(14px + 2 * ((100vw - 320px)/ 1600))
+}
+
+.order__content-delivery-grid .form-group .help-block {
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    font-size: calc(10px + 2 * ((100vw - 320px)/ 1600));
+    color: red
 }
 
 .order__content-delivery-grid .disabled__adress {
-    background-color: rgba(221, 221, 221, .5)
+    background-color: rgba(221, 221, 221, .5);
+    width: 100%;
+    margin-top: 20px;
+    border: 3px solid #ebebea;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: calc(14px + 2 * ((100vw - 320px)/ 1600))
+}
+
+.order__content-delivery-grid .disabled__adress::-moz-placeholder {
+    font-size: calc(14px + 2 * ((100vw - 320px)/ 1600))
+}
+
+.order__content-delivery-grid .disabled__adress:-ms-input-placeholder {
+    font-size: calc(14px + 2 * ((100vw - 320px)/ 1600))
+}
+
+.order__content-delivery-grid .disabled__adress::-ms-input-placeholder {
+    font-size: calc(14px + 2 * ((100vw - 320px)/ 1600))
+}
+
+.order__content-delivery-grid .disabled__adress::placeholder {
+    font-size: calc(14px + 2 * ((100vw - 320px)/ 1600))
 }
 
 .order__content-textarea {
@@ -1568,7 +1615,16 @@ h6 {
 .order__content-pay {
     max-width: 700px;
     padding: 20px 0;
-    border-top: 3px solid #000
+    border-top: 3px solid #000;
+    position: relative
+}
+
+.order__content-pay .help-block {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    font-size: calc(10px + 2 * ((100vw - 320px)/ 1600));
+    color: red
 }
 
 .order__content-pay h3 {

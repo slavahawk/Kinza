@@ -1,6 +1,6 @@
 .order {
     &__content {
-        padding: 210px 20px 150px 20px;
+        padding: 150px 20px 150px 20px;
         max-width: 1024px;
         margin: 0 auto;
         color: black;
@@ -44,19 +44,39 @@
                 grid-gap: 20px 50px;
                 padding-top: 10px;
 
-                input {
-                    width: 100%;
-                    background: #ffffff;
-                    border: 3px solid #ebebea;
-                    box-sizing: border-box;
-                    border-radius: 5px;
-                    padding: 10px;
-                    @include adaptiv-fontAll(16, 14);
+                .form-group {
+                    position: relative;
 
-                    &::placeholder {
+                    input {
+                        width: 100%;
+                        background: #ffffff;
+                        border: 3px solid #ebebea;
+                        box-sizing: border-box;
+                        border-radius: 5px;
+                        padding: 10px;
                         @include adaptiv-fontAll(16, 14);
+                        position: relative;
+
+
+                        &::placeholder {
+                            @include adaptiv-fontAll(16, 14);
+                        }
+
+
                     }
+
+                    .help-block {
+                        position: absolute;
+                        bottom: -15px;
+                        left: 0;
+                        @include adaptiv-fontAll(12, 10);
+                        color: red;
+                    }
+
                 }
+
+
+
             }
         }
 
@@ -76,17 +96,48 @@
                 flex-direction: column;
                 padding-top: 10px;
 
-                input {
-                    width: 100%;
-                    margin-top: 20px;
+                .form-group {
+                    position: relative;
 
-                    &:first-child {
-                        margin-top: 0;
+                    input {
+                        width: 100%;
+                        margin-top: 20px;
+
+                        &:first-child {
+                            margin-top: 0;
+                        }
+
+                        background: #ffffff;
+                        border: 3px solid #ebebea;
+                        box-sizing: border-box;
+                        border-radius: 5px;
+                        padding: 10px;
+                        @include adaptiv-fontAll(16, 14);
+
+                        &::placeholder {
+                            @include adaptiv-fontAll(16, 14);
+                        }
                     }
 
-                    background: #ffffff;
+
+
+                    .help-block {
+                        position: absolute;
+                        bottom: -15px;
+                        left: 0;
+                        @include adaptiv-fontAll(12, 10);
+                        color: red;
+                    }
+
+
+
+                }
+
+                .disabled__adress {
+                    background-color: rgba(221, 221, 221, 0.5);
+                    width: 100%;
+                    margin-top: 20px;
                     border: 3px solid #ebebea;
-                    box-sizing: border-box;
                     border-radius: 5px;
                     padding: 10px;
                     @include adaptiv-fontAll(16, 14);
@@ -96,9 +147,7 @@
                     }
                 }
 
-                .disabled__adress {
-                    background-color: rgba(221, 221, 221, 0.5);
-                }
+
             }
         }
 
@@ -142,6 +191,15 @@
             max-width: 700px;
             padding: 20px 0;
             border-top: 3px solid #000;
+            position: relative;
+
+            .help-block {
+                position: absolute;
+                bottom: -15px;
+                left: 0;
+                @include adaptiv-fontAll(12, 10);
+                color: red;
+            }
 
             h3 {
                 font-weight: bold;
@@ -159,6 +217,7 @@
                 grid-template-columns: 170px 150px;
                 padding: 10px 0;
 
+
                 label {
                     @include disflex(flex, stretch, center);
 
@@ -168,6 +227,10 @@
                         margin-right: 5px;
                     }
                 }
+
+
+
+
             }
         }
 

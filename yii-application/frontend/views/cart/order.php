@@ -34,7 +34,7 @@ use yii\bootstrap\ActiveForm;
                 <h3>Адрес доставки</h3>
                 <div class="order__content-delivery-grid">
                     <?= $form->field($order, 'address'); ?>
-                    <input type="text" placeholder="Красноярск" disabled/>
+                    <input class="disabled__adress" type="text" placeholder="Красноярск" disabled/>
                 </div>
             </div>
             <div class="order__content-textarea">
