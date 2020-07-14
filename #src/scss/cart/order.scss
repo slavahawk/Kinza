@@ -195,7 +195,7 @@
 
             .help-block {
                 position: absolute;
-                bottom: -15px;
+                bottom: 5px;
                 left: 0;
                 @include adaptiv-fontAll(12, 10);
                 color: red;
@@ -215,7 +215,6 @@
             #order-type {
                 display: grid;
                 grid-template-columns: 170px 150px;
-                padding: 10px 0;
 
 
                 label {
@@ -244,7 +243,7 @@
                 text-align: right;
 
                 button {
-                    @include adaptiv-fontAll(18, 12);
+                    @include adaptiv-fontAll(18, 14);
                     color: white;
                     word-wrap: none;
                     padding: 10px 20px;
@@ -264,9 +263,71 @@
 }
 
 @media (max-width: 576px) {
-    .order__content {
-        h2 {
-            padding: 10px 0;
+    .order {
+        &__content {
+            padding: 80px 20px 100px 20px;
+
+            &-back {
+                @include adaptiv-fontAll(16, 12);
+            }
+
+            h2 {
+                padding: 10px 0;
+            }
+
+            &-person {
+
+                &-grid {
+                    display: grid;
+                    grid-template-columns: repeat(1, 1fr);
+                    grid-gap: 20px 50px;
+                    padding-top: 10px;
+                }
+            }
+
+            &-pay {
+                max-width: 700px;
+                padding: 20px 0;
+                border-top: 3px solid #000;
+                position: relative;
+
+                .help-block {
+                    position: absolute;
+                    bottom: 5px;
+                    left: 0;
+                    @include adaptiv-fontAll(12, 10);
+                    color: red;
+                }
+
+                h3 {
+                    font-weight: bold;
+                    @include adaptiv-fontAll(20, 16);
+                    line-height: 33px;
+                }
+
+                &-grid {
+                    padding-top: 10px;
+                }
+
+                #order-payment,
+                #order-type {
+                    display: grid;
+                    grid-template-columns: 160px 140px;
+
+
+                    label {
+                        @include disflex(flex, stretch, center);
+
+                        input {
+                            width: 17px;
+                            height: 17px;
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }
+
+
         }
     }
 }

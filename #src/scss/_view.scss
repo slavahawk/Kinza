@@ -8,6 +8,7 @@
     border-radius: 30px;
     color: black;
     transition: 0.2s all;
+
     &:hover {
         color: white;
         background-color: black;
@@ -21,4 +22,11 @@
     font-family: Drina;
     line-height: 40px;
     font-weight: 600;
+}
+
+@media (max-width:700px) {
+
+    %tph2 {
+        line-height: 10px;
+    }
 }

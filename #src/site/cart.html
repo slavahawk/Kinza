@@ -1,24 +1,8 @@
-<!DOCTYPE html>
+< !DOCTYPE html>
 <html lang="ru">
 	@@include('../layouts/head.html')
 	<body>
-		@@include('../layouts/header.html') @@include('../layouts/filter.html')
-		<section class="filter">
-			<div class="filter__content">
-				<ul>
-					<li><a href="#">Главные блюда</a></li>
-					<li><a href="#">Завтраки</a></li>
-					<li><a href="#">Выпечка</a></li>
-					<li><a href="#">Супы</a></li>
-					<li><a href="#">Салаты</a></li>
-					<li><a href="#">Напитки</a></li>
-					<li><a href="#">Детское меню</a></li>
-				</ul>
-				<div class="filter__content-button">
-					<a id="buttonFilterMini">Фильтр и сортировка</a>
-				</div>
-			</div>
-		</section>
+		@@include('../layouts/header.html')
 		<main>
 			<section class="cart">
 				<div class="cart__content">
@@ -28,7 +12,6 @@
 						<p>/</p>
 						<a href="/">Корзина</a>
 					</div>
-
 					<div class="cart__content-sum">
 						<div class="cart__content-cart">
 							<div class="cart__content-cart-name">
@@ -36,7 +19,6 @@
 								<p>Кол-во</p>
 								<p>Сумма</p>
 							</div>
-
 							<div class="cart__content-cart-product">
 								<div class="cart__content-cart-product-main">
 									<img src="/img/product/foto8175.jpg" alt="" />
@@ -46,11 +28,9 @@
 										</p>
 									</div>
 								</div>
-								<p class="sum">1<span> шт.</span></p>
-								<p class="sum">100<span> руб.</span></p>
-								<p class="delete">
-									<a href="/cart/delete?id=2">&times;</a>
-								</p>
+								<p class="sum">1<span>шт.</span></p>
+								<p class="sum">100<span>руб.</span></p>
+								<p class="delete"><a href="/cart/delete?id=2">&times; </a></p>
 							</div>
 							<div class="cart__content-cart-product">
 								<div class="cart__content-cart-product-main">
@@ -61,23 +41,20 @@
 										</p>
 									</div>
 								</div>
-								<p class="sum">1<span> шт.</span></p>
-								<p class="sum">100<span> руб.</span></p>
-								<p class="delete">
-									<a href="/cart/delete?id=1">&times;</a>
-								</p>
+								<p class="sum">1<span>шт.</span></p>
+								<p class="sum">100<span>руб.</span></p>
+								<p class="delete"><a href="/cart/delete?id=1">&times; </a></p>
 							</div>
 							<div class="cart__content-cart-total">
 								<p>Товаров на сумму</p>
-								<p class="sum">2<span> шт.</span></p>
-								<p class="sum">200<span> руб.</span></p>
+								<p class="sum">2<span>шт.</span></p>
+								<p class="sum">200<span>руб.</span></p>
 							</div>
-
 							<div class="cart__content-cart-btn">
 								<p>Что то забыли? <a href="/menu">Нажмите, чтобы вернутсья</a></p>
 								<div class="cart__content-cart-btn-item">
-									<a class="clear" href="cart/clear">Очистить корзину</a>
-									<a class="next" href="/site/order.html">Подтвердить заказ</a>
+									<a class="clear" href="cart/clear">Очистить корзину</a
+									><a class="next" href="/site/order.html">Подтвердить заказ</a>
 								</div>
 							</div>
 						</div>
