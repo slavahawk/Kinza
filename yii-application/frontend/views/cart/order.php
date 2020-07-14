@@ -4,6 +4,7 @@
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\bootstrap\ActiveForm;
+use yii\widgets\MaskedInput;
 
 ?>
 <main>
@@ -26,15 +27,18 @@ use yii\bootstrap\ActiveForm;
             <div class="order__content-person">
                 <h3>Персональные данные</h3>
                 <div class="order__content-person-grid">
-                    <?= $form->field($order, 'name'); ?>
-                    <?= $form->field($order, 'phone'); ?>
+                    <?= $form->field($order, 'name')->input('text', ['placeholder' => 'Имя'])->label(false); ?>
+                    <?= $form->field($order, 'phone')->label(false)->widget(MaskedInput::className(), [
+                        'mask' => '+9 999 999-99-99',
+                        'options' => ['placeholder' => 'Телефон']
+                    ]); ?>
                 </div>
             </div>
             <div class="order__content-delivery">
                 <h3>Адрес доставки</h3>
                 <div class="order__content-delivery-grid">
-                    <?= $form->field($order, 'address'); ?>
-                    <input class="disabled__adress" type="text" placeholder="Красноярск" disabled/>
+                    <?= $form->field($order, 'address')->input('text', ['placeholder' => 'Улица, дом, квартира'])->label(false); ?>
+                    <input type="text" class="disabled__adress" placeholder="Красноярск" disabled/>
                 </div>
             </div>
             <div class="order__content-textarea">
@@ -46,7 +50,7 @@ use yii\bootstrap\ActiveForm;
             <div class="order__content-textarea">
                 <h3>Коментарий к заказу</h3>
                 <div class="order__content-textarea-grid">
-                    <?= $form->field($order, 'text')->textarea(['rows' => 5, 'cols' => 15]); ?>
+                    <?= $form->field($order, 'text')->textarea(['rows' => 5, 'cols' => 15])->label(false); ?>
                 </div>
             </div>
             <div class="order__content-pay">
@@ -55,7 +59,7 @@ use yii\bootstrap\ActiveForm;
                     <?= $form->field($order, 'type')->radioList([
                         'delivery' => 'Доставка курьером',
                         'pickup' => 'Самовывоз',
-                    ]); ?>
+                    ])->label(false); ?>
                 </div>
             </div>
             <div class="order__content-pay">
@@ -64,7 +68,7 @@ use yii\bootstrap\ActiveForm;
                     <?= $form->field($order, 'payment')->radioList([
                             'card' => 'Безналичный',
                             'cash' => 'Наличный',
-                    ]); ?>
+                    ])->label(false); ?>
                 </div>
             </div>
             <div class="order__content-btn">

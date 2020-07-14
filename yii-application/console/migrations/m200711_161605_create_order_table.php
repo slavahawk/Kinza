@@ -23,6 +23,7 @@ class m200711_161605_create_order_table extends Migration
             'phone' => $this->string()->notNull(),
             'address' => $this->string()->notNull(),
             'text' => $this->text(),
+            'cutlery' => $this->integer()->defaultValue(1),
             'payment' => $this->string(),
             'type' => $this->string(),
         ]);

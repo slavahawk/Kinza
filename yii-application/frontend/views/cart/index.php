@@ -63,7 +63,7 @@ $this->registerMetaTag([
                     <div class="cart__content-cart-btn">
                         <p>Что то забыли? <a href="<?= Url::to(['menu/index'])?>">Нажмите, чтобы вернутсья</a></p>
                         <div class="cart__content-cart-btn-item">
-                            <a class="clear" href="<?php echo Url::to('cart/clear')?>">Очистить корзину<
+                            <a class="clear" href="<?php echo Url::to(['cart/clear'])?>">Очистить корзину
                             <a class="next" href="<?= Url::to(['cart/order'])?>">Подтвердить заказ</a>
                         </div>
                     </div>
