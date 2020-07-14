@@ -6,7 +6,6 @@ use frontend\widgets\categoryList\CategoryList;
 use yii\helpers\Url;
 use yii\web\JqueryAsset;
 
-$this->title = "Категория ХХХ — Кинза";
 $this->registerMetaTag([
     'name' => 'description',
     'content' => 'Description of the page'

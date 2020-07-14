@@ -8,10 +8,6 @@ use yii\widgets\MaskedInput;
 
 ?>
 <main>
-    <br>
-    <br>
-    <br>
-    <br>
     <section class="order">
         <div class="order__content">
             <h2>Оформление заказа</h2>
@@ -44,7 +40,7 @@ use yii\widgets\MaskedInput;
             <div class="order__content-textarea">
                 <h3>Количество персон</h3>
                 <div class="order__content-textarea-grid">
-                   <input type="text" placeholder="2">
+                    <?= $form->field($order, 'cutlery')->input('integer', ['placeholder' => 'Кол-во приборов'])->label(false); ?>
                 </div>
             </div>
             <div class="order__content-textarea">

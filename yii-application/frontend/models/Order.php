@@ -60,7 +60,7 @@ class Order extends ActiveRecord
         return [
             [['name', 'phone', 'address', 'payment', 'type'], 'required'],
             [['created_at', 'updated_at'], 'safe'],
-            [['qty', 'status'], 'integer'],
+            [['qty', 'status', 'cutlery'], 'integer'],
             [['sum'], 'number'],
             [['text'], 'string'],
             [['name', 'phone', 'address', 'payment', 'type'], 'string', 'max' => 255],

@@ -14,8 +14,6 @@ $this->registerMetaTag([
 
 ?>
 
-<?= CategoryList::widget(); ?>
-
 <main>
     <section class="cart">
         <div class="cart__content">
