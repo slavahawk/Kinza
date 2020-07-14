@@ -1,6 +1,6 @@
 .cart {
     &__content {
-        padding: 200px 20px 150px 20px;
+        padding: 150px 20px 40px 20px;
         max-width: 1024px;
         margin: 0 auto;
         color: black;
@@ -182,7 +182,7 @@
 @media (max-width: 576px) {
     .cart {
         &__content {
-            padding: 80px 20px 100px 20px;
+            padding: 100px 20px 40px 20px;
 
             h2 {
                 padding: 10px 0;

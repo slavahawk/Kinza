@@ -124,6 +124,10 @@
 }
 
 @media (max-width: 976px) {
+    .product__content {
+        padding: 0px 20px;
+    }
+
     .product__content-item {
         display: inline-block;
     }
@@ -145,6 +149,31 @@
 
         .price {
             text-align: center;
+        }
+    }
+
+    .product__content-item-info-btn {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .product__content-item-image {
+        img {
+            width: 100%;
+        }
+    }
+
+    .product__content-item-info {
+        padding: 10px 10px;
+        text-align: center;
+        width: 100%;
+
+        .price {
+            text-align: center;
+            padding: 20px 0 25px;
+            line-height: 0px;
         }
     }
 
