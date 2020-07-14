@@ -6,6 +6,7 @@ namespace frontend\controllers;
 
 use frontend\models\Product;
 use Yii;
+use yii\helpers\Url;
 use yii\web\Controller;
 
 /**

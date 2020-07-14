@@ -78,20 +78,20 @@ $this->registerMetaTag([
             <h2>Меню</h2>
             <div class="menu__content-item">
                 <div class="menu__content-item-box">
-                    <picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/1.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/1.png" alt="" class="breakfast" /></picture>
-                    <a>Завтраки</a>
+                    <a href="<?= Url::to(['menu/category', 'categoryId' => 3]) ?>"><picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/1.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/1.png" alt="" class="breakfast" /></picture></a>
+                    <a href="<?= Url::to(['menu/category', 'categoryId' => 3]) ?>" class="text__link">Завтраки</a>
                 </div>
                 <div class="menu__content-item-box">
-                    <picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/2.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/2.png" alt="" /></picture>
-                    <a>Супы</a>
+                    <a href="<?= Url::to(['menu/category', 'categoryId' => 2]) ?>"><picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/2.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/2.png" alt="" class="breakfast" /></picture></a>
+                    <a href="<?= Url::to(['menu/category', 'categoryId' => 2]) ?>" class="text__link">Супы</a>
                 </div>
                 <div class="menu__content-item-box">
-                    <picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/3.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/3.png" alt="" /></picture>
-                    <a>Салаты</a>
+                    <a href="<?= Url::to(['menu/category', 'categoryId' => 5]) ?>"><picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/3.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/3.png" alt="" class="breakfast" /></picture></a>
+                    <a href="<?= Url::to(['menu/category', 'categoryId' => 5]) ?>" class="text__link">Салаты</a>
                 </div>
                 <div class="menu__content-item-box menuMin">
-                    <picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/5.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/5.png" alt="" /></picture>
-                    <a>Выпечка</a>
+                    <a href="<?= Url::to(['menu/category', 'categoryId' => 8]) ?>"><picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/5.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/5.png" alt="" class="breakfast" /></picture></a>
+                    <a href="<?= Url::to(['menu/category', 'categoryId' => 8]) ?>" class="text__link">Выпечка</a>
                 </div>
             </div>
             <div class="list5">
@@ -118,7 +118,6 @@ $this->registerMetaTag([
     </section>
 </main>
 <script
-        async
         defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCgwoTpESqADzD9gNWrX-uBJw7wB4-KWw&callback=initMap"
 ></script>

@@ -6,7 +6,7 @@ use frontend\widgets\categoryList\CategoryList;
 use yii\helpers\Url;
 use yii\web\JqueryAsset;
 
-$this->title = "Продукт — Кинза";
+$this->title = "$product->name — Кинза";
 $this->registerMetaTag([
     'name' => 'description',
     'content' => 'Description of the page'
@@ -16,41 +16,34 @@ $this->registerMetaTag([
 
 <main>
 
-    <?php echo CategoryList::widget(); ?>
+    <?= CategoryList::widget(); ?>
 
     <section class="product">
         <div class="product__content">
             <div class="product__content-item">
                 <div class="product__content-item-image">
-                    <img src="<?php echo Yii::getAlias('@imgFrontEnd'); ?>/product/<?php echo $product->img; ?>.jpg" alt="" />
+                    <img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/product/<?= $product->img; ?>.jpg" alt="" />
                 </div>
                 <div class="product__content-item-info">
-                    <h2><?php echo $product->name; ?></h2>
-                    <a class="backMenu__link" href="<?php echo Url::to(['menu/index']); ?>">Вернуться в каталог</a>
-                    <p class="price"><?php echo $product->price; ?><span>₽</span></p>
+                    <h2><?= $product->name; ?></h2>
+                    <a class="backMenu__link" href="<?= Url::to(['menu/category', 'categoryId' => $product->category_id]); ?>">Вернуться в каталог</a>
+                    <p class="price"><?= $product->price; ?><span>₽</span></p>
                     <div class="product__content-item-info-btn">
                         <a class="pay__link add-to-cart" data-id="<?= $product->id; ?>" href="<?= Url::to(['cart/add', 'id' => $product->id]); ?>">В корзину</a>
                     </div>
 
                     <h3>Информация о товаре</h3>
                     <p>
-                        Рис, обжаренный с ломтиками филе цыпленка, ананасами, перцем чили, куриным яйцом,
-                        чесноком, белым и зеленым луком, морковью, орешками кешью, с рыбным и соевым
-                        соусами.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad dolorem ea exercitationem harum illo incidunt laudantium nisi placeat reiciendis soluta? Blanditiis ducimus facere fuga ipsum libero molestiae molestias provident rem similique temporibus? Aperiam eos exercitationem fugit illo illum laboriosam, laborum maiores maxime nam porro qui quo repudiandae suscipit temporibus voluptatem.
                     </p>
                     <br />
-                    <p><?php echo $product->weight; ?> г</p>
+                    <p>Вес: <?= $product->weight; ?> г</p>
                     <br />
                     <p>
-                        Дополняется лаймом. spicy Возможно приготовить это блюдо не острым. Предупредите
-                        оператора заранее. Острое. Новинка
-                    </p>
-                    <br />
-                    <p>
-                        белки - <?php echo $product->proteins; ?> <br />
-                        жиры - <?php echo $product->fats; ?> <br />
-                        углеводы - <?php echo $product->carbohydrates; ?> <br />
-                        калорийность - <?php echo $product->calories; ?> ккал/100г
+                        Белки: <?= $product->proteins; ?> <br />
+                        Жиры: <?= $product->fats; ?> <br />
+                        Углеводы: <?= $product->carbohydrates; ?> <br />
+                        Калорийность: <?= $product->calories; ?> ккал/100г
                     </p>
                 </div>
             </div>

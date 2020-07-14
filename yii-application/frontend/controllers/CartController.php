@@ -44,6 +44,8 @@ class CartController extends Controller
 
     public function actionClear()
     {
+        $this->checkAccess();
+
         $session = Yii::$app->session;
         $session->open();
         $session->remove('cart');
@@ -55,6 +57,7 @@ class CartController extends Controller
 
     public function actionDelete($id)
     {
+        $this->checkAccess();
 
         $session = Yii::$app->session;
         $session->open();
@@ -66,6 +69,8 @@ class CartController extends Controller
 
     public function actionOrder()
     {
+        $this->checkAccess();
+
         $session = Yii::$app->session;
         $session->open();
         $order = new Order();
@@ -78,7 +83,7 @@ class CartController extends Controller
                 $session->remove('cart');
                 $session->remove('cart.qty');
                 $session->remove('cart.sum');
-                return $this->refresh();
+                return $this->actionSuccess();
             } else {
                 Yii::$app->session->setFlash('error', 'Ошибка оформления заказа');
             }
@@ -102,6 +107,20 @@ class CartController extends Controller
             $order_items->sum_item = $item['qty'] * $item['price'];
             $order_items->save();
         }
+    }
+
+    protected function actionSuccess()
+    {
+        return $this->render('success', []);
+    }
+
+    protected function checkAccess()
+    {
+        if (!isset($_SESSION['cart']) || empty($_SESSION['cart'])) {
+            return $this->redirect(['cart/index']);
+        }
+
+        return true;
     }
 
 }

@@ -1,5 +1,10 @@
 <?php
 use yii\helpers\Url;
+
+foreach ($categoryList as $category) {
+    (Url::current() == Url::to(['menu/category', 'categoryId' => $category->id])) ? $this->title = "$category->name — Кинза" : false;
+}
+
 ?>
 
 <div class="filter__box-mini">
@@ -13,7 +18,6 @@ use yii\helpers\Url;
 
                 <?php foreach ($categoryList as $category): ?>
                     <li><a href="<?= Url::to(['menu/category', 'categoryId' => $category->id]); ?>" <?= (Url::current() == Url::to(['menu/category', 'categoryId' => $category->id])) ? 'class="active"' : false;?>><?= $category->name; ?></a></li>
-<!--                    --><?//= (Url::current() == Url::to(['menu/category', 'categoryId' => $category->id])) ? $this->title = "$category->name — Кинза" : false ; ?>
                 <?php endforeach; ?>
 
             </ul>

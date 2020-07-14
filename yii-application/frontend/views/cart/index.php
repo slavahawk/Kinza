@@ -2,9 +2,7 @@
 
 /* @var $this yii\web\View */
 
-use frontend\widgets\categoryList\CategoryList;
 use yii\helpers\Url;
-use yii\web\JqueryAsset;
 
 $this->title = "Корзина — Кинза";
 $this->registerMetaTag([
@@ -40,7 +38,7 @@ $this->registerMetaTag([
                     <?php foreach ($session['cart'] as $id => $item): ?>
                     <div class="cart__content-cart-product">
                         <div class="cart__content-cart-product-main">
-                            <img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/product/<?= $item['img']; ?>.jpg" alt="" />
+                            <a href="<?= Url::to(['menu/product', 'productId' => $id]); ?>"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/product/<?= $item['img']; ?>.jpg" alt="" /></a>
                             <div class="cart__content-cart-product-main-title">
                                 <p><a href="<?= Url::to(['menu/product', 'productId' => $id]); ?>"><?= $item['name']; ?></a></p>
                             </div>
