@@ -58,16 +58,15 @@ $this->registerMetaTag([
                         <p>Товаров на сумму</p>
                         <p class="sum"><?= $session['cart.qty']; ?><span> шт.</span></p>
                         <p class="sum"><?= $session['cart.sum']; ?><span> руб.</span></p>
-                        <p class="delete">
-                            <a href="#">&times;</a>
-                        </p>
                     </div>
 
                     <div class="cart__content-cart-btn">
                         <p>Что то забыли? <a href="<?= Url::to(['menu/index'])?>">Нажмите, чтобы вернутсья</a></p>
-                        <a class="next" href="<?= Url::to(['cart/order'])?>">Подтвердить заказ</a>
+                        <div class="cart__content-cart-btn-item">
+                            <a class="clear" href="<?php echo Url::to('cart/clear')?>">Очистить корзину<
+                            <a class="next" href="<?= Url::to(['cart/order'])?>">Подтвердить заказ</a>
+                        </div>
                     </div>
-                    <p><a href="<?php echo Url::to('cart/clear')?>" style="color: #254e7a">Очистить корзину</a></p>
                 </div>
             </div>
             <?php endif; ?>

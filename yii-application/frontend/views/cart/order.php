@@ -38,25 +38,35 @@ use yii\bootstrap\ActiveForm;
                 </div>
             </div>
             <div class="order__content-textarea">
+                <h3>Количество персон</h3>
+                <div class="order__content-textarea-grid">
+                   <input type="text" placeholder="2">
+                </div>
+            </div>
+            <div class="order__content-textarea">
                 <h3>Коментарий к заказу</h3>
                 <div class="order__content-textarea-grid">
                     <?= $form->field($order, 'text')->textarea(['rows' => 5, 'cols' => 15]); ?>
                 </div>
             </div>
             <div class="order__content-pay">
-                <h3>Уточнение по заказу</h3>
+                <h3>Способ доставки</h3>
                 <div class="order__content-pay-grid">
-                    <?= $form->field($order, 'payment')->radioList([
-                            'card' => 'Безналичный',
-                            'cash' => 'Наличный',
-                    ]); ?>
                     <?= $form->field($order, 'type')->radioList([
                         'delivery' => 'Доставка курьером',
                         'pickup' => 'Самовывоз',
                     ]); ?>
                 </div>
             </div>
-
+            <div class="order__content-pay">
+                <h3>Способ оплаты</h3>
+                <div class="order__content-pay-grid">
+                    <?= $form->field($order, 'payment')->radioList([
+                            'card' => 'Безналичный',
+                            'cash' => 'Наличный',
+                    ]); ?>
+                </div>
+            </div>
             <div class="order__content-btn">
                 <div class="order__content-btn-grid">
                     <?= Html::submitButton('Заказать')?>
