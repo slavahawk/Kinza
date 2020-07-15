@@ -66,7 +66,6 @@
                 align-items: center;
                 position: relative;
 
-
                 &::after {
                     position: absolute;
                     content: "";
@@ -141,44 +140,46 @@
                 }
 
                 &-item {
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
-                    align-items: center;
-                    justify-items: center;
-                    grid-gap: 20px;
-                    color: white;
+                    form {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        align-items: center;
+                        justify-items: center;
+                        grid-gap: 20px;
 
-                    .next {
-                        @include adaptiv-fontAll(18, 11);
-                        word-wrap: none;
-                        padding: 10px 20px;
-                        background-color: #333333;
-                        border-radius: 5px;
-                        border: 1px solid #333333;
-                        transition: 0.1s ease-in-out;
+                        .next {
+                            color: white;
+                            @include adaptiv-fontAll(18, 11);
+                            word-wrap: none;
+                            padding: 10px 20px;
+                            background-color: #333333;
+                            border-radius: 5px;
+                            border: 1px solid #333333;
+                            transition: 0.1s ease-in-out;
 
-                        &:hover {
-                            background-color: #ffffff;
-                            color: #333333;
-                        }
-
-                        @media (max-width:976px) {
                             &:hover {
-                                background-color: #333333;
-                                color: white;
+                                background-color: #ffffff;
+                                color: #333333;
+                            }
+
+                            @media (max-width: 976px) {
+                                &:hover {
+                                    background-color: #333333;
+                                    color: white;
+                                }
                             }
                         }
-                    }
 
-                    .clear {
-                        color: white;
-                        @include adaptiv-fontAll(18, 11);
-                        word-wrap: none;
-                        padding: 10px 20px;
-                        background-color: #993030;
-                        border-radius: 5px;
-                        border: 1px solid #993030;
-                        transition: 0.1s ease-in-out;
+                        .clear {
+                            color: white;
+                            @include adaptiv-fontAll(18, 11);
+                            word-wrap: none;
+                            padding: 10px 20px;
+                            background-color: #993030;
+                            border-radius: 5px;
+                            border: 1px solid #993030;
+                            transition: 0.1s ease-in-out;
+                        }
                     }
                 }
             }

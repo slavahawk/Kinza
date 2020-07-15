@@ -100,8 +100,14 @@
 							<div class="cart__content-cart-btn">
 								<p>Что то забыли? <a href="/menu">Нажмите, чтобы вернутсья</a></p>
 								<div class="cart__content-cart-btn-item">
-									<a class="clear" href="cart/clear">Очистить корзину</a
-									><a class="next" href="/site/order.html">Подтвердить заказ</a>
+									<form action="/cart" method="post">
+										<button type="submit" class="clear" name="clear" value="clear">
+											Очистить корзину
+										</button>
+										<button type="submit" class="next" name="order" value="order">
+											Подтвердить заказ
+										</button>
+									</form>
 								</div>
 							</div>
 						</div>
