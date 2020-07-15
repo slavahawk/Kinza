@@ -1646,6 +1646,12 @@ body a {
 }
 
 @media (max-width: 976px) {
+  .mainSection__content-left a:hover,
+  .menu__content-button a:hover {
+    color: black;
+    background-color: #fc4a02;
+  }
+
   .header__content .header__content-logo img {
     height: 50px;
   }
@@ -1821,6 +1827,20 @@ body a {
     display: block;
   }
 
+  .menu__content-item-box img:hover {
+    transform: scale(1);
+  }
+
+  .menu__content-item-box .text__link:hover {
+    color: white;
+  }
+
+  .menu__content-item-box .text__link:hover:after {
+    right: 1.25rem;
+    left: 1.25rem;
+    height: 2px;
+  }
+
   .menu__content-item .menuMin {
     display: block;
   }
@@ -1907,6 +1927,29 @@ body a {
   .product__content-item-info-btn {
     display: flex;
     justify-content: center;
+  }
+
+  .contact__content-text-icon-social:hover {
+    background-color: white;
+    color: black;
+  }
+
+  .cart__content-cart-btn-item .next:hover {
+    background-color: #333333;
+    color: white;
+  }
+
+  .order__content-btn-grid button:hover {
+    background-color: #333333;
+    color: white;
+  }
+
+  .footer__content-right-menu ul li a:hover {
+    color: #000;
+  }
+
+  .footer__content-right-social-item a:hover {
+    color: black;
   }
 }
 

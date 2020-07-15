@@ -20,13 +20,16 @@ $this->registerMetaTag([
                 <br />
                 <p><a href="tel:+73912884506">+7 (391) 288-45-06</a></p>
                 <div class="contact__content-text-icon">
-                    <div class="contact__content-text-icon-social vk">
-                        <i class="fab fa-vk"></i>
-                    </div>
-                    <div class="contact__content-text-icon-social inst">
-                        <i class="fab fa-instagram"></i>
-                    </div>
-                </div>
+							<a href="https://vk.com/kinza_cafe" class="contact__content-text-icon-social vk">
+								<i class="fab fa-vk"></i>
+							</a>
+							<a
+								href="https://www.instagram.com/kinzacafe/"
+								class="contact__content-text-icon-social inst"
+							>
+								<i class="fab fa-instagram"></i>
+							</a>
+				</div>
             </div>
             <div class="contact__content-map">
                 <a

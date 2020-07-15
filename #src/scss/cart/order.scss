@@ -256,6 +256,13 @@
                         background-color: #ffffff;
                         color: #333333;
                     }
+
+                    @media (max-width:976px) {
+                        &:hover {
+                            background-color: #333333;
+                            color: white;
+                        }
+                    }
                 }
             }
         }

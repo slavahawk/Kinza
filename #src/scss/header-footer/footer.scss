@@ -48,8 +48,15 @@
                         a {
                             color: #000;
                             transition: 0.2s ease-in-out;
+
                             &:hover {
                                 color: #f53906;
+                            }
+
+                            @media (max-width:976px) {
+                                &:hover {
+                                    color: #000;
+                                }
                             }
 
                             &:active {
@@ -73,8 +80,15 @@
                     a {
                         color: black;
                         transition: 0.2s ease-in-out;
+
                         &:hover {
                             color: #f53906;
+                        }
+
+                        @media (max-width:976px) {
+                            &:hover {
+                                color: black;
+                            }
                         }
                     }
 

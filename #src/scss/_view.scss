@@ -13,6 +13,13 @@
         color: white;
         background-color: black;
     }
+
+    @media (max-width:976px) {
+        &:hover {
+            color: black;
+            background-color: #fc4a02;
+        }
+    }
 }
 
 %tph2 {
