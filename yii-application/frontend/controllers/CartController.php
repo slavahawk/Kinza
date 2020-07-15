@@ -10,7 +10,6 @@ use frontend\models\OrderItems;
 use frontend\models\Product;
 use Yii;
 use yii\web\Controller;
-use yii\web\Response;
 
 class CartController extends Controller
 {
@@ -18,7 +17,12 @@ class CartController extends Controller
     public function actionIndex()
     {
         $session = Yii::$app->session;
-        $session->open();
+
+        if (Yii::$app->request->post('order')) {
+            return $this->actionOrder();
+        } elseif (Yii::$app->request->post('clear')) {
+            return  $this->actionClear();
+        }
 
         return $this->render('index', [
             'session' => $session,
@@ -34,7 +38,6 @@ class CartController extends Controller
         if (empty($product)) return false;
 
         $session = Yii::$app->session;
-        $session->open();
 
         $cart = new Cart();
         $cart->addToCart($product);
@@ -42,12 +45,9 @@ class CartController extends Controller
         return $_SESSION['cart.qty'];
     }
 
-    public function actionClear()
+    protected function actionClear()
     {
-        $this->checkAccess();
-
         $session = Yii::$app->session;
-        $session->open();
         $session->remove('cart');
         $session->remove('cart.qty');
         $session->remove('cart.sum');
@@ -57,22 +57,16 @@ class CartController extends Controller
 
     public function actionDelete($id)
     {
-        $this->checkAccess();
-
         $session = Yii::$app->session;
-        $session->open();
         $cart = new Cart();
         $cart->recalc($id);
 
         return $this->redirect(['cart/index']);
     }
 
-    public function actionOrder()
+    protected function actionOrder()
     {
-        $this->checkAccess();
-
         $session = Yii::$app->session;
-        $session->open();
         $order = new Order();
 
         if ($order->load(Yii::$app->request->post())) {
@@ -112,15 +106,6 @@ class CartController extends Controller
     protected function actionSuccess()
     {
         return $this->render('success', []);
-    }
-
-    protected function checkAccess()
-    {
-        if (!isset($_SESSION['cart']) || empty($_SESSION['cart'])) {
-            return $this->redirect(['cart/index']);
-        }
-
-        return true;
     }
 
 }

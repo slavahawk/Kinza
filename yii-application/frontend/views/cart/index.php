@@ -2,6 +2,7 @@
 
 /* @var $this yii\web\View */
 
+use yii\helpers\Html;
 use yii\helpers\Url;
 
 $this->title = "Корзина — Кинза";
@@ -59,8 +60,10 @@ $this->registerMetaTag([
                     <div class="cart__content-cart-btn">
                         <p>Что то забыли? <a href="<?= Url::to(['menu/index'])?>">Нажмите, чтобы вернутсья</a></p>
                         <div class="cart__content-cart-btn-item">
-                            <a class="clear" href="<?php echo Url::to(['cart/clear'])?>">Очистить корзину
-                            <a class="next" href="<?= Url::to(['cart/order'])?>">Подтвердить заказ</a>
+                            <?= Html::beginForm(['cart/index'], 'post'); ?>
+                            <?= Html::submitButton('Очистить корзину', ['class' => 'clear', 'value' => 'clear', 'name' => 'clear']); ?>
+                            <?= Html::submitButton('Подтвердить заказ', ['class' => 'next', 'value' => 'order', 'name' => 'order']); ?>
+                            <?= Html::endForm(); ?>
                         </div>
                     </div>
                 </div>
