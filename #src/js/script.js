@@ -1,4 +1,3 @@
-@@include('wow.min.js');
 @@include('webp.js');
 @@include('burger.js');
 @@include('filter.js');
@@ -7,5 +6,3 @@
 @@include('flyToBasket.js');
 @@include('payButton.js');
 @@include('tab.js');
-
-new WOW().init();
