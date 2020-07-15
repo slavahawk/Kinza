@@ -6,16 +6,24 @@
         color: black;
         text-align: center;
         img {
-            width: 300px;
+            width: 250px;
         }
         p {
-            @include adaptiv-fontAll(18, 11);
+            padding-top: 20px;
+            @include adaptiv-fontAll(20, 14);
+            line-height: 18px;
+
+            margin: 0 auto;
+            width: 80%;
         }
     }
 }
 
 @media (max-width: 967px) {
-    .readyOrder {
-        padding: 10px 20px 40px 10px;
+    .readyOrder__content {
+        padding: 120px 20px 50px 20px;
+        img {
+            width: 150px;
+        }
     }
 }

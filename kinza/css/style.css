@@ -841,7 +841,7 @@ h6 {
   text-transform: uppercase;
   font-size: calc(14px + 6 * ((100vw - 320px) / 1600));
   display: block;
-  margin: auto;
+  margin: 0 auto;
   padding: 1rem 1.25rem;
   text-decoration: none;
   color: white;
@@ -1687,11 +1687,15 @@ h6 {
 }
 
 .readyOrder__content img {
-  width: 300px;
+  width: 250px;
 }
 
 .readyOrder__content p {
-  font-size: calc(11px + 7 * ((100vw - 320px) / 1600));
+  padding-top: 20px;
+  font-size: calc(14px + 6 * ((100vw - 320px) / 1600));
+  line-height: 18px;
+  margin: 0 auto;
+  width: 80%;
 }
 
 .footer {
@@ -2167,8 +2171,12 @@ body a {
 }
 
 @media (max-width: 967px) {
-  .readyOrder {
-    padding: 10px 20px 40px 10px;
+  .readyOrder__content {
+    padding: 120px 20px 50px 20px;
+  }
+
+  .readyOrder__content img {
+    width: 150px;
   }
 }
 
