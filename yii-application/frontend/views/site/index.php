@@ -123,3 +123,8 @@ $this->registerMetaTag([
 ></script>
 
 
+<?php $this->registerJsFile('@web/js/wow.min.js')?>
+
+<?php $this->registerJs(
+   "new WOW().init();"
+)?>
