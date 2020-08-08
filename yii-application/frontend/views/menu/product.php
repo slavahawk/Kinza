@@ -32,9 +32,9 @@ $this->registerMetaTag([
                         <a class="pay__link add-to-cart" data-id="<?= $product->id; ?>" href="<?= Url::to(['cart/add', 'id' => $product->id]); ?>">В корзину</a>
                     </div>
 
-                    <h3>Информация о товаре</h3>
+                    <h3>Описание</h3>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad dolorem ea exercitationem harum illo incidunt laudantium nisi placeat reiciendis soluta? Blanditiis ducimus facere fuga ipsum libero molestiae molestias provident rem similique temporibus? Aperiam eos exercitationem fugit illo illum laboriosam, laborum maiores maxime nam porro qui quo repudiandae suscipit temporibus voluptatem.
+                        <?= $product->description; ?>
                     </p>
                     <br />
                     <p>Вес: <?= $product->weight; ?> г</p>

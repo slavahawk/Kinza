@@ -51,6 +51,7 @@ $this->registerMetaTag([
                         </p>
                     </div>
                     <?php endforeach; ?>
+
                     <div class="cart__content-cart-total">
                         <p>Товаров на сумму</p>
                         <p class="sum"><?= $session['cart.qty']; ?><span> шт.</span></p>
