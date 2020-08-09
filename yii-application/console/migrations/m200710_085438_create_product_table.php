@@ -34,6 +34,7 @@ class m200710_085438_create_product_table extends Migration
             'fats' => $this->integer(),
             'carbohydrates' => $this->integer(),
             'calories' => $this->integer(),
+            'description' => $this->text(),
             'price' => $this->integer()->defaultValue(100),
             'img' => $this->string(),
             'status' => $this->integer()->defaultValue(1),
@@ -47,6 +48,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 17,
             'carbohydrates' => 8,
             'calories' => 225,
+            'price' => 280,
+            'description' => 'Говядина с грибами, тушеная в сливках с луком и зеленью, подается с гарниром на выбор: гречка с маслом, картофельным пюре',
             'img' => 'foto8176',
         ]);
 
@@ -58,6 +61,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 28,
             'carbohydrates' => 7,
             'calories' => 331,
+            'price' => 280,
+            'description' => 'Сочное мясо свинины и говядины с луком и обжаренным яйцом, подается с картофелем пюре, малосольными огурчиками, салатом из свежей капусты',
             'img' => 'foto8175',
         ]);
 
@@ -80,6 +85,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 6,
             'carbohydrates' => 3,
             'calories' => 76,
+            'price' => 275,
+            'description' => 'Баранина, картофель, томаты, грибы, перец болгарский, лук, кинза',
             'img' => 'foto15932',
         ]);
 
@@ -91,6 +98,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 4,
             'carbohydrates' => 11,
             'calories' => 69,
+            'price' => 120,
+            'description' => 'Густой наваристый свекольник с говядиной, чесноком и луком, подается со сметаной и зеленью',
             'img' => 'foto8168',
         ]);
 
@@ -102,6 +111,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 0,
             'carbohydrates' => 0,
             'calories' => 0,
+            'price' => 155,
+            'description' => 'Американский, шоколадный пирог с грецким орехом',
             'img' => 'foto16230',
         ]);
 
@@ -113,6 +124,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 7,
             'carbohydrates' => 16,
             'calories' => 194,
+            'price' => 129,
+            'description' => 'Вареники с вишней и сметаной',
             'img' => 'foto8877',
         ]);
 
@@ -124,6 +137,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 6,
             'carbohydrates' => 23,
             'calories' => 149,
+            'price' => 89,
+            'description' => 'Вареники с капустой, подаются со сметаной',
             'img' => 'foto8874',
         ]);
 
@@ -135,6 +150,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 9,
             'carbohydrates' => 3,
             'calories' => 173,
+            'price' => 89,
+            'description' => 'Вареники с картофелем, подаются со сметаной',
             'img' => 'foto8873',
         ]);
 
@@ -146,6 +163,7 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 7,
             'carbohydrates' => 16,
             'calories' => 194,
+            'price' => 129,
             'img' => 'foto16468',
         ]);
 
@@ -157,6 +175,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 4,
             'carbohydrates' => 20,
             'calories' => 174,
+            'price' => 129,
+            'description' => 'Вареники с творогом и изюмом и сметаной',
             'img' => 'foto8876',
         ]);
 
@@ -168,6 +188,7 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 7,
             'carbohydrates' => 16,
             'calories' => 194,
+            'price' => 129,
             'img' => 'foto16469',
         ]);
 
@@ -179,6 +200,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 1,
             'carbohydrates' => 19,
             'calories' => 39,
+            'price' => 125,
+            'description' => 'Фирменный десерт от шеф-повара! Подается со сгущённым молоком',
             'img' => 'foto15930',
         ]);
 
@@ -190,6 +213,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 2,
             'carbohydrates' => 3,
             'calories' => 45,
+            'price' => 280,
+            'description' => 'Рубленая телятина в виноградных листьях с восточными травами, подается с картофельным пюре, аджикой собственного приготовления и сметаной',
             'img' => 'foto15933',
         ]);
 
@@ -201,6 +226,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 17,
             'carbohydrates' => 3,
             'calories' => 187,
+            'price' => 125,
+            'description' => 'Капуста маринованная, огурцы малосольные, помидоры, помидоры черри, лук, маслины, лист салата, имбирь',
             'img' => 'foto16146',
         ]);
 
@@ -212,6 +239,7 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 22,
             'carbohydrates' => 9,
             'calories' => 279,
+            'price' => 165,
             'img' => 'foto11312',
         ]);
 
@@ -223,6 +251,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 33,
             'carbohydrates' => 29,
             'calories' => 520,
+            'price' => 69,
+            'description' => 'Колбаска шоколадная со сливочным соусом с жареным арахисом и сливочным соусом',
             'img' => 'foto8215',
         ]);
 
@@ -234,6 +264,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 6,
             'carbohydrates' => 10,
             'calories' => 121,
+            'price' => 285,
+            'description' => 'Набор из куриных крыльев, гренок с сыром, картофеля айдахо, пельмешек фри, подается с соусом',
             'img' => 'foto11303',
         ]);
 
@@ -245,6 +277,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 4,
             'carbohydrates' => 7,
             'calories' => 92,
+            'price' => 198,
+            'description' => 'Набор из подкопченых колбасок, копченого сыра, картофельных шариков и чесночных гренок, подается с соусом',
             'img' => 'foto11301',
         ]);
 
@@ -256,17 +290,21 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 3,
             'carbohydrates' => 6,
             'calories' => 56,
+            'price' => 148,
+            'description' => 'с сухариками, зеленью и луком',
             'img' => 'foto8171',
         ]);
 
         $this->insert('product', [
-            'name' => 'Крем-суп из свежих грибов с сухариками',
+            'name' => 'Крем-суп из шпината',
             'category_id' => 2,
             'weight' => 250,
             'proteins' => 0,
             'fats' => 0,
             'carbohydrates' => 0,
             'calories' => 0,
+            'price' => 159,
+            'description' => 'Картофель, шпинат, луковые чипсы, сливки',
             'img' => 'foto16315',
         ]);
 
@@ -278,6 +316,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 3,
             'carbohydrates' => 0,
             'calories' => 32,
+            'price' => 229,
+            'description' => 'Куриная отбивная в бархатной панировке с картофельным пюре',
             'img' => 'foto16219',
         ]);
 
@@ -289,6 +329,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 4,
             'carbohydrates' => 11,
             'calories' => 98,
+            'price' => 99,
+            'description' => 'Суп с картофелем, фрикадельками, домашней лапшой, луком и зеленью',
             'img' => 'foto8163',
         ]);
 
@@ -300,6 +342,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 1,
             'carbohydrates' => 4,
             'calories' => 30,
+            'price' => 160,
+            'description' => 'Домашняя лапша с говядиной и овощами, кинза',
             'img' => 'foto15832',
         ]);
 
@@ -421,6 +465,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 21,
             'carbohydrates' => 2,
             'calories' => 238,
+            'price' => 159,
+            'description' => 'Суп с куриным филе, рисом, яйцом, соком и цедрой лимона',
             'img' => 'foto16384',
         ]);
 
@@ -432,6 +478,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 0,
             'carbohydrates' => 0,
             'calories' => 0,
+            'price' => 155,
+            'description' => 'Картофель, лук-порей, сливки',
             'img' => 'foto16348',
         ]);
 
@@ -443,6 +491,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 2,
             'carbohydrates' => 3,
             'calories' => 40,
+            'price' => 169,
+            'description' => 'Суп из телятины, блинчиков из яиц, клецок, болгарского перца, лука и чеснока',
             'img' => 'foto21088',
         ]);
 
@@ -454,6 +504,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 1,
             'carbohydrates' => 17,
             'calories' => 168,
+            'price' => 165,
+            'description' => 'Собственного приготовления (свинина, говядина) с аджикой из свежих овощей (4 шт.)',
             'img' => 'foto8180',
         ]);
 
@@ -465,6 +517,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 3,
             'carbohydrates' => 4,
             'calories' => 48,
+            'price' => 165,
+            'description' => 'Манты с курицей подаются со сметаной',
             'img' => 'foto18289',
         ]);
 
@@ -476,6 +530,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 29,
             'carbohydrates' => 3,
             'calories' => 324,
+            'price' => 135,
+            'description' => 'Колбаса сырокопченая, сало соленое, сервелат, лист салата, горчица, хрен',
             'img' => 'foto11309',
         ]);
 
@@ -487,6 +543,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 3,
             'carbohydrates' => 0,
             'calories' => 32,
+            'price' => 169,
+            'description' => 'Наггетсы куриные с соусом и попкорном',
             'img' => 'foto16221',
         ]);
 
@@ -520,6 +578,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 0,
             'carbohydrates' => 0,
             'calories' => 0,
+            'price' => 268,
+            'description' => 'Говядина, картофель, томаты, лук репчатый, зёрна граната, чеснок, аджика',
             'img' => 'foto16343',
         ]);
 
@@ -531,6 +591,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 4,
             'carbohydrates' => 4,
             'calories' => 382,
+            'price' => 129,
+            'description' => 'на квасе/на кефире',
             'img' => 'foto8164',
         ]);
 
@@ -553,6 +615,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 1,
             'carbohydrates' => 26,
             'calories' => 250,
+            'price' => 155,
+            'description' => 'Подаются с соусом на выбор: масло сливочное, сметана, майонез, аджика',
             'img' => 'foto11297',
         ]);
 
@@ -564,6 +628,7 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 2,
             'carbohydrates' => 7,
             'calories' => 78,
+            'price' => 178,
             'img' => 'foto11315',
         ]);
 
@@ -575,6 +640,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 1,
             'carbohydrates' => 21,
             'calories' => 202,
+            'price' => 155,
+            'description' => 'Подаются с соусом на выбор: масло сливочное, сметана, майонез, аджика',
             'img' => 'foto8182',
         ]);
 
@@ -586,6 +653,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 5,
             'carbohydrates' => 0,
             'calories' => 70,
+            'price' => 285,
+            'description' => 'Рыбные палочки, кольца кальмаров, сыр жареный во фритюре, копченый сыр, подается с соусом',
             'img' => 'foto11304',
         ]);
 
@@ -597,6 +666,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 9,
             'carbohydrates' => 24,
             'calories' => 215,
+            'price' => 158,
+            'description' => 'Из говядины, чеснока, лука, с добавлением зиры и барбариса',
             'img' => 'foto8179',
         ]);
 
@@ -608,6 +679,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 7,
             'carbohydrates' => 6,
             'calories' => 106,
+            'price' => 165,
+            'description' => 'Картофель, копченая говядина и курочка, ветчина, лук, подается со сметаной, лимоном, маслинами и зеленью',
             'img' => 'foto8166',
         ]);
 
@@ -619,6 +692,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 14,
             'carbohydrates' => 3,
             'calories' => 209,
+            'price' => 219,
+            'description' => 'Горбуша х/к, скумбрия х/к, огурец, лимон, масло сливочное, листья салата, редис, чипсы, зелень',
             'img' => 'foto11311',
         ]);
 
@@ -630,6 +705,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 10,
             'carbohydrates' => 7,
             'calories' => 124,
+            'price' => 89,
+            'description' => 'Салат из отварных овощей, зеленого горошка, маринованного огурца, с подсолнечным маслом',
             'img' => 'foto8151',
         ]);
 
@@ -641,6 +718,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 17,
             'carbohydrates' => 3,
             'calories' => 187,
+            'price' => 158,
+            'description' => 'Свежие офощи, фетакса, листья салата, маслины, лук красный, масляная заправка',
             'img' => 'foto8149',
         ]);
 
@@ -652,6 +731,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 10,
             'carbohydrates' => 4,
             'calories' => 112,
+            'price' => 65,
+            'description' => 'С морковью, свежим огурцом, заправлен маслом',
             'img' => 'foto8150',
         ]);
 
@@ -663,6 +744,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 2,
             'carbohydrates' => 3,
             'calories' => 37,
+            'price' => 165,
+            'description' => 'Морковь острая, перец болгарский, лапша рисовая, говядина, листья салата, масляная заправка',
             'img' => 'foto15830',
         ]);
 
@@ -674,6 +757,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 25,
             'carbohydrates' => 9,
             'calories' => 287,
+            'price' => 160,
+            'description' => 'Обжаренное нежное куриное филе, морковь по-корейски, огурцы маринованные, грибы свежие, сыр, сухарики, листья салата, майонезная заправка',
             'img' => 'foto8152',
         ]);
 
@@ -685,6 +770,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 10,
             'carbohydrates' => 7,
             'calories' => 134,
+            'price' => 115,
+            'description' => 'Домашний салат с картофелем, маринованным огурцом, морковью, зеленым горошком и вареной колбасой с майонезной заправкой',
             'img' => 'foto8144',
         ]);
 
@@ -696,6 +783,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 2,
             'carbohydrates' => 1,
             'calories' => 25,
+            'price' => 189,
+            'description' => 'Теплый салат из телятины, баклажанов, болгарского перца, чеснока и кинзы',
             'img' => 'foto15926',
         ]);
 
@@ -707,6 +796,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 15,
             'carbohydrates' => 6,
             'calories' => 193,
+            'price' => 115,
+            'description' => 'Классическая селедочка с отварными овощами, яйцом и майонезом',
             'img' => 'foto8148',
         ]);
 
@@ -718,6 +809,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 4,
             'carbohydrates' => 1,
             'calories' => 44,
+            'price' => 158,
+            'description' => 'Говядина, яйцо, редька, лук жареный, грецкий орех, майонезная заправка',
             'img' => 'foto15831',
         ]);
 
@@ -729,17 +822,21 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 2,
             'carbohydrates' => 1,
             'calories' => 29,
+            'price' => 138,
+            'description' => 'Печень, сердце, лук, томаты, кинза',
             'img' => 'foto15924',
         ]);
 
         $this->insert('product', [
             'name' => 'Салат "Фруктовый"',
-            'category_id' => 5,
+            'category_id' => 7,
             'weight' => 200,
             'proteins' => 3,
             'fats' => 3,
             'carbohydrates' => 30,
             'calories' => 159,
+            'price' => 95,
+            'description' => 'Яблоко, банан, киви, апельсин, сливочный соус',
             'img' => 'foto15826',
         ]);
 
@@ -751,6 +848,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 23,
             'carbohydrates' => 16,
             'calories' => 262,
+            'price' => 180,
+            'description' => 'Листья салата с сыром «Пармезан», сухариками, помидорами Черри и нежным куриным филе под соусом "Цезарь"',
             'img' => 'foto8153',
         ]);
 
@@ -762,6 +861,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 19,
             'carbohydrates' => 12,
             'calories' => 226,
+            'price' => 120,
+            'description' => 'Говядина обжаренная, картофель пай, свекла, морковь, капуста, огурец свежий, чеснок, масляная заправка',
             'img' => 'foto8145',
         ]);
 
@@ -773,6 +874,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 1,
             'carbohydrates' => 1,
             'calories' => 23,
+            'price' => 155,
+            'description' => 'С телятиной и зернами граната',
             'img' => 'foto15925',
         ]);
 
@@ -784,6 +887,7 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 13,
             'carbohydrates' => 5,
             'calories' => 149,
+            'price' => 108,
             'img' => 'foto8160',
         ]);
 
@@ -795,6 +899,7 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 19,
             'carbohydrates' => 5,
             'calories' => 197,
+            'price' => 108,
             'img' => 'foto8161',
         ]);
 
@@ -806,6 +911,7 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 19,
             'carbohydrates' => 5,
             'calories' => 197,
+            'price' => 108,
             'img' => 'foto8158',
         ]);
 
@@ -817,6 +923,7 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 6,
             'carbohydrates' => 6,
             'calories' => 84,
+            'price' => 108,
             'img' => 'foto8159',
         ]);
 
@@ -828,6 +935,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 12,
             'carbohydrates' => 4,
             'calories' => 161,
+            'price' => 155,
+            'description' => 'Кальмары отварные, морская капуста, огурец свежий, капуста белокочанная, яйцо, зеленый горошек, майонез',
             'img' => 'foto8147',
         ]);
 
@@ -839,6 +948,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 0,
             'carbohydrates' => 0,
             'calories' => 0,
+            'price' => 179,
+            'description' => 'Лист салата, тунец консервированный, помидоры черри, огурец свежий, яйцо, лук красный, оливковое масло',
             'img' => 'foto16341',
         ]);
 
@@ -850,6 +961,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 21,
             'carbohydrates' => 2,
             'calories' => 236,
+            'price' => 149,
+            'description' => 'Ветчина, сыр, томаты свежие, огурец свежий, яйцо, майонезная заправка',
             'img' => 'foto8729',
         ]);
 
@@ -861,6 +974,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 12,
             'carbohydrates' => 1,
             'calories' => 155,
+            'price' => 85,
+            'description' => 'Варёная сгущенка, арахисовый грильяж',
             'img' => 'foto18371',
         ]);
 
@@ -872,6 +987,7 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 12,
             'carbohydrates' => 1,
             'calories' => 155,
+            'price' => 105,
             'img' => 'foto16174',
         ]);
 
@@ -883,6 +999,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 12,
             'carbohydrates' => 1,
             'calories' => 155,
+            'price' => 99,
+            'description' => 'Шпинат, жареный лук, тёртая брынза',
             'img' => 'foto16183',
         ]);
 
@@ -894,6 +1012,7 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 12,
             'carbohydrates' => 1,
             'calories' => 155,
+            'price' => 95,
             'img' => 'foto18372',
         ]);
 
@@ -905,6 +1024,7 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 12,
             'carbohydrates' => 1,
             'calories' => 155,
+            'price' => 95,
             'img' => 'foto16176',
         ]);
 
@@ -916,6 +1036,7 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 12,
             'carbohydrates' => 1,
             'calories' => 155,
+            'price' => 105,
             'img' => 'foto16177',
         ]);
 
@@ -927,6 +1048,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 19,
             'carbohydrates' => 10,
             'calories' => 264,
+            'price' => 105,
+            'description' => 'С отварным картофелем, луком и масляной заправкой',
             'img' => 'foto8146',
         ]);
 
@@ -938,6 +1061,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 11,
             'carbohydrates' => 12,
             'calories' => 162,
+            'price' => 148,
+            'description' => 'с чесночной гренкой, зеленью и луком',
             'img' => 'foto8167',
         ]);
 
@@ -960,6 +1085,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 14,
             'carbohydrates' => 3,
             'calories' => 209,
+            'price' => 135,
+            'description' => 'Сыр коса, твердый сыр, брынза в специях, брецель, зерна граната, мед',
             'img' => 'foto11310',
         ]);
 
@@ -971,6 +1098,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 4,
             'carbohydrates' => 8,
             'calories' => 90,
+            'price' => 198,
+            'description' => 'Набор из мини-чебуреков с мясом, подкопченых колбасок, гренок чесночных, картофельных шариков, подается с соусом',
             'img' => 'foto11302',
         ]);
 
@@ -993,6 +1122,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 1,
             'carbohydrates' => 14,
             'calories' => 66,
+            'price' => 139,
+            'description' => 'Медовые коржи, прослоенные сгущенным молоком и сметаной, поливается шоколадным топингом',
             'img' => 'foto8210',
         ]);
 
@@ -1004,6 +1135,7 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 3,
             'carbohydrates' => 0,
             'calories' => 32,
+            'price' => 265,
             'img' => 'foto16211',
         ]);
 
@@ -1015,17 +1147,21 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 18,
             'carbohydrates' => 14,
             'calories' => 267,
+            'price' => 368,
+            'description' => 'Филе кеты в сливках запеченное в духовом шкафу, подается с рисом, соусом «Тар-тар», лимоном и зеленью',
             'img' => 'foto8189',
         ]);
 
         $this->insert('product', [
-            'name' => 'Фрикадельки из курицы с дольками',
+            'name' => 'Фрикадельки из курицы с картофельными дольками',
             'category_id' => 1,
             'weight' => 2508,
             'proteins' => 1,
             'fats' => 3,
             'carbohydrates' => 0,
             'calories' => 32,
+            'price' => 265,
+            'description' => 'Фрикадельки из курицы с картофельными дольками в сливочном соусе подаются со свежими томатами и огурцом',
             'img' => 'foto16217',
         ]);
 
@@ -1037,6 +1173,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 0,
             'carbohydrates' => 0,
             'calories' => 0,
+            'price' => 89,
+            'description' => 'Яблоки, киви, банан, апельсин, попкорн, зёерна граната',
             'img' => 'foto16143',
         ]);
 
@@ -1048,6 +1186,7 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 0,
             'carbohydrates' => 0,
             'calories' => 0,
+            'price' => 169,
             'img' => 'foto16463',
         ]);
 
@@ -1059,6 +1198,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 1,
             'carbohydrates' => 24,
             'calories' => 223,
+            'price' => 165,
+            'description' => 'Собственного приготовления (говядина) с аджикой из свежих овощей, (5шт)',
             'img' => 'foto8181',
         ]);
 
@@ -1070,6 +1211,7 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 1,
             'carbohydrates' => 29,
             'calories' => 49,
+            'price' => 99,
             'img' => 'foto15827',
         ]);
 
@@ -1081,6 +1223,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 2,
             'carbohydrates' => 5,
             'calories' => 48,
+            'price' => 108,
+            'description' => 'Чебурек с охотничьими колбасками, беконом, луком, грибами, сыром подается со сметаной',
             'img' => 'foto21087',
         ]);
 
@@ -1092,6 +1236,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 12,
             'carbohydrates' => 19,
             'calories' => 227,
+            'price' => 165,
+            'description' => 'Чебурек с охотничьими колбасками, беконом, луком, грибами, сыром подается со сметаной',
             'img' => 'foto18298',
         ]);
 
@@ -1103,6 +1249,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 11,
             'carbohydrates' => 38,
             'calories' => 273,
+            'price' => 108,
+            'description' => 'Баранина с луком и кинзой, приправленный чили-перцем,подается со сметаной',
             'img' => 'foto8115',
         ]);
 
@@ -1114,6 +1262,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 9,
             'carbohydrates' => 32,
             'calories' => 232,
+            'price' => 165,
+            'description' => 'Баранина с луком и кинзой, приправленный чили-перцем,подается со сметаной',
             'img' => 'foto11319',
         ]);
 
@@ -1125,6 +1275,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 1,
             'carbohydrates' => 13,
             'calories' => 43,
+            'price' => 108,
+            'description' => 'Чебурек с творогом, курагой, грецким орехом, сметаной, подается со сливочным соусом',
             'img' => 'foto15923',
         ]);
 
@@ -1136,6 +1288,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 2,
             'carbohydrates' => 19,
             'calories' => 60,
+            'price' => 165,
+            'description' => 'Чебурек с творогом, курагой, грецким орехом, сметаной, подается со сливочным соусом',
             'img' => 'foto15934',
         ]);
 
@@ -1147,6 +1301,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 8,
             'carbohydrates' => 38,
             'calories' => 251,
+            'price' => 108,
+            'description' => 'Сочный чебурек, с начинкой из телятины и лука, подается со сметаной',
             'img' => 'foto8109',
         ]);
 
@@ -1158,6 +1314,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 6,
             'carbohydrates' => 32,
             'calories' => 209,
+            'price' => 108,
+            'description' => 'Сочный чебурек, с начинкой из телятины и лука, подается со сметаной',
             'img' => 'foto11326',
         ]);
 
@@ -1169,6 +1327,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 9,
             'carbohydrates' => 38,
             'calories' => 262,
+            'price' => 108,
+            'description' => 'Сочный чебурек, с нежной курочкой, сыром, луком, грибами, подается сметаной',
             'img' => 'foto8108',
         ]);
 
@@ -1180,6 +1340,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 8,
             'carbohydrates' => 32,
             'calories' => 230,
+            'price' => 165,
+            'description' => 'Сочный чебурек, с нежной курочкой, сыром, луком, грибами, подается сметаной',
             'img' => 'foto11324',
         ]);
 
@@ -1191,6 +1353,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 11,
             'carbohydrates' => 40,
             'calories' => 285,
+            'price' => 108,
+            'description' => 'Куриные потрошка с луком и сливками, подается со сметаной',
             'img' => 'foto8112',
         ]);
 
@@ -1202,6 +1366,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 9,
             'carbohydrates' => 33,
             'calories' => 244,
+            'price' => 165,
+            'description' => 'Куриные потрошка с луком и сливками, подается со сметаной',
             'img' => 'foto11328',
         ]);
 
@@ -1213,6 +1379,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 11,
             'carbohydrates' => 39,
             'calories' => 307,
+            'price' => 108,
+            'description' => 'Лёгкий, оригинальный чебурек с ветчиной и сыром, подаётся с листьями салата, вялеными томатами, сыром "Моцарелла" и соусом крем-бальзамик',
             'img' => 'foto16455',
         ]);
 
@@ -1224,6 +1392,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 11,
             'carbohydrates' => 39,
             'calories' => 307,
+            'price' => 165,
+            'description' => 'Лёгкий, оригинальный чебурек с ветчиной и сыром, подаётся с листьями салата, вялеными томатами, сыром "Моцарелла" и соусом крем-бальзамик',
             'img' => 'foto16461',
         ]);
 
@@ -1235,6 +1405,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 11,
             'carbohydrates' => 39,
             'calories' => 307,
+            'price' => 108,
+            'description' => 'Начинка из рыбы лососевых пород, с сыром, луком, подается со сметаной',
             'img' => 'foto8113',
         ]);
 
@@ -1246,6 +1418,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 10,
             'carbohydrates' => 32,
             'calories' => 267,
+            'price' => 165,
+            'description' => 'Начинка из рыбы лососевых пород, с сыром, луком, подается со сметаной',
             'img' => 'foto11327',
         ]);
 
@@ -1257,6 +1431,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 16,
             'carbohydrates' => 37,
             'calories' => 342,
+            'price' => 108,
+            'description' => 'Хрустящее тесто с тающей начинкой из домашней брынзы, сыра «Гауда», зеленью кинзы, подается со сметаной',
             'img' => 'foto8103',
         ]);
 
@@ -1268,6 +1444,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 15,
             'carbohydrates' => 31,
             'calories' => 307,
+            'price' => 165,
+            'description' => 'Хрустящее тесто с тающей начинкой из домашней брынзы, сыра «Гауда», зеленью кинзы, подается со сметаной',
             'img' => 'foto11320',
         ]);
 
@@ -1279,6 +1457,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 8,
             'carbohydrates' => 38,
             'calories' => 251,
+            'price' => 108,
+            'description' => 'Чебурек с вешенками и шампиньонами в сливках, с добавлением лука, подаётся со сметаной',
             'img' => 'foto16451',
         ]);
 
@@ -1290,6 +1470,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 8,
             'carbohydrates' => 38,
             'calories' => 251,
+            'price' => 165,
+            'description' => 'Чебурек с вешенками и шампиньонами в сливках, с добавлением лука, подаётся со сметаной',
             'img' => 'foto16457',
         ]);
 
@@ -1301,6 +1483,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 10,
             'carbohydrates' => 36,
             'calories' => 258,
+            'price' => 108,
+            'description' => 'Аппетитный чебурек с говядиной и свининой с добавлением лука, подается со сметаной',
             'img' => 'foto8110',
         ]);
 
@@ -1312,6 +1496,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 11,
             'carbohydrates' => 32,
             'calories' => 254,
+            'price' => 165,
+            'description' => 'Аппетитный чебурек с говядиной и свининой с добавлением лука, подается со сметаной',
             'img' => 'foto11325',
         ]);
 
@@ -1323,6 +1509,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 15,
             'carbohydrates' => 38,
             'calories' => 312,
+            'price' => 108,
+            'description' => 'Сочный чебурек, начиненный свининой, пряностями, луком, подается со сметаной',
             'img' => 'foto8110',
         ]);
 
@@ -1334,6 +1522,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 13,
             'carbohydrates' => 32,
             'calories' => 270,
+            'price' => 165,
+            'description' => 'Сочный чебурек, начиненный свининой, пряностями, луком, подается со сметаной',
             'img' => 'foto11322',
         ]);
 
@@ -1345,6 +1535,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 6,
             'carbohydrates' => 133,
             'calories' => 268,
+            'price' => 108,
+            'description' => 'Хрустящее тесто с начинкой из свежей вишни с добавлением коньяка, подается с соусом из свежей вишни',
             'img' => 'foto8114',
         ]);
 
@@ -1356,6 +1548,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 5,
             'carbohydrates' => 130,
             'calories' => 230,
+            'price' => 165,
+            'description' => 'Хрустящее тесто с начинкой из свежей вишни с добавлением коньяка, подается с соусом из свежей вишни',
             'img' => 'foto11329',
         ]);
 
@@ -1367,6 +1561,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 6,
             'carbohydrates' => 42,
             'calories' => 235,
+            'price' => 108,
+            'description' => 'Начинен толченым картофелем и жареными грибами с добавлением лука, подается со сметаной',
             'img' => 'foto8106',
         ]);
 
@@ -1378,6 +1574,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 4,
             'carbohydrates' => 36,
             'calories' => 194,
+            'price' => 165,
+            'description' => 'Начинен толченым картофелем и жареными грибами с добавлением лука, подается со сметаной',
             'img' => 'foto11323',
         ]);
 
@@ -1389,6 +1587,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 8,
             'carbohydrates' => 38,
             'calories' => 251,
+            'price' => 108,
+            'description' => 'Чебурек с говядиной, имбирём и Тайским соусом чили',
             'img' => 'foto16453',
         ]);
 
@@ -1400,6 +1600,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 8,
             'carbohydrates' => 38,
             'calories' => 251,
+            'price' => 165,
+            'description' => 'Чебурек с говядиной, имбирём и Тайским соусом чили',
             'img' => 'foto16459',
         ]);
 
@@ -1411,6 +1613,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 2,
             'carbohydrates' => 5,
             'calories' => 42,
+            'price' => 108,
+            'description' => 'Чебурек с рубленным мясом, квашенной капустой, салом, луком, подается со сметаной',
             'img' => 'foto15922',
         ]);
 
@@ -1422,6 +1626,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 2,
             'carbohydrates' => 7,
             'calories' => 45,
+            'price' => 165,
+            'description' => 'Чебурек с рубленным мясом, квашенной капустой, салом, луком, подается со сметаной',
             'img' => 'foto15937',
         ]);
 
@@ -1433,6 +1639,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 1,
             'carbohydrates' => 5,
             'calories' => 34,
+            'price' => 108,
+            'description' => 'Чебурек с индейкой, куриным филе, капустой, луком, подается со сметаной',
             'img' => 'foto15920',
         ]);
 
@@ -1444,6 +1652,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 2,
             'carbohydrates' => 6,
             'calories' => 46,
+            'price' => 165,
+            'description' => 'Чебурек с индейкой, куриным филе, капустой, луком, подается со сметаной',
             'img' => 'foto15935',
         ]);
 
@@ -1455,6 +1665,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 15,
             'carbohydrates' => 45,
             'calories' => 340,
+            'price' => 108,
+            'description' => 'Хрустящее тесто с начинкой из курицы, сыра, томатов, подается с листьями салата, сухариками, соусом «Цезарь»',
             'img' => 'foto8104',
         ]);
 
@@ -1466,6 +1678,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 16,
             'carbohydrates' => 36,
             'calories' => 315,
+            'price' => 165,
+            'description' => 'Хрустящее тесто с начинкой из курицы, сыра, томатов, подается с листьями салата, сухариками, соусом «Цезарь»',
             'img' => 'foto11321',
         ]);
 
@@ -1477,6 +1691,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 10,
             'carbohydrates' => 97,
             'calories' => 293,
+            'price' => 108,
+            'description' => 'Чебурек с яблоками, изюмом, грецким орехом и корицей, подается с вишневым соусом',
             'img' => 'foto11308',
         ]);
 
@@ -1488,6 +1704,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 9,
             'carbohydrates' => 92,
             'calories' => 254,
+            'price' => 165,
+            'description' => 'Чебурек с яблоками, изюмом, грецким орехом и корицей, подается с вишневым соусом',
             'img' => 'foto11330',
         ]);
 
@@ -1499,6 +1717,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 1,
             'carbohydrates' => 5,
             'calories' => 36,
+            'price' => 108,
+            'description' => 'Чебурек с куриным филе, индейкой, горбушей в сливках, луком, подается со сметаной',
             'img' => 'foto15921',
         ]);
 
@@ -1510,6 +1730,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 2,
             'carbohydrates' => 6,
             'calories' => 48,
+            'price' => 165,
+            'description' => 'Чебурек с куриным филе, индейкой, горбушей в сливках, луком, подается со сметаной',
             'img' => 'foto15936',
         ]);
 
@@ -1521,6 +1743,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 1,
             'carbohydrates' => 4,
             'calories' => 34,
+            'price' => 155,
+            'description' => 'Узбекские пельмешки с бульоном из свежих овощей, кинзой',
             'img' => 'foto18290',
         ]);
 
@@ -1532,6 +1756,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 7,
             'carbohydrates' => 33,
             'calories' => 263,
+            'price' => 255,
+            'description' => 'Из говядины на шпажке с картофелем фри и соусом',
             'img' => 'foto11316',
         ]);
 
@@ -1543,6 +1769,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 18,
             'carbohydrates' => 9,
             'calories' => 254,
+            'price' => 255,
+            'description' => 'Шашлык из курицы с жареным картофелем, маринованным луком, аджикой из свежих овощей собственного приготовления',
             'img' => 'foto8188',
         ]);
 
@@ -1554,6 +1782,7 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 0,
             'carbohydrates' => 0,
             'calories' => 0,
+            'price' => 155,
             'img' => 'foto16236',
         ]);
 
@@ -1565,6 +1794,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 3,
             'carbohydrates' => 5,
             'calories' => 64,
+            'price' => 165,
+            'description' => 'Суп с картофелем, луком, морковью, болгарским перцем, кинзой',
             'img' => 'foto8170',
         ]);
 
@@ -1576,6 +1807,8 @@ class m200710_085438_create_product_table extends Migration
             'fats' => 1,
             'carbohydrates' => 29,
             'calories' => 49,
+            'price' => 165,
+            'description' => 'Штрудель яблочный с карамелью, мороженым, топингом и лимонным соусом',
             'img' => 'foto16229',
         ]);
     }

@@ -37,8 +37,6 @@ class CartController extends Controller
 
         if (empty($product)) return false;
 
-        $session = Yii::$app->session;
-
         $cart = new Cart();
         $cart->addToCart($product);
 
@@ -57,7 +55,6 @@ class CartController extends Controller
 
     public function actionDelete($id)
     {
-        $session = Yii::$app->session;
         $cart = new Cart();
         $cart->recalc($id);
 
