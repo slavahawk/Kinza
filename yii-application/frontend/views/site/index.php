@@ -17,7 +17,7 @@ $this->registerMetaTag([
         <div class="mainSection__content">
             <div class="mainSection__content-left">
                 <h1>
-                    Лучшие чебуреки в городе
+                    Сочные и вкусные чебуреки в городе
                 </h1>
                 <p>Доставка с 10:00 до 21:00 в Красноярске</p>
                 <a href="<?= Url::to(['menu/index']); ?>">Меню</a>

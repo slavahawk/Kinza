@@ -52,7 +52,7 @@ class m200708_080437_create_category_table extends Migration
         ]);
 
         $this->insert('category', [
-            'name' => 'Холодные закузки',
+            'name' => 'Холодные закуски',
         ]);
 
         $this->insert('category', [
