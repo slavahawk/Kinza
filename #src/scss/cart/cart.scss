@@ -36,7 +36,7 @@
         &-cart {
             &-name {
                 display: grid;
-                grid-template-columns: 47% 25% 22% 2%;
+                grid-template-columns: 47% 25% 22% 4%;
                 grid-gap: 1%;
                 position: relative;
 
@@ -61,7 +61,7 @@
             &-product {
                 padding: 22px 0 18px 0;
                 display: grid;
-                grid-template-columns: 47% 25% 22% 2%;
+                grid-template-columns: 47% 25% 22% 4%;
                 grid-gap: 1%;
                 align-items: center;
                 position: relative;
@@ -90,9 +90,17 @@
                             font-weight: 500;
                             @include adaptiv-fontAll(18, 10);
                             line-height: 20px;
+                            padding: 0 0px 0 0;
 
                             a {
                                 color: black;
+                            }
+                        }
+                        .delete {
+                            a {
+                                border: 1px solid;
+                                border-style: dashed;
+                                padding: 0 5px;
                             }
                         }
                     }
@@ -109,13 +117,16 @@
                 @include adaptiv-fontAll(30, 25);
 
                 a {
+                    border: 1px solid;
+                    border-style: dashed;
+                    padding: 0 5px;
                     color: black;
                 }
             }
 
             &-total {
                 display: grid;
-                grid-template-columns: 47% 25% 22% 2%;
+                grid-template-columns: 47% 25% 22% 4%;
                 grid-gap: 1%;
                 align-items: center;
 
@@ -199,12 +210,12 @@
             &-cart {
                 &-name {
                     grid-gap: 2%;
-                    grid-template-columns: 55% 17% 18% 4%;
+                    grid-template-columns: 52% 17% 18% 13%;
                 }
 
                 &-product {
                     grid-gap: 2%;
-                    grid-template-columns: 55% 17% 18% 4%;
+                    grid-template-columns: 52% 17% 18% 13%;
 
                     &-main {
                         img {
@@ -221,7 +232,7 @@
 
                 &-total {
                     grid-gap: 2%;
-                    grid-template-columns: 55% 17% 18% 4%;
+                    grid-template-columns: 52% 17% 18% 13%;
 
                     p {
                         padding: 10px 0 0px 0;
