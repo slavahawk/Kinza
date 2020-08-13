@@ -56,13 +56,13 @@ MainAsset::register($this);
                 </div>
                 <p class="basket__text">Корзина</p>
             </a>
-            <a class="phone__min" href="tel:+73912884506">
+            <a class="phone__min" href="tel:+73912884505">
             <i class="fa fa-phone" aria-hidden="true"></i>
             </a>
         </div>
         <div class="header__content-phone">
-            <a href="tel:+73912884506">+7 (391) 288-45-06</a>
-            <p>Доставка с 10:00 до 21:00 в Красноярске</p>
+            <a href="tel:+73912884505">+7 (391) 288-45-05</a>
+            <p>Доставка с 10:00 до 23:00 в Красноярске</p>
         </div>
     </div>
 </header>
@@ -74,8 +74,8 @@ MainAsset::register($this);
         <div class="footer__content-left">
             <div class="footer__content-left-contact">
                 <p>г. Красноярск, пр. Мира, 53</p>
-                <a href="tel:+73912884506">т.288-45-06</a>
-                <p>Доставка с 10:00 до 21:00</p>
+                <a href="tel:+73912884505">т.288-45-05</a>
+                <p>Доставка с 10:00 до 23:00</p>
             </div>
             <h6>© Ресторан Кинза, 2020. Все права защищены.</h6>
         </div>
