@@ -40,7 +40,7 @@ MainAsset::register($this);
                     <a href="<?php echo Url::to(['menu/index']); ?>">Меню</a>
                 </li>
                 <li>
-                    <a href="/#aboutUs">О нас</a>
+                    <a href="<?= Url::to(['site/index', '#' => 'aboutUs']); ?>">О нас</a>
                 </li>
                 <li>
                     <a href="<?php echo Url::to(['site/contact']); ?>">Контакты</a>

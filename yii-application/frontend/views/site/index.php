@@ -38,7 +38,7 @@ $this->registerMetaTag([
         <picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/mainSection.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/mainSection.jpg" alt="" /></picture>
     </section>
     <!-- О нас -->
-    <section class="aboutUs">
+    <section id="aboutUs" class="aboutUs">
         <div class="aboutUs__content">
             <h2>О нас</h2>
             <div class="aboutUs__content-item">
