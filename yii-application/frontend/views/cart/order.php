@@ -69,7 +69,7 @@ use yii\widgets\MaskedInput;
             </div>
             <div class="order__content-btn">
                 <div class="order__content-btn-grid">
-                    <?= Html::submitButton('Заказать')?>
+                    <?= Html::submitButton('Заказать', ['value' => 'order', 'name' => 'order']); ?>
                 </div>
             </div>
             <?php $form = ActiveForm::end(); ?>
