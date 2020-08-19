@@ -15,6 +15,7 @@
     width: 100%;
     padding-top: 80px;
     z-index: 100;
+    min-height: 85vh;
 
     &__content {
         display: grid;
@@ -60,9 +61,9 @@
 
         &-right {
             z-index: 100;
-
+            max-width: 500px;
             img {
-                max-height: 80vh;
+                width: 100%;
             }
         }
     }

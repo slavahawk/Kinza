@@ -23,7 +23,7 @@ $this->registerMetaTag([
                 <a href="<?= Url::to(['menu/index']); ?>">Меню</a>
             </div>
             <div class="mainSection__content-right wow bounceInRight">
-                <picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/cheb.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/cheb.jpeg" alt="чебуреки" /></picture>
+                <picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/cheb.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/cheb.png" alt="чебуреки" /></picture>
             </div>
         </div>
         <div class="listMin1 wow bounceInRight">
