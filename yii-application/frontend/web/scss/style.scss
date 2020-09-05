@@ -1,0 +1,32 @@
+@import "mixins.scss";
+@import "fonts";
+@import "_null";
+@import "view";
+@import "header-footer/header.scss";
+@import "header-footer/burger.scss";
+@import "mainPage/mainSection.scss";
+@import "mainPage/aboutUs.scss";
+@import "mainPage/list.scss";
+@import "mainPage/listMin.scss";
+@import "mainPage/map.scss";
+@import "mainPage/menu.scss";
+@import "menu/filter.scss";
+@import "menu/catalog.scss";
+@import "menu/product.scss";
+@import "contact/contact.scss";
+@import "cart/cart.scss";
+@import "cart/order.scss";
+@import "cart/readyOrder.scss";
+@import "header-footer/footer.scss";
+
+body {
+	color: #fff;
+	background-color: white;
+	font-family: PTSans;
+	background-color: orange;
+
+	a {
+		color: #fff;
+		cursor: pointer;
+	}
+}

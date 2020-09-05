@@ -1,0 +1,94 @@
+.contact {
+    padding-top: 100px;
+    background: black;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+
+    &__content {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        display: grid;
+        grid-template-columns: 40% 60%;
+        grid-gap: 2em;
+        align-items: center;
+        margin: 0 auto;
+        width: 900px;
+
+        &-text {
+            h2 {
+                text-align: left;
+                @extend %tph2;
+                padding-bottom: 15px;
+            }
+
+            p {
+                font-size: 22px;
+                padding: 15px 0;
+            }
+
+            &-icon {
+                display: flex;
+                font-size: 26px;
+
+                &-social {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-right: 15px;
+                    background-color: white;
+                    color: black;
+                    border-radius: 50%;
+                    margin-top: 12px;
+                    transition: 0.2s ease-in-out;
+
+                    &:hover {
+                        background-color: #fc4a02;
+                        color: white;
+                    }
+
+                    @media (max-width:976px) {
+                        &:hover {
+                            background-color: white;
+                            color: black;
+                        }
+                    }
+                }
+
+                .vk {
+                    padding: 10px;
+                }
+
+                .inst {
+                    padding: 10px 12px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .contact__content {
+        grid-template-columns: 1fr;
+        width: 100%;
+
+        h2 {
+            text-align: center;
+        }
+    }
+
+    .contact__content-text {
+        text-align: center;
+    }
+
+    .contact__content-text-icon {
+        justify-content: center;
+    }
+
+    .contact__content-map {
+        display: none;
+    }
+}
