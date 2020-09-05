@@ -76,24 +76,27 @@ $this->registerMetaTag([
     <section class="menu">
         <div class="menu__content">
             <h2>Меню</h2>
+            <?php if ($categoryList): ?>
             <div class="menu__content-item">
+                <?php foreach ($categoryList as $category): ?>
                 <div class="menu__content-item-box">
-                    <a href="<?= Url::to(['menu/category', 'categoryId' => 3]) ?>"><picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/11.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/11.png" alt="" class="breakfast" /></picture></a>
-                    <a href="<?= Url::to(['menu/category', 'categoryId' => 3]) ?>" class="text__link">Завтраки</a>
+                    <a href="<?= Url::to(['menu/category', 'categoryId' => $category->id]) ?>">
+                        <picture>
+                            <?php if (is_file($category->image .'webp')): ?>
+                            <source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/category/<?=$category->image ?>.webp" type="image/webp">
+                            <?php endif; ?>
+                            <img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/category/<?=$category->image ?>.png" alt="<?=$category->name ?>" class="breakfast" />
+                        </picture>
+                    </a>
+                    <a href="<?= Url::to(['menu/category', 'categoryId' => $category->id]) ?>" class="text__link"><?=$category->name ?></a>
                 </div>
-                <div class="menu__content-item-box">
-                    <a href="<?= Url::to(['menu/category', 'categoryId' => 2]) ?>"><picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/22.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/22.png" alt="" class="breakfast" /></picture></a>
-                    <a href="<?= Url::to(['menu/category', 'categoryId' => 2]) ?>" class="text__link">Супы</a>
-                </div>
-                <div class="menu__content-item-box">
-                    <a href="<?= Url::to(['menu/category', 'categoryId' => 5]) ?>"><picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/33.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/33.png" alt="" class="breakfast" /></picture></a>
-                    <a href="<?= Url::to(['menu/category', 'categoryId' => 5]) ?>" class="text__link">Салаты</a>
-                </div>
-                <div class="menu__content-item-box menuMin">
-                    <a href="<?= Url::to(['menu/category', 'categoryId' => 8]) ?>"><picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/55.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/55.png" alt="" class="breakfast" /></picture></a>
-                    <a href="<?= Url::to(['menu/category', 'categoryId' => 8]) ?>" class="text__link">Выпечка</a>
-                </div>
+                <?php endforeach; ?>
+<!--                <div class="menu__content-item-box menuMin">-->
+<!--                    <a href="--><?//= Url::to(['menu/category', 'categoryId' => 8]) ?><!--"><picture><source srcset="--><?//= Yii::getAlias('@imgFrontEnd'); ?><!--/55.webp" type="image/webp"><img src="--><?//= Yii::getAlias('@imgFrontEnd'); ?><!--/55.png" alt="" class="breakfast" /></picture></a>-->
+<!--                    <a href="--><?//= Url::to(['menu/category', 'categoryId' => 8]) ?><!--" class="text__link">Выпечка</a>-->
+<!--                </div>-->
             </div>
+            <?php endif; ?>
             <div class="list5">
                 <picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/5.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/5.png" alt="" /></picture>
             </div>
