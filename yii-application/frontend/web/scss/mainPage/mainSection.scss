@@ -11,11 +11,10 @@
     @include disflex(flex, center, center);
     flex-direction: column;
     position: relative;
-    background-color: black;
+    background: url(../../../img/back-main.png);
     width: 100%;
-    padding-top: 80px;
+    min-height: 100vh;
     z-index: 100;
-    min-height: 85vh;
 
     &__content {
         display: grid;
@@ -23,7 +22,7 @@
         justify-content: center;
         align-items: center;
         justify-items: center;
-        padding: 1vh 15vw 0vh 15vw;
+        max-width: 1340px;
 
         margin: 0px auto;
 
@@ -61,7 +60,7 @@
 
         &-right {
             z-index: 100;
-            max-width: 500px;
+            max-width: 600px;
             img {
                 width: 100%;
             }

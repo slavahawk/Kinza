@@ -1,5 +1,6 @@
 @@include('addToCart.js');
 @@include('webp.js');
+@@include('scrollHeader.js');
 @@include('burger.js');
 @@include('filter.js');
 @@include('list.js');

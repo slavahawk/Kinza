@@ -5,8 +5,8 @@
     padding: 0;
 
     &__content {
-        padding: 15vh 20px;
-        max-width: 1400px;
+        padding: 12vh 20px;
+        max-width: 1320px;
         margin: 0px auto;
 
         h2 {
@@ -15,54 +15,48 @@
 
         &-item {
             padding-top: 50px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            justify-content: center;
-            align-items: center;
-            justify-items: center;
-
-            &-left {
-                width: 80%;
-
-                p {
-                    user-select: none;
-                    @include adaptiv-fontAll(40, 20);
-                    text-align: center;
-                    line-height: 45px;
+            p {
+                font-family: Montserrat;
+                max-width: 1215px;
+                margin: 0 auto;
+                user-select: none;
+                @include adaptiv-fontAll(26, 20);
+                line-height: 45px;
+                margin-bottom: 50px;
+                @media (max-width: 768px) {
+                    line-height: 35px;
+                }
+                @media (max-width: 468) {
+                    line-height: 32px;
                 }
             }
+            &-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+                @media (max-width: 1319px) {
+                    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+                }
+                @media (max-width: 500px) {
+                    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                }
+                .about__grid {
+                    position: relative;
+                    padding: 0px 0px 85% 0px;
+                    img {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
 
-            &-right {
-                width: 70%;
-
-                img {
-                    width: 100%;
+                .grid__big {
+                    grid-column: span 2;
+                    grid-row: span 2;
                 }
             }
         }
-    }
-}
-
-@media (max-width: 976px) {
-    .aboutUs__content-item {
-        grid-template-columns: 1fr;
-        padding-top: 25px;
-    }
-
-    .aboutUs__content-item-right {
-        display: none;
-    }
-
-    .aboutUs__content-item-left {
-        width: 100%;
-        p {
-            line-height: 30px;
-        }
-    }
-}
-
-@media (max-width: 768px) {
-    .aboutUs__content {
-        padding: 6vh 10px 8vh 10px;
     }
 }

@@ -71,41 +71,10 @@
         height: 100%;
         overflow: auto;
         transition: 0.3s cubic-bezier(0.69, 0.4, 0.4, 0.75);
-        background-color: #060608;
+        background-color: #121212;
         padding: 80px 10px 20px 10px;
 
         &.active {
-            left: 0;
-        }
-
-        ul {
-            display: block !important;
-            margin-top: 20px;
-
-            li {
-                margin: 0 0 60px 0;
-                margin-right: 0px !important;
-                @include adaptiv-fontMin(60, 28);
-            }
-        }
-    }
-
-    .headerW__content__menuW {
-        margin-left: 10vw;
-        z-index: 3;
-        position: fixed;
-        text-align: center;
-        top: 0;
-        left: 100%;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        transition: all 0.3s ease 0s;
-        background-color: #060608;
-        padding: 80px 10px 20px 10px;
-
-        &.active {
-            margin-left: 0vw;
             left: 0;
         }
 

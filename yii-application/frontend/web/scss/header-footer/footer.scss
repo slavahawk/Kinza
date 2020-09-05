@@ -1,5 +1,5 @@
 .footer {
-    color: black;
+    color: #121212;
 
     &__content {
         font-family: SourceSansPro;
@@ -19,7 +19,7 @@
                 grid-template-columns: repeat(2, 1fr);
 
                 a {
-                    color: black;
+                    color: #121212;
                 }
             }
 
@@ -46,21 +46,21 @@
                         }
 
                         a {
-                            color: #000;
+                            color: #121212;
                             transition: 0.2s ease-in-out;
 
                             &:hover {
                                 color: #f53906;
                             }
 
-                            @media (max-width:976px) {
+                            @media (max-width: 976px) {
                                 &:hover {
-                                    color: #000;
+                                    color: #121212;
                                 }
                             }
 
                             &:active {
-                                border-bottom: 1px solid #000;
+                                border-bottom: 1px solid #121212;
                             }
                         }
                     }
@@ -71,23 +71,23 @@
                 padding-top: 30px;
                 display: flex;
                 justify-content: center;
-                border-bottom: 2px solid #000;
+                border-bottom: 2px solid #121212;
                 padding-bottom: 5px;
                 width: 50%;
                 margin: 0 auto;
 
                 &-item {
                     a {
-                        color: black;
+                        color: #121212;
                         transition: 0.2s ease-in-out;
 
                         &:hover {
                             color: #f53906;
                         }
 
-                        @media (max-width:976px) {
+                        @media (max-width: 976px) {
                             &:hover {
-                                color: black;
+                                color: #121212;
                             }
                         }
                     }

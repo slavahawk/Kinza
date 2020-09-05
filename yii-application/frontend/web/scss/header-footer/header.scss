@@ -1,13 +1,21 @@
 .header {
-    background-color: black;
+    // background-color: black;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 200;
+    background-color: rgba(18, 18, 18, 0);
+    transition: 0.2s all;
+    &.fast {
+        transition: 0s !important;
+    }
+    &.out {
+        background-color: rgba(18, 18, 18, 1);
+    }
 
     &__content {
-        font-family: SourceSansPro;
+        font-family: Montserrat;
         padding: 10px 8vw;
         display: flex;
         justify-content: space-between;
@@ -32,8 +40,6 @@
 
         &-menu {
             ul {
-                font-family: SourceSansPro;
-
                 padding-top: 10px;
                 display: flex;
                 justify-content: center;
@@ -47,6 +53,7 @@
                     }
 
                     a {
+                        text-transform: uppercase;
                         color: #ffffff;
                         line-height: 1;
                         text-decoration: none;
@@ -69,8 +76,9 @@
                 align-items: center;
 
                 p {
+                    text-transform: uppercase;
                     font-size: 18px;
-                    padding-left: 10px;
+                    padding-left: 18px;
                 }
 
                 .count {
@@ -78,16 +86,18 @@
                     top: 12px;
                     left: 15px;
                     z-index: 2;
-                    background-color: #fc4a02;
-                    color: black;
+                    background-color: #e85222;
+                    color: rgb(255, 255, 255);
                     border-radius: 50%;
                     padding: 3px;
+
                     p {
-                        width: 18px;
-                        height: 18px;
+                        font-family: Roboto-Regular;
+                        width: 21px;
+                        height: 21px;
                         @include disflex(flex, center, center);
                         padding-left: 0;
-                        font-size: 14px;
+                        font-size: 16px;
                     }
                 }
             }
@@ -102,11 +112,11 @@
 
             a {
                 color: #fc4a02;
-                font-size: 19px;
+                font-size: 18px;
             }
 
             p {
-                padding-top: 5px;
+                padding-top: 8px;
                 font-size: 16px;
                 padding-left: 20px;
             }
