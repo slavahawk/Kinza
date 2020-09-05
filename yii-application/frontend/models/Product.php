@@ -11,10 +11,11 @@ use Yii;
  * @property string $name
  * @property int|null $category_id
  * @property string|null $weight
- * @property int|null $proteins
- * @property int|null $fats
- * @property int|null $carbohydrates
- * @property int|null $calories
+ * @property float|null $proteins
+ * @property float|null $fats
+ * @property float|null $carbohydrates
+ * @property float|null $calories
+ * @property string|null $description
  * @property int|null $price
  * @property string|null $img
  * @property int|null $status
@@ -43,6 +44,7 @@ class Product extends \yii\db\ActiveRecord
             'fats' => 'Fats',
             'carbohydrates' => 'Carbohydrates',
             'calories' => 'Calories',
+            'description' => 'Description',
             'price' => 'Price',
             'img' => 'Img',
             'status' => 'Status',
