@@ -1,3 +1,4 @@
+@@include('addToCart.js');
 @@include('webp.js');
 @@include('burger.js');
 @@include('filter.js');

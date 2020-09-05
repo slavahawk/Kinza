@@ -1,4 +1,4 @@
-let project__folder = '../..';
+let project__folder = '../';
 let source__folder = 'frontend/web';
 
 let path = {
@@ -16,7 +16,7 @@ let path = {
 	},
 	clean: {
 		css: project__folder + '/css/.css',
-		js: project__folder + '/js/',
+		js: project__folder + '/js/.js',
 	},
 };
 
