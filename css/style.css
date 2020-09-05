@@ -1202,10 +1202,6 @@ h6 {
   font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
 }
 
-.order__content-person-grid .form-group input::-ms-input-placeholder {
-  font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
-}
-
 .order__content-person-grid .form-group input::placeholder {
   font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
 }
@@ -1263,10 +1259,6 @@ h6 {
   font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
 }
 
-.order__content-delivery-grid .form-group input::-ms-input-placeholder {
-  font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
-}
-
 .order__content-delivery-grid .form-group input::placeholder {
   font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
 }
@@ -1294,10 +1286,6 @@ h6 {
 }
 
 .order__content-delivery-grid .disabled__adress:-ms-input-placeholder {
-  font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
-}
-
-.order__content-delivery-grid .disabled__adress::-ms-input-placeholder {
   font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
 }
 
@@ -1342,10 +1330,6 @@ h6 {
 }
 
 .order__content-textarea-grid input:-ms-input-placeholder, .order__content-textarea-grid textarea:-ms-input-placeholder {
-  font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
-}
-
-.order__content-textarea-grid input::-ms-input-placeholder, .order__content-textarea-grid textarea::-ms-input-placeholder {
   font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
 }
 
