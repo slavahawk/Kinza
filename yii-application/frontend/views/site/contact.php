@@ -16,9 +16,9 @@ $this->registerMetaTag([
                 <h2>Контакты</h2>
                 <p>Мира, 53, Красноярск</p>
                 <br />
-                <p>Часы работы: <br />Ежедневно с 10:00 до 24:00</p>
+                <p>Часы работы: <br />Ежедневно с 10:00 до 23:00</p>
                 <br />
-                <p><a href="tel:+73912884506">+7 (391) 288-45-06</a></p>
+                <p><a href="tel:+73912884505">+7 (391) 288-45-05</a></p>
                 <div class="contact__content-text-icon">
 							<a href="https://vk.com/kinza_cafe" class="contact__content-text-icon-social vk">
 								<i class="fab fa-vk"></i>
