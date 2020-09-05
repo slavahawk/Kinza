@@ -8,18 +8,16 @@
         padding: 5vh 20px 5vh 20px;
 
         h2 {
-            font-family: SourceSansProB;
-            font-size: 26px;
             color: #121212;
-            text-transform: uppercase;
-            font-weight: 500;
+            @extend %tph2;
         }
         &__item {
-            padding: 20px 0 0px 0;
+            padding: 30px 0 0px 0;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(285px, 2fr));
             gap: 36px 20px;
             font-family: SourceSansPro;
+            grid-auto-columns: 1fr;
             &__grid {
                 padding: 0 0 20px 0;
                 display: grid;
@@ -33,7 +31,7 @@
                 a {
                     position: relative;
                     padding: 0px 0px 90% 0px;
-                    margin: 0px 0px 20px 0px;
+                    margin: 0px 0px 10px 0px;
                     img {
                         position: absolute;
                         top: 0;
@@ -45,9 +43,8 @@
                 }
 
                 h3 {
-                    padding: 0 10px;
+                    padding: 20px 10px;
                     color: black;
-                    margin-top: 19px;
                     @include adaptiv-fontAll(16, 16);
                     line-height: 21px;
                     font-weight: 600;
@@ -55,27 +52,28 @@
                 }
 
                 p {
-                    font-family: SourceSansPro;
-                    color: rgb(245, 57, 6);
-                    @include adaptiv-fontAll(19, 16);
+                    font-family: Montserrat;
+                    font-weight: 600;
+                    color: #e85222;
+                    @include adaptiv-fontAll(18, 16);
                     padding-bottom: 15px;
                 }
 
                 .add-to-cart {
+                    font-family: SourceSansPro;
                     border-radius: 3px;
                     color: white;
                     margin: 0 auto;
-                    background: #f53906;
+                    background: #e85222;
                     box-shadow: 2px 2px 3px #989898;
-                    padding: 5px 1.8em;
-                    @include adaptiv-fontAll(14, 16);
+                    padding: 5px 0;
+                    @include adaptiv-fontAll(17, 16);
                     width: 105px;
                 }
             }
             .image__none {
                 background: rgba(204, 204, 204, 0.3);
                 grid-template: 1fr/1fr;
-                max-height: 422px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
