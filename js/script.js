@@ -111,14 +111,17 @@ $(document).ready(function () {
   });
 });
 ;
-$(function () {
-  'use strict';
+var arrowFilter = document.querySelector('.arrow-filter'),
+    btnFilter = document.querySelector('#buttonFilterMini'),
+    filterSelect = document.querySelector('.filter__select');
 
-  $('#buttonFilterMini, .title__box-mini').click(function () {
-    $('.filter__box-mini').toggleClass('open');
-    $('body').toggleClass('lock');
-  });
-});
+if (btnFilter) {
+  btnFilter.onclick = function () {
+    arrowFilter.classList.toggle('active');
+    filterSelect.classList.toggle('open');
+  };
+}
+
 ;
 var pos = {
   lat: 56.012458,
