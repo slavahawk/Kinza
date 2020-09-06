@@ -30,12 +30,6 @@ $this->registerMetaTag([
             <?php else: ?>
             <div class="cart__content-sum">
                 <div class="cart__content-cart">
-                    <div class="cart__content-cart-name">
-                        <p>Товары</p>
-                        <p>Кол-во</p>
-                        <p>Сумма</p>
-                    </div>
-
                     <?php foreach ($session['cart'] as $id => $item): ?>
                     <div class="cart__content-cart-product">
                         <div class="cart__content-cart-product-main">
@@ -44,8 +38,24 @@ $this->registerMetaTag([
                                 <p><a href="<?= Url::to(['menu/product', 'productId' => $id]); ?>"><?= $item['name']; ?></a></p>
                             </div>
                         </div>
-                        <p class="sum"><?= $item['qty']; ?><span> шт.</span></p>
-                        <p class="sum"><?= $item['price']; ?><span> руб.</span></p>
+                        <div class="amount">
+                            <div class="amount__content">
+                                <label>Количество</label>
+                                <div class="amount__content__item">
+                                    <div class="smaller__btn">-</div>
+                                    <p class="sum"><?= $item['qty']; ?></p>
+                                    <div class="more__btn">+</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sum__price">
+                            <div class="sum__price__content">
+                                <label>Цена</label>
+                                <div class="sum__price__content__item">
+                                    <?= $item['price']; ?><span> руб.</span>
+                                </div>
+                            </div>
+                        </div>
                         <p class="delete">
                             <a href="<?= Url::to(['cart/delete', 'id' => $id]); ?>">&times;</a>
                         </p>
@@ -53,9 +63,16 @@ $this->registerMetaTag([
                     <?php endforeach; ?>
 
                     <div class="cart__content-cart-total">
-                        <p>Товаров на сумму</p>
-                        <p class="sum"><?= $session['cart.qty']; ?><span> шт.</span></p>
-                        <p class="sum"><?= $session['cart.sum']; ?><span> руб.</span></p>
+                        <div class="total__title">Товаров на сумму</div>
+                        <div class="total__amount">
+                            <label>Всего количество</label>
+                            <p class="sum"><?= $session['cart.qty']; ?><span> шт.</span></p>
+                        </div>
+                        <div class="total__price">
+                            <label>Итог</label>
+                            <p class="sum"><?= $session['cart.sum']; ?><span> руб.</span></p>
+                        </div>
+                        
                     </div>
 
                     <div class="cart__content-cart-btn">
