@@ -22,98 +22,181 @@ $this->registerMetaTag([
                 <p>Доставка с 10:00 до 21:00 в Красноярске</p>
                 <a href="<?= Url::to(['menu/index']); ?>">Меню</a>
             </div>
-            <div class="mainSection__content-right wow bounceInRight">
-                <picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/cheb.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/cheb.png" alt="чебуреки" /></picture>
+            <div class="mainSection__content-right _anim-items">
+                <picture ><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/cheb.webp" type="image/webp"><img class="_anim-rotate" src="<?= Yii::getAlias('@imgFrontEnd'); ?>/cheb.png" alt="чебуреки" /></picture>
             </div>
         </div>
-        <div class="listMin1 wow bounceInRight">
-            <picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/1.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/1.png" alt="" /></picture>
+    <!-- Листик -->
+    <div class="list2">
+            <picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/2.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/2.png" alt="" /></picture>
         </div>
-        <div class="listMin2 wow bounceInLeft">
-            <picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/4.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/4.png" alt="" /></picture>
-        </div>
-    </section>
-    <!-- Меню фон after -->
-    <section class="mainSectionAfter">
-        <picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/mainSection.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/mainSection.jpg" alt="" /></picture>
     </section>
     <!-- О нас -->
     <section id="aboutUs" class="aboutUs">
         <div class="aboutUs__content">
             <h2>О нас</h2>
             <div class="aboutUs__content-item">
-                <div class="aboutUs__content-item-left">
-                    <p>
-                        Мы предлагаем вашему вниманию блюда восточной и европейской кухни. Вся наша еда
-                        готовится только из продуктов высшего качества, а заявки обрабатываются так быстро,
-                        что вы всегда получаете ваш заказ вкусным и горячим.
-                    </p>
-                </div>
-                <div class="aboutUs__content-item-right wow rotateIn">
-                    <picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/50.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/50.png" alt="" /></picture>
-                </div>
-            </div>
-            <div class="listMin3 wow rotateIn">
-                <picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/3.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/3.png" alt="" /></picture>
-            </div>
-            <div class="list4">
-                <picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/4.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/4.png" alt="" /></picture>
+                <p>
+                    Мы предлагаем вашему вниманию блюда восточной и европейской кухни. Вся наша еда
+                    готовится только из продуктов высшего качества, а заявки обрабатываются так быстро,
+                    что вы всегда получаете ваш заказ вкусным и горячим.
+                </p>
+                <div class="aboutUs__content-item-grid">
+                    <div class="about__grid">
+                        <img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/1.png" alt="" />
+                    </div>
+                    <div class="about__grid">
+                        <img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/2.png" alt="" />
+                    </div>
+                    <div class="about__grid grid__big">
+                        <img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/3.png" alt="" />
+                    </div>
+                    <div class="about__grid grid__big">
+                        <img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/4.png" alt="" />
+                    </div>
+                    <div class="about__grid">
+                        <img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/5.png" alt="" />
+                    </div>
+                    <div class="about__grid">
+                        <img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/6.png" alt="" />
+                    </div>
+                </div>       
             </div>
         </div>
-        <!-- Листик -->
-        <div class="list1">
-            <picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/1.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/1.png" alt="" /></picture>
-        </div>
-        <div class="list2">
-            <picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/2.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/2.png" alt="" /></picture>
-        </div>
-    </section>
-    <!-- Меню фон before -->
-    <section class="menuBefore">
-        <picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/back2bef.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/back2bef.png" alt="" /></picture>
+    
     </section>
     <!-- Меню -->
     <section class="menu">
         <div class="menu__content">
-            <h2>Меню</h2>
-            <?php if ($categoryList): ?>
-            <div class="menu__content-item">
-                <?php foreach ($categoryList as $category): ?>
-                <div class="menu__content-item-box">
-                    <a href="<?= Url::to(['menu/category', 'categoryId' => $category->id]) ?>">
-                        <picture>
-                            <?php if (is_file($category->image .'webp')): ?>
-                            <source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/category/<?=$category->image ?>.webp" type="image/webp">
-                            <?php endif; ?>
-                            <img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/category/<?=$category->image ?>.png" alt="<?=$category->name ?>" class="breakfast" />
-                        </picture>
+            <h2>Чебуреки</h2>
+            <div class="menu__content__item">
+                <div class="menu__content__item__grid">
+                    <a href="/menu/product/1">
+                        <img src="/img/product/foto8176.jpg" alt="" />
                     </a>
-                    <a href="<?= Url::to(['menu/category', 'categoryId' => $category->id]) ?>" class="text__link"><?=$category->name ?></a>
+                    <h3>Бефстроганов из говядины с картофельным пюре</h3>
+                    <p>280<span>₽</span></p>
+                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
                 </div>
-                <?php endforeach; ?>
-<!--                <div class="menu__content-item-box menuMin">-->
-<!--                    <a href="--><?//= Url::to(['menu/category', 'categoryId' => 8]) ?><!--"><picture><source srcset="--><?//= Yii::getAlias('@imgFrontEnd'); ?><!--/55.webp" type="image/webp"><img src="--><?//= Yii::getAlias('@imgFrontEnd'); ?><!--/55.png" alt="" class="breakfast" /></picture></a>-->
-<!--                    <a href="--><?//= Url::to(['menu/category', 'categoryId' => 8]) ?><!--" class="text__link">Выпечка</a>-->
-<!--                </div>-->
-            </div>
-            <?php endif; ?>
-            <div class="list5">
-                <picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/5.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/5.png" alt="" /></picture>
-            </div>
-            <div class="list3">
-                <picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/3.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/3.png" alt="" /></picture>
-            </div>
-            <div class="list6">
-                <picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/6.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/6.png" alt="" /></picture>
-            </div>
-            <div class="listMin4 wow rotateIn">
-                <picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/6.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/6.png" alt="" /></picture>
+                <div class="menu__content__item__grid">
+                    <a href="/menu/product/1">
+                        <img src="/img/product/foto8176.jpg" alt="" />
+                    </a>
+                    <h3>Бефстроганов из говядины с картофельным пюре</h3>
+                    <p>280<span>₽</span></p>
+                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
+                </div>
+                <div class="menu__content__item__grid">
+                    <a href="/menu/product/1">
+                        <img src="/img/product/foto8176.jpg" alt="" />
+                    </a>
+                    <h3>Бефстроганов из говядины с картофельным пюре</h3>
+                    <p>280<span>₽</span></p>
+                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
+                </div>
+                <div class="menu__content__item__grid">
+                    <a href="/menu/product/1">
+                        <img src="/img/product/foto8176.jpg" alt="" />
+                    </a>
+                    <h3>Бефстроганов из говядины с картофельным пюре</h3>
+                    <p>280<span>₽</span></p>
+                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
+                </div>
+                <div class="menu__content__item__grid">
+                    <a href="/menu/product/1">
+                        <img src="/img/product/foto8176.jpg" alt="" />
+                    </a>
+                    <h3>Бефстроганов из говядины с картофельным пюре</h3>
+                    <p>280<span>₽</span></p>
+                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
+                </div>
+                <div class="menu__content__item__grid">
+                    <a href="/menu/product/1">
+                        <img src="/img/product/foto8176.jpg" alt="" />
+                    </a>
+                    <h3>Бефстроганов из говядины с картофельным пюре</h3>
+                    <p>280<span>₽</span></p>
+                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
+                </div>
+                <div class="menu__content__item__grid">
+                    <a href="/menu/product/1">
+                        <img src="/img/product/foto8176.jpg" alt="" />
+                    </a>
+                    <h3>Бефстроганов из говядины с картофельным пюре</h3>
+                    <p>280<span>₽</span></p>
+                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
+                </div>
+                <a class="menu__content__item__grid image__none">
+                   <p>Смотреть все товары</p> 
+                </a>
             </div>
         </div>
     </section>
-    <!-- Меню фон after -->
-    <section class="menuAfter">
-        <picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/back2aft.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/back2aft.png" alt="" /></picture>
+    <section class="menu">
+        <div class="menu__content">
+            <h2>Чебуреки</h2>
+            <div class="menu__content__item">
+                <div class="menu__content__item__grid">
+                    <a href="/menu/product/1">
+                        <img src="/img/product/foto8176.jpg" alt="" />
+                    </a>
+                    <h3>Бефстроганов из говядины с картофельным пюре</h3>
+                    <p>280<span>₽</span></p>
+                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
+                </div>
+                <div class="menu__content__item__grid">
+                    <a href="/menu/product/1">
+                        <img src="/img/product/foto8176.jpg" alt="" />
+                    </a>
+                    <h3>Бефстроганов из говядины с картофельным пюре</h3>
+                    <p>280<span>₽</span></p>
+                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
+                </div>
+                <div class="menu__content__item__grid">
+                    <a href="/menu/product/1">
+                        <img src="/img/product/foto8176.jpg" alt="" />
+                    </a>
+                    <h3>Бефстроганов из говядины с картофельным пюре</h3>
+                    <p>280<span>₽</span></p>
+                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
+                </div>
+                <div class="menu__content__item__grid">
+                    <a href="/menu/product/1">
+                        <img src="/img/product/foto8176.jpg" alt="" />
+                    </a>
+                    <h3>Бефстроганов из говядины с картофельным пюре</h3>
+                    <p>280<span>₽</span></p>
+                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
+                </div>
+                <div class="menu__content__item__grid">
+                    <a href="/menu/product/1">
+                        <img src="/img/product/foto8176.jpg" alt="" />
+                    </a>
+                    <h3>Бефстроганов из говядины с картофельным пюре</h3>
+                    <p>280<span>₽</span></p>
+                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
+                </div>
+                <div class="menu__content__item__grid">
+                    <a href="/menu/product/1">
+                        <img src="/img/product/foto8176.jpg" alt="" />
+                    </a>
+                    <h3>Бефстроганов из говядины с картофельным пюре</h3>
+                    <p>280<span>₽</span></p>
+                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
+                </div>
+                <div class="menu__content__item__grid">
+                    <a href="/menu/product/1">
+                        <img src="/img/product/foto8176.jpg" alt="" />
+                    </a>
+                    <h3>Бефстроганов из говядины с картофельным пюре</h3>
+                    <p>280<span>₽</span></p>
+                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
+                </div>
+                <a class="menu__content__item__grid image__none">
+                   <p>Смотреть все товары</p> 
+                </a>
+            </div>
+        </div>
     </section>
     <!-- Карта -->
     <section class="map">
@@ -124,10 +207,3 @@ $this->registerMetaTag([
         defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCgwoTpESqADzD9gNWrX-uBJw7wB4-KWw&callback=initMap"
 ></script>
-
-
-<?php $this->registerJsFile('@web/js/libs/wow.min.js')?>
-
-<?php $this->registerJs(
-   "new WOW().init();"
-)?>

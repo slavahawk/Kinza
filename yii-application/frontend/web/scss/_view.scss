@@ -1,22 +1,22 @@
 %tpbutton {
-    font-family: SourceSansPro;
+    font-family: Montserrat;
     text-transform: uppercase;
     @include adaptiv-fontAll(26, 20);
     background-color: #fc4a02;
     border: 1px solid #fc4a02;
     padding: 6px 30px;
     border-radius: 30px;
-    color: black;
+    color: white;
     transition: 0.2s all;
 
     &:hover {
         color: white;
-        background-color: black;
+        background-color: #121212;
     }
 
-    @media (max-width:976px) {
+    @media (max-width: 976px) {
         &:hover {
-            color: black;
+            color: #121212;
             background-color: #fc4a02;
         }
     }
@@ -31,8 +31,7 @@
     font-weight: 600;
 }
 
-@media (max-width:700px) {
-
+@media (max-width: 700px) {
     %tph2 {
         line-height: 10px;
     }

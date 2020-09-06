@@ -14,7 +14,6 @@ class MainAsset extends AssetBundle
 {
 
     public $css = [
-        'css/libs/animate.compat.css',
         'css/style.min.css',
     ];
 

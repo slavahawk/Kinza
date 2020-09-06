@@ -1,13 +1,23 @@
 .header {
-    background-color: black;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 200;
+    background-color: #12121200;
+    transition: 0.2s all;
+
+    &.fast {
+        transition: 0s !important;
+    }
+
+    &.out {
+        background-color: rgba(18, 18, 18, 1);
+        filter: drop-shadow(0px 4px 6px rgba(36, 36, 36, 0.47));
+    }
 
     &__content {
-        font-family: SourceSansPro;
+        font-family: Montserrat;
         padding: 10px 8vw;
         display: flex;
         justify-content: space-between;
@@ -32,12 +42,10 @@
 
         &-menu {
             ul {
-                font-family: SourceSansPro;
-
                 padding-top: 10px;
                 display: flex;
                 justify-content: center;
-                font-size: 18px;
+                @include adaptiv-fontAll(18, 14);
 
                 li {
                     margin-right: 80px;
@@ -47,10 +55,12 @@
                     }
 
                     a {
+                        text-transform: uppercase;
                         color: #ffffff;
                         line-height: 1;
                         text-decoration: none;
                         transition: 0.2s ease-in-out;
+
                         &:hover {
                             color: #afafaf;
                         }
@@ -64,13 +74,14 @@
 
             a {
                 display: flex;
-                font-size: 22px;
+                @include adaptiv-fontAll(22, 18);
                 position: relative;
                 align-items: center;
 
                 p {
-                    font-size: 18px;
-                    padding-left: 10px;
+                    text-transform: uppercase;
+                    @include adaptiv-fontAll(18, 14);
+                    padding-left: 18px;
                 }
 
                 .count {
@@ -78,16 +89,24 @@
                     top: 12px;
                     left: 15px;
                     z-index: 2;
-                    background-color: #fc4a02;
-                    color: black;
+                    background-color: #e85222;
+                    color: rgb(255, 255, 255);
                     border-radius: 50%;
                     padding: 3px;
+
                     p {
-                        width: 18px;
-                        height: 18px;
+                        font-family: Roboto;
+                        width: 21px;
+                        height: 21px;
+
+                        @media (max-width: 768px) {
+                            width: 18px;
+                            height: 18px;
+                        }
+
                         @include disflex(flex, center, center);
                         padding-left: 0;
-                        font-size: 14px;
+                        @include adaptiv-fontAll(16, 14);
                     }
                 }
             }
@@ -102,11 +121,11 @@
 
             a {
                 color: #fc4a02;
-                font-size: 19px;
+                font-size: 18px;
             }
 
             p {
-                padding-top: 5px;
+                padding-top: 8px;
                 font-size: 16px;
                 padding-left: 20px;
             }

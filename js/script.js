@@ -1,23 +1,6 @@
 "use strict";
 
-$(document).ready(function () {
-  $('.add-to-cart').on('click', function (e) {
-    e.preventDefault();
-    var id = $(this).data('id');
-    $.ajax({
-      url: '/cart/add',
-      data: {
-        id: id
-      },
-      type: 'GET',
-      success: function success(res) {
-        $('#cart-count').html(res);
-      }
-    });
-  });
-});
-; // ФУНКЦИЯ ОПРЕДЕЛЕНИЯ ПОДДЕРЖКИ WEBP
-
+// ФУНКЦИЯ ОПРЕДЕЛЕНИЯ ПОДДЕРЖКИ WEBP
 function testWebP(callback) {
   var webP = new Image();
 
@@ -34,6 +17,93 @@ testWebP(function (support) {
   }
 });
 ;
+var headerMenu = document.querySelector('header'),
+    scrollPrev = 0;
+var page = document.URL;
+
+if (page == 'http://kinza/' || page == 'https://kinza-kras.ru/' || page == 'http://kinza-frontend.test/') {
+  scrollStyleHeader();
+} else {
+  headerMenu.classList.add('fast');
+  headerMenu.classList.add('out');
+}
+
+function scrollStyleHeader() {
+  window.onscroll = function () {
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrolled = winScroll / height * 100;
+
+    if (scrolled > 1 && scrolled > scrollPrev) {
+      headerMenu.classList.add('out');
+    } else if (scrolled == 0) {
+      headerMenu.classList.remove('out');
+    } else {
+      headerMenu.classList.add('out');
+    }
+  };
+}
+
+;
+var animItems = document.querySelectorAll('._anim-items');
+
+if (animItems.length > 0) {
+  var animOnscroll = function animOnscroll() {
+    for (var index = 0; index < animItems.length; index++) {
+      var animItem = animItems[index];
+      var animItemHeight = animItem.offsetHeight;
+      var animItemOffset = offset(animItem).top;
+      var animStart = 4;
+      var animItemPoint = window.innerHeight - animItemHeight / animStart;
+
+      if (animItemHeight > window.innerHeight) {
+        animItemPoint = window.innerHeight - window.innerHeight / animStart;
+      }
+
+      if (pageYOffset > animItemOffset - animItemPoint && pageYOffset < animItemOffset + animItemHeight) {
+        animItem.classList.add('_active');
+      } else {
+        if (!animItem.classList.contains('_anim-no-hide')) {
+          animItem.classList.remove('_active');
+        }
+      }
+    }
+  };
+
+  var offset = function offset(el) {
+    var rect = el.getBoundingClientRect(),
+        scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    return {
+      top: rect.top + scrollTop,
+      left: rect.left + scrollLeft
+    };
+  };
+
+  window.addEventListener('scroll', animOnscroll);
+  setTimeout(function () {
+    animOnscroll();
+  }, 500);
+}
+
+;
+$(document).ready(function () {
+  $('.add-to-cart').on('click', function (e) {
+    e.preventDefault();
+    var id = $(this).data('id');
+    $.ajax({
+      url: '/cart/add',
+      data: {
+        id: id
+      },
+      type: 'GET',
+      success: function success(res) {
+        $('#cart-count').html(res);
+      }
+    });
+  });
+});
+;
 $(document).ready(function () {
   $('.header__burger').click(function (event) {
     $('.header__burger, .header__content-menu').toggleClass('active');
@@ -48,12 +118,6 @@ $(function () {
     $('.filter__box-mini').toggleClass('open');
     $('body').toggleClass('lock');
   });
-});
-;
-$('body').on('mousemove', function (e) {
-  var x = e.pageX / $(window).width();
-  var y = e.pageY / $(window).height();
-  $('.list1, .list2, .list3, .list4, .list5, .list6, .list7, .list8 ').css('transform', 'translate(' + x * 30 + 'px, ' + y * 30 + 'px)');
 });
 ;
 var pos = {
@@ -138,7 +202,7 @@ function initMap() {
       featureType: 'road',
       elementType: 'geometry.fill',
       stylers: [{
-        color: '#2c2c2c'
+        color: '#3b3b3b'
       }]
     }, {
       featureType: 'road',
@@ -150,7 +214,7 @@ function initMap() {
       featureType: 'road.arterial',
       elementType: 'geometry',
       stylers: [{
-        color: '#373737'
+        color: '#414141'
       }]
     }, {
       featureType: 'road.highway',
@@ -214,7 +278,7 @@ function initMap() {
 $(document).ready(function () {
   $('.add-to-cart').on('click', function () {
     var cart = $('.basket');
-    var imgtodrag = $(this).parent('.catalog__content-item').find('img').eq(0);
+    var imgtodrag = $(this).parent('.catalog__content-item, .menu__content__item__grid').find('img').eq(0);
 
     if (imgtodrag) {
       var imgclone = imgtodrag.clone().offset({
@@ -245,30 +309,4 @@ $(document).ready(function () {
     }
   });
 });
-; // Кнопка купить при нажатии
-
-var buttons = document.getElementsByClassName('pay__link'),
-    forEach = Array.prototype.forEach;
-forEach.call(buttons, function (b) {
-  b.addEventListener('click', addElement);
-});
-
-function addElement(e) {
-  var addDiv = document.createElement('div'),
-      mValue = Math.max(this.clientWidth, this.clientHeight),
-      rect = this.getBoundingClientRect();
-  sDiv = addDiv.style, px = 'px';
-  sDiv.width = sDiv.height = mValue + px;
-  sDiv.left = e.clientX - rect.left - mValue / 2 + px;
-  sDiv.top = e.clientY - rect.top - mValue / 2 + px;
-  addDiv.classList.add('pulse');
-  this.appendChild(addDiv);
-}
-
-;
-$('.tabs__block').not(':first').hide();
-$('.order__content__tabs .order__content__tabs__items-item').click(function () {
-  $('.order__content__tabs .order__content__tabs__items-item').removeClass('active').eq($(this).index()).addClass('active');
-  $('.tabs__block').hide().eq($(this).index()).fadeIn();
-}).eq(0).addClass('active');
 ;
