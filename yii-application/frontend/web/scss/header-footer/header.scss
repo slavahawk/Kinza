@@ -7,7 +7,6 @@
     background-color: #12121200;
     transition: 0.2s all;
 
-
     &.fast {
         transition: 0s !important;
     }
@@ -81,7 +80,7 @@
 
                 p {
                     text-transform: uppercase;
-                    font-size: 18px;
+                    @include adaptiv-fontAll(18, 14);
                     padding-left: 18px;
                 }
 
@@ -100,7 +99,7 @@
                         width: 21px;
                         height: 21px;
 
-                        @media (max-width:768px) {
+                        @media (max-width: 768px) {
                             width: 18px;
                             height: 18px;
                         }

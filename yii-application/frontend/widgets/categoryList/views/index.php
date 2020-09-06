@@ -35,7 +35,10 @@ foreach ($categoryList as $category) {
 
         </ul>
         <div class="filter__content-button">
-            <a id="buttonFilterMini">Категории</a>
+            <a id="buttonFilterMini">
+                <p>Категории</p>
+                <img class="arrow-filter" src="<?= Yii::getAlias('@imgFrontEnd'); ?>/next.svg" alt="" />
+            </a>
         </div>
     </div>
 </section>
