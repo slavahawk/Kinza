@@ -163,7 +163,6 @@ h6 {
 }
 
 .aboutUs__content h2,
-.menu__content h2,
 .contact__content-text h2,
 .cart__content h2,
 .order__content h2 {
@@ -443,11 +442,17 @@ h6 {
 .menu__content {
   max-width: 1260px;
   margin: 0 auto;
-  padding: 0px 20px 100px;
+  padding: 36px 20px 67px;
 }
 
 .menu__content h2 {
   color: #121212;
+  text-align: left;
+  font-family: SourceSansPro;
+  font-style: normal;
+  font-weight: 600;
+  font-size: calc(24px + 6 * ((100vw - 320px) / 1600));
+  text-transform: uppercase;
 }
 
 .menu__content__item {
@@ -532,13 +537,13 @@ h6 {
 }
 
 .filter__content {
-  max-width: 900px;
+  max-width: 1040px;
   margin: 0 auto;
-  padding: 40px 0 0 0;
+  padding: 40px 20px 0;
 }
 
 .filter__content ul {
-  font-size: 13px;
+  font-size: 14px;
   text-transform: uppercase;
   display: flex;
   justify-content: space-between;
@@ -1659,6 +1664,10 @@ body a {
     display: none;
   }
 
+  .menu__content {
+    padding: 0px 20px 67px;
+  }
+
   .filter {
     margin-top: 40px;
     background-color: white;
@@ -1942,7 +1951,6 @@ body a {
 
 @media (max-width: 700px) {
   .aboutUs__content h2,
-  .menu__content h2,
   .contact__content-text h2,
   .cart__content h2,
   .order__content h2 {

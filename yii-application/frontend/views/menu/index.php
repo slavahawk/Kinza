@@ -18,7 +18,7 @@ $this->registerMetaTag([
 
     <?php echo CategoryList::widget(); ?>
 
-    <section class="catalog">
+    <!-- <section class="catalog">
         <div class="catalog__content">
 
             <?php foreach ($productList as $product): ?>
@@ -32,6 +32,139 @@ $this->registerMetaTag([
                 </div>
             <?php endforeach; ?>
 
+        </div>
+    </section> -->
+        <!-- Меню -->
+    <section class="menu">
+        <div class="menu__content">
+            <h2>Чебуреки</h2>
+            <div class="menu__content__item">
+                <div class="menu__content__item__grid">
+                    <a href="/menu/product/1">
+                        <img src="/img/product/foto8176.jpg" alt="" />
+                    </a>
+                    <h3>Бефстроганов из говядины с картофельным пюре</h3>
+                    <p>280<span>₽</span></p>
+                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
+                </div>
+                <div class="menu__content__item__grid">
+                    <a href="/menu/product/1">
+                        <img src="/img/product/foto8176.jpg" alt="" />
+                    </a>
+                    <h3>Бефстроганов из говядины с картофельным пюре</h3>
+                    <p>280<span>₽</span></p>
+                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
+                </div>
+                <div class="menu__content__item__grid">
+                    <a href="/menu/product/1">
+                        <img src="/img/product/foto8176.jpg" alt="" />
+                    </a>
+                    <h3>Бефстроганов из говядины с картофельным пюре</h3>
+                    <p>280<span>₽</span></p>
+                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
+                </div>
+                <div class="menu__content__item__grid">
+                    <a href="/menu/product/1">
+                        <img src="/img/product/foto8176.jpg" alt="" />
+                    </a>
+                    <h3>Бефстроганов из говядины с картофельным пюре</h3>
+                    <p>280<span>₽</span></p>
+                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
+                </div>
+                <div class="menu__content__item__grid">
+                    <a href="/menu/product/1">
+                        <img src="/img/product/foto8176.jpg" alt="" />
+                    </a>
+                    <h3>Бефстроганов из говядины с картофельным пюре</h3>
+                    <p>280<span>₽</span></p>
+                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
+                </div>
+                <div class="menu__content__item__grid">
+                    <a href="/menu/product/1">
+                        <img src="/img/product/foto8176.jpg" alt="" />
+                    </a>
+                    <h3>Бефстроганов из говядины с картофельным пюре</h3>
+                    <p>280<span>₽</span></p>
+                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
+                </div>
+                <div class="menu__content__item__grid">
+                    <a href="/menu/product/1">
+                        <img src="/img/product/foto8176.jpg" alt="" />
+                    </a>
+                    <h3>Бефстроганов из говядины с картофельным пюре</h3>
+                    <p>280<span>₽</span></p>
+                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
+                </div>
+                <a class="menu__content__item__grid image__none">
+                   <p>Смотреть все товары</p> 
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="menu">
+        <div class="menu__content">
+            <h2>Чебуреки</h2>
+            <div class="menu__content__item">
+                <div class="menu__content__item__grid">
+                    <a href="/menu/product/1">
+                        <img src="/img/product/foto8176.jpg" alt="" />
+                    </a>
+                    <h3>Бефстроганов из говядины с картофельным пюре</h3>
+                    <p>280<span>₽</span></p>
+                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
+                </div>
+                <div class="menu__content__item__grid">
+                    <a href="/menu/product/1">
+                        <img src="/img/product/foto8176.jpg" alt="" />
+                    </a>
+                    <h3>Бефстроганов из говядины с картофельным пюре</h3>
+                    <p>280<span>₽</span></p>
+                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
+                </div>
+                <div class="menu__content__item__grid">
+                    <a href="/menu/product/1">
+                        <img src="/img/product/foto8176.jpg" alt="" />
+                    </a>
+                    <h3>Бефстроганов из говядины с картофельным пюре</h3>
+                    <p>280<span>₽</span></p>
+                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
+                </div>
+                <div class="menu__content__item__grid">
+                    <a href="/menu/product/1">
+                        <img src="/img/product/foto8176.jpg" alt="" />
+                    </a>
+                    <h3>Бефстроганов из говядины с картофельным пюре</h3>
+                    <p>280<span>₽</span></p>
+                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
+                </div>
+                <div class="menu__content__item__grid">
+                    <a href="/menu/product/1">
+                        <img src="/img/product/foto8176.jpg" alt="" />
+                    </a>
+                    <h3>Бефстроганов из говядины с картофельным пюре</h3>
+                    <p>280<span>₽</span></p>
+                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
+                </div>
+                <div class="menu__content__item__grid">
+                    <a href="/menu/product/1">
+                        <img src="/img/product/foto8176.jpg" alt="" />
+                    </a>
+                    <h3>Бефстроганов из говядины с картофельным пюре</h3>
+                    <p>280<span>₽</span></p>
+                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
+                </div>
+                <div class="menu__content__item__grid">
+                    <a href="/menu/product/1">
+                        <img src="/img/product/foto8176.jpg" alt="" />
+                    </a>
+                    <h3>Бефстроганов из говядины с картофельным пюре</h3>
+                    <p>280<span>₽</span></p>
+                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
+                </div>
+                <a class="menu__content__item__grid image__none">
+                   <p>Смотреть все товары</p> 
+                </a>
+            </div>
         </div>
     </section>
     <section class="backMenu">
