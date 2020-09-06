@@ -2,12 +2,12 @@
 @import "fonts";
 @import "_null";
 @import "view";
+@import "animate";
 @import "header-footer/header.scss";
 @import "header-footer/burger.scss";
 @import "mainPage/mainSection.scss";
 @import "mainPage/aboutUs.scss";
 @import "mainPage/list.scss";
-@import "mainPage/listMin.scss";
 @import "mainPage/map.scss";
 @import "mainPage/menu.scss";
 @import "menu/filter.scss";
@@ -20,12 +20,12 @@
 @import "header-footer/footer.scss";
 
 body {
-	color: #fff;
-	background-color: white;
-	font-family: PTSans;
+    color: #fff;
+    background-color: white;
+    font-family: PTSans;
 
-	a {
-		color: #fff;
-		cursor: pointer;
-	}
+    a {
+        color: #fff;
+        cursor: pointer;
+    }
 }

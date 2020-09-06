@@ -3,7 +3,11 @@ const headerMenu = document.querySelector('header'),
 
 const page = document.URL;
 
-if (page == 'http://kinza/') {
+if (
+	page == 'http://kinza/' ||
+	page == 'https://kinza-kras.ru/' ||
+	page == 'http://kinza-frontend.test/'
+) {
 	scrollStyleHeader();
 } else {
 	headerMenu.classList.add('fast');
@@ -21,7 +25,7 @@ function scrollStyleHeader() {
 		} else if (scrolled == 0) {
 			headerMenu.classList.remove('out');
 		} else {
-			headerMenu.classList.remove('out');
+			headerMenu.classList.add('out');
 		}
 	};
 }

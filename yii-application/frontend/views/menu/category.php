@@ -27,7 +27,7 @@ $this->registerMetaTag([
                     </a>
                     <h3><?php echo $product->name; ?></h3>
                     <p><?php echo $product->price; ?><span>₽</span></p>
-                    <a class="add-to-cart" data-id="<?= $product->id; ?>" href="<?= Url::to(['cart/add', 'id' => $product->id]); ?>">Заказать</a>
+                    <a class="add-to-cart" data-id="<?= $product->id; ?>" href="<?= Url::to(['cart/add', 'id' => $product->id]); ?>">В корзину</a>
                 </div>
             <?php endforeach; ?>
 

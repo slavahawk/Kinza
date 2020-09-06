@@ -28,8 +28,9 @@ $this->registerMetaTag([
                     <h2><?= $product->name; ?></h2>
                     <a class="backMenu__link" href="<?= Url::to(['menu/category', 'categoryId' => $product->category_id]); ?>">Вернуться в каталог</a>
                     <p class="price"><?= $product->price; ?><span>₽</span></p>
+                    <a class="amount" href="#">В корзине: <span>1</span> шт.</a>
                     <div class="product__content-item-info-btn">
-                        <a class="pay__link add-to-cart" data-id="<?= $product->id; ?>" href="<?= Url::to(['cart/add', 'id' => $product->id]); ?>">В корзину</a>
+                        <a class="pay__link add-to-cart-product" data-id="<?= $product->id; ?>" href="<?= Url::to(['cart/add', 'id' => $product->id]); ?>">В корзину</a>
                     </div>
 
                     <h3>Описание</h3>
@@ -51,6 +52,8 @@ $this->registerMetaTag([
     </section>
     <section class="line"></section>
 </main>
+
+
 
 <?php $this->registerJsFile('@web/js/addToCart.js', [
     'depends' => JqueryAsset::className()

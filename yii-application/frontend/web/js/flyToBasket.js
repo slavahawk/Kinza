@@ -1,8 +1,10 @@
 $(document).ready(function () {
 	$('.add-to-cart').on('click', function () {
 		var cart = $('.basket');
-		var imgtodrag = $(this).parent('.catalog__content-item').find('img').eq(0);
-
+		var imgtodrag = $(this)
+			.parent('.catalog__content-item, .menu__content__item__grid')
+			.find('img')
+			.eq(0);
 		if (imgtodrag) {
 			var imgclone = imgtodrag
 				.clone()

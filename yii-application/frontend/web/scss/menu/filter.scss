@@ -19,11 +19,13 @@
                 a {
                     font-family: SourceSansPro;
                     font-weight: 600;
-                    color: black;
+                    color: #121212;
                     transition: 0.2s all;
+
                     &:hover {
                         color: #f53906;
                     }
+
                     &.active {
                         color: #f53906;
                     }
@@ -55,10 +57,11 @@
         padding: 10px 0 22px 0;
 
         a {
+            border-radius: 5px;
             width: 90%;
             margin: 0 auto;
-            color: #000;
-            background-color: #000;
+            color: #121212;
+            background-color: #121212;
             color: #fff;
             @include adaptiv-fontMin(20, 15);
             text-align: center;
@@ -116,20 +119,25 @@
 .contetnt__filter {
     font-family: SourceSansPro;
     padding: 30px;
+
     &__item {
         background-color: white;
+
         ul {
             padding: 20px;
 
             li {
                 padding-bottom: 20px;
+
                 a {
                     @include adaptiv-fontMin(18, 15);
-                    color: #000;
+                    color: #121212;
+
                     &.active {
                         color: #f53906;
                     }
                 }
+
                 &:last-child {
                     padding-bottom: 0;
                 }

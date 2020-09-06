@@ -15,6 +15,7 @@
 
         &-item {
             padding-top: 50px;
+
             p {
                 font-family: Montserrat;
                 max-width: 1215px;
@@ -23,25 +24,33 @@
                 @include adaptiv-fontAll(26, 20);
                 line-height: 45px;
                 margin-bottom: 50px;
+
                 @media (max-width: 768px) {
                     line-height: 35px;
                 }
+
                 @media (max-width: 468) {
                     line-height: 32px;
                 }
             }
+
             &-grid {
                 display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+                grid-template-columns: repeat(auto-fit, minmax(316px, 1fr));
+                gap: 5px;
+
                 @media (max-width: 1319px) {
-                    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+                    grid-template-columns: repeat(auto-fit, minmax(49%, 1fr));
                 }
+
                 @media (max-width: 500px) {
                     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
                 }
+
                 .about__grid {
                     position: relative;
                     padding: 0px 0px 85% 0px;
+
                     img {
                         position: absolute;
                         top: 0;
@@ -52,10 +61,14 @@
                     }
                 }
 
-                .grid__big {
-                    grid-column: span 2;
-                    grid-row: span 2;
+                @media (min-width:500px) {
+                    .grid__big {
+                        grid-column: span 2;
+                        grid-row: span 2;
+                    }
                 }
+
+
             }
         }
     }

@@ -1,17 +1,20 @@
 .header {
-    // background-color: black;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 200;
-    background-color: rgba(18, 18, 18, 0);
+    background-color: #12121200;
     transition: 0.2s all;
+
+
     &.fast {
         transition: 0s !important;
     }
+
     &.out {
         background-color: rgba(18, 18, 18, 1);
+        filter: drop-shadow(0px 4px 6px rgba(36, 36, 36, 0.47));
     }
 
     &__content {
@@ -58,6 +61,7 @@
                         line-height: 1;
                         text-decoration: none;
                         transition: 0.2s ease-in-out;
+
                         &:hover {
                             color: #afafaf;
                         }
@@ -92,12 +96,18 @@
                     padding: 3px;
 
                     p {
-                        font-family: Roboto-Regular;
+                        font-family: Roboto;
                         width: 21px;
                         height: 21px;
+
+                        @media (max-width:768px) {
+                            width: 18px;
+                            height: 18px;
+                        }
+
                         @include disflex(flex, center, center);
                         padding-left: 0;
-                        @include adaptiv-fontAll(18, 14);
+                        @include adaptiv-fontAll(16, 14);
                     }
                 }
             }

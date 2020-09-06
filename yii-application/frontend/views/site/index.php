@@ -22,11 +22,14 @@ $this->registerMetaTag([
                 <p>Доставка с 10:00 до 21:00 в Красноярске</p>
                 <a href="<?= Url::to(['menu/index']); ?>">Меню</a>
             </div>
-            <div class="mainSection__content-right wow bounceInRight">
-                <picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/cheb.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/cheb.png" alt="чебуреки" /></picture>
+            <div class="mainSection__content-right _anim-items">
+                <picture ><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/cheb.webp" type="image/webp"><img class="_anim-rotate" src="<?= Yii::getAlias('@imgFrontEnd'); ?>/cheb.png" alt="чебуреки" /></picture>
             </div>
         </div>
-
+    <!-- Листик -->
+    <div class="list2">
+            <picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/2.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/2.png" alt="" /></picture>
+        </div>
     </section>
     <!-- О нас -->
     <section id="aboutUs" class="aboutUs">
@@ -60,10 +63,7 @@ $this->registerMetaTag([
                 </div>       
             </div>
         </div>
-        <!-- Листик -->
-        <div class="list2">
-            <picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/2.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/2.png" alt="" /></picture>
-        </div>
+    
     </section>
     <!-- Меню -->
     <section class="menu">
@@ -76,7 +76,7 @@ $this->registerMetaTag([
                     </a>
                     <h3>Бефстроганов из говядины с картофельным пюре</h3>
                     <p>280<span>₽</span></p>
-                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">Заказать</a>
+                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
                 </div>
                 <div class="menu__content__item__grid">
                     <a href="/menu/product/1">
@@ -84,7 +84,7 @@ $this->registerMetaTag([
                     </a>
                     <h3>Бефстроганов из говядины с картофельным пюре</h3>
                     <p>280<span>₽</span></p>
-                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">Заказать</a>
+                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
                 </div>
                 <div class="menu__content__item__grid">
                     <a href="/menu/product/1">
@@ -92,7 +92,7 @@ $this->registerMetaTag([
                     </a>
                     <h3>Бефстроганов из говядины с картофельным пюре</h3>
                     <p>280<span>₽</span></p>
-                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">Заказать</a>
+                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
                 </div>
                 <div class="menu__content__item__grid">
                     <a href="/menu/product/1">
@@ -100,7 +100,7 @@ $this->registerMetaTag([
                     </a>
                     <h3>Бефстроганов из говядины с картофельным пюре</h3>
                     <p>280<span>₽</span></p>
-                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">Заказать</a>
+                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
                 </div>
                 <div class="menu__content__item__grid">
                     <a href="/menu/product/1">
@@ -108,7 +108,7 @@ $this->registerMetaTag([
                     </a>
                     <h3>Бефстроганов из говядины с картофельным пюре</h3>
                     <p>280<span>₽</span></p>
-                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">Заказать</a>
+                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
                 </div>
                 <div class="menu__content__item__grid">
                     <a href="/menu/product/1">
@@ -116,7 +116,7 @@ $this->registerMetaTag([
                     </a>
                     <h3>Бефстроганов из говядины с картофельным пюре</h3>
                     <p>280<span>₽</span></p>
-                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">Заказать</a>
+                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
                 </div>
                 <div class="menu__content__item__grid">
                     <a href="/menu/product/1">
@@ -124,7 +124,73 @@ $this->registerMetaTag([
                     </a>
                     <h3>Бефстроганов из говядины с картофельным пюре</h3>
                     <p>280<span>₽</span></p>
-                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">Заказать</a>
+                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
+                </div>
+                <a class="menu__content__item__grid image__none">
+                   <p>Смотреть все товары</p> 
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="menu">
+        <div class="menu__content">
+            <h2>Чебуреки</h2>
+            <div class="menu__content__item">
+                <div class="menu__content__item__grid">
+                    <a href="/menu/product/1">
+                        <img src="/img/product/foto8176.jpg" alt="" />
+                    </a>
+                    <h3>Бефстроганов из говядины с картофельным пюре</h3>
+                    <p>280<span>₽</span></p>
+                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
+                </div>
+                <div class="menu__content__item__grid">
+                    <a href="/menu/product/1">
+                        <img src="/img/product/foto8176.jpg" alt="" />
+                    </a>
+                    <h3>Бефстроганов из говядины с картофельным пюре</h3>
+                    <p>280<span>₽</span></p>
+                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
+                </div>
+                <div class="menu__content__item__grid">
+                    <a href="/menu/product/1">
+                        <img src="/img/product/foto8176.jpg" alt="" />
+                    </a>
+                    <h3>Бефстроганов из говядины с картофельным пюре</h3>
+                    <p>280<span>₽</span></p>
+                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
+                </div>
+                <div class="menu__content__item__grid">
+                    <a href="/menu/product/1">
+                        <img src="/img/product/foto8176.jpg" alt="" />
+                    </a>
+                    <h3>Бефстроганов из говядины с картофельным пюре</h3>
+                    <p>280<span>₽</span></p>
+                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
+                </div>
+                <div class="menu__content__item__grid">
+                    <a href="/menu/product/1">
+                        <img src="/img/product/foto8176.jpg" alt="" />
+                    </a>
+                    <h3>Бефстроганов из говядины с картофельным пюре</h3>
+                    <p>280<span>₽</span></p>
+                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
+                </div>
+                <div class="menu__content__item__grid">
+                    <a href="/menu/product/1">
+                        <img src="/img/product/foto8176.jpg" alt="" />
+                    </a>
+                    <h3>Бефстроганов из говядины с картофельным пюре</h3>
+                    <p>280<span>₽</span></p>
+                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
+                </div>
+                <div class="menu__content__item__grid">
+                    <a href="/menu/product/1">
+                        <img src="/img/product/foto8176.jpg" alt="" />
+                    </a>
+                    <h3>Бефстроганов из говядины с картофельным пюре</h3>
+                    <p>280<span>₽</span></p>
+                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
                 </div>
                 <a class="menu__content__item__grid image__none">
                    <p>Смотреть все товары</p> 
@@ -141,10 +207,3 @@ $this->registerMetaTag([
         defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCgwoTpESqADzD9gNWrX-uBJw7wB4-KWw&callback=initMap"
 ></script>
-
-
-<?php $this->registerJsFile('@web/js/libs/wow.min.js')?>
-
-<?php $this->registerJs(
-   "new WOW().init();"
-)?>
