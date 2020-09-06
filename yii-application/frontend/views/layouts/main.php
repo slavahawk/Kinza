@@ -8,7 +8,9 @@ use yii\helpers\Html;
 use frontend\assets\MainAsset;
 use yii\helpers\Url;
 
-
+$this->registerLinkTag(['rel' => 'icon', 'sizes' => '16x16', 'type' => 'image/ico', 'href' => Url::to(['/favicon.ico'])]);
+$this->registerLinkTag(['rel' => 'icon', 'sizes' => '32x32', 'type' => 'image/ico', 'href' => Url::to(['/favicon32.ico'])]);
+$this->registerLinkTag(['rel' => 'icon', 'sizes' => '64x64', 'type' => 'image/ico', 'href' => Url::to(['/favicon64.ico'])]);
 MainAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
