@@ -7,7 +7,7 @@ foreach ($categoryList as $category) {
 
 ?>
 
-<div class="filter__box-mini">
+<!-- <div class="filter__box-mini">
     <div class="title__box-mini">
         <p>Категории</p>
         <i class="fas fa-times"></i>
@@ -16,14 +16,12 @@ foreach ($categoryList as $category) {
         <div class="contetnt__filter__item">
             <ul>
 
-                <?php foreach ($categoryList as $category): ?>
-                    <li><a href="<?= Url::to(['menu/category', 'categoryId' => $category->id]); ?>" <?= (Url::current() == Url::to(['menu/category', 'categoryId' => $category->id])) ? 'class="active"' : false;?>><?= $category->name; ?></a></li>
-                <?php endforeach; ?>
+                
 
             </ul>
         </div>
     </div>
-</div>
+</div> -->
 
 <section class="filter">
     <div class="filter__content">
@@ -35,10 +33,22 @@ foreach ($categoryList as $category) {
 
         </ul>
         <div class="filter__content-button">
-            <a id="buttonFilterMini">
+            <div class="buttonFilterMini" id="buttonFilterMini">
                 <p>Категории</p>
                 <img class="arrow-filter" src="<?= Yii::getAlias('@imgFrontEnd'); ?>/next.svg" alt="" />
-            </a>
+            </div>
+            <div class="filter__select">
+                    <div class="filter__select__option">
+                        <div class="select__item">
+                            <?php foreach ($categoryList as $category): ?>
+                                <a href="<?= Url::to(['menu/category', 'categoryId' => $category->id]); ?>" <?= (Url::current() == Url::to(['menu/category', 'categoryId' => $category->id])) ? 'class="active"' : false;?>><?= $category->name; ?></a>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+            </div>
+            
         </div>
+       
+        
     </div>
 </section>

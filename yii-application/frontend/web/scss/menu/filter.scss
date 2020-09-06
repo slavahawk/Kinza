@@ -53,13 +53,12 @@
 
     .filter__content-button {
         display: block;
-        width: 100%;
+        // width: 100%;
         padding: 10px 0 22px 0;
+        position: relative;
 
-        a {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        .buttonFilterMini {
+            @include disflex(flex, space-between, center);
             font-family: Montserrat;
             border-radius: 5px;
             font-weight: 600;
@@ -68,8 +67,9 @@
             color: #121212;
             background-color: white;
             border: 1px solid #121212;
-            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+            // box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
             padding: 10px 20px;
+
             p {
                 text-align: left;
                 @include adaptiv-fontMin(20, 16);
@@ -84,80 +84,155 @@
                 }
             }
         }
-    }
-}
+        .filter__select {
+            z-index: 10;
+            position: absolute;
+            left: 5%;
+            top: 48px;
+            display: none;
+            background-color: white;
+            border-top: 0px;
+            border-bottom: 1px solid #121212;
+            border-left: 1px solid #121212;
+            border-right: 1px solid #121212;
+            border-radius: 0 0 5px 5px;
+            width: 90%;
+            margin: 0 auto;
 
-// Окно фильра Mini
-
-.filter__box-mini {
-    overflow: auto;
-    flex-wrap: nowrap;
-    flex-flow: column nowrap !important;
-    position: fixed;
-    z-index: 100;
-    right: 0;
-    bottom: 0;
-    padding-top: 70px;
-    height: 100%;
-    background-color: #e3e3e3;
-    width: 100%;
-    box-shadow: -3px 2px 9px rgba(88, 88, 88, 0.52);
-    transform: translateX(100%);
-    transition: 0.3s cubic-bezier(0.69, 0.4, 0.4, 0.75);
-
-    &.open {
-        transform: translateX(0);
-    }
-}
-
-.title__box-mini {
-    font-family: SourceSansPro;
-    @include disflex(flex, space-between, center);
-    flex-wrap: nowrap;
-    background-color: #f53906;
-    width: 100%;
-    height: 40px;
-    padding: 1vmax 1.5vmax;
-    color: white;
-    fill: white;
-    cursor: pointer;
-    @include adaptiv-fontMin(20, 15);
-}
-
-.title__box-mini i {
-    width: 1.5vmax;
-    height: 1.5vmax;
-    color: white;
-    font-weight: bold;
-    color: white;
-}
-
-.contetnt__filter {
-    font-family: SourceSansPro;
-    padding: 30px;
-
-    &__item {
-        background-color: white;
-
-        ul {
-            padding: 20px;
-
-            li {
-                padding-bottom: 20px;
-
-                a {
-                    @include adaptiv-fontMin(18, 15);
-                    color: #121212;
-
-                    &.active {
-                        color: #f53906;
-                    }
+            &.open {
+                display: block;
+            }
+            &__option {
+                position: relative;
+                overflow-y: hidden;
+                height: 100%;
+                padding: 10px;
+                height: 300px;
+                ::-webkit-scrollbar {
+                    width: 10px;
                 }
+                ::-webkit-scrollbar-button {
+                    height: 2px;
+                }
+                ::-webkit-scrollbar-track {
+                    background-color: rgb(243, 243, 243);
+                }
+                ::-webkit-scrollbar-track-piece {
+                    border: 1px solid #999;
+                    height: 100px;
+                }
+                ::-webkit-scrollbar-thumb {
+                    height: 10px;
+                    margin: 5px 0;
+                    background-color: #bebebe;
+                    border-radius: 50px;
+                }
+                ::-webkit-scrollbar-corner {
+                }
+                ::-webkit-resizer {
+                }
+                .select__item {
+                    scrollbar-color: #458245 #714826;
+                    position: absolute;
+                    overflow-x: hidden;
+                    overflow-y: auto;
+                    height: 92%;
+                    width: 95.5%;
 
-                &:last-child {
-                    padding-bottom: 0;
+                    a {
+                        font-family: Montserrat;
+                        @include adaptiv-fontMin(20, 16);
+                        // width: 100%;
+                        padding: 10px;
+                        border-radius: 5px 0 0 5px;
+                        margin: 10px 0;
+                        @include disflex(flex, space-between, flex-start);
+                        flex-direction: column;
+                        color: #121212;
+
+                        border: none;
+                        &.active {
+                            color: white;
+                            background-color: #12121247;
+                        }
+                    }
                 }
             }
         }
     }
 }
+
+// // Окно фильра Mini
+
+// .filter__box-mini {
+//     overflow: auto;
+//     flex-wrap: nowrap;
+//     flex-flow: column nowrap !important;
+//     position: fixed;
+//     z-index: 100;
+//     right: 0;
+//     bottom: 0;
+//     padding-top: 70px;
+//     height: 100%;
+//     background-color: #e3e3e3;
+//     width: 100%;
+//     box-shadow: -3px 2px 9px rgba(88, 88, 88, 0.52);
+//     transform: translateX(100%);
+//     transition: 0.3s cubic-bezier(0.69, 0.4, 0.4, 0.75);
+
+//     &.open {
+//         transform: translateX(0);
+//     }
+// }
+
+// .title__box-mini {
+//     font-family: SourceSansPro;
+//     @include disflex(flex, space-between, center);
+//     flex-wrap: nowrap;
+//     background-color: #f53906;
+//     width: 100%;
+//     height: 40px;
+//     padding: 1vmax 1.5vmax;
+//     color: white;
+//     fill: white;
+//     cursor: pointer;
+//     @include adaptiv-fontMin(20, 15);
+// }
+
+// .title__box-mini i {
+//     width: 1.5vmax;
+//     height: 1.5vmax;
+//     color: white;
+//     font-weight: bold;
+//     color: white;
+// }
+
+// .contetnt__filter {
+//     font-family: SourceSansPro;
+//     padding: 30px;
+
+//     &__item {
+//         background-color: white;
+
+//         ul {
+//             padding: 20px;
+
+//             li {
+//                 padding-bottom: 20px;
+
+//                 a {
+//                     @include adaptiv-fontMin(18, 15);
+//                     color: #121212;
+
+//                     &.active {
+//                         color: #f53906;
+//                     }
+//                 }
+
+//                 &:last-child {
+//                     padding-bottom: 0;
+//                 }
+//             }
+//         }
+//     }
+// }
