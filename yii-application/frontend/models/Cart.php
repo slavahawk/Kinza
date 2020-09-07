@@ -8,7 +8,7 @@ use yii\db\ActiveRecord;
 /**
  * This is the model class for table "product".
  *
- * @property int $id
+ * @property int $product_id
  * @property string $name
  * @property int|null $category_id
  * @property string|null $weight
@@ -48,7 +48,7 @@ class Cart extends ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
+            'product_id' => 'ID',
             'name' => 'Name',
             'category_id' => 'Category ID',
             'weight' => 'Weight',
@@ -64,14 +64,14 @@ class Cart extends ActiveRecord
 
     public function addToCart($product, $qty = 1)
     {
-        if (isset($_SESSION['cart'][$product->id])) {
-            $_SESSION['cart'][$product->id]['qty'] += $qty;
+        if (isset($_SESSION['cart'][$product->product_id])) {
+            $_SESSION['cart'][$product->product_id]['qty'] += $qty;
         } else {
-            $_SESSION['cart'][$product->id] = [
+            $_SESSION['cart'][$product->product_id] = [
                 'qty' => $qty,
-                'name' => $product->name,
+                'name' => $product->product_name,
                 'price' => $product->price,
-                'img' => $product->img,
+                'img' => $product->product_image,
             ];
         }
 

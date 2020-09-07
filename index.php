@@ -1,7 +1,7 @@
 <?php
 session_start();
-defined('YII_DEBUG') or define('YII_DEBUG', false);
-defined('YII_ENV') or define('YII_ENV', 'prod');
+defined('YII_DEBUG') or define('YII_DEBUG', true);
+defined('YII_ENV') or define('YII_ENV', 'dev');
 
 require __DIR__ . '/yii-application/vendor/autoload.php';
 require __DIR__ . '/yii-application/vendor/yiisoft/yii2/Yii.php';

@@ -6,7 +6,7 @@ use frontend\widgets\categoryList\CategoryList;
 use yii\helpers\Url;
 use yii\web\JqueryAsset;
 
-$this->title = "$product->name — Кинза";
+$this->title = "$product->product_name — Кинза";
 $this->registerMetaTag([
     'name' => 'description',
     'content' => 'Description of the page'
@@ -22,15 +22,15 @@ $this->registerMetaTag([
         <div class="product__content">
             <div class="product__content-item">
                 <div class="product__content-item-image">
-                    <img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/product/<?= $product->img; ?>.jpg" alt="" />
+                    <img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/product/<?= $product->product_image; ?>.jpg" alt="" />
                 </div>
                 <div class="product__content-item-info">
-                    <h2><?= $product->name; ?></h2>
+                    <h2><?= $product->product_name; ?></h2>
                     <a class="backMenu__link" href="<?= Url::to(['menu/category', 'categoryId' => $product->category_id]); ?>">Вернуться в каталог</a>
                     <p class="price"><?= $product->price; ?><span>₽</span></p>
                     <a class="amount" href="#">В корзине: <span>1</span> шт.</a>
                     <div class="product__content-item-info-btn">
-                        <a class="pay__link add-to-cart-product" data-id="<?= $product->id; ?>" href="<?= Url::to(['cart/add', 'id' => $product->id]); ?>">В корзину</a>
+                        <a class="pay__link add-to-cart" data-id="<?= $product->product_id; ?>">В корзину</a>
                     </div>
 
                     <h3>Описание</h3>
@@ -52,9 +52,3 @@ $this->registerMetaTag([
     </section>
     <section class="line"></section>
 </main>
-
-
-
-<?php $this->registerJsFile('/yii-application/frontend/web/js/addToCart.js', [
-    'depends' => JqueryAsset::className()
-]);

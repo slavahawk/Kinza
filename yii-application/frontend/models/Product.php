@@ -7,8 +7,8 @@ use Yii;
 /**
  * This is the model class for table "product".
  *
- * @property int $id
- * @property string $name
+ * @property int $product_id
+ * @property string $product_name
  * @property int|null $category_id
  * @property string|null $weight
  * @property float|null $proteins
@@ -36,8 +36,8 @@ class Product extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
-            'name' => 'Name',
+            '$product_id' => 'ID',
+            '$product_name' => 'Name',
             'category_id' => 'Category ID',
             'weight' => 'Weight',
             'proteins' => 'Proteins',

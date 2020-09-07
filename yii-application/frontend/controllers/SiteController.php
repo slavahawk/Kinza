@@ -32,7 +32,7 @@ class SiteController extends Controller
      */
     public function actionContact()
     {
-//        $test = $this->start();
+        $test = $this->start();
 
         return $this->render('contact');
     }
@@ -40,7 +40,7 @@ class SiteController extends Controller
     public function start()
     {
         $row = 0;
-        if (($handle = fopen( $_SERVER['DOCUMENT_ROOT'] . "/Vareniki.csv", "r")) !== FALSE) {
+        if (($handle = fopen( $_SERVER['DOCUMENT_ROOT'] . "/ETC.csv", "r")) !== FALSE) {
             while (($data = fgetcsv($handle, 1000, "\n")) !== FALSE) {
                 $num = count($data);
                 $row++;

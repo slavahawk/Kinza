@@ -16,162 +16,43 @@ $this->registerMetaTag([
 
 <main>
 
-    <?php echo CategoryList::widget(); ?>
-
-    <!-- <section class="catalog">
-        <div class="catalog__content">
-
-            <?php foreach ($productList as $product): ?>
-                <div class="catalog__content-item">
-                    <a href="<?php echo Url::to(['menu/product', 'productId' => $product->id]); ?>">
-                        <img src="<?php echo Yii::getAlias('@imgFrontEnd'); ?>/product/<?php echo $product->img; ?>.jpg" alt="" />
-                    </a>
-                    <h3><?php echo $product->name; ?></h3>
-                    <p><?php echo $product->price; ?><span>₽</span></p>
-                    <a class="add-to-cart" data-id="<?= $product->id; ?>" href="<?= Url::to(['cart/add', 'id' => $product->id]); ?>">В корзину</a>
-                </div>
-            <?php endforeach; ?>
-
-        </div>
-    </section> -->
+    <?= CategoryList::widget(); ?>
         <!-- Меню -->
+
+    <?php foreach ($menuList as $menu): ?>
+
     <section class="menu">
         <div class="menu__content">
-            <h2>Чебуреки</h2>
+            <h2><?= $menu['category_name'] ?></h2>
             <div class="menu__content__item">
+
+                <?php foreach ($menu['products'] as $product): ?>
+
                 <div class="menu__content__item__grid">
-                    <a href="/menu/product/1">
-                        <img src="/img/product/foto8176.jpg" alt="" />
+                    <a href="<?= Url::to(['menu/product', 'productId' => $product->product_id]) ?>">
+                        <img src="/img/product/<?= $product->product_image ?>.jpg" alt="" />
                     </a>
-                    <h3>Бефстроганов из говядины с картофельным пюре</h3>
-                    <p>280<span>₽</span></p>
-                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
+                    <h3><?= $product->product_name ?></h3>
+                    <p><?= $product->price ?><span>₽</span></p>
+                    <a class="add-to-cart" data-id="<?= $product->product_id; ?>" href="<?= Url::to(['cart/add', 'id' => $product->product_id]); ?>">В корзину</a>
                 </div>
-                <div class="menu__content__item__grid">
-                    <a href="/menu/product/1">
-                        <img src="/img/product/foto8176.jpg" alt="" />
-                    </a>
-                    <h3>Бефстроганов из говядины с картофельным пюре</h3>
-                    <p>280<span>₽</span></p>
-                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
-                </div>
-                <div class="menu__content__item__grid">
-                    <a href="/menu/product/1">
-                        <img src="/img/product/foto8176.jpg" alt="" />
-                    </a>
-                    <h3>Бефстроганов из говядины с картофельным пюре</h3>
-                    <p>280<span>₽</span></p>
-                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
-                </div>
-                <div class="menu__content__item__grid">
-                    <a href="/menu/product/1">
-                        <img src="/img/product/foto8176.jpg" alt="" />
-                    </a>
-                    <h3>Бефстроганов из говядины с картофельным пюре</h3>
-                    <p>280<span>₽</span></p>
-                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
-                </div>
-                <div class="menu__content__item__grid">
-                    <a href="/menu/product/1">
-                        <img src="/img/product/foto8176.jpg" alt="" />
-                    </a>
-                    <h3>Бефстроганов из говядины с картофельным пюре</h3>
-                    <p>280<span>₽</span></p>
-                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
-                </div>
-                <div class="menu__content__item__grid">
-                    <a href="/menu/product/1">
-                        <img src="/img/product/foto8176.jpg" alt="" />
-                    </a>
-                    <h3>Бефстроганов из говядины с картофельным пюре</h3>
-                    <p>280<span>₽</span></p>
-                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
-                </div>
-                <div class="menu__content__item__grid">
-                    <a href="/menu/product/1">
-                        <img src="/img/product/foto8176.jpg" alt="" />
-                    </a>
-                    <h3>Бефстроганов из говядины с картофельным пюре</h3>
-                    <p>280<span>₽</span></p>
-                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
-                </div>
-                <a class="menu__content__item__grid image__none">
+
+                <?php endforeach; ?>
+
+                <a href="<?= Url::to(['menu/category', 'categoryId' => $menu['category_id']]) ?>" class="menu__content__item__grid image__none">
                    <p>Смотреть все товары</p> 
                 </a>
             </div>
         </div>
     </section>
-    <section class="menu">
-        <div class="menu__content">
-            <h2>Чебуреки</h2>
-            <div class="menu__content__item">
-                <div class="menu__content__item__grid">
-                    <a href="/menu/product/1">
-                        <img src="/img/product/foto8176.jpg" alt="" />
-                    </a>
-                    <h3>Бефстроганов из говядины с картофельным пюре</h3>
-                    <p>280<span>₽</span></p>
-                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
-                </div>
-                <div class="menu__content__item__grid">
-                    <a href="/menu/product/1">
-                        <img src="/img/product/foto8176.jpg" alt="" />
-                    </a>
-                    <h3>Бефстроганов из говядины с картофельным пюре</h3>
-                    <p>280<span>₽</span></p>
-                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
-                </div>
-                <div class="menu__content__item__grid">
-                    <a href="/menu/product/1">
-                        <img src="/img/product/foto8176.jpg" alt="" />
-                    </a>
-                    <h3>Бефстроганов из говядины с картофельным пюре</h3>
-                    <p>280<span>₽</span></p>
-                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
-                </div>
-                <div class="menu__content__item__grid">
-                    <a href="/menu/product/1">
-                        <img src="/img/product/foto8176.jpg" alt="" />
-                    </a>
-                    <h3>Бефстроганов из говядины с картофельным пюре</h3>
-                    <p>280<span>₽</span></p>
-                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
-                </div>
-                <div class="menu__content__item__grid">
-                    <a href="/menu/product/1">
-                        <img src="/img/product/foto8176.jpg" alt="" />
-                    </a>
-                    <h3>Бефстроганов из говядины с картофельным пюре</h3>
-                    <p>280<span>₽</span></p>
-                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
-                </div>
-                <div class="menu__content__item__grid">
-                    <a href="/menu/product/1">
-                        <img src="/img/product/foto8176.jpg" alt="" />
-                    </a>
-                    <h3>Бефстроганов из говядины с картофельным пюре</h3>
-                    <p>280<span>₽</span></p>
-                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
-                </div>
-                <div class="menu__content__item__grid">
-                    <a href="/menu/product/1">
-                        <img src="/img/product/foto8176.jpg" alt="" />
-                    </a>
-                    <h3>Бефстроганов из говядины с картофельным пюре</h3>
-                    <p>280<span>₽</span></p>
-                    <a class="add-to-cart" data-id="1" href="/cart/add?id=1">В корзину</a>
-                </div>
-                <a class="menu__content__item__grid image__none">
-                   <p>Смотреть все товары</p> 
-                </a>
-            </div>
-        </div>
-    </section>
+
+    <?php endforeach; ?>
+
     <section class="backMenu">
-        <!-- <img src="<?php echo Yii::getAlias('@imgFrontEnd'); ?>/backmenu.png" alt="" /> -->
+        <!-- <img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/backmenu.png" alt="" /> -->
     </section>
 </main>
 
-<?php $this->registerJsFile('/yii-application/frontend/web/js/addToCart.js', [
-        'depends' => JqueryAsset::className()
-]);
+<?php //$this->registerJsFile('/yii-application/frontend/web/js/addToCart.js', [
+//        'depends' => JqueryAsset::className()
+//]);
