@@ -1,6 +1,6 @@
 .aboutUs {
     position: relative;
-    color: #000;
+    color: #121212;
     position: relative;
     padding: 0;
 
@@ -61,14 +61,12 @@
                     }
                 }
 
-                @media (min-width:500px) {
+                @media (min-width: 500px) {
                     .grid__big {
                         grid-column: span 2;
                         grid-row: span 2;
                     }
                 }
-
-
             }
         }
     }
