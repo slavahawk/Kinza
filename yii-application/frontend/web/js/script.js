@@ -6,3 +6,4 @@
 @@include('filter.js');
 @@include('map.js');
 @@include('flyToBasket.js');
+@@include('orderForm.js');

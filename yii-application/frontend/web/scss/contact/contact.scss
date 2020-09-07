@@ -6,19 +6,21 @@
         display: grid;
         grid-template-columns: auto minmax(500px, 1fr);
 
-        @media (max-width:976px) {
+        @media (max-width: 976px) {
+            padding: 40px 0px 0 0;
             grid-template-columns: 1fr;
+            grid-gap: 60px;
         }
 
         grid-gap: 2em;
         align-items: center;
         margin: 0 auto;
         max-width: 1260px;
-        min-height: 100vh;
 
+        @media (min-width: 976px) {
+            min-height: 100vh;
+        }
         &-text {
-
-
             h2 {
                 text-align: left;
                 @extend %tph2;
@@ -50,7 +52,7 @@
                         color: white;
                     }
 
-                    @media (max-width:976px) {
+                    @media (max-width: 976px) {
                         &:hover {
                             background-color: white;
                             color: #121212;
@@ -68,7 +70,8 @@
             }
         }
 
-        &-map {}
+        &-map {
+        }
     }
 }
 
@@ -87,5 +90,4 @@
     .contact__content-text-icon {
         justify-content: center;
     }
-
 }

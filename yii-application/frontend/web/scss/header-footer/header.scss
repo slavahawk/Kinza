@@ -39,7 +39,6 @@
 
         &-menu {
             ul {
-                padding-top: 10px;
                 @include disflex(flex, center, stretch);
                 @include adaptiv-fontAll(18, 14);
 
