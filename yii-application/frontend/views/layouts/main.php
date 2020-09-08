@@ -27,7 +27,12 @@ MainAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
-
+<div class="preloader">
+  <div class="preloader__row">
+    <img  src="<?= Yii::getAlias('@imgFrontEnd'); ?>/logo.png" alt="Логотип" />
+    <div class="preloader__item"></div>
+  </div>
+</div>
 <header class="header">
     <div class="header__content">
         <div class="header__content-logo">
