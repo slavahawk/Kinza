@@ -32,7 +32,7 @@ class SiteController extends Controller
      */
     public function actionContact()
     {
-        $test = $this->start();
+//        $test = $this->start();
 
         return $this->render('contact');
     }
