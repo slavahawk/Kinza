@@ -6,7 +6,6 @@
         margin: 0 auto;
         color: #121212;
         font-family: Roboto;
-
         h2 {
             @extend %tph2;
             text-align: left;
@@ -140,6 +139,10 @@
                             color: #242424;
                             cursor: pointer;
                             user-select: none;
+                            &.amount__disabled {
+                                background-color: #96969620;
+                                color: #96969660;
+                            }
                         }
                         p {
                         }

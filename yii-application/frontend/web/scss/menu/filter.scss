@@ -17,13 +17,13 @@
 
             li {
                 a {
-                    font-family: SourceSansPro;
+                    font-family: PTSans;
                     font-weight: 600;
                     color: #121212;
                     transition: 0.2s all;
 
                     &:hover {
-                        color: #f53906;
+                        color: rgb(245, 57, 6);
                     }
 
                     &.active {
@@ -109,6 +109,7 @@
                 height: 300px;
                 ::-webkit-scrollbar {
                     width: 10px;
+                    -webkit-appearance: none;
                 }
                 ::-webkit-scrollbar-button {
                     height: 2px;

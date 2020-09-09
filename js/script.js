@@ -1,6 +1,14 @@
 "use strict";
 
-// ФУНКЦИЯ ОПРЕДЕЛЕНИЯ ПОДДЕРЖКИ WEBP
+window.onload = function () {
+  document.body.classList.add('loaded_hiding');
+  window.setTimeout(function () {
+    document.body.classList.add('loaded');
+    document.body.classList.remove('loaded_hiding');
+  }, 500);
+}; // ФУНКЦИЯ ОПРЕДЕЛЕНИЯ ПОДДЕРЖКИ WEBP
+
+
 function testWebP(callback) {
   var webP = new Image();
 
@@ -86,23 +94,6 @@ if (animItems.length > 0) {
   }, 500);
 }
 
-;
-$(document).ready(function () {
-  $('.add-to-cart').on('click', function (e) {
-    e.preventDefault();
-    var id = $(this).data('id');
-    $.ajax({
-      url: '/cart/add',
-      data: {
-        id: id
-      },
-      type: 'GET',
-      success: function success(res) {
-        $('#cart-count').html(res);
-      }
-    });
-  });
-});
 ;
 $(document).ready(function () {
   $('.header__burger').click(function (event) {

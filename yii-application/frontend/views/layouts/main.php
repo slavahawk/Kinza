@@ -29,7 +29,7 @@ MainAsset::register($this);
 <?php $this->beginBody() ?>
 <div class="preloader">
   <div class="preloader__row">
-    <img  src="<?= Yii::getAlias('@imgFrontEnd'); ?>/logo.png" alt="Логотип" />
+    <img  src="<?= Yii::getAlias('@imgFrontEnd'); ?>/preloader.png" alt="Логотип" />
     <div class="preloader__item"></div>
   </div>
 </div>
@@ -105,8 +105,8 @@ MainAsset::register($this);
         </div>
     </div>
 </footer>
-
 <?php $this->endBody() ?>
+
 </body>
 </html>
 <?php $this->endPage() ?>
