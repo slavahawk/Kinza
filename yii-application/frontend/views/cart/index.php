@@ -4,6 +4,7 @@
 
 use yii\helpers\Html;
 use yii\helpers\Url;
+use yii\web\JqueryAsset;
 
 $this->title = "Корзина — Кинза";
 $this->registerMetaTag([
@@ -30,7 +31,9 @@ $this->registerMetaTag([
             <?php else: ?>
             <div class="cart__content-sum">
                 <div class="cart__content-cart">
+
                     <?php foreach ($session['cart'] as $id => $item): ?>
+
                     <div class="cart__content-cart-product">
                         <div class="cart__content-cart-product-main">
                             <a href="<?= Url::to(['menu/product', 'productId' => $id]); ?>"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/product/<?= $item['img']; ?>.jpg" alt="" /></a>
@@ -43,8 +46,8 @@ $this->registerMetaTag([
                                 <label>Количество</label>
                                 <div class="amount__content__item">
                                     <div class="smaller__btn">-</div>
-                                    <p class="sum"><?= $item['qty']; ?></p>
-                                    <div class="more__btn">+</div>
+                                    <p id="cart-count-num-<?= $id; ?>" class="sum"><?= $item['qty']; ?></p>
+                                    <div class="more__btn add-product" data-id="<?= $id; ?>">+</div>
                                 </div>
                             </div>
                         </div>
@@ -60,17 +63,18 @@ $this->registerMetaTag([
                             <a href="<?= Url::to(['cart/delete', 'id' => $id]); ?>">&times;</a>
                         </p>
                     </div>
+
                     <?php endforeach; ?>
 
                     <div class="cart__content-cart-total">
                         <div class="total__title">Товаров на сумму</div>
                         <div class="total__amount">
                             <label>Всего количество</label>
-                            <p class="sum"><?= $session['cart.qty']; ?><span> шт.</span></p>
+                            <p class="sum"><span id="cart-count-qty"><?= $session['cart.qty']; ?></span> шт.</p>
                         </div>
                         <div class="total__price">
                             <label>Итог</label>
-                            <p class="sum"><?= $session['cart.sum']; ?><span> руб.</span></p>
+                            <p class="sum"><span id="cart-count-sum"><?= $session['cart.sum']; ?></span> руб.</p>
                         </div>
                         
                     </div>
@@ -91,3 +95,7 @@ $this->registerMetaTag([
     </section>
     <section class="line"></section>
 </main>
+
+<?php $this->registerJsFile('/yii-application/frontend/web/js/backend/addProductInCart.js', [
+        'depends' => JqueryAsset::className()
+]);

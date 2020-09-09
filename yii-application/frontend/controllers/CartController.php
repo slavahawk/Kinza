@@ -9,7 +9,9 @@ use frontend\models\Order;
 use frontend\models\OrderItems;
 use frontend\models\Product;
 use Yii;
+use yii\helpers\Json;
 use yii\web\Controller;
+use yii\web\Response;
 
 class CartController extends Controller
 {
@@ -41,6 +43,26 @@ class CartController extends Controller
         $cart->addToCart($product);
 
         return $_SESSION['cart.qty'];
+    }
+
+    public function actionAddInCart()
+    {
+        Yii::$app->response->format = Response::FORMAT_JSON;
+
+        $id = Yii::$app->request->get('id');
+        $product = Product::findOne($id);
+
+        if (empty($product)) return false;
+
+        $cart = new Cart();
+        $cart->addToCart($product);
+
+        return Json::encode([
+            'qty' => $_SESSION['cart.qty'],
+            'sum' => $_SESSION['cart.sum'],
+            'num' => $_SESSION['cart'][$id]['qty'],
+
+        ]);
     }
 
     protected function actionClear()

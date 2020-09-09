@@ -62,8 +62,10 @@ class Cart extends ActiveRecord
         ];
     }
 
-    public function addToCart($product, $qty = 1)
+    public function addToCart($product)
     {
+        $qty = 1;
+
         if (isset($_SESSION['cart'][$product->product_id])) {
             $_SESSION['cart'][$product->product_id]['qty'] += $qty;
         } else {

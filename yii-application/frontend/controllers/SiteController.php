@@ -42,7 +42,6 @@ class SiteController extends Controller
         $row = 0;
         if (($handle = fopen( $_SERVER['DOCUMENT_ROOT'] . "/ETC.csv", "r")) !== FALSE) {
             while (($data = fgetcsv($handle, 1000, "\n")) !== FALSE) {
-                $num = count($data);
                 $row++;
                 $item = explode(';',$data[0]);
                 $id = $item[0];
