@@ -38,6 +38,6 @@ $this->registerMetaTag([
     </section>
 </main>
 
-<?php //$this->registerJsFile('@web/js/addToCart.js', [
-//    'depends' => JqueryAsset::className()
-//]);
+<?php $this->registerJsFile('/yii-application/frontend/web/js/backend/addToCart.js', [
+    'depends' => JqueryAsset::className()
+]);

@@ -4,6 +4,7 @@ namespace frontend\models;
 
 use Yii;
 use yii\db\ActiveRecord;
+use yii\helpers\Json;
 
 /**
  * This is the model class for table "product".
@@ -80,6 +81,18 @@ class Cart extends ActiveRecord
         $_SESSION['cart.qty'] = isset($_SESSION['cart.qty']) ? $_SESSION['cart.qty'] + $qty : $qty;
 
         $_SESSION['cart.sum'] = isset($_SESSION['cart.sum']) ? $_SESSION['cart.sum'] + $qty * $product->price : $qty * $product->price;
+    }
+
+    public function minusToCart($product)
+    {
+        if (isset($_SESSION['cart'][$product->product_id]) && $_SESSION['cart'][$product->product_id]['qty'] != 1) {
+            $qty = 1;
+            $_SESSION['cart'][$product->product_id]['qty'] -= $qty;
+
+            $_SESSION['cart.qty'] = isset($_SESSION['cart.qty']) ? $_SESSION['cart.qty'] - $qty : $qty;
+
+            $_SESSION['cart.sum'] = isset($_SESSION['cart.sum']) ? $_SESSION['cart.sum'] - $qty * $product->price : $qty * $product->price;
+        }
     }
 
     public static function countItems($qty = 0)

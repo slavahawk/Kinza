@@ -33,6 +33,7 @@ class CartController extends Controller
 
     public function actionAdd()
     {
+        Yii::$app->response->format = Response::FORMAT_JSON;
 
         $id = Yii::$app->request->get('id');
         $product = Product::findOne($id);
@@ -42,7 +43,10 @@ class CartController extends Controller
         $cart = new Cart();
         $cart->addToCart($product);
 
-        return $_SESSION['cart.qty'];
+        return Json::encode([
+            'qty' => $_SESSION['cart.qty'],
+            'num' => $_SESSION['cart'][$id]['qty']
+        ]);
     }
 
     public function actionAddInCart()
@@ -61,7 +65,25 @@ class CartController extends Controller
             'qty' => $_SESSION['cart.qty'],
             'sum' => $_SESSION['cart.sum'],
             'num' => $_SESSION['cart'][$id]['qty'],
+        ]);
+    }
 
+    public function actionMinusInCart()
+    {
+        Yii::$app->response->format = Response::FORMAT_JSON;
+
+        $id = Yii::$app->request->get('id');
+        $product = Product::findOne($id);
+
+        if (empty($product) || $_SESSION['cart'][$id]['qty'] == 1) return false;
+
+        $cart = new Cart();
+        $cart->minusToCart($product);
+
+        return Json::encode([
+            'qty' => $_SESSION['cart.qty'],
+            'sum' => $_SESSION['cart.sum'],
+            'num' => $_SESSION['cart'][$id]['qty'],
         ]);
     }
 

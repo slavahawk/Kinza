@@ -45,7 +45,7 @@ $this->registerMetaTag([
                             <div class="amount__content">
                                 <label>Количество</label>
                                 <div class="amount__content__item">
-                                    <div class="smaller__btn">-</div>
+                                    <div id="cart-check-num-<?= $id; ?>" class="smaller__btn <?php echo ($item['qty'] == 1) ? 'amount__disabled' : false ?> minus-product" data-id="<?= $id; ?>">-</div>
                                     <p id="cart-count-num-<?= $id; ?>" class="sum"><?= $item['qty']; ?></p>
                                     <div class="more__btn add-product" data-id="<?= $id; ?>">+</div>
                                 </div>
@@ -96,6 +96,6 @@ $this->registerMetaTag([
     <section class="line"></section>
 </main>
 
-<?php $this->registerJsFile('/yii-application/frontend/web/js/backend/addProductInCart.js', [
-        'depends' => JqueryAsset::className()
+<?php $this->registerJsFile('/yii-application/frontend/web/js/backend/addToCart.js', [
+    'depends' => JqueryAsset::className()
 ]);

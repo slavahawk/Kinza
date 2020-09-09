@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="c5affd66-7c94-401f-9d33-08e9d0ce6da0" name="Sprinthost" url="http://141.8.195.60">
+        <fileTransfer host="141.8.195.60" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="ca97f9eb-c872-4345-b9c8-7fb884705f89" name="dostavkaslon">
+        <fileTransfer accessType="SFTP" host="91.230.211.63" port="22" sshConfigId="7afeb542-ea95-4703-8aca-a4fbe9e9c4c9" sshConfig="alexprog@91.230.211.63:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="b0158f79-9157-4490-9975-ef063210fd04" name="Test2" url="http://37.143.11.148">
+        <fileTransfer host="37.143.11.148" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

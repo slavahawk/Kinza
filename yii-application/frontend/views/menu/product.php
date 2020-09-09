@@ -28,7 +28,7 @@ $this->registerMetaTag([
                     <h2><?= $product->product_name; ?></h2>
                     <a class="backMenu__link" href="<?= Url::to(['menu/category', 'categoryId' => $product->category_id]); ?>">Вернуться в каталог</a>
                     <p class="price"><?= $product->price; ?><span>₽</span></p>
-                    <a class="amount" href="#">В корзине: <span>1</span> шт.</a>
+                    <p class="amount">В корзине: <span id="cart-count-num"><?= $_SESSION['cart'][$product->product_id]['qty'] ?? 0 ?></span> шт.</p>
                     <div class="product__content-item-info-btn">
                         <a class="pay__link add-to-cart" data-id="<?= $product->product_id; ?>">В корзину</a>
                     </div>
@@ -52,3 +52,7 @@ $this->registerMetaTag([
     </section>
     <section class="line"></section>
 </main>
+
+<?php $this->registerJsFile('/yii-application/frontend/web/js/backend/addToCart.js', [
+    'depends' => JqueryAsset::className()
+]);
