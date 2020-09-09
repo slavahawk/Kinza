@@ -96,23 +96,6 @@ if (animItems.length > 0) {
 
 ;
 $(document).ready(function () {
-  $('.add-to-cart').on('click', function (e) {
-    e.preventDefault();
-    var id = $(this).data('id');
-    $.ajax({
-      url: '/cart/add',
-      data: {
-        id: id
-      },
-      type: 'GET',
-      success: function success(res) {
-        $('#cart-count').html(res);
-      }
-    });
-  });
-});
-;
-$(document).ready(function () {
   $('.header__burger').click(function (event) {
     $('.header__burger, .header__content-menu').toggleClass('active');
     $('body').toggleClass('lock');
