@@ -42,22 +42,22 @@ $this->registerMetaTag([
                     что вы всегда получаете ваш заказ вкусным и горячим.
                 </p>
                 <div class="aboutUs__content-item-grid">
-                    <a data-fancybox="gallery" href="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/1.png"  class="about__grid">
+                    <a data-fancybox="gallery" href="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/big/1.jpg"  class="about__grid">
                         <img loading="lazy" src="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/1.png" alt="" />
                     </a>
-                    <a data-fancybox="gallery" href="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/2.png"  class="about__grid">
+                    <a data-fancybox="gallery" href="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/big/2.jpg"  class="about__grid">
                         <img loading="lazy" src="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/2.png" alt="" />
                     </a>
-                    <a data-fancybox="gallery" href="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/3.png"  class="about__grid grid__big">
+                    <a data-fancybox="gallery" href="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/big/3.jpg"  class="about__grid grid__big">
                         <img loading="lazy" src="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/3.png" alt="" />
                     </a>
-                    <a data-fancybox="gallery" href="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/4.png"  class="about__grid grid__big">
+                    <a data-fancybox="gallery" href="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/big/4.jpg"  class="about__grid grid__big">
                         <img loading="lazy" src="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/4.png" alt="" />
                     </a>
-                    <a data-fancybox="gallery" href="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/5.png"  class="about__grid">
+                    <a data-fancybox="gallery" href="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/big/5.jpg"  class="about__grid">
                         <img loading="lazy" src="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/5.png" alt="" />
                     </a>
-                    <a data-fancybox="gallery" href="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/6.png"  class="about__grid">
+                    <a data-fancybox="gallery" href="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/big/6.jpg"  class="about__grid">
                         <img loading="lazy" src="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/6.png" alt="" />
                     </a>
                 </div>       
