@@ -1,3 +1,4 @@
+@@include('preloader.js');
 @@include('webp.js');
 @@include('scrollHeader.js');
 @@include('animate.js');

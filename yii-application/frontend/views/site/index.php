@@ -43,22 +43,22 @@ $this->registerMetaTag([
                 </p>
                 <div class="aboutUs__content-item-grid">
                     <div class="about__grid">
-                        <img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/1.png" alt="" />
+                        <img loading="lazy" src="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/1.png" alt="" />
                     </div>
                     <div class="about__grid">
-                        <img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/2.png" alt="" />
+                        <img loading="lazy" src="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/2.png" alt="" />
                     </div>
                     <div class="about__grid grid__big">
-                        <img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/3.png" alt="" />
+                        <img loading="lazy" src="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/3.png" alt="" />
                     </div>
                     <div class="about__grid grid__big">
-                        <img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/4.png" alt="" />
+                        <img loading="lazy" src="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/4.png" alt="" />
                     </div>
                     <div class="about__grid">
-                        <img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/5.png" alt="" />
+                        <img loading="lazy" src="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/5.png" alt="" />
                     </div>
                     <div class="about__grid">
-                        <img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/6.png" alt="" />
+                        <img loading="lazy" src="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/6.png" alt="" />
                     </div>
                 </div>       
             </div>
