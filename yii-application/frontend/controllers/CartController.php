@@ -99,10 +99,20 @@ class CartController extends Controller
 
     public function actionDelete($id)
     {
+        Yii::$app->response->format = Response::FORMAT_JSON;
+
+        $id = Yii::$app->request->get('id');
+        $product = Product::findOne($id);
+
+        if (empty($product) || $_SESSION['cart'][$id]['qty'] == 1) return false;
+
         $cart = new Cart();
         $cart->recalc($id);
 
-        return $this->redirect(['cart/index']);
+        return Json::encode([
+            'qty' => $_SESSION['cart.qty'],
+            'sum' => $_SESSION['cart.sum'],
+        ]);
     }
 
     protected function actionOrder()

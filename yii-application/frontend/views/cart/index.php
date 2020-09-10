@@ -34,7 +34,7 @@ $this->registerMetaTag([
 
                     <?php foreach ($session['cart'] as $id => $item): ?>
 
-                    <div class="cart__content-cart-product">
+                    <div class="cart__content-cart-product" id="cart-product-<?= $id ?>">
                         <div class="cart__content-cart-product-main">
                             <a href="<?= Url::to(['menu/product', 'productId' => $id]); ?>"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/product/<?= $item['img']; ?>.jpg" alt="" /></a>
                             <div class="cart__content-cart-product-main-title">
@@ -60,7 +60,7 @@ $this->registerMetaTag([
                             </div>
                         </div>
                         <p class="delete">
-                            <a href="<?= Url::to(['cart/delete', 'id' => $id]); ?>">&times;</a>
+                            <a href="<?= Url::to(['cart/delete', 'id' => $id]); ?>" class="delete-product" data-id="<?= $id; ?>">&times;</a>
                         </p>
                     </div>
 
