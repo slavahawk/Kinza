@@ -133,12 +133,12 @@ function clean(params) {
 	return del([path.clean.css], css), del([path.clean.js], js);
 }
 
-let build = gulp.series(clean, gulp.parallel(js, css, fonts), fontsStyle);
+let build = gulp.series(clean, gulp.parallel(js, css));
 let watch = gulp.parallel(build, watchFiles);
 
 
-exports.fonts = fonts;
-exports.fontsStyle = fontsStyle;
+// exports.fonts = fonts;
+// exports.fontsStyle = fontsStyle;
 exports.js = js;
 exports.css = css;
 exports.build = build;

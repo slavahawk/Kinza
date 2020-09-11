@@ -1,3 +1,5 @@
+$sizemediaProduct: 600px;
+
 .menu {
     position: relative;
     width: 100%;
@@ -6,8 +8,13 @@
         max-width: 1260px;
         margin: 0 auto;
         padding: 36px 20px 67px;
+
         @media (max-width: 976px) {
             padding: 0px 20px 67px;
+        }
+
+        @media (max-width: $sizemediaProduct) {
+            padding: 0px 10px 67px;
         }
 
         h2 {
@@ -28,6 +35,11 @@
             font-family: SourceSansPro;
             grid-auto-columns: 1fr;
 
+            @media (max-width: $sizemediaProduct) {
+                padding: 12px 0 0 0;
+                gap: 20px;
+            }
+
             &__grid {
                 padding: 0 0 20px 0;
                 display: grid;
@@ -45,10 +57,27 @@
                     }
                 }
 
+
+
+                @media (max-width: $sizemediaProduct) {
+
+                    box-shadow: 0 0px 00px rgba(0, 0, 0, 0);
+                    padding: 0;
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-template-rows: auto auto;
+                    grid-template-areas: "image title title"
+                        "image price btn";
+                }
+
                 a {
                     position: relative;
                     padding: 0px 0px 90% 0px;
                     margin: 0px 0px 10px 0px;
+
+                    @media (max-width: $sizemediaProduct) {
+                        grid-area: image;
+                        margin: 0px 0px 0px 0px;
+                    }
 
                     img {
                         position: absolute;
@@ -61,19 +90,39 @@
                 }
 
                 h3 {
+
                     padding: 20px 10px;
-                    color: black;
-                    @include adaptiv-fontAll(16, 16);
+                    color: #121212;
+                    font-size: 19px;
                     line-height: 21px;
                     font-weight: 600;
+
+                    @media (max-width: $sizemediaProduct) {
+                        font-weight: 500;
+                        padding: 0px 0px 10px 5px;
+                        @include adaptiv-fontCatalog(28, 16);
+                        line-height: 130%;
+                        grid-area: title;
+                        text-align: left;
+                    }
                 }
 
                 p {
+
                     font-family: Montserrat;
                     font-weight: 600;
                     color: #e85222;
-                    @include adaptiv-fontAll(18, 16);
+                    font-size: 23px;
                     padding-bottom: 15px;
+
+                    @media (max-width: $sizemediaProduct) {
+                        @include disflex(flex, center, center);
+                        @include adaptiv-fontCatalog(35, 22);
+                        color: #121212;
+                        grid-area: price;
+                        font-weight: 600;
+                        padding: 0
+                    }
                 }
 
                 .add-to-cart {
@@ -83,9 +132,25 @@
                     margin: 0 auto;
                     background: #e85222;
                     box-shadow: 2px 2px 3px #989898;
-                    padding: 5px 0;
-                    @include adaptiv-fontAll(17, 16);
-                    width: 105px;
+                    padding: 8px 15px;
+                    font-size: 20px;
+
+                    @media (max-width: $sizemediaProduct) {
+                        @include disflex(flex, center, center);
+                        @include adaptiv-fontCatalog(30, 17);
+                        display: grid;
+                        align-self: end;
+                        grid-area: btn;
+                        padding: 15px 8px;
+                        line-height: 21px;
+                        width: 100%;
+                        height: max-content;
+                    }
+
+                    @media (max-width: 400px) {
+                        padding: 10px 8px;
+                    }
+
                 }
             }
 
@@ -99,6 +164,11 @@
                 P {
                     font-size: 22px;
                     color: #121212;
+
+                }
+
+                @media (max-width: $sizemediaProduct) {
+                    min-height: 100px;
                 }
             }
         }

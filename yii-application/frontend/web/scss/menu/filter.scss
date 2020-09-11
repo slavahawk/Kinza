@@ -4,12 +4,12 @@
     font-family: SourceSansPro;
 
     &__content {
-        max-width: 1040px;
+        max-width: 1180px;
         margin: 0 auto;
         padding: 40px 20px 0;
 
         ul {
-            font-size: 14px;
+            @include adaptiv-font(16, 14);
             text-transform: uppercase;
             display: flex;
             justify-content: space-between;
@@ -62,7 +62,7 @@
             font-family: Montserrat;
             border-radius: 5px;
             font-weight: 600;
-            width: 90%;
+            width: 100%;
             margin: 0 auto;
             color: #121212;
             background-color: white;
@@ -73,20 +73,23 @@
                 text-align: left;
                 @include adaptiv-fontMin(20, 18);
             }
+
             .arrow-filter {
                 transform: rotate(90deg);
                 width: 20px;
                 height: 20px;
                 transition: 0.2s all;
+
                 &.active {
                     transform: rotate(270deg);
                 }
             }
         }
+
         .filter__select {
             z-index: 10;
             position: absolute;
-            left: 5%;
+            left: 0%;
             top: 48px;
             display: none;
             background-color: white;
@@ -95,42 +98,49 @@
             border-left: 1px solid #121212;
             border-right: 1px solid #121212;
             border-radius: 0 0 5px 5px;
-            width: 90%;
+            width: 100%;
             margin: 0 auto;
 
             &.open {
                 display: block;
             }
+
             &__option {
                 position: relative;
                 overflow-y: hidden;
                 height: 100%;
                 padding: 10px;
                 height: 300px;
+
                 ::-webkit-scrollbar {
                     width: 10px;
                     -webkit-appearance: none;
                 }
+
                 ::-webkit-scrollbar-button {
                     height: 2px;
                 }
+
                 ::-webkit-scrollbar-track {
                     background-color: rgb(243, 243, 243);
                 }
+
                 ::-webkit-scrollbar-track-piece {
                     border: 1px solid #999;
                     height: 100px;
                 }
+
                 ::-webkit-scrollbar-thumb {
                     height: 10px;
                     margin: 5px 0;
                     background-color: #bebebe;
                     border-radius: 50px;
                 }
-                ::-webkit-scrollbar-corner {
-                }
-                ::-webkit-resizer {
-                }
+
+                ::-webkit-scrollbar-corner {}
+
+                ::-webkit-resizer {}
+
                 .select__item {
                     scrollbar-color: #458245 #714826;
                     position: absolute;
@@ -151,6 +161,7 @@
                         color: #121212;
 
                         border: none;
+
                         &.active {
                             color: white;
                             background-color: #12121247;
