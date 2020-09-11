@@ -32,7 +32,7 @@ $this->registerMetaTag([
                     <a href="<?= Url::to(['menu/product', 'productId' => $product->product_id]) ?>">
                         <img src="/img/product/<?= $product->product_image ?>.jpg" alt="" />
                     </a>
-                    <h3><?= $product->product_name ?></h3>
+                    <a class="title__product"  href="<?= Url::to(['menu/product', 'productId' => $product->product_id]) ?>"><?= $product->product_name ?></a>
                     <p><?= $product->price ?><span>₽</span></p>
                     <a class="add-to-cart" data-id="<?= $product->product_id; ?>" href="<?= Url::to(['cart/add', 'id' => $product->product_id]); ?>">В корзину</a>
                 </div>

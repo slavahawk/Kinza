@@ -16,7 +16,6 @@
 
     @media (max-width: 976px) {
         &:hover {
-            color: #121212;
             background-color: #fc4a02;
         }
     }
@@ -24,7 +23,7 @@
 
 %tph2 {
     text-align: center;
-    @include adaptiv-fontAll(40, 26);
+    @include adaptiv-fontAll(40, 35);
     text-transform: uppercase;
     font-family: Drina;
     line-height: 40px;

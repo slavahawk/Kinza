@@ -67,17 +67,17 @@ $sizemediaProduct: 600px;
                 }
             }
 
-            h3 {
-                padding: 20px 10px;
+            .title__product {
                 color: #121212;
-                @include adaptiv-fontAll(16, 16);
+                font-size: 19px;
                 line-height: 21px;
                 font-weight: 600;
-                min-height: 50px;
+                margin: 20px 10px;
+                padding: 0;
 
                 @media (max-width: $sizemediaProduct) {
                     font-weight: 500;
-                    padding: 0px 0px 10px 5px;
+                    margin: 0px 0px 10px 5px;
                     @include adaptiv-fontCatalog(28, 16);
                     line-height: 130%;
                     grid-area: title;
@@ -89,7 +89,7 @@ $sizemediaProduct: 600px;
                 font-family: Montserrat;
                 font-weight: 600;
                 color: #f53906;
-                @include adaptiv-fontAll(19, 16);
+                font-size: 23px;
                 padding-bottom: 15px;
 
                 @media (max-width: $sizemediaProduct) {
@@ -110,9 +110,8 @@ $sizemediaProduct: 600px;
                 margin: 0 auto;
                 background: #f53906;
                 box-shadow: 2px 2px 3px #989898;
-                padding: 5px 0;
-                @include adaptiv-fontAll(17, 16);
-                width: 105px;
+                padding: 8px 15px;
+                font-size: 20px;
 
                 @media (max-width: $sizemediaProduct) {
                     @include disflex(flex, center, center);

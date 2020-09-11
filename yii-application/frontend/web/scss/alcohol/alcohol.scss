@@ -1,0 +1,121 @@
+.alcohol {
+    &__content {
+        margin: 0 auto;
+        padding: 40px 20px;
+        max-width: 1140px;
+        color: #121212;
+
+        &-title {
+            font-family: SourceSansPro;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-transform: uppercase;
+
+            &-btn {
+                display: flex;
+
+
+                a {
+                    font-weight: 600;
+                    font-size: 35px;
+                    line-height: 30px;
+                    color: #121212;
+                    margin: 0 40px 0 0;
+
+                    &:last-child {
+                        margin: 0px 0px 0px 0px;
+                    }
+
+                    &.active {
+                        color: #fc4a02;
+                    }
+                }
+            }
+
+            .back__menu {
+                color: #121212;
+                font-size: 16px;
+                line-height: 25px;
+                background: #FFFFFF;
+                border: 1px solid #121212;
+                box-sizing: border-box;
+                border-radius: 5px;
+                padding: 10px 20px;
+            }
+        }
+
+        &__item {
+            margin-top: 60px;
+            display: grid;
+            grid-template-columns: 0.8fr 2fr;
+
+            aside {
+                font-family: SourceSansPro;
+                display: flex;
+                flex-direction: column;
+
+                a {
+                    font-size: 26px;
+                    line-height: 30px;
+                    color: #121212;
+                    margin-bottom: 30px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    &.active {
+                        color: #fc4a02;
+                    }
+                }
+            }
+
+            &-main {
+                .table__aclo {
+                    margin-bottom: 100px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    h2 {
+                        text-transform: uppercase;
+                        font-family: PTSans;
+                        font-weight: bold;
+                        font-size: 24px;
+                        line-height: 23px;
+                    }
+
+                    &__item {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-top: 40px;
+
+                        &:first-child {
+                            margin-top: 20px;
+                        }
+
+                        p {
+
+                            font-family: SourceSansPro;
+                            font-weight: normal;
+                            font-size: 20px;
+                            line-height: 25px;
+
+
+                            &:first-child {
+                                max-width: 250px;
+                            }
+
+                        }
+                    }
+                }
+
+
+            }
+        }
+
+    }
+}

@@ -21,7 +21,7 @@
         &-back {
             padding: 10px 0;
             display: flex;
-            @include adaptiv-fontAll(16, 12);
+            @include adaptiv-fontAll(16, 16);
 
             p {
                 color: rgb(37, 78, 122);
@@ -93,8 +93,8 @@
                         p {
                             max-width: 263px;
                             font-weight: 500;
-                            @include adaptiv-fontAll(18, 16);
-                            line-height: 20px;
+                            font-size: 20px;
+                            line-height: 120%;
                             padding: 0 0px 0 0;
 
                             a {
@@ -113,7 +113,7 @@
                     align-items: center;
 
                     label {
-                        font-size: 14px;
+                        font-size: 16px;
                         color: #555555;
                         margin-bottom: 10px;
                     }
@@ -169,7 +169,7 @@
                     align-items: center;
 
                     label {
-                        font-size: 14px;
+                        font-size: 16px;
                         color: #555555;
                         margin-bottom: 12px;
                         padding: 0 5px 0 0;
@@ -177,19 +177,14 @@
 
                     &__item {
                         font-weight: 500;
-                        @include adaptiv-fontAll(18, 14);
+                        @include adaptiv-fontAll(20, 18);
                     }
                 }
             }
 
-            .sum {
-                font-weight: 500;
-                @include adaptiv-fontAll(18, 14);
-                line-height: 28px;
-            }
 
             .delete {
-                @include adaptiv-fontAll(30, 25);
+                @include adaptiv-fontAll(30, 30);
 
                 a {
                     display: inline-block;
@@ -219,10 +214,11 @@
                 align-items: center;
                 justify-items: center;
 
+
                 .total__title {
                     justify-self: start;
                     font-weight: 500;
-                    @include adaptiv-fontAll(20, 20);
+                    @include adaptiv-fontAll(22, 20);
 
                     @media (max-width: 600px) {
                         justify-self: center;
@@ -232,20 +228,29 @@
 
                 .total__amount,
                 .total__price {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
+                    text-align: center;
 
                     label {
-                        font-size: 14px;
+                        font-size: 16px;
                         color: #555555;
                         margin-bottom: 5px;
                         padding: 0 5px 0 0;
+
+                        @media (max-width: 600px) {
+                            padding: 0;
+
+                        }
                     }
 
                     p {
-                        @include adaptiv-fontAll(18, 18);
+                        margin-top: 10px;
+                        @include adaptiv-fontAll(20, 18);
+                        font-weight: 500;
+
+                        @media (max-width: 600px) {
+                            margin-top: 5px;
+
+                        }
                     }
                 }
 
@@ -272,6 +277,8 @@
                     grid-template-areas:
                         "amountTitle amountTitle  "
                         "amountTotal priceTotal";
+                    align-items: end;
+
                 }
             }
 
@@ -280,7 +287,9 @@
                 margin-top: 40px;
 
                 p {
-                    @include adaptiv-fontAll(16, 13);
+                    @include adaptiv-fontAll(16, 16);
+                    text-align: center;
+                    line-height: 120%;
 
                     a {
                         color: rgb(37, 78, 122);
@@ -295,19 +304,13 @@
                         justify-items: center;
                         grid-gap: 20px;
 
-                        @media (max-width: 660px) {
+                        @media (max-width: 758px) {
                             grid-template-columns: 1fr;
                         }
 
                         .next {
-                            color: white;
-                            @include adaptiv-fontAll(18, 16);
-                            word-wrap: none;
-                            padding: 10px 20px;
                             background-color: #333333;
-                            border-radius: 5px;
                             border: 1px solid #333333;
-                            transition: 0.1s ease-in-out;
 
                             &:hover {
                                 background-color: #ffffff;
@@ -323,14 +326,18 @@
                         }
 
                         .clear {
+                            background-color: #993030;
+                            border: 1px solid #993030;
+                        }
+
+                        .clear,
+                        .next {
                             color: white;
                             @include adaptiv-fontAll(18, 16);
-                            word-wrap: none;
                             padding: 10px 20px;
-                            background-color: #993030;
                             border-radius: 5px;
-                            border: 1px solid #993030;
                             transition: 0.1s ease-in-out;
+                            width: 100%;
                         }
                     }
                 }
@@ -342,7 +349,7 @@
 @media (max-width: 576px) {
     .cart {
         &__content {
-            padding: 100px 20px 40px 20px;
+            padding: 100px 10px 40px;
 
             h2 {
                 padding: 10px 0;

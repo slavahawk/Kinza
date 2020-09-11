@@ -36,7 +36,7 @@ $sizemediaProduct: 600px;
             grid-auto-columns: 1fr;
 
             @media (max-width: $sizemediaProduct) {
-                padding: 12px 0 0 0;
+                padding: 20px 0 0 0;
                 gap: 20px;
             }
 
@@ -89,17 +89,19 @@ $sizemediaProduct: 600px;
                     }
                 }
 
-                h3 {
+                .title__product {
 
-                    padding: 20px 10px;
+                    margin: 20px 10px;
+                    padding: 0;
                     color: #121212;
                     font-size: 19px;
                     line-height: 21px;
                     font-weight: 600;
 
+
                     @media (max-width: $sizemediaProduct) {
                         font-weight: 500;
-                        padding: 0px 0px 10px 5px;
+                        margin: 0px 0px 10px 5px;
                         @include adaptiv-fontCatalog(28, 16);
                         line-height: 130%;
                         grid-area: title;
