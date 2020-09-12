@@ -1,5 +1,5 @@
 $(document).ready(function () {
-	$('.add-to-cart').on('click', function () {
+	$('.btn__pay').on('click', function () {
 		var cart = $('.basket');
 		var imgtodrag = $(this)
 			.parent('.catalog__content-item, .menu__content__item__grid')

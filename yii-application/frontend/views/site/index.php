@@ -10,7 +10,12 @@ $this->registerMetaTag([
     'content' => 'Description of the page'
 ]);
 ?>
-
+<div class="preloader">
+  <div class="preloader__row">
+    <img  src="<?= Yii::getAlias('@imgFrontEnd'); ?>/preloader.png" alt="Логотип" />
+    <div class="preloader__item"></div>
+  </div>
+</div>
 <main class="wrapper">
     <!-- Основная секция -->
     <section class="mainSection">

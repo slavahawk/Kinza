@@ -27,12 +27,7 @@ MainAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
-<div class="preloader">
-  <div class="preloader__row">
-    <img  src="<?= Yii::getAlias('@imgFrontEnd'); ?>/preloader.png" alt="Логотип" />
-    <div class="preloader__item"></div>
-  </div>
-</div>
+
 <header class="header">
     <div class="header__content">
         <div class="header__content-logo">
@@ -73,6 +68,10 @@ MainAsset::register($this);
         </div>
     </div>
 </header>
+
+<section class="info__item__pay">
+    <p>Товар добавлен в корзину</p>
+</section>
 
 <?= $content ?>
 

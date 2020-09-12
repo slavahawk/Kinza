@@ -4,22 +4,23 @@
 @import "_null";
 @import "view";
 @import "animate";
-@import "header-footer/header.scss";
-@import "header-footer/burger.scss";
-@import "mainPage/mainSection.scss";
-@import "mainPage/aboutUs.scss";
-@import "mainPage/list.scss";
-@import "mainPage/map.scss";
-@import "menu/menu.scss";
-@import "menu/filter.scss";
-@import "menu/catalog.scss";
-@import "menu/product.scss";
-@import "contact/contact.scss";
-@import "cart/cart.scss";
-@import "cart/order.scss";
-@import "cart/readyOrder.scss";
-@import "header-footer/footer.scss";
-@import "alcohol/alcohol.scss";
+@import "header-footer/header";
+@import "header-footer/burger";
+@import "mainPage/mainSection";
+@import "mainPage/aboutUs";
+@import "mainPage/list";
+@import "mainPage/map";
+@import "menu/menu";
+@import "menu/filter";
+@import "menu/catalog";
+@import "menu/product";
+@import "menu/infoPayPopup";
+@import "contact/contact";
+@import "cart/cart";
+@import "cart/order";
+@import "cart/readyOrder";
+@import "header-footer/footer";
+@import "alcohol/alcohol";
 
 body {
     color: #fff;
@@ -30,6 +31,4 @@ body {
         color: #fff;
         cursor: pointer;
     }
-
-
 }
