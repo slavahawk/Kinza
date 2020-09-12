@@ -280,7 +280,19 @@ function initMap() {
   });
 }
 
-;
+; // document.addEventListener("DOMContentLoaded", () => {
+// 	"use strict"
+// 	const btnPayProduct = document.querySelectorAll(".btn__pay")
+// 	for (let i = 0; i < btnPayProduct.length; i++) {
+// 		let index = btnPayProduct[i].attributes[1].value
+// 		let image = btnPayProduct[i].parentElement.children[0].children[0]
+// 		console.log(image)
+// 		image = document.createElement('img');
+// 		image.className = "image__clone";
+// 		document.body.append(image);
+// 	}
+// })
+
 $(document).ready(function () {
   $('.btn__pay').on('click', function () {
     var cart = $('.basket');
@@ -290,12 +302,7 @@ $(document).ready(function () {
       var imgclone = imgtodrag.clone().offset({
         top: imgtodrag.offset().top,
         left: imgtodrag.offset().left
-      }).css({
-        opacity: '0.5',
-        position: 'absolute',
-        'z-index': '1000',
-        width: '0'
-      }).appendTo($('html, body')).animate({
+      }).addClass("start").appendTo($('html, body')).animate({
         top: cart.offset().top + 10,
         left: cart.offset().left + 10,
         width: 75,

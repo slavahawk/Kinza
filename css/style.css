@@ -1855,6 +1855,17 @@ body a {
   cursor: pointer;
 }
 
+.start {
+  opacity: 0.5;
+  position: absolute;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+}
+
 @media (min-width: 500px) {
   .aboutUs__content-item-grid .grid__big {
     grid-column: span 2;
@@ -2540,6 +2551,21 @@ body a {
     justify-content: center;
     grid-template-areas: "amountTitle amountTitle  " "amountTotal priceTotal";
     align-items: end;
+  }
+
+  .start {
+    width: 200px;
+    height: 200px;
+  }
+
+  .start {
+    width: 150px;
+    height: 150px;
+  }
+
+  .start {
+    width: 100px;
+    height: 100px;
   }
 }
 
