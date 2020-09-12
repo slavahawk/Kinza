@@ -2,7 +2,9 @@
 
 namespace frontend\models;
 
+use Imagine\Image\Box;
 use Yii;
+use yii\imagine\Image;
 
 /**
  * This is the model class for table "product".
@@ -49,5 +51,22 @@ class Product extends \yii\db\ActiveRecord
             'product_image' => 'Img',
             'status' => 'Status',
         ];
+    }
+
+    public static function setResizeImage($products)
+    {
+        foreach ($products as $product) {
+            $path = $_SERVER['DOCUMENT_ROOT'] . '/img/product/resize/' . $product->product_image . '.jpg';
+            if (!is_file($path)) {
+                Image::getImagine()
+                    ->open($_SERVER['DOCUMENT_ROOT'] . '/img/product/' . $product->product_image . '.jpg')
+                    ->thumbnail(new Box('400', '300'))
+                    ->save($path, ['quality' => 50]);
+
+                $product->product_image = '/img/product/resize/' . $product->product_image . '.jpg';
+            } else {
+                $product->product_image = '/img/product/resize/' . $product->product_image . '.jpg';
+            }
+        }
     }
 }

@@ -6,10 +6,7 @@ namespace frontend\controllers;
 
 use frontend\models\Category;
 use frontend\models\Product;
-use Imagine\Image\Box;
 use Yii;
-use yii\helpers\Url;
-use yii\imagine\Image;
 use yii\web\Controller;
 
 /**
@@ -31,19 +28,7 @@ class MenuController extends Controller
                 ->limit(7)
                 ->all();
 
-            foreach ($products as $product) {
-                $path = $_SERVER['DOCUMENT_ROOT'] . '/img/product/resize/' . $product->product_image . '.jpg';
-                if (!is_file($path)) {
-                    Image::getImagine()
-                        ->open($_SERVER['DOCUMENT_ROOT'] . '/img/product/' . $product->product_image . '.jpg')
-                        ->thumbnail(new Box('400', '300'))
-                        ->save($path, ['quality' => 50]);
-
-                    $product->product_image = '/img/product/resize/' . $product->product_image . '.jpg';
-                } else {
-                    $product->product_image = '/img/product/resize/' . $product->product_image . '.jpg';
-                }
-            }
+            Product::setResizeImage($products);
 
             $menuList[] = array(
                 'category_id' => $category['id'],
@@ -62,6 +47,8 @@ class MenuController extends Controller
         $condition = ['status' => Yii::$app->params['enableStatus']];
         $condition2 = ['category_id' => $categoryId];
         $productList = Product::find()->where($condition)->andWhere($condition2)->orderBy('product_id')->all();
+
+        Product::setResizeImage($productList);
 
         return $this->render('category', [
             'productList' => $productList,
