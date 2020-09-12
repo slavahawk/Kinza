@@ -36,7 +36,7 @@ $this->registerMetaTag([
             </div>
         </div>
     </section>
-    <!-- <section class="alcohol">
+    <section class="alcohol">
         <div class="alcohol__content">
 
             <div class="alcohol__content-title">
@@ -45,8 +45,8 @@ $this->registerMetaTag([
                     <a href="#">Винная карта</a>
                 </div>
                 <a class="back__menu" href="#">Вернуться в меню</a>
-            </div> 
-            
+            </div>
+
             <div class="alcohol__content__item">
                 <aside>
                     <a class="active" href="#">Пиво</a>
@@ -111,7 +111,7 @@ $this->registerMetaTag([
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
 </main>
 <script
         defer

@@ -6,8 +6,10 @@ namespace frontend\controllers;
 
 use frontend\models\Category;
 use frontend\models\Product;
+use Imagine\Image\Box;
 use Yii;
 use yii\helpers\Url;
+use yii\imagine\Image;
 use yii\web\Controller;
 
 /**
@@ -29,6 +31,8 @@ class MenuController extends Controller
                 'products' => Product::find()->where(['category_id' => $category['id']])->andWhere(['status' => $condition])->limit(7)->all()
             );
         }
+
+        Image::getImagine()->open($_SERVER['DOCUMENT_ROOT'] . '/img/product/1_1.jpg')->thumbnail(new Box('400', '300'))->save($_SERVER['DOCUMENT_ROOT'] . '/img/product/resize/1_3.jpg', ['quality' => 50]);
 
         return $this->render('index', [
             'menuList' => $menuList,
