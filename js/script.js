@@ -9,9 +9,15 @@ window.onload = function () {
   animate();
 };
 
-var observer = lozad();
-observer.observe();
-; // ФУНКЦИЯ ОПРЕДЕЛЕНИЯ ПОДДЕРЖКИ WEBP
+lozad('.lozad', {
+  load: function load(el) {
+    el.src = el.dataset.src;
+
+    el.onload = function () {
+      el.classList.add('fade');
+    };
+  }
+}).observe(); // ФУНКЦИЯ ОПРЕДЕЛЕНИЯ ПОДДЕРЖКИ WEBP
 
 function testWebP(callback) {
   var webP = new Image();
@@ -276,7 +282,7 @@ function initMap() {
 
 ;
 $(document).ready(function () {
-  $('.add-to-cart').on('click', function () {
+  $('.btn__pay').on('click', function () {
     var cart = $('.basket');
     var imgtodrag = $(this).parent('.catalog__content-item, .menu__content__item__grid').find('img').eq(0);
 
