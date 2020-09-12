@@ -55,7 +55,7 @@ $(document).ready(function () {
         });
     });
 
-    $('.delete-product').on('click', function (e){
+    $('.delete-product').on('click', function (e) {
         e.preventDefault();
         var id = $(this).data('id');
         $.ajax({
@@ -64,12 +64,14 @@ $(document).ready(function () {
             type: 'GET',
             success: function (res) {
                 var obj = jQuery.parseJSON(res);
-                    $('#cart-count').html(obj.qty);
-                    $('#cart-count-qty').html(obj.qty);
-                    $('#cart-count-sum').html(obj.sum);
-                    $('#cart-product-' + id).fadeOut();
+                $('#cart-count').html(obj.qty);
+                $('#cart-count-qty').html(obj.qty);
+                $('#cart-count-sum').html(obj.sum);
+                $('#cart-product-' + id).fadeOut();
 
             }
         });
     });
 });
+
+
