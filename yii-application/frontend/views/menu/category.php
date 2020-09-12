@@ -23,7 +23,7 @@ $this->registerMetaTag([
             <?php foreach ($productList as $product): ?>
                 <div class="catalog__content-item">
                     <a href="<?= Url::to(['menu/product', 'productId' => $product->product_id]); ?>">
-                        <img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/product/<?= $product->product_image; ?>.jpg" alt="" />
+                        <img class="lozad" data-src="<?= Yii::getAlias('@imgFrontEnd'); ?>/product/<?= $product->product_image; ?>.jpg" alt="" />
                     </a>
                     <a class="title__product"  href="<?= Url::to(['menu/product', 'productId' => $product->product_id]); ?>">
                         <?= $product->product_name; ?>

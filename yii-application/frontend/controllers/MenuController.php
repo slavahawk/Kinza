@@ -32,7 +32,7 @@ class MenuController extends Controller
             );
         }
 
-        Image::getImagine()->open($_SERVER['DOCUMENT_ROOT'] . '/img/product/1_1.jpg')->thumbnail(new Box('400', '300'))->save($_SERVER['DOCUMENT_ROOT'] . '/img/product/resize/1_3.jpg', ['quality' => 50]);
+        // Image::getImagine()->open($_SERVER['DOCUMENT_ROOT'] . '/img/product/1_1.jpg')->thumbnail(new Box('400', '300'))->save($_SERVER['DOCUMENT_ROOT'] . '/img/product/resize/1_3.jpg', ['quality' => 50]);
 
         return $this->render('index', [
             'menuList' => $menuList,

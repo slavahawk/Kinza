@@ -1,4 +1,5 @@
 @@include('preloader.js');
+@@include('lazyLoad.js');
 @@include('webp.js');
 @@include('scrollHeader.js');
 @@include('animate.js');

@@ -27,6 +27,7 @@
 	},
 	"dependencies": {
 		"@fancyapps/fancybox": "^3.5.7",
-		"gulp-cli": "^2.2.0"
+		"gulp-cli": "^2.2.0",
+		"lozad": "^1.16.0"
 	}
 }

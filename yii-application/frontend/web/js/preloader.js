@@ -8,6 +8,5 @@ window.onload = function () {
 
     animate()
 
-
-
 }
+
