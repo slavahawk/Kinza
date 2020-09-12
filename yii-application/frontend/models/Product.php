@@ -17,7 +17,7 @@ use Yii;
  * @property float|null $calories
  * @property string|null $description
  * @property int|null $price
- * @property string|null $img
+ * @property string|null $product_image
  * @property int|null $status
  */
 class Product extends \yii\db\ActiveRecord
@@ -36,8 +36,8 @@ class Product extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            '$product_id' => 'ID',
-            '$product_name' => 'Name',
+            'product_id' => 'ID',
+            'product_name' => 'Name',
             'category_id' => 'Category ID',
             'weight' => 'Weight',
             'proteins' => 'Proteins',
@@ -46,7 +46,7 @@ class Product extends \yii\db\ActiveRecord
             'calories' => 'Calories',
             'description' => 'Description',
             'price' => 'Price',
-            'img' => 'Img',
+            'product_image' => 'Img',
             'status' => 'Status',
         ];
     }

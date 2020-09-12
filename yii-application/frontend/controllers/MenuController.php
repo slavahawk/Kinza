@@ -25,14 +25,32 @@ class MenuController extends Controller
         $categoryList = Category::find()->where(['status' => $condition])->asArray()->all();
 
         foreach ($categoryList as $category) {
+            $products = Product::find()
+                ->where(['category_id' => $category['id']])
+                ->andWhere(['status' => $condition])
+                ->limit(7)
+                ->all();
+
+            foreach ($products as $product) {
+                $path = $_SERVER['DOCUMENT_ROOT'] . '/img/product/resize/' . $product->product_image . '.jpg';
+                if (!is_file($path)) {
+                    Image::getImagine()
+                        ->open($_SERVER['DOCUMENT_ROOT'] . '/img/product/' . $product->product_image . '.jpg')
+                        ->thumbnail(new Box('400', '300'))
+                        ->save($path, ['quality' => 50]);
+
+                    $product->product_image = '/img/product/resize/' . $product->product_image . '.jpg';
+                } else {
+                    $product->product_image = '/img/product/resize/' . $product->product_image . '.jpg';
+                }
+            }
+
             $menuList[] = array(
                 'category_id' => $category['id'],
                 'category_name' => $category['name'],
-                'products' => Product::find()->where(['category_id' => $category['id']])->andWhere(['status' => $condition])->limit(7)->all()
+                'products' => $products,
             );
         }
-
-        // Image::getImagine()->open($_SERVER['DOCUMENT_ROOT'] . '/img/product/1_1.jpg')->thumbnail(new Box('400', '300'))->save($_SERVER['DOCUMENT_ROOT'] . '/img/product/resize/1_3.jpg', ['quality' => 50]);
 
         return $this->render('index', [
             'menuList' => $menuList,

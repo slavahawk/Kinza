@@ -30,7 +30,7 @@ $this->registerMetaTag([
 
                 <div class="menu__content__item__grid">
                     <a href="<?= Url::to(['menu/product', 'productId' => $product->product_id]) ?>">
-                        <img class="lozad"  data-src="/img/product/<?= $product->product_image ?>.jpg" alt="" />
+                        <img class="lozad"  data-src="<?= $product->product_image ?>" alt="<?= $product->product_name ?>" />
                     </a>
                     <a class="title__product"  href="<?= Url::to(['menu/product', 'productId' => $product->product_id]) ?>"><?= $product->product_name ?></a>
                     <p><?= $product->price ?><span>₽</span></p>
@@ -40,7 +40,7 @@ $this->registerMetaTag([
                 <?php endforeach; ?>
 
                 <a href="<?= Url::to(['menu/category', 'categoryId' => $menu['category_id']]) ?>" class="menu__content__item__grid image__none">
-                   <p>Смотреть все товары</p> 
+                   <p>Смотреть все товары</p>
                 </a>
             </div>
         </div>
