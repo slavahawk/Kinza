@@ -11,9 +11,7 @@
         ul {
             @include adaptiv-font(16, 14);
             text-transform: uppercase;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            @include disflex(flex, space-between, center);
 
             li {
                 a {
@@ -137,9 +135,11 @@
                     border-radius: 50px;
                 }
 
-                ::-webkit-scrollbar-corner {}
+                ::-webkit-scrollbar-corner {
+                }
 
-                ::-webkit-resizer {}
+                ::-webkit-resizer {
+                }
 
                 .select__item {
                     scrollbar-color: #458245 #714826;

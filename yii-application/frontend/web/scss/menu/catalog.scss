@@ -1,5 +1,21 @@
 $sizemediaProduct: 600px;
 
+.fade {
+    animation-name: fade;
+    animation-duration: 0.6s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 .catalog {
     &__content {
         padding: 40px 20px;
@@ -17,7 +33,6 @@ $sizemediaProduct: 600px;
             padding: 0px 10px;
         }
 
-
         &-item {
             padding: 0 0 20px 0;
             display: grid;
@@ -28,7 +43,7 @@ $sizemediaProduct: 600px;
             text-align: center;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 
-            @media (min-width:976px) {
+            @media (min-width: 976px) {
                 transition: 0.1s ease-in-out;
 
                 &:hover {
@@ -37,19 +52,18 @@ $sizemediaProduct: 600px;
             }
 
             @media (max-width: $sizemediaProduct) {
-
                 box-shadow: 0 0px 00px rgba(0, 0, 0, 0);
                 padding: 0;
                 grid-template-columns: repeat(3, 1fr);
                 grid-template-rows: auto auto;
-                grid-template-areas: "image title title"
+                grid-template-areas:
+                    "image title title"
                     "image price btn";
             }
 
-
             a {
                 position: relative;
-                padding: 0px 0px 90% 0px;
+                padding: 0px 0px 100% 0px;
                 margin: 0px 0px 10px 0px;
 
                 @media (max-width: $sizemediaProduct) {
@@ -98,10 +112,8 @@ $sizemediaProduct: 600px;
                     color: #121212;
                     grid-area: price;
                     font-weight: 600;
-                    padding: 0
+                    padding: 0;
                 }
-
-
             }
 
             .add-to-cart {
@@ -128,7 +140,6 @@ $sizemediaProduct: 600px;
                 @media (max-width: 400px) {
                     padding: 10px 8px;
                 }
-
             }
         }
     }

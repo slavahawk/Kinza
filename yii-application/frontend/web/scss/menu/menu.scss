@@ -57,21 +57,19 @@ $sizemediaProduct: 600px;
                     }
                 }
 
-
-
                 @media (max-width: $sizemediaProduct) {
-
                     box-shadow: 0 0px 00px rgba(0, 0, 0, 0);
                     padding: 0;
                     grid-template-columns: repeat(3, 1fr);
                     grid-template-rows: auto auto;
-                    grid-template-areas: "image title title"
+                    grid-template-areas:
+                        "image title title"
                         "image price btn";
                 }
 
                 a {
                     position: relative;
-                    padding: 0px 0px 90% 0px;
+                    padding: 0px 0px 100% 0px;
                     margin: 0px 0px 10px 0px;
 
                     @media (max-width: $sizemediaProduct) {
@@ -90,14 +88,12 @@ $sizemediaProduct: 600px;
                 }
 
                 .title__product {
-
                     margin: 20px 10px;
                     padding: 0;
                     color: #121212;
                     font-size: 19px;
                     line-height: 21px;
                     font-weight: 600;
-
 
                     @media (max-width: $sizemediaProduct) {
                         font-weight: 500;
@@ -110,7 +106,6 @@ $sizemediaProduct: 600px;
                 }
 
                 p {
-
                     font-family: Montserrat;
                     font-weight: 600;
                     color: #e85222;
@@ -123,7 +118,7 @@ $sizemediaProduct: 600px;
                         color: #121212;
                         grid-area: price;
                         font-weight: 600;
-                        padding: 0
+                        padding: 0;
                     }
                 }
 
@@ -152,21 +147,17 @@ $sizemediaProduct: 600px;
                     @media (max-width: 400px) {
                         padding: 10px 8px;
                     }
-
                 }
             }
 
             .image__none {
                 background: rgba(204, 204, 204, 0.3);
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @include disflex(flex, center, center);
                 min-height: 447px;
 
                 P {
                     font-size: 22px;
                     color: #121212;
-
                 }
 
                 @media (max-width: $sizemediaProduct) {

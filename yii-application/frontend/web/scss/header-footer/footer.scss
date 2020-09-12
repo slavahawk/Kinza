@@ -8,9 +8,7 @@
         padding: 40px 20px;
         max-width: 1400px;
         margin: 0px auto;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
+        @include disflex(flex, space-around, center);
 
         &-left {
             &-contact {

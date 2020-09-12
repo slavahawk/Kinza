@@ -107,10 +107,8 @@
 
             .amount {
                 &__content {
-                    display: flex;
+                    @include disflex(flex, center, center);
                     flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
 
                     label {
                         font-size: 16px;
@@ -152,7 +150,8 @@
                             }
                         }
 
-                        p {}
+                        p {
+                        }
                     }
                 }
             }
@@ -163,10 +162,8 @@
                 }
 
                 &__content {
-                    display: flex;
+                    @include disflex(flex, center, center);
                     flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
 
                     label {
                         font-size: 16px;
@@ -181,7 +178,6 @@
                     }
                 }
             }
-
 
             .delete {
                 @include adaptiv-fontAll(30, 30);
@@ -214,7 +210,6 @@
                 align-items: center;
                 justify-items: center;
 
-
                 .total__title {
                     justify-self: start;
                     font-weight: 500;
@@ -238,7 +233,6 @@
 
                         @media (max-width: 600px) {
                             padding: 0;
-
                         }
                     }
 
@@ -249,7 +243,6 @@
 
                         @media (max-width: 600px) {
                             margin-top: 5px;
-
                         }
                     }
                 }
@@ -278,7 +271,6 @@
                         "amountTitle amountTitle  "
                         "amountTotal priceTotal";
                     align-items: end;
-
                 }
             }
 

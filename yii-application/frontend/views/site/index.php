@@ -12,8 +12,9 @@ $this->registerMetaTag([
 ?>
 <div class="preloader">
   <div class="preloader__row">
-    <img  src="<?= Yii::getAlias('@imgFrontEnd'); ?>/preloader.png" alt="Логотип" />
-    <div class="preloader__item"></div>
+    <img class="main-load" src="<?= Yii::getAlias('@imgFrontEnd'); ?>/loadMain.png" alt="Логотип" />
+    <img class="out-load"  src="<?= Yii::getAlias('@imgFrontEnd'); ?>/loadout.png" alt="Логотип" />
+    <!-- <div class="preloader__item"></div> -->
   </div>
 </div>
 <main class="wrapper">
