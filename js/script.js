@@ -7,8 +7,11 @@ window.onload = function () {
     document.body.classList.remove('loaded_hiding');
   }, 500);
   animate();
-}; // ФУНКЦИЯ ОПРЕДЕЛЕНИЯ ПОДДЕРЖКИ WEBP
+};
 
+var observer = lozad();
+observer.observe();
+; // ФУНКЦИЯ ОПРЕДЕЛЕНИЯ ПОДДЕРЖКИ WEBP
 
 function testWebP(callback) {
   var webP = new Image();
