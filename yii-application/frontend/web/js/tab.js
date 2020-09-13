@@ -9,6 +9,8 @@ $('.order__content__tabs .order__content__tabs__items-item')
 	})
 	.eq(0)
 	.addClass('active');
+
+
 // Таб на странице /proeng/ourworks/LuckyHouse/ - Слава
 let Tab = document.querySelector('.proTab');
 let tabTitleBox = document.querySelector('.proTab__items');

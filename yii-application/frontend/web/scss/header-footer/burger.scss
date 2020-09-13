@@ -86,7 +86,44 @@
                 margin: 0 0 60px 0;
                 margin-right: 0px !important;
                 @include adaptiv-fontMin(60, 28);
+
+                &:nth-child(3) {
+                    margin: 0 0 39px 0;
+                }
+
+                &:nth-child(4) {
+                    margin: 0 auto 32px;
+                }
+
+                &:nth-child(5) {
+                    margin: 0 auto 0px;
+                }
             }
+        }
+    }
+}
+
+.aclo__btn {
+    display: none;
+}
+
+@media (max-width:976px) {
+    .aclo__btn {
+        padding: 0 4vw;
+        display: block;
+
+        a {
+            max-width: 538px;
+            margin: 0 auto;
+            display: block;
+            color: #121212 !important;
+            padding: 12px 20px;
+            background-color: #ffffff;
+
+            // display: flex;
+            // justify-content: center;
+            // max-width: 91%;
+            // margin: 0 auto;
         }
     }
 }

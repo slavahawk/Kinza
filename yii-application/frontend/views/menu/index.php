@@ -23,7 +23,14 @@ $this->registerMetaTag([
 
     <section class="menu">
         <div class="menu__content">
-            <h2><?= $menu['category_name'] ?></h2>
+            <div class="title__menu">
+                <h2><?= $menu['category_name'] ?></h2>
+                <div class="title__menu__btn">
+                    <a href="#">Барная карта</a>
+                    <a href="#">Винная карта</a>
+                </div>
+            </div>
+            
             <div class="menu__content__item">
 
                 <?php foreach ($menu['products'] as $product): ?>

@@ -47,6 +47,12 @@ MainAsset::register($this);
                 <li>
                     <a href="<?php echo Url::to(['site/contact']); ?>">Контакты</a>
                 </li>
+                <li class="aclo__btn">
+                    <a href="<?php echo Url::to(['menu/alcohol']); ?>">Барная карта</a>
+                </li>
+                <li class="aclo__btn">
+                    <a href="<?php echo Url::to(['menu/alcohol']); ?>">Винная карта</a>
+                </li>
             </ul>
         </div>
 

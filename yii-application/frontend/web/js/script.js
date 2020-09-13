@@ -8,3 +8,4 @@
 @@include('map.js');
 @@include('flyToBasket.js');
 @@include('orderForm.js');
+@@include('alcotab.js');
