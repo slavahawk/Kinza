@@ -66,4 +66,11 @@ class MenuController extends Controller
         ]);
     }
 
+    public function actionAlcohol()
+    {
+        return $this->render('alcohol', [
+
+        ]);
+    }
+
 }

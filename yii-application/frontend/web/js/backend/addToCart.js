@@ -67,8 +67,15 @@ $(document).ready(function () {
                 $('#cart-count').html(obj.qty);
                 $('#cart-count-qty').html(obj.qty);
                 $('#cart-count-sum').html(obj.sum);
-                $('#cart-product-' + id).fadeOut();
-
+                $('#cart-product-' + id).fadeOut( 500, 'swing', function () {
+                    $(this).remove();
+                });
+                if (obj.qty === 0) {
+                    $('.cart__content-cart-total').remove();
+                    $('.cart__content-cart-btn').remove();
+                    $('.cart__content-sum').remove();
+                    $("<h3>Корзина пуста</h3>").insertAfter('.cart__content-back');
+                }
             }
         });
     });

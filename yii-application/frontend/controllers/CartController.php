@@ -104,7 +104,7 @@ class CartController extends Controller
         $id = Yii::$app->request->get('id');
         $product = Product::findOne($id);
 
-        if (empty($product) || $_SESSION['cart'][$id]['qty'] == 1) return false;
+        if (empty($product)) return false;
 
         $cart = new Cart();
         $cart->recalc($id);

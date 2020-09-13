@@ -34,7 +34,17 @@ foreach ($categoryList as $category) {
         </ul>
         <div class="filter__content-button">
             <div class="buttonFilterMini" id="buttonFilterMini">
-                <p>Категории</p>
+                <?php if(Url::current() == Url::to(['menu/index'])): ?>
+                <p>
+                    Категории
+                </p>
+                <?php else: ?>
+                <p>
+                    <?php foreach ($categoryList as $category): ?>
+                        <?= (Url::current() == Url::to(['menu/category', 'categoryId' => $category->id])) ? $category->name : false; ?>
+                    <?php endforeach; ?>
+                </p>
+                <?php endif; ?>
                 <img class="arrow-filter" src="<?= Yii::getAlias('@imgFrontEnd'); ?>/next.svg" alt="" />
             </div>
             <div class="filter__select">
