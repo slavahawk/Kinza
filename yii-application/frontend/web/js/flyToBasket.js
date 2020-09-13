@@ -1,31 +1,3 @@
-
-
-
-
-
-// document.addEventListener("DOMContentLoaded", () => {
-
-// 	"use strict"
-// 	const btnPayProduct = document.querySelectorAll(".btn__pay")
-
-// 	for (let i = 0; i < btnPayProduct.length; i++) {
-// 		let index = btnPayProduct[i].attributes[1].value
-// 		let image = btnPayProduct[i].parentElement.children[0].children[0]
-// 		console.log(image)
-
-
-
-
-// 		image = document.createElement('img');
-// 		image.className = "image__clone";
-// 		document.body.append(image);
-
-// 	}
-
-// })
-
-
-
 $(document).ready(function () {
 	$('.btn__pay').on('click', function () {
 		var cart = $('.basket');

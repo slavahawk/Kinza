@@ -1,13 +1,9 @@
 const headerMenu = document.querySelector('header'),
+	mainSection = document.querySelector(".mainSection"),
 	scrollPrev = 0;
 
-const page = document.URL;
 
-if (
-	page == 'http://kinza/' ||
-	page == 'https://kinza-kras.ru/' ||
-	page == 'http://kinza-frontend.test/'
-) {
+if (mainSection) {
 	scrollStyleHeader();
 } else {
 	headerMenu.classList.add('fast');
