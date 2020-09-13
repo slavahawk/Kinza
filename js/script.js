@@ -36,10 +36,10 @@ testWebP(function (support) {
 });
 ;
 var headerMenu = document.querySelector('header'),
+    mainSection = document.querySelector(".mainSection"),
     scrollPrev = 0;
-var page = document.URL;
 
-if (page == 'http://kinza/' || page == 'https://kinza-kras.ru/' || page == 'http://kinza-frontend.test/') {
+if (mainSection) {
   scrollStyleHeader();
 } else {
   headerMenu.classList.add('fast');
@@ -280,19 +280,7 @@ function initMap() {
   });
 }
 
-; // document.addEventListener("DOMContentLoaded", () => {
-// 	"use strict"
-// 	const btnPayProduct = document.querySelectorAll(".btn__pay")
-// 	for (let i = 0; i < btnPayProduct.length; i++) {
-// 		let index = btnPayProduct[i].attributes[1].value
-// 		let image = btnPayProduct[i].parentElement.children[0].children[0]
-// 		console.log(image)
-// 		image = document.createElement('img');
-// 		image.className = "image__clone";
-// 		document.body.append(image);
-// 	}
-// })
-
+;
 $(document).ready(function () {
   $('.btn__pay').on('click', function () {
     var cart = $('.basket');
