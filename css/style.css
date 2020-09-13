@@ -469,6 +469,10 @@ h6 {
   display: none;
 }
 
+.aclo__btn {
+  display: none;
+}
+
 .mainSection {
   display: flex;
   justify-content: center;
@@ -613,7 +617,13 @@ h6 {
   padding: 36px 20px 67px;
 }
 
-.menu__content h2 {
+.menu__content .title__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu__content .title__menu h2 {
   color: #121212;
   text-align: left;
   font-family: SourceSansPro;
@@ -621,6 +631,22 @@ h6 {
   font-weight: 600;
   font-size: calc(24px + 6 * ((100vw - 320px) / 1600));
   text-transform: uppercase;
+}
+
+.menu__content .title__menu__btn a {
+  font-family: Roboto;
+  background: #242424;
+  border-radius: 5px;
+  padding: 6px 22px;
+  color: #FFFFFF;
+  font-size: 20px;
+  line-height: 18px;
+  text-transform: uppercase;
+  margin: 0px 16px 0px 0px;
+}
+
+.menu__content .title__menu__btn a :last-child {
+  margin: 0px 0px 0px 0px;
 }
 
 .menu__content__item {
@@ -1737,7 +1763,7 @@ h6 {
 
 .alcohol__content {
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 150px 20px 40px;
   max-width: 1140px;
   color: #121212;
 }
@@ -1808,6 +1834,14 @@ h6 {
   color: #fc4a02;
 }
 
+.alcohol__content__item-main {
+  display: none;
+}
+
+.alcohol__content__item-main.active {
+  display: block;
+}
+
 .alcohol__content__item-main .table__aclo {
   margin-bottom: 100px;
 }
@@ -1825,9 +1859,8 @@ h6 {
 }
 
 .alcohol__content__item-main .table__aclo__item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   margin-top: 40px;
 }
 
@@ -2058,6 +2091,32 @@ body a {
     font-size: calc(28px + 32 * ((100vw - 320px) / 656));
   }
 
+  .header__content-menu ul li:nth-child(3) {
+    margin: 0 0 39px 0;
+  }
+
+  .header__content-menu ul li:nth-child(4) {
+    margin: 0 auto 32px;
+  }
+
+  .header__content-menu ul li:nth-child(5) {
+    margin: 0 auto 0px;
+  }
+
+  .aclo__btn {
+    padding: 0 4vw;
+    display: block;
+  }
+
+  .aclo__btn a {
+    max-width: 538px;
+    margin: 0 auto;
+    display: block;
+    color: #121212 !important;
+    padding: 12px 20px;
+    background-color: #ffffff;
+  }
+
   .mainSection__content .mainSection__content-left h1 {
     margin-bottom: 10px;
     line-height: 119%;
@@ -2089,6 +2148,10 @@ body a {
 
   .menu__content {
     padding: 0px 20px 67px;
+  }
+
+  .menu__content .title__menu__btn {
+    display: none;
   }
 
   .filter {

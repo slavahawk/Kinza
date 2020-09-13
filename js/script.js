@@ -417,3 +417,55 @@ function setIndex() {
 }
 
 ;
+var tabAlco = document.querySelector('.alcohol__content__item'),
+    tabAlcoButton = document.querySelectorAll('.tab__alco__btn'),
+    tabContentAlcoItem = document.querySelectorAll('.alcohol__content__item-main');
+
+if (tabAlco) {
+  searchFirstElmentAlco();
+  tabAlco.addEventListener('click', function (e) {
+    return showAlco(e);
+  });
+  setIndexAlco();
+}
+
+var showAlco = function showAlco(e) {
+  var t = e.target;
+  if (!t.classList.contains('tab__alco__btn')) return;
+  deleteActiveAlco();
+  var index = t.getAttribute("data-index");
+  var content = document.querySelector('.alcohol__content__item-main[data-index="' + index + '"]');
+  setActiveAlco(t, content);
+};
+
+function searchFirstElmentAlco() {
+  var tabAlcoButton = document.querySelector('.tab__alco__btn');
+  var tabContentAlcoItem = document.querySelector('.alcohol__content__item-main');
+  tabAlcoButton.classList.add('active');
+  tabContentAlcoItem.classList.add('active');
+}
+
+;
+
+function deleteActiveAlco() {
+  for (var i = 0; i < tabAlcoButton.length; i++) {
+    tabAlcoButton[i].classList.remove('active');
+    tabContentAlcoItem[i].classList.remove('active');
+  }
+}
+
+function setActiveAlco(t, content) {
+  for (var i = 0; i < tabAlcoButton.length; i++) {
+    t.classList.add("active");
+    content.classList.add("active");
+  }
+}
+
+function setIndexAlco() {
+  for (var i = 0; i < tabAlcoButton.length; i++) {
+    tabAlcoButton[i].setAttribute("data-index", i);
+    tabContentAlcoItem[i].setAttribute("data-index", i);
+  }
+}
+
+;
