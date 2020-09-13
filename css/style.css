@@ -1648,7 +1648,8 @@ h6 {
 }
 
 .footer__content {
-  font-family: SourceSansPro;
+  font-family: Montserrat;
+  font-weight: 500;
   font-size: 16px;
   line-height: 24px;
   padding: 40px 20px;
@@ -1660,8 +1661,9 @@ h6 {
 }
 
 .footer__content-left-contact {
+  font-size: 16px;
   display: grid;
-  justify-items: center;
+  gap: 2px 32px;
   grid-template-columns: repeat(2, 1fr);
 }
 
@@ -2318,6 +2320,17 @@ body a {
   }
 }
 
+@media (max-width: 825px) {
+  .footer__content {
+    flex-direction: column;
+  }
+
+  .footer__content-left {
+    order: 2;
+    padding-top: 40px;
+  }
+}
+
 @media (max-width: 768px) {
   .header__content-basket a .count p {
     width: 18px;
@@ -2372,15 +2385,6 @@ body a {
 
   .cart__content-cart .delete a {
     padding: 3px 7px;
-  }
-
-  .footer__content {
-    flex-direction: column;
-  }
-
-  .footer__content-left {
-    order: 2;
-    padding-top: 40px;
   }
 }
 
@@ -2684,6 +2688,10 @@ body a {
     width: 17px;
     height: 17px;
     margin-right: 5px;
+  }
+
+  .footer__content-left-contact {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
