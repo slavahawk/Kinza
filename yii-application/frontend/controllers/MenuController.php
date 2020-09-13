@@ -4,7 +4,9 @@
 namespace frontend\controllers;
 
 
+use frontend\models\Alcohol;
 use frontend\models\Category;
+use frontend\models\CategoryAlcohol;
 use frontend\models\Product;
 use Yii;
 use yii\web\Controller;
@@ -66,11 +68,73 @@ class MenuController extends Controller
         ]);
     }
 
-    public function actionAlcohol()
+    public function actionBar()
     {
-        return $this->render('alcohol', [
+        $condition = ['type' => 'bar'];
+        $condition2 = ['parent_category' => 0];
+        $condition3 = ['status' => 1];
+        $parentCategories = CategoryAlcohol::find()
+            ->where($condition)
+            ->andWhere($condition2)
+            ->andWhere($condition3)
+            ->orderBy('sort_order')
+            ->all();
 
+        foreach ($parentCategories as $category) {
+            $condition4[] = $category->category_alcohol_id;
+            $childCategories = CategoryAlcohol::find()
+                ->joinWith('alcohol', 'category_alcohol.category_alcohol_id = alcohol.category_id')
+                ->where($condition)
+                ->andWhere(['category_alcohol.parent_category' => $condition4])
+                ->andWhere('alcohol.status')
+                ->orderBy('sort_order')
+                ->all();
+        }
+
+        return $this->render('bar', [
+            'parentCategories' => $parentCategories,
+            'childCategories' => $childCategories,
         ]);
     }
+
+//    public function actionParsing()
+//    {
+//        $row = 0;
+//        if (($handle = fopen( $_SERVER['DOCUMENT_ROOT'] . "/bar_alcohol.csv", "r")) !== FALSE) {
+//            while (($data = fgetcsv($handle, 1000, "\n")) !== FALSE) {
+//                $row++;
+//                $item = explode(';',$data[0]);
+//                $alcohol_id = $item[0];
+//                $name = $item[1];
+//                $category_id = $item[2];
+//                $weight = $item[3];
+//                $price = $item[4];
+//                $sort_order = $item[5];
+//
+//                $result[$row] = array(
+//                    'alcohol_id' => $alcohol_id,
+//                    'name' => (string)$name,
+//                    'category_id' => (int)$category_id,
+//                    'weight' => (string)$weight,
+//                    'price' => (string)$price,
+//                    'sort_order' => (int)$sort_order,
+//                );
+//            }
+//            fclose($handle);
+//        }
+//
+//        foreach ($result as $item) {
+//            $test = new Alcohol();
+//            $test->name = $item['name'];
+//            $test->category_id = $item['category_id'];
+//            $test->weight = $item['weight'];
+//            $test->price = $item['price'];
+//            $test->sort_order = $item['sort_order'];
+//            $test->status = 1;
+//            $test->save();
+//        }
+//
+//        die('success');
+//    }
 
 }

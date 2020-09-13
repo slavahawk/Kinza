@@ -26,7 +26,7 @@ $this->registerMetaTag([
             <div class="title__menu">
                 <h2><?= $menu['category_name'] ?></h2>
                 <div class="title__menu__btn">
-                    <a href="#">Барная карта</a>
+                    <a href="<?= Url::to(['menu/bar']) ?>">Барная карта</a>
                     <a href="#">Винная карта</a>
                 </div>
             </div>
