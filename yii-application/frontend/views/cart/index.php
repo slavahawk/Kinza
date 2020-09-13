@@ -21,7 +21,7 @@ $this->registerMetaTag([
             <div class="cart__content-back">
                 <a href="<?= Url::to(['menu/index'])?>">Меню</a>
                 <p>/</p>
-                <a href="/">Корзина</a>
+                <p>Корзина</p>
             </div>
 
             <?php if (!isset($session['cart']) || empty($session['cart'])): ?>
