@@ -607,9 +607,16 @@ h6 {
 }
 
 .title__menu {
+  position: relative;
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.title__menu__btn {
   position: absolute;
-  right: calc(100% - 20vw);
-  top: 201px;
+  top: 50px;
+  right: 0;
 }
 
 .title__menu__btn a {
@@ -1804,8 +1811,8 @@ h6 {
 }
 
 .alcohol__content .wine__item {
-  display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr !important;
+  gap: 80px;
 }
 
 .alcohol__content__item {
