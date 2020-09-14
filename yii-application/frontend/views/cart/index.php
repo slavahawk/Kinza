@@ -14,7 +14,7 @@ $this->registerMetaTag([
 
 ?>
 
-<main>
+<main class="main-grid">
     <section class="cart">
         <div class="cart__content">
             <h2>Корзина</h2>

@@ -8,6 +8,7 @@ $sizemediaProduct: 600px;
     &__btn {
         position: absolute;
         top: 50px;
+        z-index: 50;
         right: 0;
         @media (max-width: 976px) {
             display: none;
@@ -195,5 +196,28 @@ $sizemediaProduct: 600px;
                 }
             }
         }
+    }
+}
+
+.start {
+    opacity: 0.5;
+    position: absolute;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    @media (max-width: 600px) {
+        width: 200px;
+        height: 200px;
+    }
+    @media (max-width: 600px) {
+        width: 150px;
+        height: 150px;
+    }
+    @media (max-width: 600px) {
+        width: 100px;
+        height: 100px;
     }
 }

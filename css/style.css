@@ -616,6 +616,7 @@ h6 {
 .title__menu__btn {
   position: absolute;
   top: 50px;
+  z-index: 50;
   right: 0;
 }
 
@@ -730,6 +731,17 @@ h6 {
 .menu__content__item .image__none P {
   font-size: 22px;
   color: #121212;
+}
+
+.start {
+  opacity: 0.5;
+  position: absolute;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
 }
 
 .filter {
@@ -870,6 +882,7 @@ h6 {
   padding: 40px 20px 67px;
   max-width: 1220px;
   margin: 0 auto;
+  min-height: 65vh;
 }
 
 .product__content-item {
@@ -1067,7 +1080,7 @@ h6 {
 }
 
 .cart__content {
-  min-height: 82vh;
+  min-height: 81vh;
   padding: 150px 20px 50px 20px;
   max-width: 1024px;
   margin: 0 auto;
@@ -1897,22 +1910,14 @@ body {
   color: #fff;
   background-color: white;
   font-family: PTSans;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 body a {
   color: #fff;
   cursor: pointer;
-}
-
-.start {
-  opacity: 0.5;
-  position: absolute;
-  z-index: 1000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 300px;
-  height: 300px;
 }
 
 @media (min-width: 500px) {
@@ -2567,6 +2572,21 @@ body a {
     min-height: 100px;
   }
 
+  .start {
+    width: 200px;
+    height: 200px;
+  }
+
+  .start {
+    width: 150px;
+    height: 150px;
+  }
+
+  .start {
+    width: 100px;
+    height: 100px;
+  }
+
   .catalog__content {
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
@@ -2680,21 +2700,6 @@ body a {
 
   .alcohol__content__item-main .table__aclo__item p:first-child {
     font-weight: 600;
-  }
-
-  .start {
-    width: 200px;
-    height: 200px;
-  }
-
-  .start {
-    width: 150px;
-    height: 150px;
-  }
-
-  .start {
-    width: 100px;
-    height: 100px;
   }
 }
 

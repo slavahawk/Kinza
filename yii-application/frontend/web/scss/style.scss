@@ -26,32 +26,11 @@ body {
     color: #fff;
     background-color: white;
     font-family: PTSans;
-
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
     a {
         color: #fff;
         cursor: pointer;
-    }
-}
-
-.start {
-    opacity: 0.5;
-    position: absolute;
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 300px;
-    height: 300px;
-    @media (max-width: 600px) {
-        width: 200px;
-        height: 200px;
-    }
-    @media (max-width: 600px) {
-        width: 150px;
-        height: 150px;
-    }
-    @media (max-width: 600px) {
-        width: 100px;
-        height: 100px;
     }
 }
