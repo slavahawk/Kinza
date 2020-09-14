@@ -606,6 +606,28 @@ h6 {
   width: 100%;
 }
 
+.title__menu {
+  position: absolute;
+  right: calc(100% - 20vw);
+  top: 201px;
+}
+
+.title__menu__btn a {
+  font-family: Roboto;
+  background: #242424;
+  border-radius: 5px;
+  padding: 6px 22px;
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 18px;
+  text-transform: uppercase;
+  margin: 0px 16px 0px 0px;
+}
+
+.title__menu__btn a :last-child {
+  margin: 0px 0px 0px 0px;
+}
+
 .menu {
   position: relative;
   width: 100%;
@@ -617,13 +639,7 @@ h6 {
   padding: 36px 20px 67px;
 }
 
-.menu__content .title__menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.menu__content .title__menu h2 {
+.menu__content h2 {
   color: #121212;
   text-align: left;
   font-family: SourceSansPro;
@@ -631,22 +647,6 @@ h6 {
   font-weight: 600;
   font-size: calc(24px + 6 * ((100vw - 320px) / 1600));
   text-transform: uppercase;
-}
-
-.menu__content .title__menu__btn a {
-  font-family: Roboto;
-  background: #242424;
-  border-radius: 5px;
-  padding: 6px 22px;
-  color: #FFFFFF;
-  font-size: 20px;
-  line-height: 18px;
-  text-transform: uppercase;
-  margin: 0px 16px 0px 0px;
-}
-
-.menu__content .title__menu__btn a :last-child {
-  margin: 0px 0px 0px 0px;
 }
 
 .menu__content__item {
@@ -2151,12 +2151,12 @@ body a {
     display: none;
   }
 
-  .menu__content {
-    padding: 0px 20px 67px;
+  .title__menu__btn {
+    display: none;
   }
 
-  .menu__content .title__menu__btn {
-    display: none;
+  .menu__content {
+    padding: 0px 20px 67px;
   }
 
   .filter {

@@ -1,5 +1,32 @@
 $sizemediaProduct: 600px;
 
+.title__menu {
+    position: absolute;
+    right: calc(100% - 20vw);
+    top: 201px;
+    &__btn {
+        @media (max-width: 976px) {
+            display: none;
+        }
+
+        a {
+            font-family: Roboto;
+            background: #242424;
+            border-radius: 5px;
+            padding: 6px 22px;
+            color: #ffffff;
+            font-size: 20px;
+            line-height: 18px;
+            text-transform: uppercase;
+            margin: 0px 16px 0px 0px;
+
+            :last-child {
+                margin: 0px 0px 0px 0px;
+            }
+        }
+    }
+}
+
 .menu {
     position: relative;
     width: 100%;
@@ -16,46 +43,15 @@ $sizemediaProduct: 600px;
         @media (max-width: $sizemediaProduct) {
             padding: 0px 10px 67px;
         }
-
-        .title__menu {
-            @include disflex(flex, space-between, center);
-
-
-            h2 {
-                color: #121212;
-                text-align: left;
-                font-family: SourceSansPro;
-                font-style: normal;
-                font-weight: 600;
-                @include adaptiv-fontAll(30, 24);
-                text-transform: uppercase;
-            }
-
-            &__btn {
-                @media (max-width:976px) {
-                    display: none;
-                }
-
-                a {
-                    font-family: Roboto;
-                    background: #242424;
-                    border-radius: 5px;
-                    padding: 6px 22px;
-                    color: #FFFFFF;
-                    font-size: 20px;
-                    line-height: 18px;
-                    text-transform: uppercase;
-                    margin: 0px 16px 0px 0px;
-
-                    :last-child {
-                        margin: 0px 0px 0px 0px;
-                    }
-                }
-            }
+        h2 {
+            color: #121212;
+            text-align: left;
+            font-family: SourceSansPro;
+            font-style: normal;
+            font-weight: 600;
+            @include adaptiv-fontAll(30, 24);
+            text-transform: uppercase;
         }
-
-
-
 
         &__item {
             padding: 30px 0 0px 0;

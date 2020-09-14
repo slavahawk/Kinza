@@ -18,18 +18,19 @@ $this->registerMetaTag([
 
     <?= CategoryList::widget(); ?>
         <!-- Меню -->
-
+        <div class="title__menu">
+               
+               <div class="title__menu__btn">
+                   <a href="<?= Url::to(['menu/bar']) ?>">Барная карта</a>
+                   <a href="#">Винная карта</a>
+               </div>
+           </div>
     <?php foreach ($menuList as $menu): ?>
 
     <section class="menu">
         <div class="menu__content">
-            <div class="title__menu">
-                <h2><?= $menu['category_name'] ?></h2>
-                <div class="title__menu__btn">
-                    <a href="<?= Url::to(['menu/bar']) ?>">Барная карта</a>
-                    <a href="#">Винная карта</a>
-                </div>
-            </div>
+            <h2><?= $menu['category_name'] ?></h2>
+           
             
             <div class="menu__content__item">
 
@@ -54,10 +55,6 @@ $this->registerMetaTag([
     </section>
 
     <?php endforeach; ?>
-
-    <section class="backMenu">
-        <!-- <img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/backmenu.png" alt="" /> -->
-    </section>
 </main>
 
 <?php $this->registerJsFile('/yii-application/frontend/web/js/backend/addToCart.js', [

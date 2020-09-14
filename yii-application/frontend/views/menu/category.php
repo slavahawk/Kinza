@@ -35,9 +35,6 @@ $this->registerMetaTag([
 
         </div>
     </section>
-    <section class="backMenu">
-        <!-- <img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/backmenu.png" alt="" /> -->
-    </section>
 </main>
 
 <?php $this->registerJsFile('/yii-application/frontend/web/js/backend/addToCart.js', [
