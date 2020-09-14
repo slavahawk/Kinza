@@ -1807,8 +1807,17 @@ h6 {
   padding: 10px 20px;
 }
 
+.alcohol__content .wine__item {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
 .alcohol__content__item {
   margin-top: 60px;
+  display: none;
+}
+
+.alcohol__content__item.active {
   display: grid;
   grid-template-columns: 0.8fr 2fr;
 }

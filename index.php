@@ -15,4 +15,4 @@ $config = yii\helpers\ArrayHelper::merge(
     require __DIR__ . '/yii-application/frontend/config/main-local.php'
 );
 
-(new yii\web\Application($config))->run();
+(new yii\web\Application($config))->run(); 

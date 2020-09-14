@@ -42,10 +42,18 @@
             }
         }
 
+        .wine__item {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
         &__item {
             margin-top: 60px;
-            display: grid;
-            grid-template-columns: 0.8fr 2fr;
+            display: none;
+            &.active {
+                display: grid;
+                grid-template-columns: 0.8fr 2fr;
+            }
 
             aside {
                 font-family: SourceSansPro;
@@ -69,7 +77,6 @@
             }
 
             &-main {
-
                 display: none;
 
                 &.active {
