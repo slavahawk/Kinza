@@ -427,21 +427,19 @@ h6 {
   top: 12px;
   left: 15px;
   z-index: 2;
-  background-color: #e85222;
-  color: white;
-  border-radius: 50%;
-  padding: 3px;
-}
-
-.header__content-basket a .count p {
-  font-family: Roboto;
-  width: 21px;
-  height: 21px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 0;
-  font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
+}
+
+.header__content-basket a .count p {
+  font-size: 16px;
+  background-color: #e85222;
+  color: white;
+  border-radius: 50px;
+  font-family: Roboto;
+  padding: 5px;
+  border-radius: 50px;
 }
 
 .header__content-basket .phone__min {
@@ -2113,7 +2111,7 @@ body a {
   }
 
   .aclo__btn {
-    padding: 0 4vw;
+    padding: 0 8vw;
     display: block;
   }
 
@@ -2122,7 +2120,7 @@ body a {
     margin: 0 auto;
     display: block;
     color: #121212 !important;
-    padding: 12px 20px;
+    padding: 12px 0px;
     background-color: #ffffff;
   }
 
@@ -2404,11 +2402,6 @@ body a {
 }
 
 @media (max-width: 768px) {
-  .header__content-basket a .count p {
-    width: 18px;
-    height: 18px;
-  }
-
   .mainSection {
     background: url(../../../img/back-main768х1024.png);
     background-size: cover;

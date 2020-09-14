@@ -107,9 +107,9 @@
     display: none;
 }
 
-@media (max-width:976px) {
+@media (max-width: 976px) {
     .aclo__btn {
-        padding: 0 4vw;
+        padding: 0 8vw;
         display: block;
 
         a {
@@ -117,13 +117,8 @@
             margin: 0 auto;
             display: block;
             color: #121212 !important;
-            padding: 12px 20px;
+            padding: 12px 0px;
             background-color: #ffffff;
-
-            // display: flex;
-            // justify-content: center;
-            // max-width: 91%;
-            // margin: 0 auto;
         }
     }
 }
