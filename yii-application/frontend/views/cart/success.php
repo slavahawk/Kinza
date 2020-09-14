@@ -11,5 +11,4 @@ use yii\helpers\Url;
             <a href="<?= Url::to(['site/index']) ?>">Вернуться на главную</a>
         </div>
     </section>
-    <section class="line"></section>
 </main>

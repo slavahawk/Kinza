@@ -93,7 +93,6 @@ $this->registerMetaTag([
             <?php endif; ?>
         </div>
     </section>
-    <section class="line"></section>
 </main>
 
 <?php $this->registerJsFile('/yii-application/frontend/web/js/backend/addToCart.js', [

@@ -130,5 +130,4 @@ use yii\widgets\MaskedInput;
         </div>
     </section>
 
-    <section class="line"></section>
 </main>

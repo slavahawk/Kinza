@@ -22,13 +22,18 @@ $this->registerMetaTag([
         <div class="product__content">
             <div class="product__content-item">
                 <div class="product__content-item-image">
-                    <img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/product/<?= $product->product_image; ?>.jpg" alt="" />
+                    <img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/product/<?= $product->product_image; ?>.jpg"
+                        alt="" />
                 </div>
                 <div class="product__content-item-info">
                     <h2><?= $product->product_name; ?></h2>
-                    <a class="backMenu__link" href="<?= Url::to(['menu/category', 'categoryId' => $product->category_id]); ?>">Вернуться в каталог</a>
+                    <a class="backMenu__link"
+                        href="<?= Url::to(['menu/category', 'categoryId' => $product->category_id]); ?>">Вернуться в
+                        каталог</a>
                     <p class="price"><?= $product->price; ?><span>₽</span></p>
-                    <p class="amount">В корзине: <span id="cart-count-num"><?= $_SESSION['cart'][$product->product_id]['qty'] ?? 0 ?></span> шт.</p>
+                    <p class="amount">В корзине: <span
+                            id="cart-count-num"><?= $_SESSION['cart'][$product->product_id]['qty'] ?? 0 ?></span> шт.
+                    </p>
                     <div class="product__content-item-info-btn">
                         <a class="pay__link add-to-cart" data-id="<?= $product->product_id; ?>">В корзину</a>
                     </div>
@@ -50,7 +55,6 @@ $this->registerMetaTag([
             </div>
         </div>
     </section>
-    <section class="line"></section>
 </main>
 
 <?php $this->registerJsFile('/yii-application/frontend/web/js/backend/addToCart.js', [
