@@ -68,6 +68,7 @@ function scrollStyleHeader() {
   };
 }
 
+;
 var footerMain = document.querySelector("footer"),
     about = document.querySelector(".aboutUs"),
     contact = document.querySelector(".contact"),
