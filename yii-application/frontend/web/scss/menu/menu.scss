@@ -1,10 +1,14 @@
 $sizemediaProduct: 600px;
 
 .title__menu {
-    position: absolute;
-    right: calc(100% - 20vw);
-    top: 201px;
+    position: relative;
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 0 20px;
     &__btn {
+        position: absolute;
+        top: 50px;
+        right: 0;
         @media (max-width: 976px) {
             display: none;
         }

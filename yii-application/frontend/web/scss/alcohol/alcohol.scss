@@ -43,8 +43,8 @@
         }
 
         .wine__item {
-            display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: 1fr !important;
+            gap: 80px;
         }
 
         &__item {

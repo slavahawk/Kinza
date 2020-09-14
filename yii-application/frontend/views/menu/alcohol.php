@@ -58,16 +58,10 @@ $this->registerMetaTag([
 
         </div>
         <div data-index="2" class="alcohol__content__item wine__item">
-            <aside>
 
-                <?php foreach ($WineCategories as $category): ?>
-                    <a data-index="<?= $category->sort_order ?>" class="tab__alco__btn"><?= $category->name ?></a>
-                <?php endforeach; ?>
-
-            </aside>
 
             <?php foreach ($WineCategories as $category): ?>
-            <div data-index="<?= $category->sort_order ?>" class="alcohol__content__item-main">
+            <div data-index="<?= $category->sort_order ?>" class="alcohol__content__item-main active">
                 <div class="table__aclo">
                     <h2><?= $category->name ?></h2>
 
