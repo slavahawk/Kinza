@@ -427,18 +427,20 @@ h6 {
   top: 12px;
   left: 15px;
   z-index: 2;
+}
+
+.header__content-basket a .count .count-item {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.header__content-basket a .count p {
   font-size: 16px;
   background-color: #e85222;
-  color: white;
+  color: #fff;
   border-radius: 50px;
   font-family: Roboto;
-  padding: 5px;
+  padding: 0px;
+  width: 30px;
+  height: 30px;
   border-radius: 50px;
 }
 

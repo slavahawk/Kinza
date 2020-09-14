@@ -421,7 +421,7 @@ var mainBtnAlco = document.querySelectorAll(".main__btn__alco"),
     alco = document.querySelector(".alcohol"),
     mainItemAlco = document.querySelectorAll(".alcohol__content__item");
 
-if (mainBtnAlco) {
+if (alco) {
   searcMainhFirstElmentAlco();
   alco.addEventListener("click", function (e) {
     return showMainAlco(e);
@@ -464,7 +464,8 @@ function setMainIndexAlco() {
     mainBtnAlco[i].setAttribute("data-index", i);
     mainItemAlco[i].setAttribute("data-index", i);
   }
-}
+} // --------------------------------------------------------------------
+
 
 var tabAlco = document.querySelector(".alcohol__content__item"),
     tabAlcoButton = document.querySelectorAll(".tab__alco__btn"),

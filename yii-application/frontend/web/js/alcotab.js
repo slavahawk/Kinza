@@ -2,7 +2,7 @@ const mainBtnAlco = document.querySelectorAll(".main__btn__alco"),
     alco = document.querySelector(".alcohol"),
     mainItemAlco = document.querySelectorAll(".alcohol__content__item");
 
-if (mainBtnAlco) {
+if (alco) {
     searcMainhFirstElmentAlco();
     alco.addEventListener("click", (e) => showMainAlco(e));
     setMainIndexAlco();
@@ -48,6 +48,8 @@ function setMainIndexAlco() {
         mainItemAlco[i].setAttribute("data-index", i);
     }
 }
+
+// --------------------------------------------------------------------
 
 let tabAlco = document.querySelector(".alcohol__content__item"),
     tabAlcoButton = document.querySelectorAll(".tab__alco__btn"),
