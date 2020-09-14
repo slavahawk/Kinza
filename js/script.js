@@ -1,5 +1,11 @@
 "use strict";
 
+function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 window.onload = function () {
   document.body.classList.add('loaded_hiding');
   window.setTimeout(function () {
@@ -35,15 +41,15 @@ testWebP(function (support) {
   }
 });
 ;
-var headerMenu = document.querySelector('header'),
+var headerMenu = document.querySelector("header"),
     mainSection = document.querySelector(".mainSection"),
     scrollPrev = 0;
 
 if (mainSection) {
   scrollStyleHeader();
 } else {
-  headerMenu.classList.add('fast');
-  headerMenu.classList.add('out');
+  headerMenu.classList.add("fast");
+  headerMenu.classList.add("out");
 }
 
 function scrollStyleHeader() {
@@ -53,13 +59,43 @@ function scrollStyleHeader() {
     var scrolled = winScroll / height * 100;
 
     if (scrolled > 1 && scrolled > scrollPrev) {
-      headerMenu.classList.add('out');
+      headerMenu.classList.add("out");
     } else if (scrolled == 0) {
-      headerMenu.classList.remove('out');
+      headerMenu.classList.remove("out");
     } else {
-      headerMenu.classList.add('out');
+      headerMenu.classList.add("out");
     }
   };
+}
+
+var footerMain = document.querySelector("footer"),
+    about = document.querySelector(".aboutUs"),
+    contact = document.querySelector(".contact"),
+    footerLinks = footerMain.querySelectorAll("a"),
+    socialBorder = document.querySelector(".footer__content-right-social");
+
+var _iterator = _createForOfIteratorHelper(footerLinks),
+    _step;
+
+try {
+  for (_iterator.s(); !(_step = _iterator.n()).done;) {
+    var link = _step.value;
+
+    if (!about) {
+      footerMain.style.background = "#121212";
+      footerMain.style.color = "#fff";
+      link.style.color = "white";
+      socialBorder.style.borderColor = "#fff";
+    }
+
+    if (contact) {
+      footerMain.style.display = "none";
+    }
+  }
+} catch (err) {
+  _iterator.e(err);
+} finally {
+  _iterator.f();
 }
 
 ;
