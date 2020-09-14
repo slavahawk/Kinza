@@ -422,7 +422,7 @@ var mainBtnAlco = document.querySelectorAll(".main__btn__alco"),
     mainItemAlco = document.querySelectorAll(".alcohol__content__item");
 
 if (alco) {
-  searcMainhFirstElmentAlco();
+  // searcMainhFirstElmentAlco();
   alco.addEventListener("click", function (e) {
     return showMainAlco(e);
   });
@@ -436,14 +436,13 @@ var showMainAlco = function showMainAlco(e) {
   var index = t.getAttribute("data-index");
   var content = document.querySelector('.alcohol__content__item[data-index="' + index + '"]');
   setMainActiveAlco(t, content);
-};
+}; // function searcMainhFirstElmentAlco() {
+//     let mainBtnAlcoFirst = document.querySelector(".main__btn__alco");
+//     let mainItemAlcoFirst = document.querySelector(".alcohol__content__item");
+//     mainBtnAlcoFirst.classList.add("active");
+//     mainItemAlcoFirst.classList.add("active");
+// }
 
-function searcMainhFirstElmentAlco() {
-  var mainBtnAlcoFirst = document.querySelector(".main__btn__alco");
-  var mainItemAlcoFirst = document.querySelector(".alcohol__content__item");
-  mainBtnAlcoFirst.classList.add("active");
-  mainItemAlcoFirst.classList.add("active");
-}
 
 function deleteMainActiveAlco() {
   for (var i = 0; i < mainBtnAlco.length; i++) {

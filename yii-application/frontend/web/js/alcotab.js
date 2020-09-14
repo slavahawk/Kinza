@@ -3,7 +3,7 @@ const mainBtnAlco = document.querySelectorAll(".main__btn__alco"),
     mainItemAlco = document.querySelectorAll(".alcohol__content__item");
 
 if (alco) {
-    searcMainhFirstElmentAlco();
+    // searcMainhFirstElmentAlco();
     alco.addEventListener("click", (e) => showMainAlco(e));
     setMainIndexAlco();
 }
@@ -21,12 +21,12 @@ const showMainAlco = (e) => {
     setMainActiveAlco(t, content);
 };
 
-function searcMainhFirstElmentAlco() {
-    let mainBtnAlcoFirst = document.querySelector(".main__btn__alco");
-    let mainItemAlcoFirst = document.querySelector(".alcohol__content__item");
-    mainBtnAlcoFirst.classList.add("active");
-    mainItemAlcoFirst.classList.add("active");
-}
+// function searcMainhFirstElmentAlco() {
+//     let mainBtnAlcoFirst = document.querySelector(".main__btn__alco");
+//     let mainItemAlcoFirst = document.querySelector(".alcohol__content__item");
+//     mainBtnAlcoFirst.classList.add("active");
+//     mainItemAlcoFirst.classList.add("active");
+// }
 
 function deleteMainActiveAlco() {
     for (let i = 0; i < mainBtnAlco.length; i++) {
