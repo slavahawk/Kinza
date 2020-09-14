@@ -68,21 +68,21 @@ class MenuController extends Controller
         ]);
     }
 
-    public function actionBar()
+    public function actionAlcohol()
     {
         $condition = ['type' => 'bar'];
         $condition2 = ['parent_category' => 0];
         $condition3 = ['status' => 1];
-        $parentCategories = CategoryAlcohol::find()
+        $parentBarCategories = CategoryAlcohol::find()
             ->where($condition)
             ->andWhere($condition2)
             ->andWhere($condition3)
             ->orderBy('sort_order')
             ->all();
 
-        foreach ($parentCategories as $category) {
+        foreach ($parentBarCategories as $category) {
             $condition4[] = $category->category_alcohol_id;
-            $childCategories = CategoryAlcohol::find()
+            $childBarCategories = CategoryAlcohol::find()
                 ->joinWith('alcohol', 'category_alcohol.category_alcohol_id = alcohol.category_id')
                 ->where($condition)
                 ->andWhere(['category_alcohol.parent_category' => $condition4])
@@ -91,16 +91,25 @@ class MenuController extends Controller
                 ->all();
         }
 
-        return $this->render('bar', [
-            'parentCategories' => $parentCategories,
-            'childCategories' => $childCategories,
+        $condition5 = ['type' => 'wine'];
+        $WineCategories = CategoryAlcohol::find()
+            ->joinWith('alcohol', 'category_alcohol.category_alcohol_id = alcohol.category_id')
+            ->where($condition5)
+            ->andWhere(['alcohol.status' => 1])
+            ->orderBy('sort_order')
+            ->all();
+
+        return $this->render('alcohol', [
+            'parentBarCategories' => $parentBarCategories,
+            'childBarCategories' => $childBarCategories,
+            'WineCategories' => $WineCategories,
         ]);
     }
 
 //    public function actionParsing()
 //    {
 //        $row = 0;
-//        if (($handle = fopen( $_SERVER['DOCUMENT_ROOT'] . "/bar_alcohol.csv", "r")) !== FALSE) {
+//        if (($handle = fopen( $_SERVER['DOCUMENT_ROOT'] . "/wine_alcohol.csv", "r")) !== FALSE) {
 //            while (($data = fgetcsv($handle, 1000, "\n")) !== FALSE) {
 //                $row++;
 //                $item = explode(';',$data[0]);
