@@ -16,7 +16,7 @@ use yii\widgets\MaskedInput;
                 <p>/</p>
                 <a href="<?= Url::to(['cart/index'])?>">Корзина</a>
                 <p>/</p>
-                <a href="/">Оформление заказа</a>
+                <p>Оформление заказа</p>
             </div>
 
             <section class="tabOrder">
@@ -33,8 +33,14 @@ use yii\widgets\MaskedInput;
                         </div>
                     </div>
                     <div class="tabOrder__content__item">
-                        <form data-index="1" class="courier tab__item">
-                        <?php $form = ActiveForm::begin(); ?>
+
+                            <?php $form = ActiveForm::begin([
+                                'id' => 'delivery_form',
+                                'options' => [
+                                    'data-index' => 1,
+                                    'class' => 'courier tab__item',
+                                ]
+                            ]); ?>
                             <div class="order__content-person">
                                 <h3>Персональные данные</h3>
                                 <div class="order__content-person-grid">
@@ -55,7 +61,7 @@ use yii\widgets\MaskedInput;
                             <div class="order__content-textarea">
                                 <h3>Количество персон</h3>
                                 <div class="order__content-textarea-grid">
-                                    <?= $form->field($order, 'cutlery')->input('integer', ['placeholder' => 'Кол-во приборов'])->label(false); ?>
+                                    <?= $form->field($order, 'cutlery')->input('number', ['placeholder' => 'Кол-во приборов'])->label(false); ?>
                                 </div>
                             </div>
                             <div class="order__content-textarea">
@@ -75,11 +81,11 @@ use yii\widgets\MaskedInput;
                             </div>
                             <div class="order__content-btn">
                                 <div class="order__content-btn-grid">
-                                    <?= Html::submitButton('В корзину', ['value' => 'order', 'name' => 'order']); ?>
+                                    <?= Html::submitButton('Заказать доставку', ['value' => 'order_delivery', 'name' => 'order_delivery']); ?>
                                 </div>
                             </div>
                         <?php $form = ActiveForm::end(); ?>
-                        </form>
+
                         <form data-index="2" class="pickup tab__item">
                         <?php $form = ActiveForm::begin(); ?>
                             <div class="order__content-person">
@@ -115,7 +121,7 @@ use yii\widgets\MaskedInput;
                             </div>
                             <div class="order__content-btn">
                                 <div class="order__content-btn-grid">
-                                    <?= Html::submitButton('В корзину', ['value' => 'order', 'name' => 'order']); ?>
+                                    <?= Html::submitButton('Заказать самовывоз', ['value' => 'order', 'name' => 'order']); ?>
                                 </div>
                             </div>
                         <?php $form = ActiveForm::end(); ?>

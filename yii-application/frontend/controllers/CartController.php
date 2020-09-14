@@ -123,13 +123,17 @@ class CartController extends Controller
         if ($order->load(Yii::$app->request->post())) {
             $order->qty = $session['cart.qty'];
             $order->sum = $session['cart.sum'];
-            if (Yii::$app->request->post('order') && $order->save()) {
+            $order->type = 'delivery';
+            if (Yii::$app->request->post('delivery_form') && $order->save()) {
                 $this->saveOrderItems($session['cart'], $order->id);
                 $session->remove('cart');
                 $session->remove('cart.qty');
                 $session->remove('cart.sum');
-                return $this->actionSuccess();
             }
+        }
+
+        if ($order->hasErrors()) {
+            exit('failure');
         }
 
         return $this->render('order', [

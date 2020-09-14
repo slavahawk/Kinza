@@ -20,7 +20,8 @@ use yii\db\Expression;
  * @property string $phone
  * @property string $address
  * @property string|null $text
- * @property string|null $payment
+ * @property string $payment
+ * @property string $type
  */
 class Order extends ActiveRecord
 {
@@ -58,12 +59,12 @@ class Order extends ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'phone', 'address', 'payment', 'type'], 'required'],
+            [['name', 'phone', 'address', 'payment'], 'required'],
             [['created_at', 'updated_at'], 'safe'],
             [['qty', 'status', 'cutlery'], 'integer'],
             [['sum'], 'number'],
             [['text'], 'string'],
-            [['name', 'phone', 'address', 'payment', 'type'], 'string', 'max' => 255],
+            [['name', 'phone', 'address', 'payment'], 'string', 'max' => 255],
         ];
     }
 
@@ -78,7 +79,6 @@ class Order extends ActiveRecord
             'address' => 'Адрес',
             'text' => 'Коментарий к заказу',
             'payment' => 'Способ оплаты',
-            'type' => 'Способ доставки',
         ];
     }
 }
