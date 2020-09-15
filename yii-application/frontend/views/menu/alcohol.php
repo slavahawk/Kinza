@@ -18,13 +18,13 @@ $this->registerMetaTag([
 
         <div class="alcohol__content-title">
             <div class="alcohol__content-title-btn">
-                <a data-index="1" class="main__btn__alco active">Барная карта</a>
-                <a data-index="2" class="main__btn__alco" href="#">Винная карта</a>
+                <a data-index="1" class="main__btn__alco <?= (Yii::$app->request->get('bar')) ? 'active' : false ?>">Барная карта</a>
+                <a data-index="2" class="main__btn__alco <?= (Yii::$app->request->get('wine')) ? 'active' : false ?>">Винная карта</a>
             </div>
             <a class="back__menu" href="<?= Url::to(['menu/index']) ?>">Вернуться в меню</a>
         </div>
 
-        <div data-index="1" class="alcohol__content__item active">
+        <div data-index="1" class="alcohol__content__item <?= (Yii::$app->request->get('bar')) ? 'active' : false ?>">
             <aside>
 
                 <?php foreach ($parentBarCategories as $category): ?>
@@ -57,7 +57,7 @@ $this->registerMetaTag([
             <?php endforeach; ?>
 
         </div>
-        <div data-index="2" class="alcohol__content__item wine__item">
+        <div data-index="2" class="alcohol__content__item wine__item <?= (Yii::$app->request->get('wine')) ? 'active' : false ?>">
 
 
             <?php foreach ($WineCategories as $category): ?>

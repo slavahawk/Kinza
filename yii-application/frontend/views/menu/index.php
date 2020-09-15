@@ -21,8 +21,8 @@ $this->registerMetaTag([
         <div class="title__menu">
                
                <div class="title__menu__btn">
-                   <a href="<?= Url::to(['menu/bar']) ?>">Барная карта</a>
-                   <a href="#">Винная карта</a>
+                   <a href="<?= Url::to(['menu/alcohol', 'bar' => '1']) ?>">Барная карта</a>
+                   <a href="<?= Url::to(['menu/alcohol', 'wine' => '2']) ?>">Винная карта</a>
                </div>
            </div>
     <?php foreach ($menuList as $menu): ?>
@@ -38,7 +38,14 @@ $this->registerMetaTag([
 
                 <div class="menu__content__item__grid">
                     <a href="<?= Url::to(['menu/product', 'productId' => $product->product_id]) ?>">
+
+                        <?php if ($product->product_image): ?>
                         <img  class="lozad" data-src="<?= $product->product_image ?>" alt="<?= $product->product_name ?>" src="<?php echo Yii::getAlias('@imgFrontEnd'); ?>/dish.png" />
+                        <?php else: ?>
+                            <img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/dish.png"
+                                 alt="<?= $product->product_name; ?>" />
+                        <?php endif; ?>
+
                     </a>
                     <a class="title__product"  href="<?= Url::to(['menu/product', 'productId' => $product->product_id]) ?>"><?= $product->product_name ?></a>
                     <p><?= $product->price ?><span>₽</span></p>

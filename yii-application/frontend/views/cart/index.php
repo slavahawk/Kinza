@@ -84,8 +84,8 @@ $this->registerMetaTag([
                         <div class="cart__content-cart-btn-item">
                             <?= Html::beginForm(['cart/index'], 'post'); ?>
                             <?= Html::submitButton('Очистить корзину', ['class' => 'clear', 'value' => 'clear', 'name' => 'clear']); ?>
-                            <?= Html::submitButton('Подтвердить заказ', ['class' => 'next', 'value' => 'order', 'name' => 'order']); ?>
                             <?= Html::endForm(); ?>
+                            <a href="<?= Url::to(['cart/order']) ?>" class="next"></a>
                         </div>
                     </div>
                 </div>

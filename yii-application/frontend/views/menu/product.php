@@ -8,8 +8,8 @@ use yii\web\JqueryAsset;
 
 $this->title = "$product->product_name — Кинза";
 $this->registerMetaTag([
-    'name' => 'description',
-    'content' => 'Description of the page'
+    'name' => $product->product_name,
+    'content' => $product->description
 ]);
 
 ?>
@@ -22,8 +22,15 @@ $this->registerMetaTag([
         <div class="product__content">
             <div class="product__content-item">
                 <div class="product__content-item-image">
+
+                    <?php if ($product->product_image): ?>
                     <img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/product/<?= $product->product_image; ?>.jpg"
-                        alt="" />
+                        alt="<?= $product->product_name; ?>" />
+                    <?php else: ?>
+                    <img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/dish.png"
+                         alt="<?= $product->product_name; ?>" />
+                    <?php endif; ?>
+
                 </div>
                 <div class="product__content-item-info">
                     <h2><?= $product->product_name; ?></h2>
