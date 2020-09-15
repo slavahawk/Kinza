@@ -84,10 +84,15 @@ use yii\widgets\MaskedInput;
                                     <?= Html::submitButton('Заказать доставку', ['value' => 'order_delivery', 'name' => 'order_delivery']); ?>
                                 </div>
                             </div>
-                        <?php $form = ActiveForm::end(); ?>
+                            <?php $form = ActiveForm::end(); ?>
 
-                        <form data-index="2" class="pickup tab__item">
-                        <?php $form = ActiveForm::begin(); ?>
+                            <?php $form = ActiveForm::begin([
+                                'id' => 'pickup_form',
+                                'options' => [
+                                    'data-index' => 2,
+                                    'class' => 'pickup tab__item',
+                                ]
+                            ]); ?>
                             <div class="order__content-person">
                                 <h3>Персональные данные</h3>
                                 <div class="order__content-person-grid">
@@ -101,7 +106,7 @@ use yii\widgets\MaskedInput;
                             <div class="order__content-textarea">
                                 <h3>Количество персон</h3>
                                 <div class="order__content-textarea-grid">
-                                    <?= $form->field($order, 'cutlery')->input('integer', ['placeholder' => 'Кол-во приборов'])->label(false); ?>
+                                    <?= $form->field($order, 'cutlery')->input('number', ['placeholder' => 'Кол-во приборов'])->label(false); ?>
                                 </div>
                             </div>
                             <div class="order__content-textarea">
@@ -121,19 +126,14 @@ use yii\widgets\MaskedInput;
                             </div>
                             <div class="order__content-btn">
                                 <div class="order__content-btn-grid">
-                                    <?= Html::submitButton('Заказать самовывоз', ['value' => 'order', 'name' => 'order']); ?>
+                                    <?= Html::submitButton('Заказать самовывоз', ['value' => 'order_pickup', 'name' => 'order_pickup']); ?>
                                 </div>
                             </div>
                         <?php $form = ActiveForm::end(); ?>
-                        </form>
+
                     </div>
-                    
                 </div>
-
             </section>
-
-
         </div>
     </section>
-
 </main>

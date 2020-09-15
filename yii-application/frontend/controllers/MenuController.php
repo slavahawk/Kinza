@@ -3,8 +3,6 @@
 
 namespace frontend\controllers;
 
-
-use frontend\models\Alcohol;
 use frontend\models\Category;
 use frontend\models\CategoryAlcohol;
 use frontend\models\Product;

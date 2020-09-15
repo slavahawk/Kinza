@@ -20,9 +20,7 @@ class CartController extends Controller
     {
         $session = Yii::$app->session;
 
-        if (Yii::$app->request->post('order')) {
-            return $this->actionOrder();
-        } elseif (Yii::$app->request->post('clear')) {
+        if (Yii::$app->request->post('clear')) {
             return  $this->actionClear();
         }
 
@@ -115,25 +113,41 @@ class CartController extends Controller
         ]);
     }
 
-    protected function actionOrder()
+    public function actionOrder()
     {
         $session = Yii::$app->session;
+
+        if (empty($session['cart'])) return $this->redirect(['cart/index']);
+
         $order = new Order();
 
-        if ($order->load(Yii::$app->request->post())) {
-            $order->qty = $session['cart.qty'];
-            $order->sum = $session['cart.sum'];
-            $order->type = 'delivery';
-            if (Yii::$app->request->post('delivery_form') && $order->save()) {
-                $this->saveOrderItems($session['cart'], $order->id);
-                $session->remove('cart');
-                $session->remove('cart.qty');
-                $session->remove('cart.sum');
+        if (Yii::$app->request->post('order_delivery')){
+            if ($order->load(Yii::$app->request->post())) {
+                $order->qty = $session['cart.qty'];
+                $order->sum = $session['cart.sum'];
+                $order->type = 'delivery';
+                if (Yii::$app->request->post() && $order->save()) {
+                    $this->saveOrderItems($session['cart'], $order->id);
+                    $session->remove('cart');
+                    $session->remove('cart.qty');
+                    $session->remove('cart.sum');
+                    return $this->actionSuccess();
+                }
             }
-        }
-
-        if ($order->hasErrors()) {
-            exit('failure');
+        } elseif (Yii::$app->request->post('order_pickup')) {
+            if ($order->load(Yii::$app->request->post())) {
+                $order->qty = $session['cart.qty'];
+                $order->sum = $session['cart.sum'];
+                $order->address = 'pickup';
+                $order->type = 'pickup';
+                if (Yii::$app->request->post() && $order->save()) {
+                    $this->saveOrderItems($session['cart'], $order->id);
+                    $session->remove('cart');
+                    $session->remove('cart.qty');
+                    $session->remove('cart.sum');
+                    return $this->actionSuccess();
+                }
+            }
         }
 
         return $this->render('order', [

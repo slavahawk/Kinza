@@ -32,6 +32,11 @@ class Product extends \yii\db\ActiveRecord
         return 'product';
     }
 
+    public function getCategory()
+    {
+        return $this->hasOne(Category::className(), ['id' => 'product_id']);
+    }
+
     /**
      * {@inheritdoc}
      */
@@ -56,16 +61,20 @@ class Product extends \yii\db\ActiveRecord
     public static function setResizeImage($products)
     {
         foreach ($products as $product) {
-            $path = $_SERVER['DOCUMENT_ROOT'] . '/img/product/resize/' . $product->product_image . '.jpg';
-            if (!is_file($path)) {
-                Image::getImagine()
-                    ->open($_SERVER['DOCUMENT_ROOT'] . '/img/product/' . $product->product_image . '.jpg')
-                    ->thumbnail(new Box('400', '300'))
-                    ->save($path, ['quality' => 50]);
+            if ($product->product_image) {
+                $path = $_SERVER['DOCUMENT_ROOT'] . '/img/product/resize/' . $product->product_image . '.jpg';
+                if (!is_file($path)) {
+                    Image::getImagine()
+                        ->open($_SERVER['DOCUMENT_ROOT'] . '/img/product/' . $product->product_image . '.jpg')
+                        ->thumbnail(new Box('400', '300'))
+                        ->save($path, ['quality' => 50]);
 
-                $product->product_image = '/img/product/resize/' . $product->product_image . '.jpg';
-            } else {
-                $product->product_image = '/img/product/resize/' . $product->product_image . '.jpg';
+                    $product->product_image = '/img/product/resize/' . $product->product_image . '.jpg';
+                } elseif (is_file($path)) {
+                    $product->product_image = '/img/product/resize/' . $product->product_image . '.jpg';
+                } else {
+                    return false;
+                }
             }
         }
     }

@@ -1,4 +1,6 @@
 <?php
+
+use frontend\models\Category;
 use yii\helpers\Url;
 
 foreach ($categoryList as $category) {
@@ -35,26 +37,31 @@ foreach ($categoryList as $category) {
         <div class="filter__content-button">
             <div class="buttonFilterMini" id="buttonFilterMini">
                 <?php if(Url::current() == Url::to(['menu/index'])): ?>
-                <p>
-                    Категории
-                </p>
-                <?php else: ?>
-                <p>
-                    <?php foreach ($categoryList as $category): ?>
-                        <?= (Url::current() == Url::to(['menu/category', 'categoryId' => $category->id])) ? $category->name : false; ?>
-                    <?php endforeach; ?>
-                </p>
+                    <p>Категории</p>
                 <?php endif; ?>
+
+                <?php if ($categoryItem): ?>
+                    <p>
+                        <?= $categoryItem ?>
+                    </p>
+                <?php endif; ?>
+
+                <?php if ($categoryOfProduct): ?>
+                    <p>
+                        <?= $categoryOfProduct->name; ?>
+                    </p>
+                <?php endif; ?>
+
                 <img class="arrow-filter" src="<?= Yii::getAlias('@imgFrontEnd'); ?>/next.svg" alt="" />
             </div>
             <div class="filter__select">
-                    <div class="filter__select__option">
-                        <div class="select__item">
-                            <?php foreach ($categoryList as $category): ?>
-                                <a href="<?= Url::to(['menu/category', 'categoryId' => $category->id]); ?>" <?= (Url::current() == Url::to(['menu/category', 'categoryId' => $category->id])) ? 'class="active"' : false;?>><?= $category->name; ?></a>
-                            <?php endforeach; ?>
-                        </div>
+                <div class="filter__select__option">
+                    <div class="select__item">
+                        <?php foreach ($categoryList as $category): ?>
+                            <a href="<?= Url::to(['menu/category', 'categoryId' => $category->id]); ?>" <?= (Url::current() == Url::to(['menu/category', 'categoryId' => $category->id])) ? 'class="active"' : false;?>><?= $category->name; ?></a>
+                        <?php endforeach; ?>
                     </div>
+                </div>
             </div>
             
         </div>
