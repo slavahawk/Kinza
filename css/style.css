@@ -1298,37 +1298,41 @@ h6 {
   color: #254e7a;
 }
 
-.cart__content-cart-btn-item form {
+.cart__content-cart-btn-item {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
-  justify-items: center;
   grid-gap: 20px;
-}
-
-.cart__content-cart-btn-item form .next {
-  background-color: #333333;
-  border: 1px solid #333333;
-}
-
-.cart__content-cart-btn-item form .next:hover {
-  background-color: #ffffff;
-  color: #333333;
 }
 
 .cart__content-cart-btn-item form .clear {
   background-color: #993030;
   border: 1px solid #993030;
-}
-
-.cart__content-cart-btn-item form .clear,
-.cart__content-cart-btn-item form .next {
   color: white;
   font-size: calc(16px + 2 * ((100vw - 320px) / 1600));
   padding: 10px 20px;
   border-radius: 5px;
   transition: 0.1s ease-in-out;
   width: 100%;
+  min-height: 43px;
+}
+
+.cart__content-cart-btn-item .next {
+  display: flex;
+  align-items: center;
+  background-color: #333333;
+  color: white;
+  min-height: 43px;
+  font-size: calc(16px + 2 * ((100vw - 320px) / 1600));
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: 0.1s ease-in-out;
+  width: 100%;
+  border: 1px solid #333333;
+}
+
+.cart__content-cart-btn-item .next:hover {
+  background-color: #ffffff;
+  color: #333333;
 }
 
 .order__content {
@@ -1675,6 +1679,7 @@ h6 {
   margin: 0 auto;
   color: black;
   text-align: center;
+  min-height: 81vh;
 }
 
 .readyOrder__content img {
@@ -2328,7 +2333,7 @@ body a {
   }
 
   .product__content {
-    padding: 0px 20px;
+    padding: 0px 20px 50px;
   }
 
   .product__content-item {
@@ -2387,7 +2392,7 @@ body a {
     justify-content: center;
   }
 
-  .cart__content-cart-btn-item form .next:hover {
+  .cart__content-cart-btn-item .next:hover {
     background-color: #333333;
     color: white;
   }
@@ -2408,7 +2413,8 @@ body a {
 
 @media (max-width: 967px) {
   .readyOrder__content {
-    padding: 120px 20px 50px 20px;
+    padding: 150px 20px 50px 20px;
+    min-height: 56vh;
   }
 
   .readyOrder__content img {
@@ -2495,7 +2501,7 @@ body a {
 }
 
 @media (max-width: 758px) {
-  .cart__content-cart-btn-item form {
+  .cart__content-cart-btn-item {
     grid-template-columns: 1fr;
   }
 }
@@ -2590,7 +2596,7 @@ body a {
   .catalog__content {
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
-    padding: 0px 10px;
+    padding: 0px 10px 50px;
   }
 
   .catalog__content-item {
