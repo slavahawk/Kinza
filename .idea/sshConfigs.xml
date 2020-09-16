@@ -3,6 +3,9 @@
   <component name="SshConfigs">
     <configs>
       <sshConfig authType="PASSWORD" host="91.230.211.63" id="7afeb542-ea95-4703-8aca-a4fbe9e9c4c9" port="22" nameFormat="DESCRIPTIVE" username="alexprog" />
+      <sshConfig authType="PASSWORD" id="a22f3c58-4000-49a6-8bac-48c85c0b7e4a" customName="dostavkaslon" nameFormat="CUSTOM">
+        <option name="customName" value="dostavkaslon" />
+      </sshConfig>
     </configs>
   </component>
 </project>
