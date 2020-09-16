@@ -36,16 +36,22 @@ $this->registerMetaTag([
 
                     <div class="cart__content-cart-product" id="cart-product-<?= $id ?>">
                         <div class="cart__content-cart-product-main">
-                            <a href="<?= Url::to(['menu/product', 'productId' => $id]); ?>"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/product/<?= $item['img']; ?>.jpg" alt="" /></a>
+                            <a href="<?= Url::to(['menu/product', 'productId' => $id]); ?>"><img
+                                    src="<?= Yii::getAlias('@imgFrontEnd'); ?>/product/<?= $item['img']; ?>.jpg"
+                                    alt="" /></a>
                             <div class="cart__content-cart-product-main-title">
-                                <p><a href="<?= Url::to(['menu/product', 'productId' => $id]); ?>"><?= $item['name']; ?></a></p>
+                                <p><a
+                                        href="<?= Url::to(['menu/product', 'productId' => $id]); ?>"><?= $item['name']; ?></a>
+                                </p>
                             </div>
                         </div>
                         <div class="amount">
                             <div class="amount__content">
                                 <label>Количество</label>
                                 <div class="amount__content__item">
-                                    <div id="cart-check-num-<?= $id; ?>" class="smaller__btn <?php echo ($item['qty'] == 1) ? 'amount__disabled' : false ?> minus-product" data-id="<?= $id; ?>">-</div>
+                                    <div id="cart-check-num-<?= $id; ?>"
+                                        class="smaller__btn <?php echo ($item['qty'] == 1) ? 'amount__disabled' : false ?> minus-product"
+                                        data-id="<?= $id; ?>">-</div>
                                     <p id="cart-count-num-<?= $id; ?>" class="sum"><?= $item['qty']; ?></p>
                                     <div class="more__btn add-product" data-id="<?= $id; ?>">+</div>
                                 </div>
@@ -60,7 +66,8 @@ $this->registerMetaTag([
                             </div>
                         </div>
                         <p class="delete">
-                            <a href="<?= Url::to(['cart/delete', 'id' => $id]); ?>" class="delete-product" data-id="<?= $id; ?>">&times;</a>
+                            <a href="<?= Url::to(['cart/delete', 'id' => $id]); ?>" class="delete-product"
+                                data-id="<?= $id; ?>">&times;</a>
                         </p>
                     </div>
 
@@ -76,7 +83,7 @@ $this->registerMetaTag([
                             <label>Итог</label>
                             <p class="sum"><span id="cart-count-sum"><?= $session['cart.sum']; ?></span> руб.</p>
                         </div>
-                        
+
                     </div>
 
                     <div class="cart__content-cart-btn">
@@ -85,7 +92,7 @@ $this->registerMetaTag([
                             <?= Html::beginForm(['cart/index'], 'post'); ?>
                             <?= Html::submitButton('Очистить корзину', ['class' => 'clear', 'value' => 'clear', 'name' => 'clear']); ?>
                             <?= Html::endForm(); ?>
-                            <a href="<?= Url::to(['cart/order']) ?>" class="next"></a>
+                            <a href="<?= Url::to(['cart/order']) ?>" class="next">Подтвердить заказ</a>
                         </div>
                     </div>
                 </div>

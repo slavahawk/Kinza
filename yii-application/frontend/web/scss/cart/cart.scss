@@ -289,47 +289,48 @@
                 }
 
                 &-item {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-gap: 20px;
+                    @media (max-width: 758px) {
+                        grid-template-columns: 1fr;
+                    }
                     form {
-                        display: grid;
-                        grid-template-columns: 1fr 1fr;
-                        align-items: center;
-                        justify-items: center;
-                        grid-gap: 20px;
-
-                        @media (max-width: 758px) {
-                            grid-template-columns: 1fr;
-                        }
-
-                        .next {
-                            background-color: #333333;
-                            border: 1px solid #333333;
-
-                            &:hover {
-                                background-color: #ffffff;
-                                color: #333333;
-                            }
-
-                            @media (max-width: 976px) {
-                                &:hover {
-                                    background-color: #333333;
-                                    color: white;
-                                }
-                            }
-                        }
-
                         .clear {
                             background-color: #993030;
                             border: 1px solid #993030;
-                        }
-
-                        .clear,
-                        .next {
                             color: white;
                             @include adaptiv-fontAll(18, 16);
                             padding: 10px 20px;
                             border-radius: 5px;
                             transition: 0.1s ease-in-out;
                             width: 100%;
+                            min-height: 43px;
+                        }
+                    }
+                    .next {
+                        display: flex;
+                        align-items: center;
+                        background-color: #333333;
+                        color: white;
+                        min-height: 43px;
+                        @include adaptiv-fontAll(18, 16);
+                        padding: 10px 20px;
+                        border-radius: 5px;
+                        transition: 0.1s ease-in-out;
+                        width: 100%;
+                        border: 1px solid #333333;
+
+                        &:hover {
+                            background-color: #ffffff;
+                            color: #333333;
+                        }
+
+                        @media (max-width: 976px) {
+                            &:hover {
+                                background-color: #333333;
+                                color: white;
+                            }
                         }
                     }
                 }

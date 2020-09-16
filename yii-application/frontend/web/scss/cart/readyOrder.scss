@@ -5,6 +5,7 @@
         margin: 0 auto;
         color: black;
         text-align: center;
+        min-height: 81vh;
         img {
             width: 250px;
         }
@@ -21,7 +22,8 @@
 
 @media (max-width: 967px) {
     .readyOrder__content {
-        padding: 120px 20px 50px 20px;
+        padding: 150px 20px 50px 20px;
+        min-height: 56vh;
         img {
             width: 150px;
         }
