@@ -8,9 +8,14 @@ use yii\helpers\Html;
 use frontend\assets\MainAsset;
 use yii\helpers\Url;
 
-$this->registerLinkTag(['rel' => 'icon', 'sizes' => '16x16', 'type' => 'image/ico', 'href' => Url::to(['/favicon.ico'])]);
-$this->registerLinkTag(['rel' => 'icon', 'sizes' => '32x32', 'type' => 'image/ico', 'href' => Url::to(['/favicon32.ico'])]);
-$this->registerLinkTag(['rel' => 'icon', 'sizes' => '64x64', 'type' => 'image/ico', 'href' => Url::to(['/favicon64.ico'])]);
+$this->registerLinkTag(['rel' => 'icon', 'sizes' => '16x16',  'href' => Url::to(['/favicon.svg'])]);
+$this->registerLinkTag(['rel' => 'icon', 'sizes' => '32x32',  'href' => Url::to(['/favicon32.svg'])]);
+$this->registerLinkTag(['rel' => 'icon', 'sizes' => '64x64',  'href' => Url::to(['/favicon64.svg'])]);
+$this->registerLinkTag(['rel' => 'icon', 'sizes' => '194х194', 'href' => Url::to(['/favicon-194x194.png'])]);
+$this->registerLinkTag(['rel' => 'icon', 'sizes' => '192х192', 'href' => Url::to(['/android-chrome-192x192.png'])]);
+$this->registerLinkTag(['rel' => 'mask-icon', 'color' => '#ffffff', 'href' => Url::to(['/safari-pinned-tab.svg'])]);
+$this->registerLinkTag(['rel' => 'apple-touch-icon', 'sizes' => '180х180', 'href' => Url::to(['/apple-touch-icon.png'])]);
+$this->registerLinkTag(['rel' => 'apple-touch-icon-precomposed', 'sizes' => '180х180', 'href' => Url::to(['/apple-touch-icon-precomposed.png'])]);
 MainAsset::register($this);
 ?>
 <?php $this->beginPage() ?>

@@ -11,11 +11,12 @@ $this->registerMetaTag([
 ]);
 ?>
 <div class="preloader">
-  <div class="preloader__row">
-    <img class="main-load" src="<?= Yii::getAlias('@imgFrontEnd'); ?>/loadMain.png" alt="Логотип" />
-    <img class="out-load"  src="<?= Yii::getAlias('@imgFrontEnd'); ?>/loadout.png" alt="Логотип" />
-    <!-- <div class="preloader__item"></div> -->
-  </div>
+    <div class="preloader__row">
+
+        <img class="main-load" src="<?= Yii::getAlias('@imgFrontEnd'); ?>/loadMain.svg" alt="Логотип" />
+        <img class="out-load" src="<?= Yii::getAlias('@imgFrontEnd'); ?>/loadout.svg" alt="Логотип" />
+        <!-- <div class="preloader__item"></div> -->
+    </div>
 </div>
 <main class="wrapper">
     <!-- Основная секция -->
@@ -29,12 +30,18 @@ $this->registerMetaTag([
                 <a href="<?= Url::to(['menu/index']); ?>">Меню</a>
             </div>
             <div class="mainSection__content-right _anim-items">
-                <picture ><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/cheb.webp" type="image/webp"><img class="_anim-rotate" src="<?= Yii::getAlias('@imgFrontEnd'); ?>/cheb.png" alt="чебуреки" /></picture>
+                <picture>
+                    <source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/cheb.webp" type="image/webp"><img
+                        class="_anim-rotate" src="<?= Yii::getAlias('@imgFrontEnd'); ?>/cheb.png" alt="чебуреки" />
+                </picture>
             </div>
         </div>
-    <!-- Листик -->
-    <div class="list2">
-            <picture><source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/2.webp" type="image/webp"><img src="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/2.png" alt="" /></picture>
+        <!-- Листик -->
+        <div class="list2">
+            <picture>
+                <source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/2.webp" type="image/webp"><img
+                    src="<?= Yii::getAlias('@imgFrontEnd'); ?>/lists/2.png" alt="" />
+            </picture>
         </div>
     </section>
     <!-- О нас -->
@@ -48,28 +55,34 @@ $this->registerMetaTag([
                     что вы всегда получаете ваш заказ вкусным и горячим.
                 </p>
                 <div class="aboutUs__content-item-grid">
-                    <a data-fancybox="gallery" href="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/big/1.jpg"  class="about__grid">
+                    <a data-fancybox="gallery" href="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/big/1.jpg"
+                        class="about__grid">
                         <img class="lozad" data-src="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/1.png" alt="" />
                     </a>
-                    <a data-fancybox="gallery" href="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/big/2.jpg"  class="about__grid">
+                    <a data-fancybox="gallery" href="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/big/2.jpg"
+                        class="about__grid">
                         <img class="lozad" data-src="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/2.png" alt="" />
                     </a>
-                    <a data-fancybox="gallery" href="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/big/3.jpg"  class="about__grid grid__big">
+                    <a data-fancybox="gallery" href="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/big/3.jpg"
+                        class="about__grid grid__big">
                         <img class="lozad" data-src="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/3.png" alt="" />
                     </a>
-                    <a data-fancybox="gallery" href="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/big/4.jpg"  class="about__grid grid__big">
+                    <a data-fancybox="gallery" href="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/big/4.jpg"
+                        class="about__grid grid__big">
                         <img class="lozad" data-src="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/4.png" alt="" />
                     </a>
-                    <a data-fancybox="gallery" href="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/big/5.jpg"  class="about__grid">
+                    <a data-fancybox="gallery" href="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/big/5.jpg"
+                        class="about__grid">
                         <img class="lozad" data-src="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/5.png" alt="" />
                     </a>
-                    <a data-fancybox="gallery" href="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/big/6.jpg"  class="about__grid">
+                    <a data-fancybox="gallery" href="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/big/6.jpg"
+                        class="about__grid">
                         <img class="lozad" data-src="<?= Yii::getAlias('@imgFrontEnd'); ?>/aboutUs/6.png" alt="" />
                     </a>
-                </div>       
+                </div>
             </div>
         </div>
-    
+
     </section>
 
     <!-- Карта -->
@@ -77,7 +90,5 @@ $this->registerMetaTag([
         <div id="map"></div>
     </section>
 </main>
-<script
-        defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCgwoTpESqADzD9gNWrX-uBJw7wB4-KWw&callback=initMap"
-></script>
+<script defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCgwoTpESqADzD9gNWrX-uBJw7wB4-KWw&callback=initMap"></script>
