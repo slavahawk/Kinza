@@ -26,7 +26,7 @@ $this->registerMetaTag([
                 <h1>
                     Сочные и вкусные чебуреки в городе
                 </h1>
-                <p>Доставка с 10:00 до 21:00 в Красноярске</p>
+                <p>Доставка с 10:00 до 23:00 в Красноярске</p>
                 <a href="<?= Url::to(['menu/index']); ?>">Меню</a>
             </div>
             <div class="mainSection__content-right _anim-items">
