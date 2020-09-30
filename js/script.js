@@ -15,15 +15,18 @@ window.onload = function () {
   animate();
 };
 
-lozad('.lozad', {
+lozad(".lozad", {
   load: function load(el) {
     el.src = el.dataset.src;
 
-    el.onload = function () {
-      el.classList.add('fade');
-    };
+    if (window.location.pathname !== "/") {
+      el.onload = function () {
+        el.classList.add("fade");
+      };
+    }
   }
-}).observe(); // ФУНКЦИЯ ОПРЕДЕЛЕНИЯ ПОДДЕРЖКИ WEBP
+}).observe();
+; // ФУНКЦИЯ ОПРЕДЕЛЕНИЯ ПОДДЕРЖКИ WEBP
 
 function testWebP(callback) {
   var webP = new Image();
