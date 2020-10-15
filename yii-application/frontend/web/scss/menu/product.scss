@@ -37,7 +37,6 @@
 
                 .price {
                     font-family: Montserrat;
-
                     font-weight: 600;
                     text-align: left;
                     margin: 25px 0 20px;
@@ -108,7 +107,7 @@
                     font-family: SourceSansPro;
                     @include adaptiv-fontAll(16, 14);
                     line-height: 140%;
-                    font-weight: 300;
+                    font-weight: 400;
                 }
             }
         }
