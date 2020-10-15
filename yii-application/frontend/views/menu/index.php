@@ -9,7 +9,7 @@ use yii\web\JqueryAsset;
 $this->title = "Меню — Кинза";
 $this->registerMetaTag([
     'name' => 'description',
-    'content' => 'Description of the page'
+    'content' => 'Вкусные блюда с доставкой по городу Красноярск'
 ]);
 
 ?>
@@ -21,8 +21,7 @@ $this->registerMetaTag([
         <div class="title__menu">
 
             <div class="title__menu__btn">
-                <a href="<?= Url::to(['menu/alcohol', 'bar' => '1']) ?>">Барная карта</a>
-                <a href="<?= Url::to(['menu/alcohol', 'wine' => '2']) ?>">Винная карта</a>
+                <a href="<?= Url::to(['menu/alcohol', 'bar' => '1']) ?>">Барное меню</a>
             </div>
         </div>
         <?php foreach ($menuList as $menu): ?>
@@ -33,7 +32,7 @@ $this->registerMetaTag([
 
 
                     <!--Добавляем класс, когда товаров < 4 "few__products"-->
-                    <div class="menu__content__item">
+                    <div class="menu__content__item <?php if(count($menu['products']) < 3): ?>few__products<?php endif;?>">
 
                         <?php foreach ($menu['products'] as $product): ?>
 

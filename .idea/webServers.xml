@@ -30,6 +30,20 @@
           </advancedOptions>
         </fileTransfer>
       </webServer>
+      <webServer id="03b35e3f-3076-40b2-ae06-9c4259db7108" name="630630.ru" url="http://630630.ru">
+        <fileTransfer host="630630.ru" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="d006f4ce-30b0-4811-9914-5335e25cf68a" name="smalldog.beget.tech" url="http://smalldog.beget.tech">
+        <fileTransfer host="smalldog.beget.tech" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </project>

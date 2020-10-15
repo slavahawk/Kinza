@@ -56,5 +56,10 @@ return [
     'aliases' => [
         '@imgBackEnd' => '/kinza/yii-application/frontend/web/img',
         '@imgFrontEnd' => '/img',
+        '@deliveryFrom' => '10:00',
+        '@deliveryTo' => '22:00',
+        '@phone' => '288-45-05',
+        '@workFrom' => '10:00',
+        '@workTo' => '24:00',
     ],
 ];

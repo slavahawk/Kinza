@@ -16,7 +16,7 @@ class CategoryList extends Widget
     public function run()
     {
         $condition = ['status' => Yii::$app->params['enableStatus']];
-        $categoryList = Category::find()->where($condition)->orderBy('sort_order')->all();
+        $categoryList = Category::find()->where($condition)->orderBy(['sort_order' => SORT_ASC])->all();
 
         foreach ($categoryList as $category) {
             if (Url::current() == Url::to(['menu/category', 'categoryId' => $category->id])) {

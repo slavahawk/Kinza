@@ -4,10 +4,10 @@
 
 use yii\helpers\Url;
 
-$this->title = "Главная — Кинза";
+$this->title = "Доставка чебуреков в Красноярске — Кинза";
 $this->registerMetaTag([
     'name' => 'description',
-    'content' => 'Description of the page'
+    'content' => 'Доставка в Красноярске ароматных чебуреков и вкусных блюд'
 ]);
 ?>
 <div class="preloader">
@@ -26,7 +26,7 @@ $this->registerMetaTag([
                 <h1>
                     Сочные и вкусные чебуреки в городе
                 </h1>
-                <p>Доставка с 10:00 до 23:00 в Красноярске</p>
+                <p>Доставка с <?= Yii::getAlias('@deliveryFrom')?> до <?= Yii::getAlias('@deliveryTo')?> в Красноярске</p>
                 <a href="<?= Url::to(['menu/index']); ?>">Меню</a>
             </div>
             <div class="mainSection__content-right _anim-items">

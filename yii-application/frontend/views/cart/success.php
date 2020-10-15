@@ -2,6 +2,8 @@
 
 use yii\helpers\Url;
 
+$this->title = "Успешное оформление заказа — Кинза";
+
 ?>
 <main>
     <section class="readyOrder">

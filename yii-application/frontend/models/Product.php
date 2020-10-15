@@ -67,13 +67,11 @@ class Product extends \yii\db\ActiveRecord
                     Image::getImagine()
                         ->open($_SERVER['DOCUMENT_ROOT'] . '/img/product/' . $product->product_image . '.jpg')
                         ->thumbnail(new Box('400', '300'))
-                        ->save($path, ['quality' => 50]);
+                        ->save($path, ['quality' => 90]);
 
                     $product->product_image = '/img/product/resize/' . $product->product_image . '.jpg';
                 } elseif (is_file($path)) {
                     $product->product_image = '/img/product/resize/' . $product->product_image . '.jpg';
-                } else {
-                    return false;
                 }
             }
         }

@@ -2,6 +2,13 @@
 <project version="4">
   <component name="PublishConfigData">
     <serverData>
+      <paths name="630630.ru">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="Sprinthost">
         <serverdata>
           <mappings>
@@ -24,6 +31,13 @@
         </serverdata>
       </paths>
       <paths name="manager">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="smalldog.beget.tech">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />

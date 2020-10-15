@@ -19,7 +19,7 @@ class MenuController extends Controller
     public function actionIndex()
     {
         $condition = ['status' => Yii::$app->params['enableStatus']];
-        $categoryList = Category::find()->where(['status' => $condition])->asArray()->all();
+        $categoryList = Category::find()->where(['status' => $condition])->orderBy(['sort_order' => SORT_ASC])->asArray()->all();
 
         foreach ($categoryList as $category) {
             $products = Product::find()
@@ -46,7 +46,7 @@ class MenuController extends Controller
     {
         $condition = ['status' => Yii::$app->params['enableStatus']];
         $condition2 = ['category_id' => $categoryId];
-        $productList = Product::find()->where($condition)->andWhere($condition2)->orderBy('product_id')->all();
+        $productList = Product::find()->where($condition)->andWhere($condition2)->orderBy(['sort_order' => SORT_ASC])->all();
 
         Product::setResizeImage($productList);
 

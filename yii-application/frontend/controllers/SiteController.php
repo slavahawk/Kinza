@@ -37,6 +37,13 @@ class SiteController extends Controller
         return $this->render('contact');
     }
 
+    public function actionDelivery()
+    {
+
+        return $this->render('delivery');
+
+    }
+
 //    public function start()
 //    {
 //        $row = 0;

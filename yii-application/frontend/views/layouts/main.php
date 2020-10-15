@@ -43,46 +43,43 @@ MainAsset::register($this);
                 </div>
                 <a href="/">
                     <picture>
-                        <source srcset="<?php echo Yii::getAlias('@imgFrontEnd'); ?>/logo.webp" type="image/webp"><img
-                            src="<?php echo Yii::getAlias('@imgFrontEnd'); ?>/logo.png" alt="" />
+                        <source srcset="<?= Yii::getAlias('@imgFrontEnd'); ?>/logo.webp" type="image/webp"><img
+                            src="<?= Yii::getAlias('@imgFrontEnd'); ?>/logo.png" alt="" />
                     </picture>
                 </a>
             </div>
             <div class="header__content-menu">
                 <ul>
                     <li>
-                        <a href="<?php echo Url::to(['menu/index']); ?>">Меню</a>
+                        <a href="<?= Url::to(['menu/index']); ?>">Меню</a>
                     </li>
                     <li>
-                        <a href="<?= Url::to(['site/index', '#' => 'aboutUs']); ?>">Доставка</a>
+                        <a href="<?= Url::to(['site/delivery']); ?>">Доставка</a>
                     </li>
                     <li>
-                        <a href="<?php echo Url::to(['site/contact']); ?>">Контакты</a>
+                        <a href="<?= Url::to(['site/contact']); ?>">Контакты</a>
                     </li>
                     <li class="aclo__btn">
-                        <a href="<?= Url::to(['menu/alcohol', 'bar' => '1']) ?>">Барная карта</a>
-                    </li>
-                    <li class="aclo__btn">
-                        <a href="<?= Url::to(['menu/alcohol', 'wine' => '2']) ?>">Винная карта</a>
+                        <a href="<?= Url::to(['menu/alcohol', 'bar' => '1']) ?>">Барное меню</a>
                     </li>
                 </ul>
             </div>
 
             <div class="header__content-basket">
-                <a href="/<?php echo Url::to('cart/index')?>" class="basket">
+                <a href="/<?= Url::to('cart/index')?>" class="basket">
                     <i class="fas fa-shopping-basket"></i>
                     <div class="count">
                         <div class="count-item" id="cart-count"><?= Cart::countItems(); ?></div>
                     </div>
                     <p class="basket__text">Корзина</p>
                 </a>
-                <a class="phone__min" href="tel:+73912884505">
+                <a class="phone__min" href="tel:+7391<?= str_replace('-', '',Yii::getAlias('@phone'));?>">
                     <i class="fa fa-phone" aria-hidden="true"></i>
                 </a>
             </div>
             <div class="header__content-phone">
-                <a href="tel:+73912884505">+7 (391) 288-45-05</a>
-                <p>Доставка с 10:00 до 23:00 в Красноярске</p>
+                <a href="tel:+7391<?= str_replace('-', '',Yii::getAlias('@phone'));?>">+7 (391) <?= Yii::getAlias('@phone')?></a>
+                <p>Доставка с <?= Yii::getAlias('@deliveryFrom')?> до <?= Yii::getAlias('@deliveryTo')?> в Красноярске</p>
             </div>
         </div>
     </header>
@@ -98,8 +95,8 @@ MainAsset::register($this);
             <div class="footer__content-left">
                 <div class="footer__content-left-contact">
                     <p>г. Красноярск, пр. Мира, 53</p>
-                    <a href="tel:+73912884505">т.288-45-05</a>
-                    <p>Доставка с 10:00 до 23:00</p>
+                    <a href="tel:+7391<?= str_replace('-', '',Yii::getAlias('@phone'));?>">т.<?= Yii::getAlias('@phone')?></a>
+                    <p>Доставка с <?= Yii::getAlias('@deliveryFrom')?> до <?= Yii::getAlias('@deliveryTo')?></p>
                 </div>
                 <h6>© Ресторан Кинза, 2020. Все права защищены.</h6>
             </div>
@@ -107,8 +104,8 @@ MainAsset::register($this);
                 <div class="footer__content-right-menu">
                     <ul class="footer__menu">
                         <li><a href="/">Главная</a></li>
-                        <li><a href="<?php echo Url::to(['menu/index']); ?>">Меню</a></li>
-                        <li><a href="<?php echo Url::to(['site/contact']); ?>">Контакты</a></li>
+                        <li><a href="<?= Url::to(['menu/index']); ?>">Меню</a></li>
+                        <li><a href="<?= Url::to(['site/contact']); ?>">Контакты</a></li>
                     </ul>
                 </div>
                 <div class="footer__content-right-social">
