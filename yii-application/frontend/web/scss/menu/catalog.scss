@@ -25,6 +25,7 @@
         font-family: SourceSansPro;
         grid-auto-columns: 1fr;
 
+
         @media (max-width: $sizemediaProduct) {
             grid-template-columns: repeat(1, 1fr);
             gap: 20px;

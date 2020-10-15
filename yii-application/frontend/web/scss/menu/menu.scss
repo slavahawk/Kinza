@@ -66,6 +66,8 @@ $sizemediaProduct: 600px;
             font-family: SourceSansPro;
             grid-auto-columns: 1fr;
 
+
+
             @media (max-width: $sizemediaProduct) {
                 padding: 20px 0 0 0;
                 gap: 20px;
@@ -196,6 +198,20 @@ $sizemediaProduct: 600px;
                 }
             }
         }
+    }
+}
+
+// Если в ряду 3, 2, 1 товара
+.few__products{
+    grid-template-columns:repeat(4, 1fr);
+    @media (max-width: 1240px) {
+        grid-template-columns:repeat(3, 1fr);
+    }
+    @media (max-width: 934px) {
+        grid-template-columns:repeat(2, 1fr);
+    }
+    @media (max-width: 629px) {
+        grid-template-columns:repeat(1, 1fr);
     }
 }
 
