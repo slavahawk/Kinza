@@ -2,7 +2,10 @@ lozad('.lozad', {
     load: function (el) {
         el.src = el.dataset.src;
         el.onload = function () {
-            el.classList.add('fade')
+            if (window.location.pathname !== "/") {
+                el.classList.add('fade')
+            }
+
         }
     }
 }).observe()

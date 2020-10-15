@@ -2,12 +2,12 @@
     background: #121212;
 
     &__content {
-        padding: 0px 20px;
+        padding: 0 20px;
         display: grid;
         grid-template-columns: auto minmax(500px, 1fr);
 
         @media (max-width: 976px) {
-            padding: 40px 0px 0 0;
+            padding: 40px 0 0 0;
             grid-template-columns: 1fr;
             grid-gap: 60px;
         }

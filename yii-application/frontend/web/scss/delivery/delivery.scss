@@ -1,0 +1,42 @@
+.delivery{
+    &__content{
+      max-width: 1340px;
+      margin: 40px auto;
+      h1{
+        color: #121212;
+        font-size: 19px;
+        line-height: 21px;
+        font-weight: 600;
+        margin: 0px 10px 30px;
+        padding: 0;
+
+        @media (max-width: $sizemediaProduct) {
+          font-weight: 500;
+          margin: 0 0 10px 5px;
+          @include adaptiv-fontCatalog(28, 16);
+          line-height: 130%;
+          grid-area: title;
+          text-align: left;
+        }
+      }
+      &__item{
+        p{
+          font-family: Montserrat;
+          max-width: 1100px;
+          margin: 0 auto;
+          user-select: none;
+          @include adaptiv-fontAll(26, 20);
+          line-height: 45px;
+          margin-bottom: 50px;
+
+          @media (max-width: 768px) {
+            line-height: 35px;
+          }
+
+          @media (max-width: 468) {
+            line-height: 32px;
+          }
+        }
+      }
+    }
+}

@@ -8,7 +8,7 @@
         line-height: 24px;
         padding: 40px 20px;
         max-width: 1400px;
-        margin: 0px auto;
+        margin: 0 auto;
         @include disflex(flex, space-around, center);
 
         &-left {

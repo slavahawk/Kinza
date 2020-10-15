@@ -23,10 +23,10 @@ $sizemediaProduct: 600px;
             font-size: 20px;
             line-height: 18px;
             text-transform: uppercase;
-            margin: 0px 16px 0px 0px;
+            margin: 0 16px 0 0;
 
             :last-child {
-                margin: 0px 0px 0px 0px;
+                margin: 0 0 0 0;
             }
         }
     }
@@ -42,11 +42,11 @@ $sizemediaProduct: 600px;
         padding: 36px 20px 67px;
 
         @media (max-width: 976px) {
-            padding: 0px 20px 67px;
+            padding: 0 20px 67px;
         }
 
         @media (max-width: $sizemediaProduct) {
-            padding: 0px 10px 67px;
+            padding: 0 10px 67px;
         }
         h2 {
             color: #121212;
@@ -59,7 +59,7 @@ $sizemediaProduct: 600px;
         }
 
         &__item {
-            padding: 30px 0 0px 0;
+            padding: 30px 0 0 0;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(285px, 2fr));
             gap: 36px 20px;
@@ -89,7 +89,7 @@ $sizemediaProduct: 600px;
                 }
 
                 @media (max-width: $sizemediaProduct) {
-                    box-shadow: 0 0px 00px rgba(0, 0, 0, 0);
+                    box-shadow: 0 0 00px rgba(0, 0, 0, 0);
                     padding: 0;
                     grid-template-columns: repeat(3, 1fr);
                     grid-template-rows: auto auto;
@@ -100,12 +100,12 @@ $sizemediaProduct: 600px;
 
                 a {
                     position: relative;
-                    padding: 0px 0px 100% 0px;
-                    margin: 0px 0px 10px 0px;
+                    padding: 0 0 100% 0;
+                    margin: 0 0 10px 0;
 
                     @media (max-width: $sizemediaProduct) {
                         grid-area: image;
-                        margin: 0px 0px 0px 0px;
+                        margin: 0 0 0 0;
                     }
 
                     img {
@@ -128,7 +128,7 @@ $sizemediaProduct: 600px;
 
                     @media (max-width: $sizemediaProduct) {
                         font-weight: 500;
-                        margin: 0px 0px 10px 5px;
+                        margin: 0 0 10px 5px;
                         @include adaptiv-fontCatalog(28, 16);
                         line-height: 130%;
                         grid-area: title;

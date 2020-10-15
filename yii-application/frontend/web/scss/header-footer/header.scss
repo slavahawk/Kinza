@@ -41,12 +41,13 @@
             ul {
                 @include disflex(flex, center, stretch);
                 @include adaptiv-fontAll(18, 14);
+                font-weight: 500;
 
                 li {
                     margin-right: 80px;
 
                     &:last-child {
-                        margin-right: 0px;
+                        margin-right: 0;
                     }
 
                     a {
@@ -91,7 +92,7 @@
                         color: #fff;
                         border-radius: 50px;
                         font-family: Roboto;
-                        padding: 0px;
+                        padding: 0;
                         width: 30px;
                         height: 30px;
                         border-radius: 50px;

@@ -84,7 +84,7 @@
 
             li {
                 margin: 0 0 60px 0;
-                margin-right: 0px !important;
+                margin-right: 0 !important;
                 @include adaptiv-fontMin(60, 28);
 
                 &:nth-child(3) {
@@ -96,7 +96,7 @@
                 }
 
                 &:nth-child(5) {
-                    margin: 0 auto 0px;
+                    margin: 0 auto 0;
                 }
             }
         }
@@ -117,7 +117,7 @@
             margin: 0 auto;
             display: block;
             color: #121212 !important;
-            padding: 12px 0px;
+            padding: 12px 0;
             background-color: #ffffff;
         }
     }
