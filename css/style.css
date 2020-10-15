@@ -340,6 +340,33 @@ h6 {
   transform: rotateZ(0deg) scale(1);
 }
 
+.delivery__content {
+  max-width: 1340px;
+  margin: 40px auto;
+}
+
+.delivery__content h1 {
+  color: #121212;
+  font-size: 19px;
+  line-height: 21px;
+  font-weight: 600;
+  margin: 0px 10px 30px;
+  padding: 0;
+}
+
+.delivery__content__item p {
+  font-family: Montserrat;
+  max-width: 1100px;
+  margin: 0 auto;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-size: calc(20px + 6 * ((100vw - 320px) / 1600));
+  line-height: 45px;
+  margin-bottom: 50px;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -382,6 +409,7 @@ h6 {
   justify-content: center;
   align-items: stretch;
   font-size: calc(14px + 4 * ((100vw - 320px) / 1600));
+  font-weight: 500;
 }
 
 .header__content-menu ul li {
@@ -389,7 +417,7 @@ h6 {
 }
 
 .header__content-menu ul li:last-child {
-  margin-right: 0px;
+  margin-right: 0;
 }
 
 .header__content-menu ul li a {
@@ -438,7 +466,7 @@ h6 {
   color: #fff;
   border-radius: 50px;
   font-family: Roboto;
-  padding: 0px;
+  padding: 0;
   width: 30px;
   height: 30px;
   border-radius: 50px;
@@ -495,7 +523,7 @@ h6 {
   align-items: center;
   justify-items: center;
   max-width: 1340px;
-  margin: 0px auto;
+  margin: 0 auto;
 }
 
 .mainSection__content-left {
@@ -548,7 +576,7 @@ h6 {
 .aboutUs__content {
   padding: 12vh 20px;
   max-width: 1320px;
-  margin: 0px auto;
+  margin: 0 auto;
 }
 
 .aboutUs__content-item {
@@ -576,7 +604,7 @@ h6 {
 
 .aboutUs__content-item-grid .about__grid {
   position: relative;
-  padding: 0px 0px 85% 0px;
+  padding: 0 0 85% 0;
 }
 
 .aboutUs__content-item-grid .about__grid img {
@@ -629,11 +657,11 @@ h6 {
   font-size: 20px;
   line-height: 18px;
   text-transform: uppercase;
-  margin: 0px 16px 0px 0px;
+  margin: 0 16px 0 0;
 }
 
 .title__menu__btn a :last-child {
-  margin: 0px 0px 0px 0px;
+  margin: 0 0 0 0;
 }
 
 .menu {
@@ -658,7 +686,7 @@ h6 {
 }
 
 .menu__content__item {
-  padding: 30px 0 0px 0;
+  padding: 30px 0 0 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(285px, 2fr));
   gap: 36px 20px;
@@ -678,8 +706,8 @@ h6 {
 
 .menu__content__item__grid a {
   position: relative;
-  padding: 0px 0px 100% 0px;
-  margin: 0px 0px 10px 0px;
+  padding: 0 0 100% 0;
+  margin: 0 0 10px 0;
 }
 
 .menu__content__item__grid a img {
@@ -750,7 +778,7 @@ h6 {
 }
 
 .filter__content {
-  max-width: 1180px;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 40px 20px 0;
 }
@@ -831,14 +859,13 @@ h6 {
   grid-template: auto 1fr 35px minmax(26px, auto)/1fr;
   justify-content: center;
   text-align: center;
-  text-align: center;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .catalog__content-item a {
   position: relative;
-  padding: 0px 0px 100% 0px;
-  margin: 0px 0px 10px 0px;
+  padding: 0 0 100% 0;
+  margin: 0 0 10px 0;
 }
 
 .catalog__content-item a img {
@@ -938,16 +965,22 @@ h6 {
 }
 
 .product__content-item-info-btn .pay__link {
-  font-size: 16px;
+  font-size: 20px;
   line-height: 20px;
   padding: 10px 0;
   text-align: center;
-  background-color: #131313;
-  border: 1px solid #131313;
+  border-radius: 3px;
+  color: white;
+  background: #e85222;
+  box-shadow: 2px 2px 3px #989898;
   position: relative;
   overflow: hidden;
   display: block;
   width: 270px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .product__content-item-info-btn .pay__link .pulse {
@@ -1000,7 +1033,7 @@ h6 {
   position: fixed;
   z-index: 9999999;
   background: #e85222;
-  border-radius: 20px 0px 0px 20px;
+  border-radius: 20px 0 0 20px;
   right: -100%;
   top: 16%;
   display: flex;
@@ -1030,7 +1063,7 @@ h6 {
 }
 
 .contact__content {
-  padding: 0px 20px;
+  padding: 0 20px;
   display: grid;
   grid-template-columns: auto minmax(500px, 1fr);
   grid-gap: 2em;
@@ -1162,7 +1195,7 @@ h6 {
   font-weight: 500;
   font-size: 20px;
   line-height: 120%;
-  padding: 0 0px 0 0;
+  padding: 0 0 0 0;
 }
 
 .cart__content-cart-product-main-title p a {
@@ -1705,7 +1738,7 @@ h6 {
   line-height: 24px;
   padding: 40px 20px;
   max-width: 1400px;
-  margin: 0px auto;
+  margin: 0 auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -1811,7 +1844,7 @@ h6 {
 }
 
 .alcohol__content-title-btn a:last-child {
-  margin: 0px 0px 0px 0px;
+  margin: 0 0 0 0;
 }
 
 .alcohol__content-title-btn a.active {
@@ -2125,7 +2158,7 @@ body a {
 
   .header__content-menu ul li {
     margin: 0 0 60px 0;
-    margin-right: 0px !important;
+    margin-right: 0 !important;
     font-size: calc(28px + 32 * ((100vw - 320px) / 656));
   }
 
@@ -2138,7 +2171,7 @@ body a {
   }
 
   .header__content-menu ul li:nth-child(5) {
-    margin: 0 auto 0px;
+    margin: 0 auto 0;
   }
 
   .aclo__btn {
@@ -2151,7 +2184,7 @@ body a {
     margin: 0 auto;
     display: block;
     color: #121212 !important;
-    padding: 12px 0px;
+    padding: 12px 0;
     background-color: #ffffff;
   }
 
@@ -2189,7 +2222,7 @@ body a {
   }
 
   .menu__content {
-    padding: 0px 20px 67px;
+    padding: 0 20px 67px;
   }
 
   .filter {
@@ -2245,7 +2278,7 @@ body a {
     top: 48px;
     display: none;
     background-color: white;
-    border-top: 0px;
+    border-top: 0;
     border-bottom: 1px solid #121212;
     border-left: 1px solid #121212;
     border-right: 1px solid #121212;
@@ -2320,7 +2353,7 @@ body a {
   }
 
   .catalog__content {
-    padding: 0px 20px;
+    padding: 0 20px;
     grid-template-columns: repeat(3, 1fr);
   }
 
@@ -2333,7 +2366,7 @@ body a {
   }
 
   .product__content {
-    padding: 0px 20px 50px;
+    padding: 0 20px 50px;
   }
 
   .product__content-item {
@@ -2369,7 +2402,7 @@ body a {
   }
 
   .contact__content {
-    padding: 40px 0px 0 0;
+    padding: 40px 0 0 0;
     grid-template-columns: 1fr;
     grid-gap: 60px;
   }
@@ -2449,6 +2482,10 @@ body a {
 }
 
 @media (max-width: 768px) {
+  .delivery__content__item p {
+    line-height: 35px;
+  }
+
   .mainSection {
     background: url(../../../img/back-main768х1024.png);
     background-size: cover;
@@ -2516,8 +2553,17 @@ body a {
 }
 
 @media (max-width: 600px) {
+  .delivery__content h1 {
+    font-weight: 500;
+    margin: 0 0 10px 5px;
+    font-size: calc(16px + 12 * ((100vw - 320px) / 308));
+    line-height: 130%;
+    grid-area: title;
+    text-align: left;
+  }
+
   .menu__content {
-    padding: 0px 10px 67px;
+    padding: 0 10px 67px;
   }
 
   .menu__content__item {
@@ -2526,7 +2572,7 @@ body a {
   }
 
   .menu__content__item__grid {
-    box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0px rgba(0, 0, 0, 0);
     padding: 0;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto auto;
@@ -2535,12 +2581,12 @@ body a {
 
   .menu__content__item__grid a {
     grid-area: image;
-    margin: 0px 0px 0px 0px;
+    margin: 0 0 0 0;
   }
 
   .menu__content__item__grid .title__product {
     font-weight: 500;
-    margin: 0px 0px 10px 5px;
+    margin: 0 0 10px 5px;
     font-size: calc(16px + 12 * ((100vw - 320px) / 308));
     line-height: 130%;
     grid-area: title;
@@ -2596,11 +2642,11 @@ body a {
   .catalog__content {
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
-    padding: 0px 10px 50px;
+    padding: 0 10px 50px;
   }
 
   .catalog__content-item {
-    box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
     padding: 0;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto auto;
@@ -2609,12 +2655,12 @@ body a {
 
   .catalog__content-item a {
     grid-area: image;
-    margin: 0px 0px 0px 0px;
+    margin: 0 0 0 0;
   }
 
   .catalog__content-item .title__product {
     font-weight: 500;
-    margin: 0px 0px 10px 5px;
+    margin: 0 0 10px 5px;
     font-size: calc(16px + 12 * ((100vw - 320px) / 308));
     line-height: 130%;
     grid-area: title;
@@ -2689,11 +2735,11 @@ body a {
   }
 
   .alcohol__content-title-btn a {
-    margin: 0 0px 40px 0;
+    margin: 0 0 40px 0;
   }
 
   .alcohol__content-title-btn a:last-child {
-    margin: 0px 0px 0px 0px;
+    margin: 0 0 0 0;
   }
 
   .alcohol__content__item aside {
@@ -2723,7 +2769,7 @@ body a {
   .product__content-item-info .price {
     text-align: center;
     padding: 4px 0 5px;
-    line-height: 0px;
+    line-height: 0;
   }
 
   .product__content-item-info-btn {
@@ -2744,7 +2790,7 @@ body a {
   }
 
   .cart__content-cart-total p {
-    padding: 10px 0 0px 0;
+    padding: 10px 0 0 0;
   }
 
   .cart__content-cart-btn {
@@ -2843,6 +2889,10 @@ body a {
 }
 
 @media (max-width: 468) {
+  .delivery__content__item p {
+    line-height: 32px;
+  }
+
   .aboutUs__content-item p {
     line-height: 32px;
   }

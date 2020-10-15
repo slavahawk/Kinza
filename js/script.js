@@ -20,7 +20,9 @@ lozad('.lozad', {
     el.src = el.dataset.src;
 
     el.onload = function () {
-      el.classList.add('fade');
+      if (window.location.pathname !== "/") {
+        el.classList.add('fade');
+      }
     };
   }
 }).observe(); // ФУНКЦИЯ ОПРЕДЕЛЕНИЯ ПОДДЕРЖКИ WEBP
